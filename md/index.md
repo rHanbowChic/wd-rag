@@ -19,5 +19,5 @@ features:
   - title: High Credibility
     details: From official wikidot website
   - title: Adorable UI
-    details: Despite it's not pink
+    details: Although it's not pink
 ---
