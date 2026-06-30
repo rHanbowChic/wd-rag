@@ -1,0 +1,20 @@
+
+<div class="page-title">
+                    The 'pagepath' field type
+                </div>
+<div id="page-content">
+<p>Lets the user create and select from a page within a page tree; the 'path' is the list of all parents plus that page. It is visualized as <tt>page / page / page / page</tt> with at each level, the option of viewing that page, changing the page, or adding a new child. This does not affect the actual page parent, and a form can have many pagepath fields. The pagepath field value is stored as a page full name. Hidden pages are invisible to users when selecting and navigating the page tree.</p>
+<div class="code">
+<pre>
+<code> origin:
+   label: Origin
+   type: pagepath
+   category: band-origin</code>
+</pre></div>
+<p>The specific properties you can use on a pagepath field:</p>
+<ul>
+<li><strong>category</strong>: specifies the category that holds the page tree.</li>
+<li><strong>default</strong>: defines a default value for the field shown on new pages.</li>
+<li><strong>max-level</strong>: sets the maximum number of levels that can be created in the pagepath tree.</li>
+</ul>
+</div><div id="action-area" style="display: none;"></div>

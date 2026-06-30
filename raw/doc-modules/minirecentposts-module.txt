@@ -1,0 +1,36 @@
+
+<div class="page-title">
+                    MiniRecentPosts Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » MiniRecentPosts Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Displays most recent forum threads in a forum suitable to be included e.g. within the welcome page. The list items contain thread title, date started and number of posts.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>limit</tt></td>
+<td>no</td>
+<td>positive integer</td>
+<td>5</td>
+<td>how many items to display?</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<div class="code">
+<pre>
+<code>++ Most recent forum threads
+
+[[module MiniRecentPosts limit="3"]]</code>
+</pre></div>
+<p>simply displays 3 most recent forum posts.</p>
+</div><div id="action-area" style="display: none;"></div>

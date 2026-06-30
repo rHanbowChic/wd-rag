@@ -1,0 +1,20 @@
+
+<div class="page-title">
+                    PetitionAdmin Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » PetitionAdmin Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>This module allows you to set up and manage online internet petitions. You can set up several campaigns to collect signatures, download data directly into your spreadsheet application (OpenOffice Calc, Gnumeric or Excel) etc. Just awesome. One of the examples can be found here: <a href="http://noooxml.wikidot.com/petition">http://noooxml.wikidot.com/petition</a></p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>None required. During the setup you will be instructed how to configure your site to run the petition campaign.</p>
+<h2 id="toc2"><span>Example</span></h2>
+<p>Put this piece of code on any of your (admin) pages:</p>
+<div class="code">
+<pre>
+<code>[[module PetitionAdmin]]</code>
+</pre></div>
+<p>You will be able to administer your petition from the above module provided that you have administrative rights within the site.</p>
+</div><div id="action-area" style="display: none;"></div>

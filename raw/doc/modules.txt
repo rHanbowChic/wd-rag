@@ -1,0 +1,122 @@
+
+<div class="page-title">
+                    Modules
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Modules
+                    </div>
+<div id="page-content">
+<p>Modules are built-in applications that you can place anywhere on your pages.</p>
+<div class="row">
+<div class="col-md-6">
+<div class="module-infobox">
+<h2 id="toc0"><span>Listing &amp; Categorizing</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:listdrafts-module">ListDrafts</a></strong> — module for listing Draft Pages on site</li>
+<li><strong><a href="/doc-modules:listpages-module">ListPages</a></strong> — module for selecting, processing and listing pages</li>
+<li><strong><a href="/doc-modules:countpages-module">CountPages</a></strong> — module for counting pages</li>
+<li><strong><a href="/doc-modules:listusers-module">ListUsers</a></strong> — module for selecting, processing and listing users</li>
+<li><strong><a href="/doc-modules:tagcloud-module">TagCloud</a></strong> — creates a customizable tag cloud for tagged pages</li>
+<li><strong><a href="/doc-modules:pagecalendar-module">PageCalendar</a></strong> — lists number of new pages per year/month (nice for blogging)</li>
+<li><strong><a href="/doc-modules:pagetree-module">PageTree</a></strong> — displays a nested tree of pages connected by parenthood</li>
+<li><strong><a href="/doc-modules:backlinks-module">Backlinks</a></strong> — lists pages that link back to the current page</li>
+<li><strong><a href="/doc-modules:wantedpages-module">WantedPages</a></strong> — lists not existing pages, but linked from somewhere</li>
+<li><strong><a href="/doc-modules:orphanedpages-module">OrphanedPages</a></strong> — lists existing pages, but not linked from anywhere</li>
+<li><strong><a href="/doc-modules:categories-module">Categories</a></strong> — module for listing categories in the current site</li>
+</ul>
+</div>
+<div class="module-infobox">
+<h2 id="toc1"><span>Users &amp; Members</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:watchers-module">Watchers</a></strong> — list watchers of the page / category / site</li>
+<li><strong><a href="/doc-modules:members-module">Members</a></strong> — list members within a site</li>
+<li><strong><a href="/doc-modules:join-module">Join</a></strong> — allow users to join the site with one click</li>
+<li><strong><a href="/doc-modules:sendinvitations-module">SendInvitations</a></strong> — allow all members of a Wiki to send email invitations</li>
+<li><strong><a href="/doc-modules:whoinvited-module">WhoInvited</a></strong> — check who invited a particular member</li>
+</ul>
+</div>
+<div class="module-infobox">
+<h2 id="toc2"><span>Miscellaneous</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:css-module">CSS</a></strong> — lets you add custom CSS to any page.</li>
+<li><strong><a href="/doc-modules:newpage-module">NewPage</a></strong> — makes creation of new pages easier.</li>
+<li><strong><a href="/doc-modules:redirect-module">Redirect</a></strong> — performs a "301" redirect from a page with optional URL mapping</li>
+<li><strong><a href="/doc-modules:themepreviewer-module">ThemePreviewer</a></strong> — allows previewing themes without altering Site configuration</li>
+<li><strong><a href="/doc-modules:mailform-module">MailForm</a></strong> — define a form, let others fill it and receive the forms via email</li>
+<li><strong><a href="/doc-modules:petitionadmin-module">PetitionAdmin</a></strong> — allows you to create online petition campaigns (like <a href="http://www.noooxml.org/petition">this one</a>)</li>
+<li><strong><a href="/doc-modules:sitegrid-module">SiteGrid</a></strong> — creates a grid of sites' thumbnails with descriptions</li>
+<li><strong><a href="/doc-modules:featuredsite-module">FeaturedSite</a></strong> — created clickable bigger thumbnail of site with a description</li>
+</ul>
+</div>
+<div class="module-infobox">
+<h2 id="toc3"><span>News &amp; Feeds</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:feed-module">Feed</a></strong> — imports RSS/Atom feeds from almost any web location and displays them in a customizable way</li>
+<li><strong><a href="/doc-modules:frontforum-module">FrontForum</a></strong> — uses forum categories to create news items to put on the pages and create RSS feeds</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="module-infobox">
+<h2 id="toc4"><span>Forum &amp; Discussion</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:comments-module">Comments</a></strong> — put comments below page content; a cool one!</li>
+<li><strong><a href="/doc-modules:recentposts-module">RecentPosts</a></strong> — displays recent forum posts</li>
+<li><strong><a href="/doc-modules:minirecentthreads-module">MiniRecentThreads</a></strong> — displays recent forum topics</li>
+<li><strong><a href="/doc-modules:miniactivethreads-module">MiniActiveThreads</a></strong> — displays most active forum topics within some time period</li>
+<li><strong><a href="/doc-modules:minirecentposts-module">MiniRecentPosts</a></strong> — displays recent forum posts</li>
+</ul>
+</div>
+<div class="module-infobox">
+<h2 id="toc5"><span>Page Rating</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:rate-module">Rate</a></strong> — displays a widget used to rate pages within the page body</li>
+<li><strong><a href="/doc-modules:ratedpages-module">RatedPages</a></strong> — displays top-rated pages</li>
+</ul>
+</div>
+<div class="module-infobox">
+<h2 id="toc6"><span>Photos, Galleries, Files</span></h2>
+<ul>
+<li><strong><a href="/doc-wiki-syntax:images#gallery">Gallery</a></strong> — creates gallery with nice image presentation</li>
+<li><strong><a href="/doc-modules:flickrgallery-module">FlickrGallery</a></strong> — pulls images from <a href="http://www.flickr.com">Flickr</a></li>
+<li><strong><a href="/doc-modules:files-module">Files</a></strong> — lists all files attached to a page</li>
+</ul>
+</div>
+<div class="module-infobox">
+<h2 id="toc7"><span>Searching</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:search-module">Search</a></strong> — search one Wikidot site</li>
+<li><strong><a href="/doc-modules:searchall-module">SearchAll</a></strong> — search all Wikidot sites</li>
+<li><strong><a href="/doc-modules:searchusers-module">SearchUsers</a></strong> — search all Wikidot users</li>
+</ul>
+</div>
+<div class="module-infobox">
+<h2 id="toc8"><span>Changes</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:sitechanges-module">SiteChanges</a></strong> — list recent changes to the site content</li>
+</ul>
+</div>
+<div class="module-infobox">
+<h2 id="toc9"><span>Administration</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:managesite-module">ManageSite</a></strong> — site administration</li>
+<li><strong><a href="/doc-modules:clone-module">Clone</a></strong> — site clone tool</li>
+</ul>
+</div>
+<div class="module-infobox">
+<h2 id="toc10"><span>Deprecated</span></h2>
+<ul>
+<li><strong><a href="/doc-modules:adsenseunit-module">AdSenseUnit</a></strong> — insert AdSense unit into a panel (only for enabled sites).</li>
+<li><strong><a href="/doc-modules:membershipapply-module">MembershipApply</a></strong> — allow users to apply to the site admin(s) for membership</li>
+<li><strong><a href="/doc-modules:membershipbypassword-module">MembershipByPassword</a></strong> — when a password is specified people can become members of the site if they know the password</li>
+<li><strong><a href="/doc-modules:pages-module">Pages</a></strong> — module for listing pages within a site</li>
+<li><strong><a href="/doc-modules:childpages-module">ChildPages</a></strong> — lists child pages of a page</li>
+<li><strong><a href="/doc-modules:pagesbytag-module">PagesByTag</a></strong> — lists all pages, that are tagged with a specific tag</li>
+<li><strong><a href="/doc-modules:nextpreviouspage-module">NextPage</a></strong> — create links to the next page in the category.</li>
+<li><strong><a href="/doc-modules:nextpreviouspage-module">PreviousPage</a></strong> — create links to the previous page in the category.</li>
+<li><strong><a href="/doc:simpletodo-module">SimpleToDo</a></strong> — create simple "todo" lists</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

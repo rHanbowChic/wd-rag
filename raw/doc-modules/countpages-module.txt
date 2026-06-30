@@ -1,0 +1,151 @@
+
+<div class="page-title">
+                    CountPages Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » CountPages Module
+                    </div>
+<div id="page-content">
+<p>The CountPages module lets count the number of pages that match various criteria. CountPages is similar to the <a href="/doc-modules:listpages-module">ListPages module</a> in some ways but does not let you render page data, only a single symbol called <span style="white-space: pre-wrap;">%%total%%</span>.</p>
+<h2 id="toc0"><span>Selecting pages</span></h2>
+<p>Specify one or more of these selectors to refine the set of pages you select. Each selector adds additional constraints:</p>
+<table class="wiki-content-table">
+<tr>
+<th>Argument</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>pagetype</td>
+<td>Select by type of page</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Select by category</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Select by tags</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Select by parent page</td>
+</tr>
+<tr>
+<td>link_to</td>
+<td>Select by outgoing links</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Select by date of creation</td>
+</tr>
+<tr>
+<td>created_by</td>
+<td>Select by original author</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>Select by rating</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>Start list after an offset of pages</td>
+</tr>
+<tr>
+<td>range</td>
+<td>Select a range of pages</td>
+</tr>
+<tr>
+<td>_&lt;data-form-field-name&gt;</td>
+<td>Select by a field's value in a data form</td>
+</tr>
+</table>
+<p>Page type selector:</p>
+<ul>
+<li>"normal" means pages without underscore in name (default)</li>
+<li>"hidden" means pages starting with underscore</li>
+<li>"*" means all pages, with or without underscores</li>
+</ul>
+<p>Category selector:</p>
+<ul>
+<li>"." means current category (default)</li>
+<li>"*" means all categories</li>
+<li>else, a list of space/comma delimited categories</li>
+<li>categories are by default additive (category OR category OR category)</li>
+<li>"-category" means exclude pages in this category (AND NOT)</li>
+</ul>
+<p>Tags selector:</p>
+<ul>
+<li>"-" means pages with no tags, visible or invisible</li>
+<li>"=" means pages with any of the same visible tags as this page</li>
+<li>"==" means pages with the exact same visible tags as this page</li>
+<li>else, a list of space/comma delimited tags</li>
+<li>tags are by default additive (tag OR tag OR tag)</li>
+<li>"-tag" means pages without the tag (AND NOT)</li>
+<li>"+tag" means pages with the tag (AND)</li>
+</ul>
+<p>Parent page selector:</p>
+<ul>
+<li>"-" means pages with no parent page</li>
+<li>"=" means siblings of current page (same parent)</li>
+<li>"-=" means with different parent than current page</li>
+<li>"." means children of current page (parent is this page)</li>
+<li>else specifies a single full page name</li>
+</ul>
+<p>Outgoing links selector:</p>
+<ul>
+<li>enter a single full name of an existing page to select pages that link to that page</li>
+<li>while "." means pages that link to current page</li>
+</ul>
+<p>Creation date selector:</p>
+<ul>
+<li>"=" means created on same day as current page</li>
+<li>"yyyy" means specified year</li>
+<li>"yyyy.mm" means specified year and month</li>
+<li>optionally prefixed by "&gt;", "&lt;", "=", "&lt;=", "&gt;=", "&lt;&gt;" (default is "=")</li>
+<li>dates are not site-local but currently all UTC (GMT)</li>
+<li>or: "last n unit" where 'n' is a count (defaults to 1) and unit is "hours", "day", "week", or "month"</li>
+</ul>
+<p>Author selector:</p>
+<ul>
+<li>"=" means by created by author of current page</li>
+<li>"-=" means by not created by author of current page</li>
+<li>else, a single user name</li>
+</ul>
+<p>Rating selector:</p>
+<ul>
+<li>"n" means pages with rating equal to n</li>
+<li>"=" means pages with same rating as current page</li>
+<li>optionally prefixed by "&gt;", "&lt;", "=", "&lt;=", "&gt;=", "&lt;&gt;" (default is "=")</li>
+</ul>
+<p>Caution: When listing pages from many categories, where some categories have rating type set to + or +/- and others to "stars" (in Site Manager), selecting and ordering by rating may not funtion properly. The solution is to list and order pages from categories having the same rating mode.</p>
+<p>Offset selector:</p>
+<ul>
+<li>"n" means do not show the first n pages (default is 0)</li>
+</ul>
+<p>Range selector:</p>
+<ul>
+<li>"." means current page</li>
+<li>"before" means pages up to but not including current (in order after sorting)</li>
+<li>"after" means pages after current page (in order after sorting)</li>
+<li>"others" means pages except current page</li>
+</ul>
+<p>Data Form selector:</p>
+<ul>
+<li>Select by a field's value in a data form</li>
+<li>Syntax: <tt>_data-form-field-name="data-form-field-value"</tt></li>
+<li>Example: <tt>_gender="m"</tt> - select all pages that have 'm' set as the 'gender' field's value in the Data Form</li>
+</ul>
+<h2 id="toc1"><span>Example</span></h2>
+<div class="code">
+<pre>
+<code>[[module CountPages category="wiki,blog" tags="_closed"]]
+%%total%% active pages.
+[[/module]]</code>
+</pre></div>
+<h2 id="toc2"><span>Notes</span></h2>
+<ul>
+<li>You can put wiki syntax (e.g. for links) into the module body.</li>
+<li>This module (like most) cannot be used inside a ListPages module.</li>
+<li><span style="white-space: pre-wrap;">%%count%%</span> can be used as a synonym for <span style="white-space: pre-wrap;">%%total%%</span>.</li>
+</ul>
+</div><div id="action-area" style="display: none;"></div>

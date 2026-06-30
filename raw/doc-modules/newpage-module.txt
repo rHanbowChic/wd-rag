@@ -1,0 +1,145 @@
+
+<div class="page-title">
+                    NewPage Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » NewPage Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Displays a form that allows easier creation of new pages.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>category</tt></td>
+<td>no</td>
+<td>name of a page category</td>
+<td>none</td>
+<td>forces the given page category by prepending the page name by the <em>categoryname:</em><br/>
+Note: Cannot use <tt>_default</tt> category for this.</td>
+</tr>
+<tr>
+<td><tt>template</tt></td>
+<td>no</td>
+<td>name of a template page</td>
+<td>none</td>
+<td>a page (or comma-separated list of pages) to be used as a template for the new page</td>
+</tr>
+<tr>
+<td><tt>size</tt></td>
+<td>no</td>
+<td>any positive integer</td>
+<td>30</td>
+<td>size of the displayed input field</td>
+</tr>
+<tr>
+<td><tt>button</tt></td>
+<td>no</td>
+<td>any string</td>
+<td>"create page"</td>
+<td>text displayed within the <em>create page</em> button</td>
+</tr>
+<tr>
+<td><tt>format</tt></td>
+<td>no</td>
+<td>any valid regular expression</td>
+<td>none</td>
+<td>forces the input value to match the required format</td>
+</tr>
+<tr>
+<td><tt>tags</tt></td>
+<td>no</td>
+<td>space-separated list of tags</td>
+<td>none</td>
+<td>automatically adds given tags to created pages</td>
+</tr>
+<tr>
+<td><tt>parent</tt></td>
+<td>no</td>
+<td>name of a <tt>page</tt> or <tt>category:page</tt></td>
+<td>none</td>
+<td>automatically adds parent page to created pages</td>
+</tr>
+</table>
+<h3 id="toc2"><span>Attributes for AutoSave function</span></h3>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>mode</tt></td>
+<td>no</td>
+<td><tt>edit</tt>, <tt>save-and-refresh</tt>, <tt>save-and-go</tt></td>
+<td><tt>edit</tt></td>
+<td>"edit" takes you to an editor. "save-and-refresh" saves the page and refreshes the current page. "save-and-go" saves the page and goes to it (without editor) unless <tt>goTo</tt> attribute is passed</td>
+</tr>
+<tr>
+<td>goTo</td>
+<td>no</td>
+<td>valid page name</td>
+<td>none</td>
+<td>specifies which page to go to after automatically saving a page</td>
+</tr>
+</table>
+<p>Any page that would be used as a template (passed via the <tt>template</tt> attribute) must belong to the <tt>template</tt> category, i.e. its name should contain the <tt>template:</tt> prefix, e.g. <tt>template:pagename</tt>. And must already exist.</p>
+<p>If you choose several templates (names separated by a comma) an additional field will be displayed asking to choose a template for the page that a user wishes to create.</p>
+<p>If you want new pages to fit match a given pattern, you can use the <tt>format</tt> attribute. To learn more about regular expressions you can see the <a href="http://pl2.php.net/manual/en/reference.pcre.pattern.syntax.php" target="_blank">Pattern Syntax description</a> at the PHP main page.<br/>
+Anyway, you could do:<br/>
+<tt>format="/^[0-9]{5}$/"</tt> — page names would consist of exactly 5 numbers<br/>
+<tt>format="/^[\d]{4}[- \/.](0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])$/"</tt> — a simple expression to match a valid date (not 100% accurate, assumes all months have 31 days)<br/>
+etc.</p>
+<div class="wiki-note">
+<p>You cannot use NewPage module to create a hidden page (i.e. page whose name starts with an underscore — "_"). On the feedback site, there is a wish to change it. If you also feel this way, <a href="http://feedback.wikidot.com/wish:404">rate it up</a>.</p>
+</div>
+<h2 id="toc3"><span>Examples</span></h2>
+<p>To make creating pages within the <em>doc</em> category:</p>
+<div class="code">
+<pre>
+<code>[[module NewPage category="doc"]]</code>
+</pre></div>
+<p>Results in:</p>
+<div class="new-page-box" style="text-align: center; margin: 1em 0;">
+<form action="dummy.html" method="get" onsubmit="WIKIDOT.modules.NewPageHelperModule.listeners.create(event);">
+<input class="text" maxlength="128" name="pageName" size="30" style="margin: 1px" type="text"/>
+<input class="button" style="margin: 1px;" type="submit" value="Create page"/>
+<input name="categoryName" type="hidden" value="doc"/>
+</form>
+</div>
+<p>(you will not be able to create a page in the documentation section - this is just for demonstration purposes).</p>
+<p>To use a template:</p>
+<div class="code">
+<pre>
+<code>[[module NewPage template="template:module"]]</code>
+</pre></div>
+<p>To use several templates to choose from:</p>
+<div class="code">
+<pre>
+<code>[[module NewPage template="template:module,template:howto"]]</code>
+</pre></div>
+<p>And now a perfect module to insert into you side-bar for easier page creation:</p>
+<div class="code">
+<pre>
+<code>+++ Add a new page
+[[module NewPage size="15" button="new page"]]</code>
+</pre></div>
+<div style="width: 13em">
+<h3 id="toc4"><span>Add a new page</span></h3>
+<div class="new-page-box" style="text-align: center; margin: 1em 0;">
+<form action="dummy.html" method="get" onsubmit="WIKIDOT.modules.NewPageHelperModule.listeners.create(event);">
+<input class="text" maxlength="128" name="pageName" size="15" style="margin: 1px" type="text"/>
+<input class="button" style="margin: 1px;" type="submit" value="new page"/>
+</form>
+</div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

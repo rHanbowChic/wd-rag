@@ -1,0 +1,41 @@
+
+<div class="page-title">
+                    Expressions
+                </div>
+<div id="page-content">
+<p>Expressions can be used to create advence structures and applications. It allowes to use mathematic/logic syntax and 3 build in functions (abs, min, max). Expression can be maximum 256 character length.</p>
+<p><strong><span style="white-space: pre-wrap;">[[#if value | display if true | display if false ]]</span></strong><br/>
+Simple true/false checker, it treats first parameter as string and evaluate it to true/false<br/>
+false is a:</p>
+<ul>
+<li>string false</li>
+<li>string null</li>
+<li>empty string</li>
+<li>0</li>
+</ul>
+<p>everything else is true</p>
+<p><strong><span style="white-space: pre-wrap;">[[#ifexpr expression | display if true | display if false ]]</span></strong><br/>
+This syntax evaluates expression and check if it's true or not.</p>
+<p><strong><span style="white-space: pre-wrap;">[[#expr expression]]</span></strong><br/>
+It evaluates expression and display it.</p>
+<p>Examples:</p>
+<div class="code">
+<pre>
+<code>[[#expr abs(-100) ]]
+[[#expr min(4, 1, -4, 6, -10) ]]
+[[#expr max(4, 1, -4, 6, -10) ]]
+[[#expr 2*4/12-4+66%2 ]]
+[[#ifexpr 2*4/12-4+66%2 &lt; -3.5 | less than -3.5 | greater than -3.5 ]]
+[[#expr 2*(2-1) ]]
+[[#if true | display if true | display if false ]]</code>
+</pre></div>
+<blockquote>
+<p>100<br/>
+-10<br/>
+6<br/>
+-3.33333333333<br/>
+greater than -3.5<br/>
+2<br/>
+display if true</p>
+</blockquote>
+</div><div id="action-area" style="display: none;"></div>

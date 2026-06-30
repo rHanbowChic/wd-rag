@@ -1,0 +1,232 @@
+
+<div class="page-title">
+                    MailForm Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » MailForm Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>This module can be used to collect user input via a web form and receive the filled form via email. The email can be sent to any registered Wikidot users.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>to</tt></td>
+<td>no</td>
+<td>user names</td>
+<td>site admins</td>
+<td>comma-delimited list of Wikidot user names</td>
+</tr>
+<tr>
+<td><tt>button</tt></td>
+<td>no</td>
+<td>any string</td>
+<td>"send"</td>
+<td>text displayed within the <em>send</em> button</td>
+</tr>
+<tr>
+<td><tt>format</tt></td>
+<td>no</td>
+<td>"csv"</td>
+<td>none</td>
+<td>chooses alternative format of serializing the form data</td>
+</tr>
+<tr>
+<td><tt>title</tt></td>
+<td>no</td>
+<td>text</td>
+<td>"Wikidot.com - MailForm form data"</td>
+<td>title of the email containing the submitted form</td>
+</tr>
+<tr>
+<td><tt>successPage</tt></td>
+<td>no</td>
+<td>valid page name</td>
+<td>none</td>
+<td>after the form is sent the browser will be redirected to the specified page. put a "thank you" there if you wish ;-)</td>
+</tr>
+</table>
+<p>The names of the 'to' recipients may not contain spaces: to specify a user name that has spaces, replace each space with a hyphen or underscore. If you do not specify a 'to' argument, the email will be sent to all site admins.</p>
+<p>The definition of the form must be enclosed within the [[module … ]] … [[/module]] tags. The full specification of how to do this:</p>
+<p>The definition of the fields is a nested list that looks like this:</p>
+<div class="code">
+<pre><code># field1_name
+ * option1_name: value
+ * option2_name: value2
+  * suboption1_nam: value
+# field2_name
+ * ...</code></pre></div>
+where <tt>field_name</tt> is the alphanumeric identifier of the field, e.g. <tt>first_name</tt>. The options are:<br/>
+<table class="wiki-content-table">
+<tr>
+<th>option name</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>title</td>
+<td>no, but recommended!</td>
+<td>any string</td>
+<td>field_name</td>
+<td>title of the field displayed in the same row on the left</td>
+</tr>
+<tr>
+<td>type</td>
+<td>no</td>
+<td>text, textarea, select, checkbox</td>
+<td>text</td>
+<td>type of the input field</td>
+</tr>
+<tr>
+<td>size</td>
+<td>no</td>
+<td>integer</td>
+<td>30</td>
+<td>size of the input field</td>
+</tr>
+<tr>
+<td>default</td>
+<td>no</td>
+<td>value of the input</td>
+<td>none</td>
+<td>in case of the "text" or "textarea" fields it is just a string that appears inside the field; in case of "select" it must be one of the option labels</td>
+</tr>
+<tr>
+<td>hint</td>
+<td>no</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+<tr>
+<td>options</td>
+<td colspan="4">only for "select", see below</td>
+</tr>
+<tr>
+<td>rules</td>
+<td colspan="4">validation rules, see below</td>
+</tr>
+</table>
+<h3 id="toc2"><span>"Select" type</span></h3>
+<p>If your field is a "select" field, you must also provide options for it. Do so as shown:</p>
+<div class="code">
+<pre><code># field_name 
+ * title: Gender
+ * type: select
+ * default: male
+ * options:
+  * male: Male
+  * female: Female
+  * option_name: Displayed value</code></pre></div>
+<p>where the "default: …" is not required, but if provided it should match one of the names of the options.</p>
+<h3 id="toc3"><span>Validation</span></h3>
+<p>This module offers a powerful way to validate the input data. To use validation do:</p>
+<div class="code">
+<pre><code># field_name
+ * title: Validated field
+ * type: text
+ * rules:
+  * rule1_name: value
+  * rule2_name: value</code></pre></div>
+<p>where rules are:</p>
+<table class="wiki-content-table">
+<tr>
+<th>rule name</th>
+<th>allowed values</th>
+<th>description</th>
+</tr>
+<tr>
+<td>required</td>
+<td>anything, e.g. "true"</td>
+<td>if the field is required</td>
+</tr>
+<tr>
+<td>minLength</td>
+<td>integer</td>
+<td>does not allow strings shorter than limit</td>
+</tr>
+<tr>
+<td>maxLength</td>
+<td>integer</td>
+<td>does not allow strings longer than limit</td>
+</tr>
+<tr>
+<td>match</td>
+<td>perl regular expression</td>
+<td>checks the value against expression, e.g. <tt>/[a-z0-9]+/</tt> allows only lowercase letters and numbers</td>
+</tr>
+<tr>
+<td>number</td>
+<td>anything, e.g. "true"</td>
+<td>checks if numeric</td>
+</tr>
+<tr>
+<td>minValue</td>
+<td>number</td>
+<td>for numerical fields sets the lower limit</td>
+</tr>
+<tr>
+<td>maxValue</td>
+<td>number</td>
+<td>for numerical fields sets the upper limit</td>
+</tr>
+</table>
+<h2 id="toc4"><span>Examples</span></h2>
+<p>Ok, suppose you are making some kind of conference registration and want to grab participants' data:</p>
+<div class="code">
+<pre><code>[[module MailForm title="New message from MailForm documentation page"]]
+# name
+ * title: Your name
+ * type: text
+ * rules:
+  * required: true 
+# affiliation
+ * title: Institute/Organization/Company
+ * hint: leave blank in none
+# address 
+ * title: Address
+ * rules:
+  * required: true 
+  * minLength: 2
+# address2
+ * title: Address (cont.)
+# country
+ * title: Country
+ * rules:
+  * minLength: 2
+# phone
+ * title: Phone
+# email
+ * title: Email
+ * type: text
+ * rules:
+  * match: /^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+$/
+# payment
+ * title: I will pay by
+ * type: select
+ * options:
+  * creditcard: Credit card
+  * banktransfer: Bank wire transfer
+  * desk: At the registration desk
+  * na: Not applicable
+# logging
+ * title: Please find me a hotel
+ * type: checkbox
+ * hint: we will contact you via email if yes
+# comments
+ * type: textarea
+ * title: Extra comments
+ * rules:
+  * maxLength: 500
+[[/module]]</code></pre></div>
+<p><strong>Note:</strong> The following image depicts the output of the prior MailForm code and is non-interactive.</p>
+<div style="max-width: 472px;"><img alt="Example form requesting for contact information and a message." class="image" src="https://www.wdfiles.com/local--files/doc-modules:mailform-module/wikidot-form-example.png" style="width: 100%;"/></div>
+</div><div id="action-area" style="display: none;"></div>

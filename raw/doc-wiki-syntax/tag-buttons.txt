@@ -1,0 +1,47 @@
+
+<div class="page-title">
+                    Button for tag update
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Button for tag update
+                    </div>
+<div id="page-content">
+<p>You can use <tt><span style="white-space: pre-wrap;">[[button set-tags &lt;tag_alterations&gt; text="&lt;button_text&gt;"]]</span></tt> to change page tags easily.</p>
+<p>&lt;tag_alterations&gt; is one or more of the following (separated by space):</p>
+<ul>
+<li><tt>+tag</tt> — will add a tag to the page if not already present</li>
+<li><tt>-tag</tt> — will remove a tag from the page if present</li>
+<li><tt>-*</tt> — will remove all the visible tags from the page (those not starting from "_")</li>
+<li><tt>-_*</tt> — will remove all the hidden tags from the page (those starting from "_")</li>
+</ul>
+<p>The action will happen when user clicks on the button and has permissions to edit the page. The page will reload afterwards (this is useful if you have some iftags constructions on the page).</p>
+<p>Any tag removal will happen before tag addition.</p>
+<p>Examples:</p>
+<table class="wiki-content-table">
+<tr>
+<th>code</th>
+<th>creates button that … when clicked</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[button set-tags +tag1 -tag2 text="Change tags"]]</span></tt></td>
+<td>adds tag <tt>tag1</tt> and removes tag <tt>tag2</tt></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[button set-tags +favorite +_book -_movie text="Change tags"]]</span></tt></td>
+<td>add tags <tt>favorite</tt> and <tt>_book</tt> and removes tag <tt>_movie</tt></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[button set-tags +favorite -* text="Change tags"]]</span></tt></td>
+<td>add tags <tt>favorite</tt> and removes other visible tags (tags starting with "_" are kept)</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[button set-tags -* -_* text="Change tags"]]</span></tt></td>
+<td>clears all the tags</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[button set-tags -* +favorite +_book text="Change tags"]]</span></tt></td>
+<td>adds tag favorite, removes other visible tags and adds tag _book keeping all tags starting with "_"</td>
+</tr>
+</table>
+<p>Class and style attributes work like for standalone buttons for page actions.</p>
+</div><div id="action-area" style="display: none;"></div>

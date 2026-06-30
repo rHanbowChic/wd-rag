@@ -1,0 +1,68 @@
+
+<div class="page-title">
+                    Comments Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Comments Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Inserts page discussion below page contents. A very useful module if you want to comment contents of the page.</p>
+<p>By default, if the visitor has enough permissions, the form for comments is already open. This can be changed by setting the <tt>hideForm="true"</tt> attribute.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>title</td>
+<td>no</td>
+<td>text string</td>
+<td>""</td>
+<td>shows alternate heading for the comments block</td>
+</tr>
+<tr>
+<td>hide</td>
+<td>no</td>
+<td><tt>"true"</tt></td>
+<td><tt>"false"</tt></td>
+<td>hides the discussion and requires user click to show it</td>
+</tr>
+<tr>
+<td>hideForm</td>
+<td>no</td>
+<td><tt>"true"</tt>, <tt>"yes"</tt></td>
+<td><tt>"false"</tt></td>
+<td>does not display the open input form by default, just a link to add a comment</td>
+</tr>
+<tr>
+<td>order</td>
+<td>no</td>
+<td><tt>"reverse"</tt>, <tt>"forwards"</tt></td>
+<td>forwards</td>
+<td>If set to <tt>"reverse"</tt>, this shows comments in reverse order, newest above oldest</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>Initially hidden discussion.</p>
+<div class="code">
+<pre>
+<code>[[module Comments hide="true"]]</code>
+</pre></div>
+<p>Full discussion within a page.</p>
+<div class="code">
+<pre>
+<code>[[module Comments]]</code>
+</pre></div>
+<p>Make the comments block be listed in [[toc]] (by disabling the default heading and insert a heading manually):</p>
+<div class="code">
+<pre>
+<code>+ Comments
+
+[[module Comments]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

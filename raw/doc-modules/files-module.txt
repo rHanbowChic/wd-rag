@@ -1,0 +1,19 @@
+
+<div class="page-title">
+                    Files Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Files Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>This module lists all files attached to a page</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>none</p>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>List all files attached to a page</p>
+<div class="code">
+<pre>
+<code>[[module Files]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

@@ -1,0 +1,53 @@
+
+<div class="page-title">
+                    Join Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Join Module
+                    </div>
+<div id="page-content">
+<p>The <tt>Join</tt> module provides an action button that has the same functionality as the "Join this site" action on the top toolbar shown on free sites. When a user clicks the button, the Join module first ensures that the user has an account (and asks anonymous users to create an account) and then attempts to make the user a member of the site.</p>
+<p>The Join module has these arguments:</p>
+<ul>
+<li><strong>button="text string"</strong> — specifies the text for the button, which is "Join this site" by default.</li>
+<li><strong>class="css-class"</strong> — specifies CSS class for the <tt>div</tt> element containing the button, allowing custom styling</li>
+</ul>
+<p>The precise behavior of the Join module depends on the access policy of the site:</p>
+<ul>
+<li>On open sites, the user becomes a member instantly.</li>
+<li>On closed and private sites, the user must provide a password or apply to join the site, depending on the access policy configuration.</li>
+</ul>
+<hr/>
+<p><strong><span style="color: #880000">Note:</span></strong></p>
+<p>When you create the join module on your site you will not see the join button when you save the page, and you might think it hasn't worked. The button doesn't display because you are already a member of your site and the module does not display the button for those that are already a member of your site. This is because they don't need to join the site again.</p>
+<p>There are two ways to check to see how the button looks when non-members visit your site:</p>
+<ul>
+<li>You can edit the page containing <span style="white-space: pre-wrap;">[[module Join]]</span> and then <em>preview</em> the page.</li>
+<li>You can sign out of your site. After the page refreshes, you will then see the button. You can then sign in again to carry on working on your site (and you won't see the button).</li>
+</ul>
+<hr/>
+<p>Here is the simplest example of use:</p>
+<div class="code">
+<pre>
+<code>[[module Join]]</code>
+</pre></div>
+<p>Here is an example that specifies the button text:</p>
+<div class="code">
+<pre>
+<code>[[module Join button="Join this site, it is cool!"]]</code>
+</pre></div>
+<p>Join button with custom styling:</p>
+<div class="code">
+<pre>
+<code>[[module Join class="my-join-button"]]</code>
+</pre></div>
+<p>If you use custom styling, remember to define the class in your custom CSS. The default class for the join box is ".join-box" and you can style this using custom CSS like this:</p>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-identifier">.join-box</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">background-image:</span><span class="hl-code"> url(yourimage.png)
+</span><span class="hl-brackets">}</span>
+</pre></div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

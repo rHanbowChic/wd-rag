@@ -1,0 +1,32 @@
+
+<div class="page-title">
+                    Include
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Include
+                    </div>
+<div id="page-content">
+<p>If you want to include contents of another page use:</p>
+<div class="code">
+<pre><code>[[include pagename]]</code></pre></div>
+<p>or</p>
+<div class="code">
+<pre><code>[[include :sitename:pagename]]</code></pre></div>
+<p>The <em>include</em> tag should start and end with a newline. <span style="white-space: pre-wrap;">[[include]]</span> tags are parsed <em>inside</em> code blocks. To prevent an <span style="white-space: pre-wrap;">[[include]]</span> tag from being parsed, put a space in front of it. This does make copy/paste of example code that contains <span style="white-space: pre-wrap;">[[include]]</span> tags a problem.</p>
+<p>The sitename can be a Wikidot subdomain (e.g. :www) or a full name, including a custom domain.</p>
+<p>The <tt>[[include]]</tt> tag can also take parameters and substitute variables in the included source. To denote variables in the included page use:</p>
+<div class="code">
+<pre><code>{$var1}, {$number_books}, {$title}, {$variable_name}, {$variableName}</code></pre></div>
+<p>and in the including page use:</p>
+<div class="code">
+<pre><code> [[include pagename
+|var1=value1
+|number_books=43
+|title=Best Wiki Ever
+|variable_name=just a variable
+|variableName=another variable
+]]</code></pre></div>
+<p>As you can see you can split variable definitions over several lines for cleaner code.</p>
+<p><strong>NOTE: includes and images/files</strong>: The <tt>[[include]]</tt> works just by inserting the page source at a given place. If you have any images or files attached in the included page and you refer to them as <span style="white-space: pre-wrap;">[[image filename.jpg]]</span> in the included page, please rather use the image/file source with the name of the page too, e.g. <span style="white-space: pre-wrap;">[[image </span><strong>included-page/</strong>filename.jpg]]</p>
+<p>Includes across sites are called <em>cross-site includes</em> or CSIs. CSIs are a powerful way to link page templates and code from other sites.</p>
+</div><div id="action-area" style="display: none;"></div>

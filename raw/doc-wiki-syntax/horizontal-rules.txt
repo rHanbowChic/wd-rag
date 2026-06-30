@@ -1,0 +1,10 @@
+
+<div class="page-title">
+                    Horizontal Rules
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Horizontal Rules
+                    </div>
+<div id="page-content">
+<p>Use four dashes or more (<tt><span style="white-space: pre-wrap;">----</span></tt>) to create a horizontal rule.</p>
+</div><div id="action-area" style="display: none;"></div>

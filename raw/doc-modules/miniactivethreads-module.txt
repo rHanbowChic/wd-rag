@@ -1,0 +1,37 @@
+
+<div class="page-title">
+                    MiniActiveThreads Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » MiniActiveThreads Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Displays the most active threads within the last 7 days in a compact form. Thread title, date started and total number of posts is displayed.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>limit</tt></td>
+<td>no</td>
+<td>positive integer</td>
+<td>5</td>
+<td>how many threads to print</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>The code:</p>
+<div class="code">
+<pre>
+<code>+++ Most active topics (last week)
+
+[[module MiniActiveThreads limit="5"]]</code>
+</pre></div>
+<p>displays the most active forum threads within last 7 days.</p>
+</div><div id="action-area" style="display: none;"></div>

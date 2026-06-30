@@ -1,0 +1,45 @@
+
+<div class="page-title">
+                    YouTube and other external content
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » YouTube and other external content
+                    </div>
+<div id="page-content">
+<h3 id="toc0"><span>Data form field</span></h3>
+<p>To upload a YouTube video to your data form you need to use a <strong>wiki</strong> field. The user pastes the html embed code into the field on the dat aform.</p>
+<h3 id="toc1"><span>Layout</span></h3>
+<p>To display it, above the <span style="white-space: pre-wrap;">====</span> separator use <span style="white-space: pre-wrap;">[[html]]</span> tags and form_raw as follows:</p>
+<div class="code">
+<pre>
+<code>[[html]]
+%%form_raw{field}%%
+[[/html]]</code>
+</pre></div>
+<p><span style="text-decoration: underline;">Example</span></p>
+<ul>
+<li>add a wiki field to the data form:</li>
+</ul>
+<div class="code">
+<pre>
+<code>  bandvideo:
+    label: Video
+    type: wiki</code>
+</pre></div>
+<ul>
+<li>above the separator you add an <span style="white-space: pre-wrap;">[[html]]</span> block and <span style="white-space: pre-wrap;">%%form_raw{bandvideo}%%</span> to display the video:</li>
+</ul>
+<div class="code">
+<pre>
+<code>[[html]]
+%%form_raw{bandvideo}%%
+[[/html]]</code>
+</pre></div>
+<ul>
+<li>the user pastes the YouTube embed code into the field:</li>
+</ul>
+<img alt="df_video.jpg" class="image" src="https://www.wdfiles.com/local--files/doc-data-forms:youtube/df_video.jpg"/>
+<ul>
+<li>the result is</li>
+</ul>
+<img alt="df_video2.jpg" class="image" src="https://www.wdfiles.com/local--files/doc-data-forms:youtube/df_video2.jpg"/></div><div id="action-area" style="display: none;"></div>

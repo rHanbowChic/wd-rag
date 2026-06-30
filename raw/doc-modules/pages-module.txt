@@ -1,0 +1,83 @@
+
+<div class="page-title">
+                    Pages Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Pages Module
+                    </div>
+<div id="page-content">
+<p><strong>This module is deprecated. Use the <a href="/doc:listpages-module">ListPages module</a> instead.</strong></p>
+<h2 id="toc0"><span>Description</span></h2>
+<p>The <em>Pages</em> module is able to list pages within a site or within a category.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>category</td>
+<td>no</td>
+<td>name of an existing category</td>
+<td>none</td>
+<td>limits the listing to the specified category</td>
+</tr>
+<tr>
+<td>details</td>
+<td>no</td>
+<td>"true"</td>
+<td>none</td>
+<td>print extra information about pages</td>
+</tr>
+<tr>
+<td>preview</td>
+<td>no</td>
+<td>"true"</td>
+<td>none</td>
+<td><span style="text-decoration: line-through;">prints a short preview of the page</span> (This parameter is temporarily ignored due to performance reasons. It will come back soon)</td>
+</tr>
+<tr>
+<td>order</td>
+<td>no</td>
+<td><tt>dateCreatedDesc</tt><br/>
+<tt>dateCreatedAsc</tt><br/>
+<tt>dateEditedDesc</tt><br/>
+<tt>dateEditedAsc</tt><br/>
+<tt>titleDesc</tt><br/>
+<tt>titleAsc</tt></td>
+<td><tt>titleAsc</tt></td>
+<td>selects ordering of the pages</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>no</td>
+<td>any positive integer</td>
+<td>none</td>
+<td>how many pages to return; if you omit this all pages will be listed</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>Print only pages from the <em>_default</em> category with details:</p>
+<div class="code">
+<pre>
+<code>[[module Pages category="_default" details="true"]]</code>
+</pre></div>
+<p>Print all pages with details and preview:</p>
+<div class="code">
+<pre>
+<code>[[module Pages details="true" preview="true"]]</code>
+</pre></div>
+<p>10 most recently edited pages</p>
+<div class="code">
+<pre>
+<code>[[module Pages order="dateEditedDesc" limit="10"]]</code>
+</pre></div>
+<p>10 most recently created pages</p>
+<div class="code">
+<pre>
+<code>[[module Pages order="dateCreatedDesc" limit="10"]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

@@ -1,0 +1,77 @@
+
+<div class="page-title">
+                    Displaying the results
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Displaying the results
+                    </div>
+<div id="page-content">
+<p>If you just save the <span style="white-space: pre-wrap;">[[form]]..[[/form]]</span> structure then create pages, each page will have simple layout with each field under the previous one in the order the form was structured. With this simple layout any images uploaded won't be displayed, just a link to the image.</p>
+<p>But you can layout the fields that are displayed in any way you like and display uploaded images and videos. To do this you need to divide the live template page into 2 areas with <span style="white-space: pre-wrap;">====</span> separator between them:</p>
+<p>The <span style="white-space: pre-wrap;">[[form]]..[[/form]]</span> data form goes at the bottom of the page. Above that is a separator, <span style="white-space: pre-wrap;">====</span>, and then above the separator is how you want the form to be displayed on the page. This might be just the fields, it might be a table or it might be a more complex layout using divs, modules, tables and css. You display the data for the form using the following syntax. In place of the word field use</p>
+<table class="wiki-content-table">
+<tr>
+<th>Variable</th>
+<th>Usage</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">%%form_data{field}%%</span></tt></td>
+<td>Displays the content of the chosen field. This is used for essentially everything except urls (images, video, email, etc.).</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">%%form_raw{field}%%</span></tt></td>
+<td>Displays unformatted content of the chosen field. This is used for url information (images, video, etc.) and when advanced Wikidot syntax is necessary (includes, modules).</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">%%form_label{field}%%</span></tt></td>
+<td>Displays the field's label if any.</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">%%form_hint{field}%%</span></tt></td>
+<td>Displays the hint used for the field, if any.</td>
+</tr>
+</table>
+<p>Using the form we created above, the dataform structure, separator and layout are shown below with a very simple layout:</p>
+<div class="code">
+<pre>
+<code>[[f&lt;image %%form_raw{bandimage}%% width="150px"]]
+
+++ %%title%%
+
+Band type: %%form_data{type}%%
+Band website: %%form_data{bandwebsite}%%
+Is the band currently recording?: %%form_data{current}%%
+
+====
+
+[[form]]
+fields:
+  type:
+    label: Music type
+    type: select
+    values:
+      0: Classical
+      1: Country
+      2: Folk
+      3: Indie
+      4: Jazz
+      5: Pop
+      6: Rock
+    default: 6
+  bandimage:
+    label: Image
+    type: file
+  bandwebsite:
+    label: Band website
+    type: url
+  current:
+    label: Currently Recording
+    type: select
+    values:
+      0: "Yes"
+      1: "No"
+    default: 0
+[[/form]]</code>
+</pre></div>
+<p>The result is:</p>
+<img alt="df_queen.jpg" class="image" src="https://www.wdfiles.com/local--files/doc-data-forms:displaying/df_queen.jpg"/></div><div id="action-area" style="display: none;"></div>

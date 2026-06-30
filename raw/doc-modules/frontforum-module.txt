@@ -1,0 +1,160 @@
+
+<div class="page-title">
+                    FrontForum Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » FrontForum Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Uses forum discussions to create news system (with comments) to put on the pages. Also can create RSS feeds.</p>
+<p>In more details - each new forum thread from selected forum categories is used to create new news item (first post makes the body). Several parameters allow customization.</p>
+<p>If RSS feed is created a link will also be put into the document head (feed info should appear in browsers automatically) and below the news items.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>category</td>
+<td>yes</td>
+<td>semicolon-separated integers</td>
+<td>none</td>
+<td>numerical IDs of the forum categories (look at the URL address); multiple categories can be used to create news</td>
+</tr>
+<tr>
+<td>feed</td>
+<td>no</td>
+<td>alphanumeric</td>
+<td>none</td>
+<td>if present - RSS feed will be created with the filename equal to its value</td>
+</tr>
+<tr>
+<td>feedTitle</td>
+<td>no</td>
+<td>string</td>
+<td>"<em>sitename</em> feed"</td>
+<td>title of the feed</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>no</td>
+<td>number</td>
+<td>20</td>
+<td>how many items should be displayed</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>no</td>
+<td>number</td>
+<td>0</td>
+<td>how many items to omit from the beginning?</td>
+</tr>
+<tr>
+<td>fixRelativeLinks</td>
+<td>no</td>
+<td>true</td>
+<td>none</td>
+<td>fixes links for forum posts if you're using categories from external forums, e.g. Wikidot News / Changelog etc.</td>
+</tr>
+</table>
+<p><strong>Category IDs</strong> can be found when looking at the URL address of the page which lists the threads in the category. It looks like this:</p>
+<p>http://community.wikidot.com/forum/c-<strong>12</strong>/bugs-and-problems</p>
+<p>So in this case the category ID is <strong>12</strong>.</p>
+<h2 id="toc2"><span>Item format</span></h2>
+<p>A custom format for displaying news items can be chosen. To specify a custom format one should use module invocation:</p>
+<div class="code">
+<pre>
+<code>[[module FrontForum category="..."]]
+&lt;custom format&gt;
+[[/module]]</code>
+</pre></div>
+<p>where the inner <tt>&lt;custom format&gt;</tt> element is any block of text following the wiki-syntax, where special variables can be used:</p>
+<table class="wiki-content-table">
+<tr>
+<th>variable</th>
+<th>aliases</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>%%title%%</tt></td>
+<td></td>
+<td>title of the news item</td>
+</tr>
+<tr>
+<td><tt>%%linked_title%%</tt></td>
+<td><tt>%%title_linked%%</tt></td>
+<td>title of the news item linking to the original forum thread</td>
+</tr>
+<tr>
+<td><tt>%%link%%</tt></td>
+<td></td>
+<td>URL pointing to the original forum thread</td>
+</tr>
+<tr>
+<td><tt>%%author%%</tt></td>
+<td></td>
+<td>prints author of the thread</td>
+</tr>
+<tr>
+<td><tt>%%date%%</tt></td>
+<td></td>
+<td>prints posting date</td>
+</tr>
+<tr>
+<td><tt>%%date|<em>format</em>%%</tt></td>
+<td></td>
+<td>prints posting date with a custom format. Most tokens from php's <a href="http://php.net/manual/en/function.strftime.php">strftime</a> are accepted. You may find <a href="http://community.wikidot.com/howto:frontforum-date-variable">the howto</a> contributed by community useful.</td>
+</tr>
+<tr>
+<td><tt>%%comments%%</tt></td>
+<td></td>
+<td>number of comments = number of threads posts - 1</td>
+</tr>
+<tr>
+<td><tt>%%category%%</tt></td>
+<td></td>
+<td>forum category where the thread belongs (linked)</td>
+</tr>
+<tr>
+<td><tt>%%description%%</tt></td>
+<td><tt>%%short%%</tt>, <tt>%%summary%%</tt></td>
+<td>short summary of the item</td>
+</tr>
+<tr>
+<td><tt>%%content%%</tt></td>
+<td><tt>%%text%%</tt>, <tt>%%long%%</tt>, <tt>%%body%%</tt></td>
+<td>full content of the item (post)</td>
+</tr>
+</table>
+<p>The default format is:</p>
+<div class="code">
+<pre>
+<code>+ %%linked_title%%
+
+by %%author%% %%date|%O ago (%e %b %Y, %H:%M %Z)%%
+
+%%content%%
+
+%%comments%% | category: %%category%%</code>
+</pre></div>
+<h2 id="toc3"><span>Examples</span></h2>
+<p>The news from the <a href="/start">main Wikidot site</a> use the following code to produce both the news on the main site and a feed:</p>
+<div class="code">
+<pre>
+<code>[[module FrontForum category="8" feed="news" feedTitle="Wikidot site news"]]
+++ %%linked_title%%
+
+%%date|%e %b %Y, %H:%M %Z (%O ago)%%
+
+%%content%%
+
+%%comments%% | category: %%category%%
+[[/module]]</code>
+</pre></div>
+<p>You should change the <tt>category</tt> and <tt>feedTitle</tt> parameters of course to match your own Site.</p>
+</div><div id="action-area" style="display: none;"></div>

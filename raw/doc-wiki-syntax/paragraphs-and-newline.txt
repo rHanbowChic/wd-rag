@@ -1,0 +1,49 @@
+
+<div class="page-title">
+                    Paragraphs and newlines
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Paragraphs and newlines
+                    </div>
+<div id="page-content">
+<p>Paragraphs are separated by two new lines. One new line produces a… new line.</p>
+<div class="code">
+<pre>
+<code>First paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+Second paragraph. Aenean a libero. Vestibulum adipiscing, felis ac faucibus imperdiet, erat lacus accumsan neque, vitae nonummy lorem pede ac elit.
+Just a new line.
+Another new line.</code>
+</pre></div>
+<p>First paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p>Second paragraph. Aenean a libero. Vestibulum adipiscing, felis ac faucibus imperdiet, erat lacus accumsan neque, vitae nonummy lorem pede ac elit.<br/>
+Just a new line.<br/>
+Another new line.</p>
+<p>Line-Break:<br/>
+there is a special character used for line-break at the end of a line which does not start a new paragraph and is very useful in tables or divs where it is sometimes needed:<br/>
+it contains a "space" and "underscore" (and then "enter" ) to insert such "\n" in the code and start at the next line.</p>
+<p>The difference is not easy to show ( because spaces + enter are rendered also in Code blocks to nearly one line):</p>
+<div class="code">
+<pre>
+<code>Only 5x space+ Enter:
+
+Last line after 5 x enter 
+
+With special Line-Break: _
+ _
+ _
+ _
+ _
+Last line after 5 x special line-Break</code>
+</pre></div>
+<br/>
+Only 5x space+ Enter:
+<p>Last line after 5 x enter</p>
+<p>With special Line-Break:<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Last line after 5 x special line-Break</p>
+<p>Do not forget that spaces alone or empty lines are rendered to one line!</p>
+</div><div id="action-area" style="display: none;"></div>

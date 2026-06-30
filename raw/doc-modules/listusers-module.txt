@@ -1,0 +1,46 @@
+
+<div class="page-title">
+                    ListUsers Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » ListUsers Module
+                    </div>
+<div id="page-content">
+<p>The ListUsers module produces formatted output that lets you report on a set of users working with a site.</p>
+<p>The current implementation of the module outputs a block of text for the currently logged user only.</p>
+<div class="code">
+<pre>
+<code>[[module ListUsers users="."]]
+module body
+[[/module]]</code>
+</pre></div>
+<p>Module body cannot contain <span style="white-space: pre-wrap;">[[code]]</span> or <span style="white-space: pre-wrap;">[[html]]</span>. In case it contains those tags, module will not work at all.</p>
+<table class="wiki-content-table">
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>number</td>
+<td>The current user's ID number</td>
+</tr>
+<tr>
+<td>title</td>
+<td>The current user's title or name</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The current user's name in unix format (lowercase, no spaces)</td>
+</tr>
+</table>
+<h1 id="toc0"><span>Example:</span></h1>
+<div class="code">
+<pre>
+<code>[[module ListUsers users="."]]
+**You are user number %%number%%, %%title%% (%%name%%)!**
+[[/module]]</code>
+</pre></div>
+<h1 id="toc1"><span>In action:</span></h1>
+<p>This code prints nothing if user is anonymous.</p>
+<p>To comment or discuss on the planned design for this module <a href="http://projects.wikidot.com/thread:129">please visit the projects forum</a>.</p>
+</div><div id="action-area" style="display: none;"></div>

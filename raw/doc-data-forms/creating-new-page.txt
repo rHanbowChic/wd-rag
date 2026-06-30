@@ -1,0 +1,26 @@
+
+<div class="page-title">
+                    Creating a new page
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Creating a new page
+                    </div>
+<div id="page-content">
+<p>You can create a new page in your data form category in three ways:</p>
+<p>1) in your browser address bar, enter the category and pagename after the sitename, for example <span style="white-space: pre-wrap;">http://yoursite.wikidot.com/</span><strong>band:genesis</strong>. Then press Enter.</p>
+<p>2) create a <a href="http://www.wikidot.com/doc:newpage-module" target="_blank">NewPage module</a> button. This method allows you to set the category, parent page, any tags you want when the page is saved and the text of the button. for example:</p>
+<div class="code">
+<pre>
+<code>Enter the name of the band and press the button:
+[[module NewPage size="30" category="band" parent="bands" tags="rock" button="Add a new rock band"]]</code>
+</pre></div>
+<p>3) use the NewPage Button at <a href="http://snippets.wikidot.com/code:newpage-button" target="_blank">http://snippets.wikidot.com/code:newpage-button</a> which is an excellent snippet created by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/james-kanjo" onclick="WIKIDOT.page.listeners.userInfo(35113); return false;"><img alt="James Kanjo" class="small" src="https://www.wikidot.com/avatar.php?userid=35113&amp;amp;size=small&amp;amp;timestamp=1398764048" style="background-image:url(https://www.wikidot.com/userkarma.php?u=35113)"/></a><a href="http://www.wikidot.com/user:info/james-kanjo" onclick="WIKIDOT.page.listeners.userInfo(35113); return false;">James Kanjo</a></span>. Using our band example, if you use this you will need to change the name of the band when you edit the form from <em>Band</em> to the actual name of the band.</p>
+<p><span style="white-space: pre-wrap;">[[include :snippets:newpage-button</span><br/>
+<span style="white-space: pre-wrap;">|size=30</span><br/>
+<span style="white-space: pre-wrap;">|category=band</span><br/>
+<span style="white-space: pre-wrap;">|name=band</span><br/>
+<span style="white-space: pre-wrap;">|parent=bands</span><br/>
+<span style="white-space: pre-wrap;">|tags=rock</span><br/>
+<span style="white-space: pre-wrap;">|button=Add a new band</span><br/>
+<span style="white-space: pre-wrap;">]]</span></p>
+</div><div id="action-area" style="display: none;"></div>

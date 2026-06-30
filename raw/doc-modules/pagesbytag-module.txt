@@ -1,0 +1,104 @@
+
+<div class="page-title">
+                    PagesByTag Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » PagesByTag Module
+                    </div>
+<div id="page-content">
+<p><strong>This module is deprecated. Use the <a href="/doc:listpages-module">ListPages module</a> with the tag and category selectors instead. Specifically:</strong></p>
+<div class="code">
+<pre>
+<code>[[module ListPages tags="@URL" OTHER PARAMETERS]]
+MODULE BODY
+[[/module]]</code>
+</pre></div>
+<h2 id="toc0"><span>Description</span></h2>
+<p>This module lists all pages, that are tagged<sup class="footnoteref"><a class="footnoteref" href="javascript:;" id="footnoteref-1" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup> with a specific tag. The scope can optionally be restricted to a single category.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>tag</tt></td>
+<td>no</td>
+<td>an all-lowercase text string</td>
+<td>none</td>
+<td>limits displayed pages to the specified tag</td>
+</tr>
+<tr>
+<td><tt>category</tt></td>
+<td>no</td>
+<td>valid category name</td>
+<td>none</td>
+<td>limits displayed pages to the specified page category</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Notes</span></h2>
+<p>If you do not specify a <tt>tag</tt> attribute, <em>PagesByTag</em></p>
+<ul>
+<li>will use a tag that is specified by adding a trailing <tt>/tag<em>/any-tagl</em></tt> to the URL, like <tt>http:<span style="white-space: pre-wrap;">//</span><em>{wiki-name}</em>.wikidot.com<span style="white-space: pre-wrap;">/</span><em>{page-name}</em><span style="white-space: pre-wrap;">/</span>tag<span style="white-space: pre-wrap;">/</span><em>{any-tag}</em></tt></li>
+<li>will displays nothing if no tag is specified in the URL</li>
+</ul>
+<p>If you do not specify a <tt>category</tt> attribute, <em>PagesByTag</em></p>
+<ul>
+<li>will use a category that is specified by adding a trailing <tt>/category<em>/any-category</em></tt> to the URL, like <tt>http:<span style="white-space: pre-wrap;">//</span><em>{wiki-name}</em>.wikidot.com<span style="white-space: pre-wrap;">/</span><em>{page-name}</em><span style="white-space: pre-wrap;">/</span>category<span style="white-space: pre-wrap;">/</span><em>{any-category}</em></tt></li>
+<li>will displays pages from all categories</li>
+</ul>
+<p>If <em>PagesByTag</em> is specified without attributes (i. e. <span style="white-space: pre-wrap;">[[module PagesByTag]]</span>), it works nicely together with <span style="white-space: pre-wrap;">[[</span><a href="http://www.wikidot.com/doc:tagcloud-module">module TagCloud</a><span style="white-space: pre-wrap;">]]</span>. If correctly set up (like on a default <a class="newpage" href="/system:page-tags">system:page-tags</a> page), <em>TagCloud</em> generates links of the form …<tt>/tag<em>/any-tag</em></tt>, which <em>PagesByTag</em> then uses to list those pages.</p>
+<h2 id="toc3"><span><a name="examples"></a>Examples</span></h2>
+<h4 id="toc4"><span>PagesByTag Standalone</span></h4>
+<div style="float:right; width:50%; padding:0 1em">
+<p><em>what you get …</em></p>
+<p><span style="font-size:smaller;">If you don't see any <em>PagesByTag</em> output here, try adding <tt>/tag<em>/any-tag</em></tt> to the end of the …<tt>/doc:pagesbytag-module</tt> URL. An example would be <a href="http://www.wikidot.com/doc:pagesbytag-module/tag/news#examples">doc:pagesbytag-module/tag/news</a></span></p>
+</div>
+<br/>
+<em>what you type …</em>
+<div class="code">
+<pre>
+<code>[[module PagesByTag]]</code>
+</pre></div>
+<div style="clear:right; height: 0px; font-size: 1px"></div>
+<h4 id="toc5"><span>PagesByTag with Tag Attribute</span></h4>
+<div style="float:right; width:50%; padding:0 1em">
+<p><em>what you get …</em></p>
+<a name="pages"></a>
+<h2>List of pages tagged with <em>news</em>:</h2>
+<div class="pages-list" id="tagged-pages-list">
+</div>
+</div>
+<br/>
+<em>what you type …</em>
+<div class="code">
+<pre>
+<code>[[module PagesByTag tag="news"]]</code>
+</pre></div>
+<div style="clear:right; height: 0px; font-size: 1px"></div>
+<h4 id="toc6"><span>PagesByTag with Tag and Category Attribute</span></h4>
+<div style="float:right; width:50%; padding:0 1em">
+<p><em>what you get …</em></p>
+<a name="pages"></a>
+<h2>List of pages tagged with <em>news</em> from category <em>_default</em>:</h2>
+<span style="float: right">(<a href="/doc-modules:pagesbytag-module/tag/news">show from all categories</a>)</span>
+<div class="pages-list" id="tagged-pages-list">
+</div>
+</div>
+<br/>
+<em>what you type …</em>
+<div class="code">
+<pre>
+<code>[[module PagesByTag tag="news" category="_default"]]</code>
+</pre></div>
+<div style="clear:right; height: 0px; font-size: 1px"></div>
+<h2 id="toc7"><span>Credits</span></h2>
+<p>The original text is located at the Wikidot Open Source Edition <a href="http://www.wikidot.org/doc:pagesbytag-module">documentation pages</a>.</p>
+<div class="footnotes-footer">
+<div class="title">Footnotes</div>
+<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. You can tag a page by clicking on the “tags” button at the bottom of a page</div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

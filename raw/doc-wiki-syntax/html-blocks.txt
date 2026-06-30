@@ -1,0 +1,34 @@
+
+<div class="page-title">
+                    Html Blocks
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Html Blocks
+                    </div>
+<div id="page-content">
+<p>Create HTML blocks by using <tt>[[html]] … <span style="white-space: pre-wrap;">[[/html]]</span></tt> tags (each on its own line). HTML block is a Code Block inserted in the IFRAME. It makes <a href="http://community.wikidot.com/howto:use-html-scripting">HTML - scripting</a> much easier.</p>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-code">[[html]]
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">h1</span><span class="hl-brackets">&gt;</span><span class="hl-code">Custom HTML</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">h1</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">Something else</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">img</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">anything.png</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">alt</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">hello ;-)</span><span class="hl-quotes">"</span><span class="hl-brackets">/&gt;</span><span class="hl-code">
+[[/html]]</span>
+</pre></div>
+</div>
+<p>All wiki syntax inside a html block is treated as literal text and not processed.</p>
+<p>You can apply styles (both by means of &lt;style type="text/css"&gt;…&lt;/style&gt; and &lt;element style="…"&gt;) to elements, but styling html and body (that are added transparently to your content if needed) is not supported. If you need any styling done to the top level elements, do this by wrapping the whole content of <span style="white-space: pre-wrap;">[[html]]</span> block in div with proper style, for example:</p>
+<div class="code">
+<pre>
+<code>[[html]]
+&lt;div style="background-color: black; color: lightgreen"&gt;
+&lt;p&gt;This is a test.&lt;/p&gt;
+&lt;/div&gt;
+[[/html]]</code>
+</pre></div>
+<p>This renders the whole HTML block black with text color light green:</p>
+<p><iframe allowtransparency="true" class="html-block-iframe" frameborder="0" src="/doc-wiki-syntax:html-blocks/html/0549a97d1b44514457c5ed9ef9e8328d5b92d229-1962558741227578935"></iframe></p>
+<p>Each HTML block on a page has a unique URL that lets you access it individually. You can do it by right clicking on the HTML block element on the rendered page and choose "Show only this frame" and check the web address.</p>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+</div><div id="action-area" style="display: none;"></div>

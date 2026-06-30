@@ -1,0 +1,61 @@
+
+<div class="page-title">
+                    Technical FAQ
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Technical FAQ
+                    </div>
+<div id="page-content">
+<h3 id="toc0"><span>Which web browsers are supported?</span></h3>
+<p>At Wikidot we use graded browser support:</p>
+<table class="wiki-content-table">
+<tr>
+<th>Browser release date</th>
+<th>Support level</th>
+</tr>
+<tr>
+<td>last 3 years</td>
+<td>full support</td>
+</tr>
+<tr>
+<td>3-5 years old</td>
+<td>partial support</td>
+</tr>
+<tr>
+<td>older than 5 years</td>
+<td>no support</td>
+</tr>
+</table>
+<hr/>
+<table class="wiki-content-table">
+<tr>
+<th>Browser brand</th>
+<th>Support level</th>
+</tr>
+<tr>
+<td>Mozilla Firefox</td>
+<td>full support</td>
+</tr>
+<tr>
+<td>Google Chrome</td>
+<td>full support</td>
+</tr>
+<tr>
+<td>Apple Safari</td>
+<td>full support</td>
+</tr>
+<tr>
+<td>mobile browsers</td>
+<td>partial support</td>
+</tr>
+<tr>
+<td>other</td>
+<td>partial support</td>
+</tr>
+</table>
+<hr/>
+<p>full support — everything should work<br/>
+partial support — core functions work, however glitches and errors in the presentation layer and interface might occur<br/>
+no support — Wikidot might work, but it comes without any guarantee</p>
+<p>To get best Wikidot experience, please use the newest browser versions available.</p>
+</div><div id="action-area" style="display: none;"></div>

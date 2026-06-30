@@ -1,0 +1,50 @@
+
+<div class="page-title">
+                    Clone Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Clone Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Makes a copy of part of, or all of the current or a specified site. The current logged user (who invokes the clone action) becomes the owner (master administrator) of the specified site.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>source</td>
+<td>no</td>
+<td>text string,<tt>"."</tt></td>
+<td>current site</td>
+<td>Specifies the site to clone. If not specified, clones the current site. If the source site is private, the user must be a member of the site.</td>
+</tr>
+<tr>
+<td>button</td>
+<td>no</td>
+<td>text string</td>
+<td>"Clone this site"</td>
+<td>Specifies the text for a button link.</td>
+</tr>
+</table>
+<h2 id="toc2"><span>How it works</span></h2>
+<p>The Clone module creates a button that occupies a line by itself. Clicking on the button shows a pop-up that asks for a destination site (which may not exist). When the clone operation is complete, the Clone module takes the user directly to the destination site.</p>
+<p>The clone has all the pages, attached files, and configuration of the original site, however:</p>
+<ul>
+<li>It has only one member, the cloner, who is the new site's master admin</li>
+<li>It is marked as private, even if the template was public</li>
+</ul>
+<h2 id="toc3"><span>Examples</span></h2>
+<p>On a template site, offer the user the opportunity to copy the site:</p>
+<div class="code">
+<pre>
+<code>[[module Clone]]</code>
+</pre></div>
+<h2 id="toc4"><span>Notes</span></h2>
+<p>Sites, even public ones, are at present clonable by default. This will be switched for Pro users.</p>
+</div><div id="action-area" style="display: none;"></div>

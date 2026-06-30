@@ -1,0 +1,83 @@
+
+<div class="page-title">
+                    RatedPages Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » RatedPages Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Displays top-rated pages. Also a category can be specified to limit the results.</p>
+<div class="wiki-note">
+<p>This module is under development and not yet complete.<br/>
+But should work as described below.</p>
+</div>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>category</tt></td>
+<td>no</td>
+<td>valid category name</td>
+<td>none</td>
+<td>limits reported pages to a single category</td>
+</tr>
+<tr>
+<td><tt>order</tt></td>
+<td>no</td>
+<td>"date-created-asc", "date-created-desc", "rating-asc", "rating-desc"</td>
+<td>"rating-desc"</td>
+<td></td>
+</tr>
+<tr>
+<td><tt>minRating</tt></td>
+<td>no</td>
+<td>integer</td>
+<td>none</td>
+<td>limits the results to the pages having rating equal or above this limit</td>
+</tr>
+<tr>
+<td><tt>maxRating</tt></td>
+<td>no</td>
+<td>integer</td>
+<td>none</td>
+<td>limits the results to the pages having rating equal or below this limit</td>
+</tr>
+<tr>
+<td><tt>limit</tt></td>
+<td>no</td>
+<td>positive integer</td>
+<td>10</td>
+<td>limits number of displayed pages</td>
+</tr>
+<tr>
+<td><tt>comments</tt></td>
+<td>no</td>
+<td>"true"/"yes"</td>
+<td>none</td>
+<td>display number of comments too</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>Display top-rated pages from the category <tt>rateit</tt></p>
+<div class="code">
+<pre>
+<code>[[module RatedPages category="rateit" limit="20" comments="true" minRating="0"]]</code>
+</pre></div>
+<p>Display "most hated" pages:</p>
+<div class="code">
+<pre>
+<code>[[module RatedPages category="rateit" order="rate-asc" limit="20" comments="true" maxRating="-1"]]</code>
+</pre></div>
+<p>Display new submissions:</p>
+<div class="code">
+<pre>
+<code>[[module RatedPages category="rateit" order="date-created-desc" limit="20" comments="true"]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

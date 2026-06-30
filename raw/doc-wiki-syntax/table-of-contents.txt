@@ -1,0 +1,44 @@
+
+<div class="page-title">
+                    Table Of Contents
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Table Of Contents
+                    </div>
+<div id="page-content">
+<p>To create a list of every heading, with a link to that heading, put a table of contents tag on its own line.</p>
+<div class="code">
+<pre>
+<code>[[toc]]
+[[f&gt;toc]] - right-float table of contents
+[[f&lt;toc]] - left-float table of contents</code>
+</pre></div>
+<p>Note that the table of contents creates a bookmark called "#toc".</p>
+<p>If you want a particular heading NOT to appear in the table of contents, append the pluses with an asterisk, like this:</p>
+<div class="code">
+<pre>
+<code>+ This section appears in the TOC
++* And this one does not
+++* Neither does this one</code>
+</pre></div>
+<br/>
+<strong>TOC example using above code</strong>
+<hr/>
+<table style="margin:0; padding:0">
+<tr>
+<td style="margin:0; padding:0">
+<div id="toc">
+<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)" style="display: none">Unfold</a></div>
+<div class="title">Table of Contents</div>
+<div id="toc-list">
+<div style="margin-left: 1em;"><a href="#toc0">This section appears in the TOC</a></div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<hr/>
+<h1 id="toc0"><span>This section appears in the TOC</span></h1>
+<h1><span>And this one does not</span></h1>
+<h2><span>Neither does this one</span></h2>
+</div><div id="action-area" style="display: none;"></div>

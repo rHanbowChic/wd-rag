@@ -1,0 +1,20 @@
+
+<div class="page-title">
+                    ManageSite Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » ManageSite Module
+                    </div>
+<div id="page-content">
+<p><strong>This module is deprecated.</strong></p>
+<h2 id="toc0"><span>Description</span></h2>
+<p>The ManageSite module provides you with a panel to manage your site, users, and so on. On new sites, the admin:manage page contains this module. You can put this module on any page but only logged-in site administrators are allowed to use the panel. Any other users will get a permission error.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>This module does not take any attributes.</p>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>Please this code on a page by itself:</p>
+<div class="code">
+<pre>
+<code>[[module ManageSite]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

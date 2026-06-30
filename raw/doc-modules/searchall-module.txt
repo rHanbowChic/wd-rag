@@ -1,0 +1,26 @@
+
+<div class="page-title">
+                    SearchAll Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » SearchAll Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>The SearchAll module lets your users search all Wikidot sites, including private sites (if they are logged in, and for private sites that they are members of). You can place the SearchAll module itself on any page, but your site <em>must</em> contain a page called "search:all" that (also) contains the SearchAll module.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>The SearchAll module does not allow any attributes.</p>
+<h2 id="toc2"><span>Example</span></h2>
+<p>On your site start page:</p>
+<div class="code">
+<pre>
+<code>++ Search all Wikidot sites
+[[module SearchAll]]
+= ([http://www.wikidot.com/doc:searching Search tips])</code>
+</pre></div>
+<p>On your site's search:all page:</p>
+<div class="code">
+<pre>
+<code>[[module SearchAll]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

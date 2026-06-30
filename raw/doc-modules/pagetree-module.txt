@@ -1,0 +1,54 @@
+
+<div class="page-title">
+                    PageTree Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » PageTree Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>This module can visualize the structure of pages connected by <em>parenthood</em> - i.e. the page tree is constructed by the fact that a page can have a <em>parent page</em>. This can be set by accessing page <em>+options</em> and clicking on <em>parent</em>.</p>
+<p>Parenthood also affects navigation since it produces a breadcrumb navigation element at the top of the page which is quite useful.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>root</td>
+<td>no</td>
+<td>page name string</td>
+<td>current page</td>
+<td>top element of the tree</td>
+</tr>
+<tr>
+<td>showRoot</td>
+<td>no</td>
+<td><tt>"true"</tt></td>
+<td><tt>"false"</tt></td>
+<td>should the root element be displayed on the top of the list?</td>
+</tr>
+<tr>
+<td>depth</td>
+<td>no</td>
+<td>integer <tt>n &gt; 0</tt></td>
+<td>none</td>
+<td>limits maximum depth of the list; <tt>n = "1"</tt> displays only child pages of the root page, <tt>n = "2"</tt> displays child pages and their child pages etc.</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>Display page tree of the documentation:</p>
+<div class="code">
+<pre>
+<code>[[module PageTree root="doc" showRoot="true"]]</code>
+</pre></div>
+<ul>
+<li>
+<a href="/doc">Doc</a>
+</li>
+</ul>
+</div><div id="action-area" style="display: none;"></div>

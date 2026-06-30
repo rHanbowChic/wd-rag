@@ -1,0 +1,7 @@
+
+<div class="page-title">
+                    Deleting a form
+                </div>
+<div id="page-content">
+<p>If you wish to remove a form from the live template, do not simply comment it out. Either delete it completely or change <span style="white-space: pre-wrap;">[[form]]</span> to something like <span style="white-space: pre-wrap;">[[x-form]]</span>. Otherwise the form will continue to be used.</p>
+</div><div id="action-area" style="display: none;"></div>

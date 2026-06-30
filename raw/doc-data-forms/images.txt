@@ -1,0 +1,70 @@
+
+<div class="page-title">
+                    Images in Data Forms
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Images in Data Forms
+                    </div>
+<div id="page-content">
+<h3 id="toc0"><span>Data form field</span></h3>
+<p>To upload an image to your dataform you need to use a <strong>file</strong> field.</p>
+<h3 id="toc1"><span>Layout</span></h3>
+<p>You display the image using <span style="white-space: pre-wrap;">%%form_raw{field}%%</span>, <span style="text-decoration: underline;">not</span> <span style="white-space: pre-wrap;">%%form_data{field}%%</span>.</p>
+<p>As with images on normal pages you can set parameters like a float or the width. For example:<br/>
+<span style="white-space: pre-wrap;">[[f&lt;image %%form_raw{field}%% width="150px"]]</span></p>
+<p>You can also combine data forms with the <a href="http://snippets.wikidot.com/code:image-box" target="_blank">image box snippet</a> created by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/timothy-foster" onclick="WIKIDOT.page.listeners.userInfo(197988); return false;"><img alt="Timothy Foster" class="small" src="https://www.wikidot.com/avatar.php?userid=197988&amp;amp;size=small&amp;amp;timestamp=1398764050" style="background-image:url(https://www.wikidot.com/userkarma.php?u=197988)"/></a><a href="http://www.wikidot.com/user:info/timothy-foster" onclick="WIKIDOT.page.listeners.userInfo(197988); return false;">Timothy Foster</a></span> which will allow you to easily add a header, caption, a float left or float-right, specify the width and add a link for the image. In the data form use a file field for the image, a text field for the header and a text field for the caption.</p>
+<p>Then to display them, above the <span style="white-space: pre-wrap;">====</span> separator use the following snippet code with <span style="white-space: pre-wrap;">%%form_raw{field}%%</span> for the image and <span style="white-space: pre-wrap;">%%form_data{field}%%</span> for each of the header and caption. You do not need to have a value in each parameter line of the snippet code. An example of how it would look is below.</p>
+<p><span style="white-space: pre-wrap;">[[include :snippets:image</span><br/>
+<span style="white-space: pre-wrap;">|image=%%form_raw{field}%%</span><br/>
+<span style="white-space: pre-wrap;">|width=150px</span><br/>
+<span style="white-space: pre-wrap;">|float=right</span><br/>
+<span style="white-space: pre-wrap;">|heading=%%form_data{field}%%</span><br/>
+<span style="white-space: pre-wrap;">|caption=%%form_data{field}%%</span><br/>
+<span style="white-space: pre-wrap;">|link=*%%form_data{bandwebsite}%%</span><br/>
+<span style="white-space: pre-wrap;">]]</span></p>
+<h3 id="toc2"><span>Where images are stored</span></h3>
+<p>On normal wiki pages you can upload an image to the page. This is not the case with data forms. When you upload an image using a data form, it places the image on its own page in the <em>file</em> category and the page is called the name of the image. So for example if your user presses the browse button in the data form and uploads an image called <strong>queen.jpg</strong>, that image is saved on the page <span style="white-space: pre-wrap;">http://yoursite.wikidot.com/</span><strong>file:queen</strong></p>
+<p>Although the <em>file</em>category is used by default for images, you can change the category the images on a data form are saved in. To do this use the category attribute as follows:</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  eventimage:
+    label: Image
+    type: file
+    category: eventimages
+[[/form]]</code>
+</pre></div>
+<p>If you had specified this in the data form structure in your live template before uploading the queen.jpg image it would have saved it at <span style="white-space: pre-wrap;">http://yoursite.wikidot.com/</span><strong>eventimages:queen</strong></p>
+<h3 id="toc3"><span>Displaying a default image</span></h3>
+<p>If you don't upload an image to a file field in a data form, older browsers like IE8 will show a box with a red x or similar. This doesn't look good and makes it seem that a mistake has been made. So, instead you can display a default image which will be displayed instead. This could be a blank image or a general image related to the site. If an image <span style="text-decoration: underline;">is</span> uploaded to the field in the data form then that image will be used instead..</p>
+<p>It needs a css module in the live template and this example also uses the image box snippet from <a href="http://snippets.wikidot.com/code:image-box" target="_blank">http://snippets.wikidot.com/code:image-box</a> to display the relevant image:</p>
+<div class="code">
+<pre>
+<code>[!-- Following CSS module is needed for the default image code below --]
+[[module CSS]]
+.form-image-default%%form_raw{bandimage}%%{ display: block !important; }
+.form-image%%form_raw{bandimage}%%{ display: none !important; }
+[[/module]]</code>
+</pre></div>
+<p><span style="white-space: pre-wrap;">[[div class="form-image"]]</span><br/>
+<span style="white-space: pre-wrap;">[[include :snippets:image</span><br/>
+<span style="white-space: pre-wrap;">|image=%%form_raw{bandimage}%%</span><br/>
+<span style="white-space: pre-wrap;">|width=150px</span><br/>
+<span style="white-space: pre-wrap;">|float=right</span><br/>
+<span style="white-space: pre-wrap;">|heading=</span><br/>
+<span style="white-space: pre-wrap;">|caption=%%form_data{band_caption}%%</span><br/>
+<span style="white-space: pre-wrap;">|link=%%form_data{band_link}%%</span><br/>
+<span style="white-space: pre-wrap;">]]</span><br/>
+<span style="white-space: pre-wrap;">[[/div]]</span><br/>
+<span style="white-space: pre-wrap;">[[div class="form-image-default" style="display: none;"]]</span><br/>
+<span style="white-space: pre-wrap;">[[include :snippets:image</span><br/>
+<span style="white-space: pre-wrap;">|image=/css:theme/blankjpg</span><br/>
+<span style="white-space: pre-wrap;">|width=150px</span><br/>
+<span style="white-space: pre-wrap;">|float=right</span><br/>
+<span style="white-space: pre-wrap;">|heading=</span><br/>
+<span style="white-space: pre-wrap;">|caption=</span><br/>
+<span style="white-space: pre-wrap;">|link=</span><br/>
+<span style="white-space: pre-wrap;">]]</span><br/>
+<span style="white-space: pre-wrap;">[[/div]]</span></p>
+</div><div id="action-area" style="display: none;"></div>

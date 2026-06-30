@@ -1,0 +1,85 @@
+
+<div class="page-title">
+                    Selecting &amp; Sorting by Data Form fields
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Selecting &amp; Sorting by Data Form fields
+                    </div>
+<div id="page-content">
+<p>Using the ListPages module you can select data from a field in the data form and you can also sort by the values within a data form field.</p>
+<h3 id="toc0"><span><a name="selecting"></a> Selecting</span></h3>
+<p>Add a field to your data form or use an existing. With our band example we have added a field to note whether the band will visit Scotland on their next tour:</p>
+<div class="code">
+<pre>
+<code> scotland:
+  label: Next tour will visit Scotland
+  type: select
+  values:
+     info: No Info
+     visit: "Yes"
+     novisit: "No"</code>
+</pre></div>
+<p>To list those where the value is "Yes" use a ListPages module and add a new parameter starting with an underscore then the fieldname, in this case <em>_scotland</em> followed by an = sign and the property of the field you want: <em>_scotland="visit"</em></p>
+<div class="code">
+<pre>
+<code>[[module ListPages category="band"  _scotland="visit" perPage="10" order="name"  separate="false" prependLine="||~ Band||~ Type ||" appendLine="||||||~ ||"]]
+|| %%title_linked%% || %%form_data{type}%% ||
+[[/module]]</code>
+</pre></div>
+<p>That produces a list of just 2 bands:</p>
+<img alt="df_scotland.png" class="image" src="https://www.wdfiles.com/local--files/doc-data-forms:selecting-and-sorting/df_scotland.png"/>
+<p>You can combine several data form selection fields to narrow down your search. For example if we wanted to just select folk bands that will tour Scotland we would use the <em>_scotland="visit"</em> selection criteria and the <em>_type="2"</em> selection criteria (because type is the data form feld for the music type, and 2 is the property of the folk value).</p>
+<div class="code">
+<pre>
+<code> type:
+   label: Music type
+   type: select
+   values:
+     0: Classical
+     1: Country
+     2: Folk
+     3: Indie
+     4: Jazz
+     5: Pop
+     6: Rock
+   default: 6</code>
+</pre></div>
+<p>Combining different selection criteria uses the AND operator, so the result must match both of these criteria. The resulting ListPages code would look like this:</p>
+<div class="code">
+<pre>
+<code>[[module ListPages category="band"  _scotland="visit" _type="2" perPage="10" order="name"  separate="false" prependLine="||~ Band||~ Type ||" appendLine="||||||~ ||"]]
+|| %%title_linked%% || %%form_data{type}%% ||
+[[/module]]</code>
+</pre></div>
+<p>and the table that is produced is:</p>
+<img alt="df_filter.png" class="image" src="https://www.wdfiles.com/local--files/doc-data-forms:selecting-and-sorting/df_filter.png"/>
+<p>You can search for pages where a particular field is empty by using <strong>_field=""</strong></p>
+<h3 id="toc1"><span><a name="sorting"></a> Sorting</span></h3>
+<p>You can also sort by data form field properties. In our band example we have created a field to store the number of albums/CDs released by the band:</p>
+<div class="code">
+<pre>
+<code> albums:
+    label: Albums/CDs released
+    type: select
+    values:
+      "00": 0
+      "01": 1
+      "02": 2
+      "03": 3
+      "04": 4
+      "05": 5
+      "06": 6
+      "07": 7
+      "08": 8
+      "09": 9
+..</code>
+</pre></div>
+<p>To sort the number of albums into descending order, use a Listpages module with the <em>order=</em>parameter followed by an underscore then the name of the field then the <em>desc</em> attribute: order="_albums desc"</p>
+<div class="code">
+<pre>
+<code>[[module ListPages category="band"  perPage="10" order="_albums desc" separate="false" prependLine="||~ Band||~ Albums ||" appendLine="||||||~ ||"]]
+|| %%title_linked%% || %%form_data{albums}%% ||
+[[/module]]</code>
+</pre></div>
+<p>In order for the sort to work correctly, numbers below 10 must have a property of 01, 02, 03 etc. although the value can still be 1, 2, 3 etc as in the example data form field above. It is the value that is displayed in the ListPages module, as shown below. As (01, 02, 03, …) are treated as octal numbers you need to enclose them by semicolons ("01", "02", "03", …) because there is no 08 and 09 in octal and they both will be 0.</p>
+<img alt="df_albums.png" class="image" src="https://www.wdfiles.com/local--files/doc-data-forms:selecting-and-sorting/df_albums.png"/></div><div id="action-area" style="display: none;"></div>

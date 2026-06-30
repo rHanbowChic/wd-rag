@@ -1,0 +1,255 @@
+
+<div class="page-title">
+                    Links
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Links
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span><a name="internal"></a>Internal links</span></h2>
+<p>Unlike some other wiki engines Wikidot.com does not process SquashedAndCapitalized words as page links. Instead any link should be marked with 3 nesting square brackets.</p>
+<p>If a page address contains disallowed characters the address will be "unixified" to contain only allowed chars. The displayed name however will maintain original form.</p>
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+<th>comments</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[link-to-a-page]]]</span></tt></td>
+<td><a class="newpage" href="/link-to-a-page">link-to-a-page</a></td>
+<td>using raw page name</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[link "TO" a; pagE]]]</span></tt></td>
+<td><a class="newpage" href="/link-to-a-page">link "TO" a; pagE</a></td>
+<td>automatic purification of destination page</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[category: sample page]]]</span></tt></td>
+<td><a class="newpage" href="/category:sample-page">sample page</a></td>
+<td>linked to a page with category</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[some page| custom text]]]</span></tt></td>
+<td><a class="newpage" href="/some-page">custom text</a></td>
+<td>using custom text</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[doc|Documentation]]]</span></tt></td>
+<td><a href="/doc">Documentation</a></td>
+<td>linking to an existing page (different color)</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[some page|]]]</span></tt></td>
+<td><a class="newpage" href="/some-page">some-page</a></td>
+<td>using page title as link text</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[doc#toc1|Section 1]]]</span></tt></td>
+<td><a href="/doc#toc1">Section 1</a></td>
+<td>linking to an anchor (first section)</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[doc#toc1]]]</span></tt></td>
+<td><a href="/doc#toc1">doc</a></td>
+<td>linking to an anchor (first section)</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[/| Home]]]</span></tt></td>
+<td><a href="/">Home</a></td>
+<td>links to your home page</td>
+</tr>
+</table>
+<h2 id="toc1"><span><a name="urls"></a>URLs</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+<th>comments</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[http://www.wikidot.com | Wikidot]]]</span></tt></td>
+<td><a href="http://www.wikidot.com">Wikidot</a></td>
+<td>named link (custom anchor)</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[*http://www.wikidot.com | Wikidot]]]</span></tt></td>
+<td><a href="http://www.wikidot.com" target="_blank">Wikidot</a></td>
+<td>named link (custom anchor), opened in new window/tab</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[[/category:page/option1/option2 | link text]]]</span></tt></td>
+<td><a href="/category:page/option1/option2">link text</a></td>
+<td>You can create shorter links to your own site with<br/>
+parameters without writing whole http link.<br/>
+E.g. you can use<br/>
+<tt><span style="white-space: pre-wrap;">[[[/blog:post/edit/true | edit this post]]]</span></tt><br/>
+instead of<br/>
+<tt><span style="white-space: pre-wrap;">[[[http://site.wikidot.com/ blog:post/edit/true | edit this post]]]</span></tt></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">http://www.wikidot.com</span></tt></td>
+<td><a href="http://www.wikidot.com">http://www.wikidot.com</a></td>
+<td>simple inline link</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[http://www.wikidot.com wikidot]</span></tt></td>
+<td><a href="http://www.wikidot.com">wikidot</a></td>
+<td>named link (custom anchor)</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">*http://www.wikidot.com</span></tt><br/>
+<tt><span style="white-space: pre-wrap;">[*http://www.wikidot.com wikidot]</span></tt></td>
+<td><a href="http://www.wikidot.com" target="_blank">http://www.wikidot.com</a><br/>
+<a href="http://www.wikidot.com" target="_blank">wikidot</a></td>
+<td>opens in a new window</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[a href="http://www.wikidot.com"]] Wikidot[[/a]]</span></tt></td>
+<td><a href="http://www.wikidot.com">Wikidot</a></td>
+<td>You can use classes and data-* parameters</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[# empty link]</span></tt></td>
+<td><a href="javascript:;">empty link</a></td>
+<td>link with <tt>href="javascript:;"</tt> i.e. not leading anywhere. useful when constructing pull-down menus</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[/category:page/option1/option2 link text]</span></tt></td>
+<td><a href="/category:page/option1/option2">link text</a></td>
+<td>You can create shorter links to your own site with<br/>
+parameters without writing whole http link.<br/>
+E.g. you can use<br/>
+<em><span style="white-space: pre-wrap;">[/blog:post/edit/true edit this post]</span></em><br/>
+instead of<br/>
+<em><span style="white-space: pre-wrap;">[http://site.wikidot.com/ blog:post/edit/true edit this post]</span></em></td>
+</tr>
+</table>
+<p>Adding underscore to <strong>a</strong> element <strong><span style="white-space: pre-wrap;">[[a_ ]]</span></strong> will truncate whitespaces around it which prevents creation of random <a href="/doc-wiki-syntax:paragraphs-and-newline">new lines and paragraphs</a>. It's simplifices creation of complex HTML syntax like <a href="http://getbootstrap.com/components/">Bootstrap components</a></p>
+<h2 id="toc2"><span><a name="anchors"></a>Anchors</span></h2>
+<p>To place an anchor use <tt><span style="white-space: pre-wrap;">[[# anchor-name]]</span></tt> syntax. To refer to an anchor (and scroll to it) use <tt><span style="white-space: pre-wrap;">[#anchor-name text to display]</span></tt>.</p>
+<h2 id="toc3"><span><a name="emails"></a>Emails</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+<th>comments</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">support@example.com</span></tt></td>
+<td><span class="wiki-email">moc.elpmaxe|troppus#moc.elpmaxe|troppus</span></td>
+<td>simple inline email</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[support@example.com email me!]</span></tt></td>
+<td><span class="wiki-email">moc.elpmaxe|troppus#!em liame</span></td>
+<td>custom anchor</td>
+</tr>
+</table>
+<p>Although we discourage anyone from putting his/her email address on the web, Wikidot engine provides a simple scrambling mechanism to prevent automated bots from reading emails. Each email is scrambled and it is decoded in the client's browser. So it is not 100% spam-safe, but much safer than plain-text emails.</p>
+<h2 id="toc4"><span><a name="interwiki"></a> InterWiki</span></h2>
+<p>To link directly to a Wikipedia article you can use a syntax:</p>
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[wikipedia:Albert_Einstein]</span></tt></td>
+<td><a href="http://en.wikipedia.org/wiki/Albert_Einstein" onclick="window.open(this.href, '_blank'); return false;">Albert_Einstein</a></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[wikipedia:Albert_Einstein Albert]</span></tt></td>
+<td><a href="http://en.wikipedia.org/wiki/Albert_Einstein" onclick="window.open(this.href, '_blank'); return false;">Albert</a></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[wikipedia:it:Albert_Einstein Albert]</span></tt></td>
+<td><a href="http://en.wikipedia.org/wiki/it:Albert_Einstein" onclick="window.open(this.href, '_blank'); return false;">Albert</a></td>
+</tr>
+</table>
+<p>Other links defined by example:</p>
+<ul>
+<li><tt><span style="white-space: pre-wrap;">[google:free+wiki]</span></tt> - search google for the "free wiki" term</li>
+<li><tt><span style="white-space: pre-wrap;">[dictionary:wiki]</span></tt> - look up definitions of the word <em>wiki</em> from dictionary.reference.com</li>
+</ul>
+<h2 id="toc5"><span><a name="magicuris"></a> Magic URIs</span></h2>
+<p>Magic URIs (or Magic Links) are the way to control pages within the URL address.</p>
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+<th>comments</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[http://site-name.wikidot.com/page-name#_editpage Edit]</span></tt></td>
+<td><a href="http://site-name.wikidot.com/page-name#_editpage">Edit</a></td>
+<td>Goes to the page with the edit mode already opened</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[http://site-name.wikidot.com/page-name/title/whatever Edit with title]</span></tt></td>
+<td><a href="http://site-name.wikidot.com/page-name/title/whatever">Edit with title set</a></td>
+<td>Works only with not existing pages. When you go to edit mode on such page, the title will be set to 'whatever'. May be combined with /edit/true, parentPage/page-name etc.</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[http://site-name.wikidot.com/page-name/parentPage/parent-page-name Edit with parent page set]</span></tt></td>
+<td><a href="http://site-name.wikidot.com/page-name/parentPage/parent-page-name">Edit with parent page set</a></td>
+<td>Works only with not existing pages. When you go to edit mode on such page, the parent page will be set to 'page-name'. May be combined with /edit/true, title/whatever etc.</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[http://site-name.wikidot.com/page-name/noredirect/true Page without redirect]</span></tt></td>
+<td><a href="http://site-name.wikidot.com/page-name/noredirect/true">Page without redirect</a></td>
+<td>Turning off redirection, if the <a href="http://www.wikidot.com/doc:redirect-module">Redirect Module</a> is present on the page</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[http://site-name.wikidot.com/page-name/tags/tag1,tag2 Set tags]</span></tt></td>
+<td><a href="http://site-name.wikidot.com/page-name/tags/tag1,tag2">Set tags</a></td>
+<td>Sets tags on the page via URL, comma-delimited</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[http://site-name.wikidot.com/page-name/norender/true No Render]</span></tt></td>
+<td><a href="http://site-name.wikidot.com/page-name/norender/true">No Render</a></td>
+<td>Goes to the page, but does not render it. It allows to change the source of the page when there is a problem with page functionality</td>
+</tr>
+</table>
+<h2 id="toc6"><span><a name="hashmagicuris"></a> Hash Magic URIs</span></h2>
+<p><tt><span style="white-space: pre-wrap;">http://site-name.wikidot.com/page-name</span></tt><strong><tt>#_option</tt></strong></p>
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+</tr>
+<tr>
+<td>#_wantedpages</td>
+<td>lists Wanted Pages</td>
+</tr>
+<tr>
+<td>#_orphanedpages</td>
+<td>lists Orphaned Pages</td>
+</tr>
+<tr>
+<td>#_draftpages</td>
+<td>lists Draft Pages on site</td>
+</tr>
+<tr>
+<td>#_editpage</td>
+<td>opens Editor</td>
+</tr>
+<tr>
+<td>#_edittags</td>
+<td>opens Tag Editor</td>
+</tr>
+<tr>
+<td>#_history</td>
+<td>displays History</td>
+</tr>
+<tr>
+<td>#_files</td>
+<td>lists Files attached to the page</td>
+</tr>
+<tr>
+<td>#_sitetools</td>
+<td>opens Site Tools</td>
+</tr>
+</table>
+</div><div id="action-area" style="display: none;"></div>

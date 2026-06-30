@@ -1,0 +1,37 @@
+
+<div class="page-title">
+                    Universal Escaping
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Universal Escaping
+                    </div>
+<div id="page-content">
+<p>If you want to put arbitrary characters or HTML entities (including Unicode entities) into your text, use <span style="white-space: pre-wrap;">@&lt;</span> … <span style="white-space: pre-wrap;">&gt;@</span>. Inside this sequence, convert each "&amp;" to "&amp;amp;", each "&lt;" to "&amp;lt;" and each "&gt;" to "&amp;gt;".</p>
+<p>The escape sequence will decode HTML entities like &amp;lt; including:</p>
+<ul>
+<li>entities such as &amp;copy; (<span style="white-space: pre-wrap;">©</span>)</li>
+<li>numeric entities like &amp;#252; (<span style="white-space: pre-wrap;">ü</span>)</li>
+<li>Unicode entities like &amp;#8212; (<span style="white-space: pre-wrap;">—</span>) or &amp;auml; (<span style="white-space: pre-wrap;">ä</span>)</li>
+</ul>
+<h2 id="toc0"><span>Live example</span></h2>
+<div class="code">
+<pre>
+<code>HTML entities: @&lt;U umlaut: &amp;#252;&gt;@
+@&lt;[[code]]&gt;@
+@&lt;Hello world @@ !!!!&gt;@
+@&lt;Something **not** bold&gt;@
+@&lt;[[module ListPages]]&gt;@
+@&lt;Copyright sign: &amp;copy;&gt;@
+@&lt;[[/code]]&gt;@
+Or, @&lt;@&amp;lt;&gt;@ and @&lt;&amp;gt;@&gt;@</code>
+</pre></div>
+<p>Which gives:</p>
+<p>HTML entities: <span style="white-space: pre-wrap;">U umlaut: ü</span><br/>
+<span style="white-space: pre-wrap;">[[code]]</span><br/>
+<span style="white-space: pre-wrap;">Hello world @@ !!!!</span><br/>
+<span style="white-space: pre-wrap;">Something **not** bold</span><br/>
+<span style="white-space: pre-wrap;">[[module ListPages]]</span><br/>
+<span style="white-space: pre-wrap;">Copyright sign: ©</span><br/>
+<span style="white-space: pre-wrap;">[[/code]]</span><br/>
+Or, <span style="white-space: pre-wrap;">@&lt;</span> and <span style="white-space: pre-wrap;">&gt;@</span></p>
+</div><div id="action-area" style="display: none;"></div>

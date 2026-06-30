@@ -1,0 +1,31 @@
+
+<div class="page-title">
+                    Standalone buttons for page options
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Standalone buttons for page options
+                    </div>
+<div id="page-content">
+<p>Sometimes it might be convenient to hide the default page options and present only selected buttons to the users. The syntax for accomplishing this is:</p>
+<p><tt><span style="white-space: pre-wrap;">[[button</span> <em>type</em> <em>options</em>]]</tt></p>
+<p>Where the <em>type</em> is: <tt>edit</tt>, <tt>edit-append</tt>, <tt>edit-sections</tt>, <tt>history</tt>, <tt>print</tt>, <tt>files</tt>, <tt>tags</tt>, <tt>source</tt> (view page source), <tt>backlinks</tt>, <tt>talk</tt> (works similar as in MediaWiki/Wikipedia), <tt>delete</tt>, <tt>rename</tt>, <tt>site-tools</tt>, <tt>edit-meta</tt>, <tt>watchers</tt>, <tt>parent</tt> and <tt>lock-page</tt>.</p>
+<p>Possible attributes are:</p>
+<ul>
+<li>text — alternative text to be displayed</li>
+<li>class — CSS class of the A element</li>
+<li>style — CSS style definition</li>
+</ul>
+<p>For some nice "view source" and "print" buttons with icons you can use the following code:</p>
+<div class="code">
+<pre>
+<code>[[&gt;]]
+[[button source style="background-image: url(http://www.wikidot.com/local--files/files/view-source.png); background-repeat: no-repeat; background-position: bottom right; padding-right: 20px; color: #444"]]
+[[button print style="background-image: url(http://www.wikidot.com/local--files/files/document-print.png); background-repeat: no-repeat; background-position: bottom right; padding-right: 20px;color: #444"]]
+[[/&gt;]]</code>
+</pre></div>
+<p>to get:<br/></p>
+<div style="text-align: right;">
+<p><a class="wiki-standalone-button" href="javascript:;" onclick="WIKIDOT.page.listeners.viewSourceClick(event)" style="background-image: url(http://www.wikidot.com/local--files/files/view-source.png); background-repeat: no-repeat; background-position: bottom right; padding-right: 20px; color: #444">view source</a><br/>
+<a class="wiki-standalone-button" href="javascript:;" onclick="WIKIDOT.page.listeners.printClick(event)" style="background-image: url(http://www.wikidot.com/local--files/files/document-print.png); background-repeat: no-repeat; background-position: bottom right; padding-right: 20px;color: #444">print</a></p>
+</div>
+</div><div id="action-area" style="display: none;"></div>

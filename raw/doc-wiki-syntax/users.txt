@@ -1,0 +1,28 @@
+
+<div class="page-title">
+                    Users
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Users
+                    </div>
+<div id="page-content">
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+<th>comments</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[user</span> <em>user-name</em>]]</tt><br/>
+e.g. <tt><span style="white-space: pre-wrap;">[[user michal frackowiak]]</span></tt></td>
+<td><span class="printuser"><a href="http://www.wikidot.com/user:info/michal-frackowiak" onclick="WIKIDOT.page.listeners.userInfo(1); return false;">michal frackowiak</a></span></td>
+<td>user info (no buddy icon)</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[*user</span> <em>user-name</em>]]</tt><br/>
+e.g. <tt><span style="white-space: pre-wrap;">[[*user michal frackowiak]]</span></tt></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/michal-frackowiak" onclick="WIKIDOT.page.listeners.userInfo(1); return false;"><img alt="michal frackowiak" class="small" src="https://www.wikidot.com/avatar.php?userid=1&amp;amp;size=small&amp;amp;timestamp=1401117862" style="background-image:url(https://www.wikidot.com/userkarma.php?u=1)"/></a><a href="http://www.wikidot.com/user:info/michal-frackowiak" onclick="WIKIDOT.page.listeners.userInfo(1); return false;">michal frackowiak</a></span></td>
+<td>user info (with buddy icon)</td>
+</tr>
+</table>
+</div><div id="action-area" style="display: none;"></div>

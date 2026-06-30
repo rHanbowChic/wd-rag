@@ -1,0 +1,38 @@
+
+<div class="page-title">
+                    Searching
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Searching
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Basic searching</span></h2>
+<p>Every site header shows a search form that lets you find pages in that site. In the search form, type the words you want to search for and press Enter.</p>
+<ul>
+<li>Pages are ranked on how many search terms they match, so to refine your search results, add more words.</li>
+<li>To show <em>only</em> pages that contain <em>elephant</em>, search for <strong>+elephant</strong>.</li>
+<li>To show pages that have <em>elephant</em> in the title, search for <strong>title:elephant</strong>.</li>
+<li>To show pages that have the phrase <em>grey elephants</em> in the title, search for <strong>title:"grey elephants"</strong> using double quotes.</li>
+<li>To show pages that contain any word starting with <em>ele</em>, search for <strong><span style="white-space: pre-wrap;">ele*</span></strong>.</li>
+<li>To show pages that contain any word starting with <em>ele</em> and ending in <em>ant</em>, search for <strong><span style="white-space: pre-wrap;">ele*ant</span></strong>.</li>
+</ul>
+<h2 id="toc1"><span>Additional filters</span></h2>
+<ul>
+<li>To restrict the search to category "abc", add the filter <strong>category:abc</strong>.</li>
+<li>To restrict the search to categories "abc" and "def", add the filter <strong>category:abc,def</strong>.</li>
+<li>To restrict the search by date, add either or both of: <strong>since:yyyy-mm-dd</strong> and <strong>till:yyyy-mm-dd</strong>.</li>
+<li>To restrict the search to a specific author, add <strong>user:author-name</strong>, using '-' or '_' instead of spaces in the user name.</li>
+</ul>
+<h2 id="toc2"><span>Global searching</span></h2>
+<p>You can search all of Wikidot, including private sites that you are allowed to read, at <a href="http://www.wikidot.com/search:all">http://www.wikidot.com/search:all</a>. Global search works like basic searching, with these additional options:</p>
+<ul>
+<li>To show pages in the site elephants.wikidot.com, search for <strong>site:elephants</strong>.</li>
+<li>To show pages in several specific sites, list these with commas after the <strong>site:</strong> keyword.</li>
+</ul>
+<h2 id="toc3"><span>Searching on tags</span></h2>
+<p><em>Note: searching on tags is currently not enabled for performance reasons. When we've solved those, we'll enable tag searching.</em></p>
+<p>In basic and global searches you can additionally search for pages that have specific tags:</p>
+<ul>
+<li>To show pages that contain the tags "big" and "noisy", search for <strong>tags:big,noisy</strong>.</li>
+</ul>
+</div><div id="action-area" style="display: none;"></div>

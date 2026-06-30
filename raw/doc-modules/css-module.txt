@@ -1,0 +1,39 @@
+
+<div class="page-title">
+                    CSS Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » CSS Module
+                    </div>
+<div id="page-content">
+<p>The CSS module lets you insert CSS code into a wiki page. This is particularly useful for cross-site include (CSI) packages that need to use custom styling for their code. When you use the CSS module in a CSI, that CSS code will be included in all pages that use the CSI.</p>
+<p>The syntax for the CSS module is:</p>
+<div class="code">
+<pre>
+<code>[[module CSS arguments...]]
+CSS code
+[[/module]]</code>
+</pre></div>
+<h2 id="toc0"><span>Example</span></h2>
+<p>This example hides the side-bar menu on a single page (on themes with an elastic main-content):</p>
+<div class="code">
+<pre>
+<code>[[module CSS]]
+#side-bar { 
+    visibility: hidden; 
+    width: 0
+}
+[[/module]]</code>
+</pre></div>
+<h2 id="toc1"><span>Arguments</span></h2>
+<p>You can render the module's CSS code on the page in a <tt><span style="white-space: pre-wrap;">[[code type="css"]]</span></tt> block by adding:</p>
+<ul>
+<li><strong>show="true"</strong></li>
+</ul>
+<p>You can disable the module's CSS code so that it doesn't affect the theme by adding:</p>
+<ul>
+<li><strong>disable="true"</strong></li>
+</ul>
+<h2 id="toc2"><span>Multiple CSS modules</span></h2>
+<p>A single page can contain any number of CSS modules. Their code will be output, in order, in the page's HTML header.</p>
+</div><div id="action-area" style="display: none;"></div>

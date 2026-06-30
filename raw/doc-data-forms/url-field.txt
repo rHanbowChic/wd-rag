@@ -1,0 +1,27 @@
+
+<div class="page-title">
+                    The 'url' field type
+                </div>
+<div id="page-content">
+<p>This lets the user enter URLs. This is displayed as a link.</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  info_link:
+    type: url
+    default: ftp://example.com/files/
+    match-error: Custom error msg.
+    required: true
+    default-schema: ftp://
+[[/form]]</code>
+</pre></div>
+<p>The specific properties you can use on a url field:</p>
+<ul>
+<li><strong>width</strong>: specifies the visible field width in columns (fixed spaced characters, more or less).</li>
+<li><strong>default</strong>: defines a default value for the field shown on new pages.</li>
+<li><strong>default-schema</strong>: define a default schema for URL ('http://' if not specified).</li>
+<li><strong>match-error</strong>: specifies a custom error message.</li>
+<li><strong>required</strong>: specifies if the field is mandatory [true/false] ('false' if not specified).</li>
+</ul>
+</div><div id="action-area" style="display: none;"></div>

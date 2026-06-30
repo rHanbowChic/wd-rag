@@ -1,0 +1,18 @@
+
+<div class="page-title">
+                    RecentPosts Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » RecentPosts Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Displays recent forum posts.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>No attributes required.</p>
+<h2 id="toc2"><span>Examples</span></h2>
+<div class="code">
+<pre>
+<code>[[module RecentPosts]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

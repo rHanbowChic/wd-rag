@@ -1,0 +1,59 @@
+
+<div class="page-title">
+                    Redirect Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Redirect Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>The Redirect module performs a "301 Permanently Moved" redirection, i.e. it tells a web browser to request another web page.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>destination</td>
+<td>yes</td>
+<td>page-name or URL</td>
+<td>none</td>
+<td>where to redirect?</td>
+</tr>
+</table>
+<p>When the <tt>destination</tt> attribute is just an alphanumeric string, e.g. "start", the page which contains the Redirect module will automatically forward the browser to the wiki page called "start". If destination is the whole URL address (e.g. "<a href="http://slashdot.org">http://slashdot.org</a>"), the browser will be redirected to this external address.</p>
+<h2 id="toc2"><span>Mapping</span></h2>
+<p>If the <tt>destination</tt> attribute ends with a slash, e.g. destination="start<strong>/</strong>" or destination="<span style="white-space: pre-wrap;">http://www.example.com</span><strong>/</strong>", the current URL will be mapped to the destination in the following way. The code for the module would be:</p>
+<div class="code">
+<pre>
+<code>[[module Redirect destination="http://www.example.com/base/"]]</code>
+</pre></div>
+<p>Now if the Redirect module is placed on page <span style="white-space: pre-wrap;">http://your-wiki.wikidot.com/redir</span> the following mapping will be performed:<br/></p>
+<table class="wiki-content-table">
+<tr>
+<th>from</th>
+<th>to</th>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">http://your-wiki.wikidot.com/redir</span></td>
+<td><span style="white-space: pre-wrap;">http://www.example.com/base/</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">http://your-wiki.wikidot.com/redir/</span><strong>mapped-path</strong></td>
+<td><span style="white-space: pre-wrap;">http://www.example.com/base/</span><strong>mapped-path</strong></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">http://your-wiki.wikidot.com/redir/</span><strong>mapped-path/file1.html</strong></td>
+<td><span style="white-space: pre-wrap;">http://www.example.com/base/</span><strong>mapped-path/file1.html</strong></td>
+</tr>
+</table>
+<h2 id="toc3"><span>Preventing the redirect</span></h2>
+<p>If the Redirect module redirected the browser always there would be no way to edit the actual page. The solution is to pass an extra parameter to the module in the URL as follows:</p>
+<p><span style="white-space: pre-wrap;">http://your-wiki.wikidot.com/page-with-redirect/</span><strong>noredirect/true</strong></p>
+<p>There should be an information box where the module is placed.</p>
+<p>Working with the Redirect module might not be very convenient but even of you have to do this you will not configure it every day ;-)</p>
+</div><div id="action-area" style="display: none;"></div>

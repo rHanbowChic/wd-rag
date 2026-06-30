@@ -1,0 +1,59 @@
+
+<div class="page-title">
+                    Date
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Date
+                    </div>
+<div id="page-content">
+<p>In several places (forum, private messages, last revision date, etc.) Wikidot pages use dates and timestamps that automatically calculate (either when hovering with the mouse or directly in the text) how long ago this was. Examples are</p>
+<ul>
+<li><span class="odate time_1237135440 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%25Z%7Cagohover">15 Mar 2009 16:44</span> (move the mouse over the date to see the hovering text) or,</li>
+<li><span class="odate time_1237135440 format_%25c">15 Mar 2009 16:44</span></li>
+</ul>
+<p>If you want dates that <em>you</em> type on your pages to also automatically show "how long ago'', here is how you can do it.</p>
+<h2 id="toc0"><span><a name="how"></a> How it works</span></h2>
+<p>The syntax needed is:</p>
+<blockquote>
+<p><tt><span style="white-space: pre-wrap;">[[date</span> <em>timestamp</em> &lt;format="<em>format</em><span style="white-space: pre-wrap;">&lt;|agohover&gt;"&gt;]]</span></tt></p>
+</blockquote>
+<p>where</p>
+<ul>
+<li>&lt; … &gt; denote optional parameters</li>
+<li><tt><em>timestamp</em></tt> is the number of seconds between Jan 1, 1970 and the wanted date. To find this number for a specific date, see <a href="#wizard">Code Wizard</a> below.</li>
+<li><tt><em>format</em></tt> is an arbitrary text string that may include <em><a href="http://community.wikidot.com/howto:frontforum-date-variable#modifiers">%modifiers</a></em>, which are replaced by an actual (part of the) date or time. If not specified, <tt><em>format</em></tt> defaults to "%e''.</li>
+<li><tt>|agohover</tt> when specified displays a "hovering'' text ("<em>nn</em> seconds/minutes/hours/days ago") when the mouse is moved over any part of the displayed <tt><em>format</em></tt> string.</li>
+</ul>
+<h2 id="toc1"><span><a name="wizard"></a><a name="example"></a>Code Wizard</span></h2>
+<p>To find out what code you should use on your page for a specific date:<br/>
+<iframe align="" class="" frameborder="0" height="210px" scrolling="no" src="http://community.wikidot.com/howto:date-how-long-ago/code/1" style="" width="100%"></iframe><br/>
+Then copy/paste the displayed code into your page.</p>
+<h2 id="toc2"><span><a name="examples"></a>Examples</span></h2>
+<table style="border-collapse:collapse;border-top:2px solid;border-bottom:2px solid">
+<tr>
+<td style="padding:3px 1em 3px 0"><em><strong>What you type …</strong></em></td>
+<td><em><strong>What you get …</strong></em></td>
+</tr>
+<tr style="border-top:1px solid">
+<td style="padding:3px 1em 3px 0"><tt><span style="white-space: pre-wrap;">[[date 1216153821]]</span></tt></td>
+<td><span class="odate time_1216153821">15 Jul 2008 20:30</span></td>
+</tr>
+<tr style="border-top:1px solid">
+<td style="padding:3px 1em 3px 0"><tt><span style="white-space: pre-wrap;">[[date 1216153821 format="%d. %m. %Y|agohover"]]</span></tt></td>
+<td><span class="odate time_1216153821 format_%25d.%20%25m.%20%25Y%7Cagohover">15 Jul 2008 20:30</span></td>
+</tr>
+<tr style="border-top:1px solid">
+<td style="padding:3px 1em 3px 0"><tt><span style="white-space: pre-wrap;">[[date 681746400 format="James is %O young"]]</span></tt></td>
+<td><span class="odate time_681746400 format_James%20is%20%25O%20young">09 Aug 1991 14:00</span></td>
+</tr>
+<tr style="border-top:1px solid">
+<td style="padding:3px 1em 3px 0"><tt><span style="white-space: pre-wrap;">+++ Minutes from [[date 1234567890 format="%e %B|agohover"]]</span></tt></td>
+<td>
+<h3><span>Minutes from <span class="odate time_1234567890 format_%25e%20%25B%7Cagohover">13 Feb 2009 23:31</span></span></h3>
+</td>
+</tr>
+</table>
+<p>Note: You can use %O also with the future dates as well.</p>
+<p><strong>Author</strong><br/>
+created by <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/erichsteinboeck" onclick="WIKIDOT.page.listeners.userInfo(7925); return false;"><img alt="ErichSteinboeck" class="small" src="https://www.wikidot.com/avatar.php?userid=7925&amp;amp;size=small&amp;amp;timestamp=1401117862" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7925)"/></a><a href="http://www.wikidot.com/user:info/erichsteinboeck" onclick="WIKIDOT.page.listeners.userInfo(7925); return false;">ErichSteinboeck</a></span></p>
+</div><div id="action-area" style="display: none;"></div>

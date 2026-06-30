@@ -1,0 +1,29 @@
+
+<div class="page-title">
+                    Embedding code from other sites
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Embedding code from other sites
+                    </div>
+<div id="page-content">
+<p>Sometimes web sites (mainly social-oriented ones) allow you to paste a code block directly into other pages in order to increase your site functionality or embed some content from the original site.</p>
+<h2 id="toc0"><span><tt><span style="white-space: pre-wrap;">[[embed]]</span></tt> tag</span></h2>
+<p>The <tt><span style="white-space: pre-wrap;">[[embed]]</span></tt> block tag allows you to do the same with your wiki pages. E.g. to display del.icio.us tag cloud as generated from <a href="http://del.icio.us/help/tagrolls">http://del.icio.us/help/tagrolls</a> simply wrap the html code:</p>
+<div class="code">
+<pre>
+<code>[[embed]]
+&lt;script type="text/javascript" src="http://del.icio.us/feeds/js/tags/michal_frackowiak?icon;size=12-35;color=87ceeb-0000ff;title=my%20del.icio.us%20tags"&gt;&lt;/script&gt;
+[[/embed]]</code>
+</pre></div>
+<p>For the list of supported services please see the page: <a href="/doc:embedding">Embedding code from other services</a>.</p>
+<p>Please note that if the code contains <tt>&lt;script type="text/javascript"…</tt> i.e. just JavaScript, the content will not be fully rendered when you click <tt>preview</tt> while editing the page. It should be there however when you view the page afterwards.</p>
+<h2 id="toc1"><span><a name="iframe"></a><tt><span style="white-space: pre-wrap;">[[iframe]]</span></tt> element</span></h2>
+<p>Using the <em>iframe</em> element one can embed content of any other web page. The syntax is</p>
+<div class="code">
+<pre>
+<code>[[iframe url-source attributes]]</code>
+</pre></div>
+<br/>
+and it translates into HTML tags <tt>&lt;iframe src="url-source" attributes&gt;&lt;/iframe&gt;</tt>. The allowed attributes are: frameborder (0 or 1 allowed), align (left, right, top, bottom, middle), height (number of pixels or %), width (number of pixels or %), scrolling (yes or no), class, style
+
+</div><div id="action-area" style="display: none;"></div>

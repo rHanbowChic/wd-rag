@@ -1,0 +1,28 @@
+
+<div class="page-title">
+                    Collapsible Blocks
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Collapsible Blocks
+                    </div>
+<div id="page-content">
+<div class="collapsible-block">
+<div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+ explain collapsible blocks</a></div>
+<div class="collapsible-block-unfolded" style="display:none">
+<div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">- ok, thanks</a></div>
+<div class="collapsible-block-content">
+<p>The <span style="white-space: pre-wrap;">[[collapsible]]</span> tag lets you place a block of text on your page that the user can show/hide with one click. For short blocks of text, use this form:</p>
+<div class="code">
+<pre>
+<code>[[collapsible show="+ Show whatever" hide="- Hide whatever"]]
+Whatever text to show/hide.
+[[/collapsible]]</code>
+</pre></div>
+<p>You can format the collapsible block text as for any Wikidot text. Look at the example at: <a href="http://snippets.wikidot.com/code:collapsible-block-unleashed">http://snippets.wikidot.com/code:collapsible-block-unleashed</a>.</p>
+<p>Put the <span style="white-space: pre-wrap;">[[collapsible]]</span> and <span style="white-space: pre-wrap;">[[/collapsible]]</span> tags on their own lines or the parser will not recognize them.</p>
+<p>By default, the show link says "+ show block" and the hide link says "- hide block". For longer blocks, add the <span style="white-space: pre-wrap;">hideLocation="both"</span> option to show the hide link at the bottom as well as the top of the block when it's shown. Other values for the hideLocation option are "top" (the default) and "bottom".</p>
+<p>Finally, you can use the <span style="white-space: pre-wrap;">folded="no"</span> option to show blocks by default, allowing the user to hide them if wanted. We use this for tables of content, for example.</p>
+</div>
+</div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

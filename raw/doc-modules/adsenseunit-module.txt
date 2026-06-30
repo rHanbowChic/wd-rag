@@ -1,0 +1,39 @@
+
+<div class="page-title">
+                    AdSenseUnit Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » AdSenseUnit Module
+                    </div>
+<div id="page-content">
+<div class="wiki-note">
+<p>This module was <strong>deprecated</strong> when Wikidot's AdSense integration was removed on 6 April 2010, in favour of a more flexible system.</p>
+<p>Paying users are now able to use a much larger variety of advertisement providers - and are no longer limited to just Google AdSense.</p>
+<p>You can read the <a href="http://blog.wikidot.com/blog:advertising">official announcement</a> if you'd like to know more.</p>
+</div>
+<div class="floatright" id="toc">
+<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)" style="display: none">Unfold</a></div>
+<div class="title">Table of Contents</div>
+<div id="toc-list">
+<div style="margin-left: 2em;"><a href="#toc0">Example</a></div>
+<div style="margin-left: 2em;"><a href="#toc1">Arguments</a></div>
+</div>
+</div>
+<p>The AdSenseUnit module lets you insert Google AdSense ads into a wiki page. You must have enabled AdSense on your wiki for this module to work. Normally, Wikidot will provide the code for you and you do not need to create your own code to use the AdSenseUnit module.</p>
+<p>The syntax for the AdSenseUnit module is:</p>
+<div class="code">
+<pre>
+<code>[[module AdSenseUnit arguments...]]</code>
+</pre></div>
+<h2 id="toc0"><span>Example</span></h2>
+<p>This example shows two left-aligned blocks of adverts:</p>
+<div class="code">
+<pre>
+<code>[[div style="margin-left:auto; margin-right:auto; padding: 10px; margin:0 0em 1em 2em; text-align: center; background-color: transparent; float:left; border: none; width: 15%;"]]
+[[module AdSenseUnit label="your add"]]
+[[module AdSenseUnit label="your add"]]
+[[/div]]</code>
+</pre></div>
+<h2 id="toc1"><span>Arguments</span></h2>
+<p>The <strong>label</strong> argument specifies the label to show, and is mandatory.</p>
+</div><div id="action-area" style="display: none;"></div>

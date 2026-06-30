@@ -1,0 +1,31 @@
+
+<div class="page-title">
+                    ListDrafts Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » ListDrafts Module
+                    </div>
+<div id="page-content">
+<p>This module lists all pages on Site where there is a draft included. You can choose if you want to display all draft or only for existing/non-existing pages.</p>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>pageType</td>
+<td>no</td>
+<td>exists, notexists</td>
+<td>-</td>
+<td>when not defined, all drafts are listed</td>
+</tr>
+</table>
+<p>Example:</p>
+<div class="code">
+<pre>
+<code>[[module ListDrafts pageType="exists"]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

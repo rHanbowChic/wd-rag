@@ -1,0 +1,25 @@
+
+<div class="page-title">
+                    The 'file' field type
+                </div>
+<div id="page-content">
+<p>This lets the user upload files directly from the data form. It is displayed as a link to the file.</p>
+<p>Files are not uploaded to the same page. Instead, a separate page is created for each file in a different category, 'file' by default, with the pagename being the name of the image.</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  document:
+    type: file
+    label: Upload document
+    category: alternative-category
+[[/form]]</code>
+</pre></div>
+<p>The specific properties you can use on a file field:</p>
+<ul>
+<li><strong>category</strong>: specifies the category that the page will be created in ('file' category if not specified), and the uploaded file is attached to this page.</li>
+</ul>
+<div class="wiki-note">
+<p>Note that images won't be treated like they are when attaching an image to simple (i.e. non-data form enabled) page. This means they won't be displayed by the <span style="white-space: pre-wrap;">[[gallery]]</span> tag.</p>
+</div>
+</div><div id="action-area" style="display: none;"></div>

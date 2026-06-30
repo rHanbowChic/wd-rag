@@ -1,0 +1,16 @@
+
+<div class="page-title">
+                    WantedPages Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » WantedPages Module
+                    </div>
+<div id="page-content">
+<p>This module lists all pages that do not exist but there are links that point to them.</p>
+<p>The same module can be found in <strong>site tools</strong> at the bottom of every page.</p>
+<h3 id="toc0"><span>Usage</span></h3>
+<div class="code">
+<pre>
+<code>[[module WantedPages]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

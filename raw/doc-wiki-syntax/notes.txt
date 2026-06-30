@@ -1,0 +1,14 @@
+
+<div class="page-title">
+                    Notes
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Notes
+                    </div>
+<div id="page-content">
+<p>Create notes on a page using <tt>[[note]] … [[/note]]</tt> tags (each on its own line).</p>
+<p>This is an example note:</p>
+<div class="wiki-note">
+<p>For more information, please contact: <span class="wiki-email">moc.todikiw|troppus#moc.todikiw|troppus</span></p>
+</div>
+</div><div id="action-area" style="display: none;"></div>

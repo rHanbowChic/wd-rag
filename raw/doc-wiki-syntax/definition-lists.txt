@@ -1,0 +1,35 @@
+
+<div class="page-title">
+                    Definition Lists
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Definition Lists
+                    </div>
+<div id="page-content">
+<p>You can create a definition (description) list with the following syntax:</p>
+<div class="code">
+<pre>
+<code>: Item 1 : Something
+: Item 2 : Something else</code>
+</pre></div>
+<dl>
+<dt>Item 1</dt>
+<dd>Something</dd>
+<dt>Item 2</dt>
+<dd>Something else</dd>
+</dl>
+<p>If you need to put more than one line in the definition list, please use _ (underscore) at the end of the line you want to break (after one space). Remember not to insert any character after the underscore.</p>
+<div class="code">
+<pre>
+<code>: Item 1 : Something _
+another line
+: Item 2 : Something else</code>
+</pre></div>
+<dl>
+<dt>Item 1</dt>
+<dd>Something<br/>
+another line</dd>
+<dt>Item 2</dt>
+<dd>Something else</dd>
+</dl>
+</div><div id="action-area" style="display: none;"></div>

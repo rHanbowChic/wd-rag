@@ -1,0 +1,217 @@
+
+<div class="page-title">
+                    Feed Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Feed Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>The <em>Feed</em> module can import RSS or Atom feeds from (almost) any web location and display them in a customizable way. It can also combine feeds from multiple sources.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>src</td>
+<td>yes</td>
+<td>single URL address or semicolon-separated list of URL addresses</td>
+<td>none</td>
+<td>points to the location of source RSS or Atom feed(s)</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>no</td>
+<td>any reasonable number</td>
+<td>none</td>
+<td>limits the number of news items</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>no</td>
+<td>any reasonable number</td>
+<td>0</td>
+<td>which item number to start from</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Display format</span></h2>
+<p>If no format is specified all the news items are displayed using the default format. To specify a custom format one should use module invocation:</p>
+<div class="code">
+<pre>
+<code>[[module Feed src="somesource"]]
+&lt;custom format&gt;
+[[/module]]</code>
+</pre></div>
+<p>where the inner <tt>&lt;custom format&gt;</tt> element is any block of text following the wiki-syntax, where special variables can be used:</p>
+<table class="wiki-content-table">
+<tr>
+<th>variable</th>
+<th>aliases</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>%%title%%</tt></td>
+<td></td>
+<td>title of the news item</td>
+</tr>
+<tr>
+<td><tt>%%linked_title%%</tt></td>
+<td><tt>%%title_linked%%</tt></td>
+<td>title of the news item linking to the original web page</td>
+</tr>
+<tr>
+<td><tt>%%channel_title%%</tt></td>
+<td></td>
+<td>title of the news channel (useful when combining multiple feed sources)</td>
+</tr>
+<tr>
+<td><tt>%%linked_channel_title%%</tt></td>
+<td><tt>%%channel_title_linked%%</tt></td>
+<td>title of the channel linking to the feed source page</td>
+</tr>
+<tr>
+<td><tt>%%link%%</tt></td>
+<td></td>
+<td>URL address to the original news item</td>
+</tr>
+<tr>
+<td><tt>%%description%%</tt></td>
+<td><tt>%%short%%</tt>, <tt>%%summary%%</tt></td>
+<td>short summary of the item</td>
+</tr>
+<tr>
+<td><tt>%%content%%</tt></td>
+<td><tt>%%long%%</tt>, <tt>%%body%%</tt></td>
+<td>full content of the item (only when available; falls back to <tt>description</tt> if not)</td>
+</tr>
+<tr>
+<td><tt>%%date%%</tt></td>
+<td></td>
+<td>date of the item publication</td>
+</tr>
+<tr>
+<td><tt>%%date|format%%</tt></td>
+<td></td>
+<td>prints date with a custom format. Most tokens from php's <a href="http://php.net/manual/en/function.strftime.php" target="_blank">strftime</a> are accepted. You may find the <a href="http://community.wikidot.com/howto:frontforum-date-variable" target="_blank">howto</a> contributed by community useful.</td>
+</tr>
+<tr>
+<td><tt>%%custom%%</tt></td>
+<td></td>
+<td>gives access to any field in the feed (see below)</td>
+</tr>
+</table>
+<p>The default format is:</p>
+<div class="code">
+<pre>
+<code>++ %%linked_title%%
+
+%%date%%
+
+%%description%%</code>
+</pre></div>
+<h2 id="toc3"><span>How to use %%custom%%</span></h2>
+<p>To access any field in the feed environment, use</p>
+<div class="code">
+<pre>
+<code>%%custom &lt;pointer&gt;%%</code>
+</pre></div>
+<p>where pointer is a path to the requested element. It is easier to learn this by example:</p>
+<p>Look at fragment of an item from <a href="http://www.digg.com">Digg</a>:</p>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-brackets">&lt;</span><span class="hl-reserved">item</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">title</span><span class="hl-brackets">&gt;</span><span class="hl-code">UFO gathering draws believers and belittlers</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">title</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">link</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        http://digg.com/space/UFO_gathering_draws_believers_and_belittlers
+    </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">link</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">description</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        The 37th annual Mutual UFO Network symposium is being held this weekend in Denver, 
+        attracting throngs of believers and the downright curious — as well as upright skeptics 
+        and debunkers.  
+    </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">description</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">pubDate</span><span class="hl-brackets">&gt;</span><span class="hl-code">Sat, 15 Jul 2006 15:32:45 GMT</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">pubDate</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">guid</span><span class="hl-code"> </span><span class="hl-var">isPermaLink</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">true</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        http://digg.com/space/UFO_gathering_draws_believers_and_belittlers
+    </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">guid</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">digg:diggCount</span><span class="hl-brackets">&gt;</span><span class="hl-code">72</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">digg:diggCount</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">digg:submitter</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">digg:username</span><span class="hl-brackets">&gt;</span><span class="hl-code">capn_caveman</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">digg:username</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">digg:userimage</span><span class="hl-brackets">&gt;</span><span class="hl-code">http://digg.com/userimages/capn_caveman/medium.jpg</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">digg:userimage</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">digg:submitter</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">digg:category</span><span class="hl-brackets">&gt;</span><span class="hl-code">Space</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">digg:category</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">digg:commentCount</span><span class="hl-brackets">&gt;</span><span class="hl-code">13</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">digg:commentCount</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">item</span><span class="hl-brackets">&gt;</span>
+</pre></div>
+</div>
+<p>To access the <tt>&lt;digg:diggCount&gt;</tt> and display it use:</p>
+<div class="code">
+<pre>
+<code>digg counts: %%custom digg:diggCount%%</code>
+</pre></div>
+<p>To access a nested element <tt>&lt;digg:username&gt;</tt> use:</p>
+<div class="code">
+<pre>
+<code>submitted by %%custom digg:submitter/digg:username%%</code>
+</pre></div>
+<p>Now to access any element starting from the root feed element: look at the fragment of the digg feed code again:</p>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-brackets">&lt;</span><span class="hl-reserved">rss</span><span class="hl-code"> </span><span class="hl-var">version</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">2.0</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">channel</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">title</span><span class="hl-brackets">&gt;</span><span class="hl-code">digg</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">title</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">language</span><span class="hl-brackets">&gt;</span><span class="hl-code">en-us</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">language</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">link</span><span class="hl-brackets">&gt;</span><span class="hl-code">http://digg.com/</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">link</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">description</span><span class="hl-brackets">&gt;</span><span class="hl-code">digg</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">description</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+        ...</span>
+</pre></div>
+</div>
+<br/>
+To access the channel tittle element use:
+<div class="code">
+<pre>
+<code>%%custom feed/channel/title%%</code>
+</pre></div>
+<br/>
+It is important to start with the <tt>feed</tt> word. Ater that the full path to the element follows.
+<p>You can also use <tt>%%custom%%</tt> inside <tt><span style="white-space: pre-wrap;">[[image ...]]</span></tt> and some other places. In some cases however a space character must be replaced with an underscore not to confuse the parser, e.g. to display user submitter image from the digg feed you can use:</p>
+<div class="code">
+<pre>
+<code>[[image %%custom_digg:submitter_userimage%%]]</code>
+</pre></div>
+<h2 id="toc4"><span>Examples</span></h2>
+<h3 id="toc5"><span>Combine <a href="http://slashdot.org/">Slashdot</a> and <a href="http://digg.com/view/technology">Digg technology</a> feeds</span></h3>
+<p>URL for the feeds are:</p>
+<ul>
+<li><a href="http://rss.slashdot.org/Slashdot/slashdot">http://rss.slashdot.org/Slashdot/slashdot</a></li>
+<li><a href="http://digg.com/rss/containertechnology.xml">http://digg.com/rss/containertechnology.xml</a></li>
+</ul>
+<p>Simply do:</p>
+<div class="code">
+<pre>
+<code>[[module Feed src="http://rss.slashdot.org/Slashdot/slashdot;http://digg.com/rss/containertechnology.xml"]]</code>
+</pre></div>
+<p>More advanced example:</p>
+<div class="code">
+<pre>
+<code>[[module Feed src="http://rss.slashdot.org/Slashdot/slashdot;http://digg.com/rss/containertechnology.xml" limit="20"]]
+++ %%linked_title%% (%%linked_channel_title%%)
+
+%%date%%, submitted by %%custom digg:submitter_username%% %%custom dc:creator%%
+
+%%description%%
+[[/module]]
+
+[[module Feed src="http://rss.slashdot.org/Slashdot/slashdot;http://digg.com/rss/containertechnology.xml" offset="20" limit="20"]]
+**%%linked_title%%** (%%linked_channel_title%%, %%date%% by %%custom digg:submitter_username%% %%custom dc:creator%%)
+[[/module]]</code>
+</pre></div>
+<p>which displays first 20 items in detail and next 20 items just printing the title, channel title, date and submitter.</p>
+<p>BTW: a very nice digg feed import is presented at our <a href="http://snippets.wikidot.com/code:import-the-digg-feed">snippets code repository here</a>.</p>
+</div><div id="action-area" style="display: none;"></div>

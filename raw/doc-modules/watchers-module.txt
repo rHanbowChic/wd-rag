@@ -1,0 +1,64 @@
+
+<div class="page-title">
+                    Watchers Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Watchers Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>This module is used to list users watching the page. It will display all users who will receive notification about the changes on this page, so: page watchers, category watchers and site watchers.</p>
+<p>Module Watchers also displays "watch/unwatch" options for users.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>noActions</td>
+<td>no</td>
+<td>"true"</td>
+<td>none</td>
+<td>does not show "watch/unwatch" options</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>List all users watching this page:</p>
+<div class="code">
+<pre>
+<code>[[module Watchers]]</code>
+</pre></div>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nchristlieb" onclick="WIKIDOT.page.listeners.userInfo(695277); return false;"><img alt="nchristlieb" class="small" src="https://www.wikidot.com/avatar.php?userid=695277&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=695277)"/></a><a href="http://www.wikidot.com/user:info/nchristlieb" onclick="WIKIDOT.page.listeners.userInfo(695277); return false;">nchristlieb</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/norbert-christlieb" onclick="WIKIDOT.page.listeners.userInfo(1893645); return false;"><img alt="Norbert Christlieb" class="small" src="https://www.wikidot.com/avatar.php?userid=1893645&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=1893645)"/></a><a href="http://www.wikidot.com/user:info/norbert-christlieb" onclick="WIKIDOT.page.listeners.userInfo(1893645); return false;">Norbert Christlieb</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/cloveradv" onclick="WIKIDOT.page.listeners.userInfo(2014222); return false;"><img alt="cloveradv" class="small" src="https://www.wikidot.com/avatar.php?userid=2014222&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=2014222)"/></a><a href="http://www.wikidot.com/user:info/cloveradv" onclick="WIKIDOT.page.listeners.userInfo(2014222); return false;">cloveradv</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nightshade52" onclick="WIKIDOT.page.listeners.userInfo(1929124); return false;"><img alt="Nightshade52" class="small" src="https://www.wikidot.com/avatar.php?userid=1929124&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=1929124)"/></a><a href="http://www.wikidot.com/user:info/nightshade52" onclick="WIKIDOT.page.listeners.userInfo(1929124); return false;">Nightshade52</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/bgarst" onclick="WIKIDOT.page.listeners.userInfo(2123344); return false;"><img alt="bgarst" class="small" src="https://www.wikidot.com/avatar.php?userid=2123344&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=2123344)"/></a><a href="http://www.wikidot.com/user:info/bgarst" onclick="WIKIDOT.page.listeners.userInfo(2123344); return false;">bgarst</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/lovelylife" onclick="WIKIDOT.page.listeners.userInfo(3450291); return false;"><img alt="lovelylife" class="small" src="https://www.wikidot.com/avatar.php?userid=3450291&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=3450291)"/></a><a href="http://www.wikidot.com/user:info/lovelylife" onclick="WIKIDOT.page.listeners.userInfo(3450291); return false;">lovelylife</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/francesca-colafati" onclick="WIKIDOT.page.listeners.userInfo(2011457); return false;"><img alt="Francesca Colafati" class="small" src="https://www.wikidot.com/avatar.php?userid=2011457&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=2011457)"/></a><a href="http://www.wikidot.com/user:info/francesca-colafati" onclick="WIKIDOT.page.listeners.userInfo(2011457); return false;">Francesca Colafati</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ray-mizukagami" onclick="WIKIDOT.page.listeners.userInfo(5232136); return false;"><img alt="Ray Mizukagami" class="small" src="https://www.wikidot.com/avatar.php?userid=5232136&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=5232136)"/></a><a href="http://www.wikidot.com/user:info/ray-mizukagami" onclick="WIKIDOT.page.listeners.userInfo(5232136); return false;">Ray Mizukagami</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/thyesteanfeast" onclick="WIKIDOT.page.listeners.userInfo(2125650); return false;"><img alt="ThyesteanFeast" class="small" src="https://www.wikidot.com/avatar.php?userid=2125650&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=2125650)"/></a><a href="http://www.wikidot.com/user:info/thyesteanfeast" onclick="WIKIDOT.page.listeners.userInfo(2125650); return false;">ThyesteanFeast</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/self-defense" onclick="WIKIDOT.page.listeners.userInfo(2277917); return false;"><img alt="Self Defense" class="small" src="https://www.wikidot.com/avatar.php?userid=2277917&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=2277917)"/></a><a href="http://www.wikidot.com/user:info/self-defense" onclick="WIKIDOT.page.listeners.userInfo(2277917); return false;">Self Defense</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/nazomeita-neko" onclick="WIKIDOT.page.listeners.userInfo(2942484); return false;"><img alt="nazomeita-neko" class="small" src="https://www.wikidot.com/avatar.php?userid=2942484&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=2942484)"/></a><a href="http://www.wikidot.com/user:info/nazomeita-neko" onclick="WIKIDOT.page.listeners.userInfo(2942484); return false;">nazomeita-neko</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/shirleytan" onclick="WIKIDOT.page.listeners.userInfo(1936943); return false;"><img alt="shirleytan" class="small" src="https://www.wikidot.com/avatar.php?userid=1936943&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=1936943)"/></a><a href="http://www.wikidot.com/user:info/shirleytan" onclick="WIKIDOT.page.listeners.userInfo(1936943); return false;">shirleytan</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/kdkdxcipp" onclick="WIKIDOT.page.listeners.userInfo(10140795); return false;"><img alt="kdkdxcipp" class="small" src="https://www.wikidot.com/avatar.php?userid=10140795&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=10140795)"/></a><a href="http://www.wikidot.com/user:info/kdkdxcipp" onclick="WIKIDOT.page.listeners.userInfo(10140795); return false;">kdkdxcipp</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/marci12345" onclick="WIKIDOT.page.listeners.userInfo(10374686); return false;"><img alt="Marci12345" class="small" src="https://www.wikidot.com/avatar.php?userid=10374686&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=10374686)"/></a><a href="http://www.wikidot.com/user:info/marci12345" onclick="WIKIDOT.page.listeners.userInfo(10374686); return false;">Marci12345</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/boilyu" onclick="WIKIDOT.page.listeners.userInfo(9888106); return false;"><img alt="BOILYU" class="small" src="https://www.wikidot.com/avatar.php?userid=9888106&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=9888106)"/></a><a href="http://www.wikidot.com/user:info/boilyu" onclick="WIKIDOT.page.listeners.userInfo(9888106); return false;">BOILYU</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/cyanshine" onclick="WIKIDOT.page.listeners.userInfo(10139768); return false;"><img alt="Cyanshine" class="small" src="https://www.wikidot.com/avatar.php?userid=10139768&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=10139768)"/></a><a href="http://www.wikidot.com/user:info/cyanshine" onclick="WIKIDOT.page.listeners.userInfo(10139768); return false;">Cyanshine</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/limama" onclick="WIKIDOT.page.listeners.userInfo(2014133); return false;"><img alt="limama" class="small" src="https://www.wikidot.com/avatar.php?userid=2014133&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=2014133)"/></a><a href="http://www.wikidot.com/user:info/limama" onclick="WIKIDOT.page.listeners.userInfo(2014133); return false;">limama</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/setting-sun" onclick="WIKIDOT.page.listeners.userInfo(6740614); return false;"><img alt="setting sun" class="small" src="https://www.wikidot.com/avatar.php?userid=6740614&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=6740614)"/></a><a href="http://www.wikidot.com/user:info/setting-sun" onclick="WIKIDOT.page.listeners.userInfo(6740614); return false;">setting sun</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/dr-zerro" onclick="WIKIDOT.page.listeners.userInfo(7486247); return false;"><img alt="dr_zerro" class="small" src="https://www.wikidot.com/avatar.php?userid=7486247&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=7486247)"/></a><a href="http://www.wikidot.com/user:info/dr-zerro" onclick="WIKIDOT.page.listeners.userInfo(7486247); return false;">dr_zerro</a></span><br/>
+<span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/breakingnewsss1" onclick="WIKIDOT.page.listeners.userInfo(8596909); return false;"><img alt="breakingnewsss1" class="small" src="https://www.wikidot.com/avatar.php?userid=8596909&amp;amp;size=small&amp;amp;timestamp=1782790193" style="background-image:url(https://www.wikidot.com/userkarma.php?u=8596909)"/></a><a href="http://www.wikidot.com/user:info/breakingnewsss1" onclick="WIKIDOT.page.listeners.userInfo(8596909); return false;">breakingnewsss1</a></span><br/>
+<div class="actions" style="margin-top: 10px">
+				
+			Watch:
+			<a href="javascript:;" onclick="WIKIDOT.page.listeners.awatch(event, 'site', false, true)">site</a>
+                			|
+    			<a href="javascript:;" onclick="WIKIDOT.page.listeners.awatch(event, 'category', false, true)">category</a> 
+    			| 
+    			<a href="javascript:;" onclick="WIKIDOT.page.listeners.awatch(event, 'page', false, true)">page</a>
+</div>
+</div><div id="action-area" style="display: none;"></div>

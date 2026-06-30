@@ -1,0 +1,460 @@
+
+<div class="page-title">
+                    The 'date' field type
+                </div>
+<div id="page-content">
+<div class="alert alert-info">
+<p>October 2, 2014<br/>
+This is a work in progress. Some options still need to be tested before being added to this documentation.</p>
+</div>
+<br/>
+Defines a date input field that uses the <a href="http://api.jqueryui.com/datepicker/" target="_blank">jQuery UI Datepicker Widget</a> to select dates. It uses most of the options available that are of type <em>String</em> or <em>Int</em>. A basic datepicker can be added using just the <em>type</em> property:
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  date-1:
+    type: date
+[[/form]]</code>
+</pre></div>
+<p>The specific properties you can use on a text field:</p>
+<ul>
+<li><strong>width</strong>: specifies the visible field width in columns (fixed spaced characters, more or less). If the <em>autoSize</em> option is enabled, it overrides this property setting.</li>
+<li><strong>options</strong>: specifies the jQuery UI Datepicker Widget options to apply.</li>
+</ul>
+<p>Here is an example using a few of the available options:</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  mydate:
+    type: date
+    label: 'My Date Widget'
+    options:
+      appendText: ' This Demo is Cool!'
+      autoSize: true
+      changeYear: true
+      dateFormat: 'DD, d MM yy'
+      firstDay: 1
+      showOn: button
+      yearRange: '2014:2025'
+[[/form]]</code>
+</pre></div>
+<br/>
+The above example creates a datepicker calendar widget with the following options:
+<ul>
+<li><strong>showon: button</strong> adds a button after the input field and it must be clicked to open the datepicker.</li>
+<li><strong>autoSize: true</strong> automatically sets the width of the input box to fit the date format defined in the <em>dateFormat</em> option.</li>
+<li><strong>changeYear: true</strong> creates a dropdown selector of changing the year. This is useful if you don't want to make users click the previous/next links 12 times to move to another year.</li>
+<li><strong>dateFormat: 'DD, d MM yy</strong> formats the date selected to something like "Wednesday, 1 October 2014". See the date format reference below for more details on date formats.</li>
+<li><strong>firstDay: 1</strong> tells the calendar to use Monday as the first day of the week for the widget's calendar instead of the default of Sunday (0=Sunday, 1=Monday, …, 6=Saturday).</li>
+<li><strong>yearRange: '2014:2025'</strong> limits the year selection to the range specified.</li>
+</ul>
+<p>Dates in a date field are stored as a date number and displayed based on the <em>dateFormat</em> option you specifiy. add the <em>altFormat</em> option to use a different date format for your alternate date. If you want to save and use the date as <em>text</em> and not a number, you can use the <em>altField</em> option to place a text version of the date into another field in your data form. The example below will place a copy of the date selected in the <strong>mydate</strong> field as text into the <strong>alt-date</strong> field text box on the form. <strong><span style="white-space: pre-wrap;">%%form_data{alt-date}%%</span></strong> will be stored in the data form as text.</p>
+<h2 id="toc0"><span>altDate/altFormat Example</span></h2>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  mydate:
+    type: date
+    label: 'This date will fill in'
+    options:
+      appendText: ' altField Demo'
+      autoSize: true
+      changeYear: true
+      dateFormat: 'DD, d MM yy'
+      altField: 'input[name=field-alt-date]'
+      altFormat: 'm/d/yy'
+      yearRange: '2014:2025'
+  alt-date:
+    type: text
+    label: 'Filled in by date above'
+    width: 10
+[[/form]]</code>
+</pre></div>
+<h2 id="toc1"><span>Live Examples</span></h2>
+<p>A very comprehensive demo has been created on the <a href="http://bootstrap-playground.wikidot.com/dataform-dates:demo" target="_blank">Bootstrap Playground site</a>.<br/>
+The <strong><em>_template</em></strong> page that drives the demo is located <a href="http://bootstrap-playground.wikidot.com/dataform-dates:_template" target="_blank">here</a>.</p>
+<h2 id="toc2"><span>Datepicker Widget Options:</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>Option</th>
+<th>Syntax</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+<tr>
+<td><strong>altField</strong></td>
+<td>altField: 'input[name=field-&lt;target field name&gt;]'</td>
+<td>The alternate field on your form to place a text copy of the date based on the current <em>dateFormat</em> option. Use <em>altFormat</em> to define a different date format.</td>
+<td>altField: 'input[name=field-alt-date]'</td>
+</tr>
+<tr>
+<td><strong>altFormat</strong></td>
+<td>altFormat : format string</td>
+<td>Used to apply an alternate <em>dateFormat</em> to the <em>altDate</em> option</td>
+<td>altFormat: 'm/d/yy'</td>
+</tr>
+<tr>
+<td><strong>appendText</strong></td>
+<td>appendText : 'string to display'</td>
+<td>The text to display after each date field.</td>
+<td>appendText: ' This Demo is Cool!'</td>
+</tr>
+<tr>
+<td><strong>autoSize</strong></td>
+<td>autoSize : true|false</td>
+<td>Set to true to automatically resize the input field to accommodate dates in the current dateFormat.</td>
+<td>autoSize: true</td>
+</tr>
+<tr>
+<td><strong>buttonImage</strong></td>
+<td>buttonImage : 'url of image file'</td>
+<td>URL of an image to use to display the datepicker when the showOn option is set to "button" or "both".</td>
+<td>buttonImage: '<a href="http://community.wikidot.com/local--files/files/calendar-icon.png">http://community.wikidot.com/local--files/files/calendar-icon.png</a>'</td>
+</tr>
+<tr>
+<td><strong>buttonImageOnly</strong></td>
+<td>buttonImageOnly : true|false</td>
+<td>Whether the button image should be rendered by itself instead of inside a button element. This option is only relevant if the buttonImage option has also been set.</td>
+<td>buttonImageOnly: false</td>
+</tr>
+<tr>
+<td><strong>buttonText</strong></td>
+<td>buttonText : 'string to display'</td>
+<td>The text to display on the trigger button. Use in conjunction with the showOn option set to "button" or "both". If <em>buttonImage</em> is set, the text becomes the alt value and is not directly displayed.</td>
+<td>buttonText: 'Pick!'</td>
+</tr>
+<tr>
+<td><strong>changeMonth</strong></td>
+<td>changeMonth : true|false</td>
+<td>Whether the month should be rendered as a dropdown instead of text.</td>
+<td>changeMonth: true</td>
+</tr>
+<tr>
+<td><strong>changeYear</strong></td>
+<td>changeYear : true|false</td>
+<td>Whether the year should be rendered as a dropdown instead of text. Use the <em>yearRange</em> option to control which years are made available for selection.</td>
+<td>changeYear: true</td>
+</tr>
+<tr>
+<td><strong>closeText</strong></td>
+<td>closeText : 'string to display'</td>
+<td>The text to display for the close link. Use the <em>showButtonPanel: true</em> to display this button.</td>
+<td>closeText: 'Abort Mission'</td>
+</tr>
+<tr>
+<td><strong>currentText</strong></td>
+<td>currentText : 'string to display'</td>
+<td>The text to display for the close link. Use <em>showButtonPanel: true</em> to display this button.</td>
+<td>currentText: 'Go to Today'</td>
+</tr>
+<tr>
+<td><strong>dateFormat</strong></td>
+<td>dateFormat : format string</td>
+<td>The format for parsed and displayed dates. For a full list of the possible formats see the table below.</td>
+<td>dateFormat: 'DD, MM yy'</td>
+</tr>
+<tr>
+<td><strong>dayNames</strong></td>
+<td>dayNames : [array of names]</td>
+<td>The list of long day names, starting from Sunday. Useful for languages other than English. Used with the <em>DD</em> date format option.</td>
+<td>dayNames: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]</td>
+</tr>
+<tr>
+<td><strong>dayNamesMin</strong></td>
+<td>dayNamesMin : [array of names]</td>
+<td>The list of minimised day names, starting from Sunday, for use as column headers within the datepicker. Useful for languages other than English.</td>
+<td>dayNamesMin: [So, Mo, Di, Mi, Do, Fr, Sa]</td>
+</tr>
+<tr>
+<td><strong>dayNamesShort</strong></td>
+<td>dayNamesShort : [array of names]</td>
+<td>The list of abbreviated day names, starting from Sunday. Useful for languages other than English. Used with the <em>D</em> date format option.</td>
+<td>dayNamesShort: [Son, Mon, Die, Mit, Don, Fre, Sam]</td>
+</tr>
+<tr>
+<td><strong>defaultDate</strong></td>
+<td>defaultDate : 'date string'|+/- number of days from today|string of values and periods</td>
+<td>Set the default date on first opening of the widget. Specify either an actual date via a string in the current dateFormat, or a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +7d'), or null for today.</td>
+<td>defaultDate: '+1m -1d'</td>
+</tr>
+<tr>
+<td><strong>duration</strong></td>
+<td>duration : number of milliseconds|slow|normal|fast</td>
+<td>Control the speed at which the datepicker appears, it may be a time in milliseconds or a string representing one of the three predefined speeds ("slow", "normal", "fast").</td>
+<td>duration : slow</td>
+</tr>
+<tr>
+<td><strong>firstDay</strong></td>
+<td>firstDay: number</td>
+<td>Set the first day of the week: Sunday is 0, Monday is 1, etc.</td>
+<td>firstDay: 1</td>
+</tr>
+<tr>
+<td><strong>hideIfNoPrevNext</strong></td>
+<td>hideIfNoPrevNext : true|false|\Normally the previous and next links are disabled (greyed out) when not applicable (as determined by the <em>minDate</em> and <em>maxDate</em> options). You can hide them altogether by setting this attribute to true.</td>
+<td>hideIfNoPrevNext: true</td>
+</tr>
+<tr>
+<td><strong>isRTL</strong></td>
+<td>isRTL : true|false</td>
+<td>Whether the current language is drawn from right to left.</td>
+<td>isRTL: true</td>
+</tr>
+<tr>
+<td><strong>maxDate</strong></td>
+<td>maxDate : 'date string'|+/- number of days from today|string of values and periods.</td>
+<td>The maximum selectable date.</td>
+<td>- maxDate: '+2y -1m'</td>
+</tr>
+<tr>
+<td><strong>minDate</strong></td>
+<td>minDate : 'date string'|+/- number of days from today|string of values and periods.</td>
+<td>The minimum selectable date.</td>
+<td>minDate: 0</td>
+</tr>
+<tr>
+<td><strong>monthNames</strong></td>
+<td>monthNames : [array of names]</td>
+<td>The list of full month names. Useful for languages other than English. Used with the <em>MM</em> date format option.</td>
+<td>monthNames: [Jannuar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]</td>
+</tr>
+<tr>
+<td><strong>monthNamesShort</strong></td>
+<td>monthNamesShort : [array of names]</td>
+<td>The list of abbreviated month names, as used in the month header and with the <em>M</em> date format option. Useful for languages other than English.</td>
+<td>monthNamesShort: [Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]</td>
+</tr>
+<tr>
+<td><strong>nextText</strong></td>
+<td>nextText : string</td>
+<td>The text to display for the next month link. With the default styling, this value is used as the alt text when hovering over the icon.</td>
+<td>nextText: 'Forward'</td>
+</tr>
+<tr>
+<td><strong>numberOfMonths</strong></td>
+<td>numberOfMonths : number|[rows, columns]</td>
+<td>The number of months to show at once. <strong>Number</strong>: The number of months to display in a single row. <strong>Array</strong>: An array defining the number of rows and columns to display.</td>
+<td>numberOfMonths: [ 2, 3 ]</td>
+</tr>
+<tr>
+<td><strong>prevText</strong></td>
+<td>prevText : 'string'</td>
+<td>The text to display for the next month link. With the default styling, this value is used as the alt text when hovering over the icon.</td>
+<td>prevText: 'Back'</td>
+</tr>
+<tr>
+<td><strong>shortYearCutoff</strong></td>
+<td>shortYearCutoff : number|date string</td>
+<td>The cutoff year for determining the century for a date (used in conjunction with dateFormat 'y'). Any dates entered with a year value less than or equal to the cutoff year are considered to be in the current century, while those greater than it are deemed to be in the previous century.</td>
+<td>shortYearCutoff: '+20'</td>
+</tr>
+<tr>
+<td><strong>showAnim</strong></td>
+<td>showAnim : show|slideDown|fadeIn</td>
+<td>The name of the animation used to show and hide the datepicker. Use "show" (the default), "slideDown" or "fadeIn"<a href="http://api.jqueryui.com/category/effects/" target="_blank">Other effects</a> need testing and should be added as they are confirmed to work here.</td>
+<td>showAnim: slideDown</td>
+</tr>
+<tr>
+<td><strong>showButtonPanel</strong></td>
+<td>showButtonPanel : true|false</td>
+<td>Whether to display a button pane underneath the calendar. The button pane contains two buttons, a Today button that links to the current day, and a Done button that closes the datepicker. The buttons' text can be customized using the currentText and closeText options respectively.</td>
+<td>showButtonPanel: true</td>
+</tr>
+<tr>
+<td><strong>showCurrentAtPos</strong></td>
+<td>showCurrentAtPos : number</td>
+<td>When displaying multiple months via the <em>numberOfMonths</em> option, this option defines which position to display the current month in.</td>
+<td>showCurrentAtPos: 1</td>
+</tr>
+<tr>
+<td><strong>showMonthAfterYear</strong></td>
+<td>showMonthAfterYear: true|false</td>
+<td>Whether to show the month after the year in the header.</td>
+<td>showMonthAfterYear: true</td>
+</tr>
+<tr>
+<td><strong>showOn</strong></td>
+<td>showOn : focus|button|both</td>
+<td>When the datepicker should appear. The datepicker can appear when the field receives focus ("focus"), when a button is clicked ("button"), or when either event occurs ("both").</td>
+<td>showOn: both</td>
+</tr>
+<tr>
+<td><strong>showWeek</strong></td>
+<td>showWeek: true|false</td>
+<td>When true, a column is added to show the week of the year.</td>
+<td>showWeek: true</td>
+</tr>
+<tr>
+<td><strong>stepMonths</strong></td>
+<td>stepMonths: number</td>
+<td>Set how many months to move when clicking the previous/next links.</td>
+<td>stepMonths: 3</td>
+</tr>
+<tr>
+<td><strong>weekHeader</strong></td>
+<td>weekheader: 'string'</td>
+<td>Text to display for the week number column header when the <em>showWeek</em> option is enabled.)</td>
+<td>weekHeader: 'wk#'</td>
+</tr>
+<tr>
+<td><strong>yearRange</strong></td>
+<td>yearRange: 'string'</td>
+<td>The range of years displayed in the year drop-down: either relative to today's year ("-nn:+nn"), relative to the currently selected year ("c-nn:c+nn"), absolute ("nnnn:nnnn"), or combinations of these formats ("nnnn:-nn"). Note that this option only affects what appears in the drop-down, to restrict which dates may be selected use the <em>minDate</em> and/or <em>maxDate</em> options.</td>
+<td>yearRange: '2010:2020'</td>
+</tr>
+<tr>
+<td><strong>yearSuffix</strong></td>
+<td>yearSuffix: 'string'</td>
+<td>Additional text to display after the year in the month headers.</td>
+<td>yearSuffix: ' CE'</td>
+</tr>
+</table>
+<h2 id="toc3"><span>Date Formats Reference</span></h2>
+<table class="wiki-content-table">
+<tr>
+<td colspan="2"><strong>Datepicker Date Format Options</strong></td>
+<td colspan="2"><strong>Wikidot Date Format Options</strong></td>
+</tr>
+<tr>
+<td colspan="2"><span style="color: #880000">The format can be combinations of the following:</span></td>
+<td colspan="2"><span style="color: #880000">Use to display Data Form Datepicker date fields:<br/>
+<strong><span style="white-space: pre-wrap;">[[date</span> <span style="white-space: pre-wrap;">%%</span>form_data{datefield}<span style="white-space: pre-wrap;">%%</span> <span style="white-space: pre-wrap;">format="%b %d, %Y"]]</span></strong></span></td>
+</tr>
+<tr>
+<td>d</td>
+<td>day of month (no leading zero)</td>
+<td>%a</td>
+<td>abbreviated weekday name (3 letters)</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>day of month (two digit)</td>
+<td><tt>%A</tt></td>
+<td>full weekday name</td>
+</tr>
+<tr>
+<td>o</td>
+<td>day of the year (no leading zeros)</td>
+<td>%b</td>
+<td>abbreviated month name (3 letters)</td>
+</tr>
+<tr>
+<td>oo</td>
+<td>day of the year (three digit)</td>
+<td>%B</td>
+<td>full month name</td>
+</tr>
+<tr>
+<td>D</td>
+<td>day name short</td>
+<td>%c</td>
+<td>local date representation</td>
+</tr>
+<tr>
+<td>DD</td>
+<td>day name long</td>
+<td>%d</td>
+<td>day of the month (01…31)</td>
+</tr>
+<tr>
+<td>m</td>
+<td>month of year (no leading zero)</td>
+<td>%D</td>
+<td>is equivalent to "%m/%d/%y"</td>
+</tr>
+<tr>
+<td>mm</td>
+<td>month of year (two digit)</td>
+<td>%e</td>
+<td>day of the month (1…9, 10…31)</td>
+</tr>
+<tr>
+<td>M</td>
+<td>month name short</td>
+<td>%H</td>
+<td>hours (00…23)</td>
+</tr>
+<tr>
+<td>MM</td>
+<td>month name long</td>
+<td>%I</td>
+<td>hours (00…12)</td>
+</tr>
+<tr>
+<td>y</td>
+<td>year (two digit)</td>
+<td>%m</td>
+<td>month (01…12)</td>
+</tr>
+<tr>
+<td>yy</td>
+<td>year (four digit)</td>
+<td>%M</td>
+<td>minutes (00…59)</td>
+</tr>
+<tr>
+<td>@</td>
+<td>Unix timestamp (ms since 01/01/1970)</td>
+<td>%O</td>
+<td><em>nn</em> seconds/minutes/hours/days</td>
+</tr>
+<tr>
+<td>!</td>
+<td>Windows ticks (100ns since 01/01/0001)</td>
+<td>%p</td>
+<td>AM/PM</td>
+</tr>
+<tr>
+<td>'…'</td>
+<td>literal text</td>
+<td>%r</td>
+<td>is equivalent to "%I:%M:%S %p"</td>
+</tr>
+<tr>
+<td>''</td>
+<td>single quote</td>
+<td>%R</td>
+<td>is equivalent to "%H:%M"</td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td>anything else</td>
+<td>literal text</td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td>%S</td>
+<td>seconds (00…59)</td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td>%T</td>
+<td>is equivalent to "%H:%M:%S"</td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td><tt>%y</tt></td>
+<td>year (00…99)</td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td><tt>%Y</tt></td>
+<td>year (1970…2999)</td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td><span style="white-space: pre-wrap;"> </span></td>
+<td><tt>%z<br/>
+%Z</tt></td>
+<td>time zone</td>
+</tr>
+</table>
+</div><div id="action-area" style="display: none;"></div>

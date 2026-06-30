@@ -1,0 +1,9 @@
+
+<div class="page-title">
+                    Thanks
+                </div>
+<div id="page-content">
+<p>Thanks of course go to the Wikidot developers for releasing such a powerful addition to the feature set. Thanks also for the good ideas and solutions from my fellow admins, particularly <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/helmut-pdorf" onclick="WIKIDOT.page.listeners.userInfo(17609); return false;"><img alt="Helmut_pdorf" class="small" src="https://www.wikidot.com/avatar.php?userid=17609&amp;amp;size=small&amp;amp;timestamp=1398763987" style="background-image:url(https://www.wikidot.com/userkarma.php?u=17609)"/></a><a href="http://www.wikidot.com/user:info/helmut-pdorf" onclick="WIKIDOT.page.listeners.userInfo(17609); return false;">Helmut_pdorf</a></span> and <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/ed-johnson" onclick="WIKIDOT.page.listeners.userInfo(38854); return false;"><img alt="Ed Johnson" class="small" src="https://www.wikidot.com/avatar.php?userid=38854&amp;amp;size=small&amp;amp;timestamp=1398763987" style="background-image:url(https://www.wikidot.com/userkarma.php?u=38854)"/></a><a href="http://www.wikidot.com/user:info/ed-johnson" onclick="WIKIDOT.page.listeners.userInfo(38854); return false;">Ed Johnson</a></span></p>
+<hr/>
+<p><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/robelliott" onclick="WIKIDOT.page.listeners.userInfo(111301); return false;"><img alt="RobElliott" class="small" src="https://www.wikidot.com/avatar.php?userid=111301&amp;amp;size=small&amp;amp;timestamp=1398763987" style="background-image:url(https://www.wikidot.com/userkarma.php?u=111301)"/></a><a href="http://www.wikidot.com/user:info/robelliott" onclick="WIKIDOT.page.listeners.userInfo(111301); return false;">RobElliott</a></span> November/December 2011</p>
+</div><div id="action-area" style="display: none;"></div>

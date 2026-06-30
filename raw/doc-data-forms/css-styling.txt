@@ -1,0 +1,42 @@
+
+<div class="page-title">
+                    CSS Styling
+                </div>
+<div id="page-content">
+<p>You can modify the look and feel of your data forms using CSS (either per-site, or per page using the <a href="http://www.wikidot.com/doc:css-module">CSS module</a>. This is the CSS model for data forms:</p>
+<ul>
+<li><strong>table</strong><br/>
+<em>class</em>: form-table
+<ul>
+<li><strong>tr</strong><br/>
+<em>class</em>: form-row row-{row number}</li>
+<li><strong>td</strong><br/>
+<em>class</em>: form-labels</li>
+<li><strong>span</strong><br/>
+<em>class</em>: form-label</li>
+<li><strong>td</strong><br/>
+<em>class</em>: form-values</li>
+<li><strong>span/div</strong> (div for wiki and static)<br/>
+<em>class</em>: form-value field-{name}<br/>
+<em>class</em>': form-error (added to field while save when there is matching error)
+<ul>
+<li><strong>{field}</strong><br/>
+<em>class</em>: form-{type}</li>
+<li><strong>span</strong><br/>
+<em>class</em>: form-message</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="toc0"><span>Styling the hint text</span></h3>
+<p>If you have a long hint text you might find that it is longer than the text box. This is because by default the text box is a partcular width. In this case you can either set the width of that particular field to be wider or you can use CSS to set the same width for all text input boxes and ensure the hint fits inside it by using:</p>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-identifier">input</span><span class="hl-brackets">[</span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">text</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">, </span><span class="hl-identifier">textarea</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">width:</span><span class="hl-number">100</span><span class="hl-string">%</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span>
+</pre></div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

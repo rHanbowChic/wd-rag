@@ -1,0 +1,18 @@
+
+<div class="page-title">
+                    Literal Text
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Literal Text
+                    </div>
+<div id="page-content">
+<p>If you want to escape parsing and produce raw text enclose it in double @@ characters.</p>
+<div class="code">
+<pre>
+<code>This //text// gets **parsed**.
+
+@@This //text// does not get **parsed**.@@</code>
+</pre></div>
+<p>This <em>text</em> gets <strong>parsed</strong>.</p>
+<p><span style="white-space: pre-wrap;">This //text// does not get **parsed**.</span></p>
+</div><div id="action-area" style="display: none;"></div>

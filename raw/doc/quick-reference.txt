@@ -1,0 +1,192 @@
+
+<div class="page-title">
+                    Quick Reference
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Quick Reference
+                    </div>
+<div id="page-content">
+<p><a href="/doc:quick-reference-mini">Mini version</a><br/></p>
+<table class="wiki-content-table">
+<tr>
+<td><a href="/doc-wiki-syntax:headings">+ Level 1 Heading</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:headings">++ Level 2 Heading</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:headings">+++ Level 3 Heading</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:lists">* Bulleted text</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:lists"># Numbered text</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:block-quotes">&gt; Blockquoted text</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:inline-formatting">//italic text//</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:inline-formatting">**bold text**</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:inline-formatting">{{monospaced text}}</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:inline-formatting">^^superscript^^</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:inline-formatting">,,subscript,,</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:inline-formatting">##red|standard## or ##229966|custom-code## color</a></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[size smaller]]</span><a href="/doc-wiki-syntax:text-size">smaller text</a><span style="white-space: pre-wrap;">[[/size]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[size larger]]</span><a href="/doc-wiki-syntax:text-size">larger text</a><span style="white-space: pre-wrap;">[[/size]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[size 80%]]</span><a href="/doc-wiki-syntax:text-size">80% of current size</a><span style="white-space: pre-wrap;">[[/size]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[size 1.5em]]</span><a href="/doc-wiki-syntax:text-size">150% of current size</a><span style="white-space: pre-wrap;">[[/size]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[code]]</span> <a href="/doc-wiki-syntax:code-blocks">lines of code</a> <span style="white-space: pre-wrap;">[[/code]]</span></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:block-formatting-elements">=This line is centered</a></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[&lt;]]</span><br/>
+<a href="/doc-wiki-syntax:block-formatting-elements">Text is aligned left</a><br/>
+<span style="white-space: pre-wrap;">[[/&lt;]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[&gt;]]</span><br/>
+<a href="/doc-wiki-syntax:block-formatting-elements">Text is aligned right</a><br/>
+<span style="white-space: pre-wrap;">[[/&gt;]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[=]]</span><br/>
+<a href="/doc-wiki-syntax:block-formatting-elements">Text is centered</a><br/>
+<span style="white-space: pre-wrap;">[[/=]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[==]]</span><br/>
+<a href="/doc-wiki-syntax:block-formatting-elements">Text is justified</a><br/>
+<span style="white-space: pre-wrap;">[[/==]]</span></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:links">http://www.wikidot.com</a></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[http://www.wikidot.com</span> <a href="/doc-wiki-syntax:links">Link to Wikidot</a><span style="white-space: pre-wrap;">]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[http://www.wikidot.com/doc-wiki-syntax:links#internal</span> <a href="/doc-wiki-syntax:links">Link to anchor</a><span style="white-space: pre-wrap;">]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[*http://www.wikidot.com</span> <a href="/doc-wiki-syntax:links">Pops in new window</a><span style="white-space: pre-wrap;">]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[/category:page/option1/option2</span> <a href="/doc-wiki-syntax:links">Click to show page</a><span style="white-space: pre-wrap;">]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[support@example.com</span> <a href="/doc-wiki-syntax:links">Email us</a><span style="white-space: pre-wrap;">]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[wikipedia:Albert_Einstein</span> <a href="/doc-wiki-syntax:links">Albert Einstein</a><span style="white-space: pre-wrap;">]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[google:free+wiki]</span> <a href="/doc-wiki-syntax:links">Google search results</a></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[dictionary:wiki]</span> <a href="/doc-wiki-syntax:links">Dictionary.com lookup</a></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[[</span><a href="/doc-wiki-syntax:links">name-of-page</a><span style="white-space: pre-wrap;">]]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[[name-of-page |</span> <a href="/doc-wiki-syntax:links">Click to show page</a><span style="white-space: pre-wrap;">]]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[[name-of-page#anchor |</span> <a href="/doc-wiki-syntax:links">Some anchor</a><span style="white-space: pre-wrap;">]]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">``</span><a href="/doc-wiki-syntax:typography">smart double quotes</a><span style="white-space: pre-wrap;">''</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">`</span><a href="/doc-wiki-syntax:typography">smart single quotes</a><span style="white-space: pre-wrap;">' </span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">&lt;&lt;</span> <a href="/doc-wiki-syntax:typography">French-style quotes</a> <span style="white-space: pre-wrap;">&gt;&gt;</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">...</span><a href="/doc-wiki-syntax:typography">ellipsis</a></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">em -- </span><a href="/doc-wiki-syntax:typography">dash</a></td>
+</tr>
+<tr>
+<td>@@<a href="/doc-wiki-syntax:literal-text">unparsed text</a>@@</td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">@&lt;</span><a href="/doc-wiki-syntax:universal-escaping">escaped text</a><span style="white-space: pre-wrap;">&gt;@</span></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:horizontal-rules">---- Horizontal line</a></td>
+</tr>
+<tr>
+<td><a href="/doc-wiki-syntax:definition-lists">: Word : Definition</a></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[image</span> <a href="/doc-wiki-syntax:images">url OR attachment OR :first</a> <span style="white-space: pre-wrap;">]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[image</span> <a href="/doc-wiki-syntax:images">something</a> <span style="white-space: pre-wrap;">size="large | medium | small | thumbnail" ]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[image</span> <a href="/doc-wiki-syntax:images">something</a> <span style="white-space: pre-wrap;">link="name-of-page OR url" ]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[f&lt;image</span> <a href="/doc-wiki-syntax:images">something</a> <span style="white-space: pre-wrap;">alt="Float left"]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[</span><a href="/doc-wiki-syntax:images#gallery">gallery size="image-size"</a><span style="white-space: pre-wrap;">]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[collapsible]]</span> <a href="/doc-wiki-syntax:collapsible-blocks">collapsed text</a> <span style="white-space: pre-wrap;">[[/collapsible]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">||</span> <a href="/doc-wiki-syntax:tables">Simple table</a><span style="white-space: pre-wrap;"> ||~ heading || cell ||</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[div</span> <a href="/doc-wiki-syntax:block-formatting-elements#custom">custom styles</a> <span style="white-space: pre-wrap;">]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[math somelabel]]</span> <a href="/doc-wiki-syntax:math">LaTeX specification</a> <span style="white-space: pre-wrap;">[[/math]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[$</span> <a href="/doc-wiki-syntax:math">E = mc^2</a> <span style="white-space: pre-wrap;">$]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[footnote]]</span><a href="/doc-wiki-syntax:footnotes">A footnote.</a><span style="white-space: pre-wrap;">[[/footnote]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[bibliography]]</span> <a href="/doc-wiki-syntax:bibliography">bibliography entries</a> <span style="white-space: pre-wrap;">[[/bibliography]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[</span><a href="/doc-wiki-syntax:include">include pagename</a><span style="white-space: pre-wrap;">]]</span></td>
+</tr>
+<tr>
+<td><span style="white-space: pre-wrap;">[[file</span> <a href="/doc:wiki-syntax:attachments">attachment | custom-text</a><span style="white-space: pre-wrap;">]]</span></td>
+</tr>
+</table>
+<p>More: <a href="/doc-wiki-syntax:table-of-contents">Tables of Content</a> • <a href="http://www.wikidot.com/doc-modules:start">Modules</a> • <a href="/doc-wiki-syntax:tables#advanced">Custom tables</a> • <a href="/doc-wiki-syntax:embedding#video">Video</a> • <a href="/doc-wiki-syntax:embedding#audio">Audio</a> • <a href="/doc-wiki-syntax:comments">Comments</a> • <a href="/doc-wiki-syntax:notes">Notes</a> • <a href="/doc-wiki-syntax:date">Dates</a> • <a href="/doc-wiki-syntax:embedding">Embedding</a> • <a href="/doc-wiki-syntax:embedding-code#iframe">iframe</a> • <a href="/doc-wiki-syntax:iftags">iftag</a> • <a href="/doc-wiki-syntax:users">Users</a> • <a href="/doc-wiki-syntax:social-bookmarking">Bookmarking</a> • <a href="/doc-wiki-syntax:layout#tabview">Tab Layouts</a></p>
+</div><div id="action-area" style="display: none;"></div>

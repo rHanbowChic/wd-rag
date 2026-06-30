@@ -1,0 +1,60 @@
+
+<div class="page-title">
+                    Members Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Members Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>This module is used to list members of the site.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>group</td>
+<td>no</td>
+<td>"members"<br/>
+"admins"<br/>
+"moderators"</td>
+<td>"members"</td>
+<td>limits the list to the specified group</td>
+</tr>
+<tr>
+<td>showSince</td>
+<td>no</td>
+<td>"no" or "false"</td>
+<td>"yes" for group="members"</td>
+<td>does not show the date joined; valid only for group="members"</td>
+</tr>
+<tr>
+<td>order</td>
+<td>no</td>
+<td>"userId", "userIdDesc", "joined", "joinedDesc", "name", "nameDesc"</td>
+<td>"joined"</td>
+<td>sort Members by name (alphabetically), by user ID or date of joining</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>List all members of the site:</p>
+<div class="code">
+<pre>
+<code>[[module Members]]</code>
+</pre></div>
+<p>List only site administrators:</p>
+<div class="code">
+<pre>
+<code>[[module Members group="admins"]]</code>
+</pre></div>
+<p>List only moderators:</p>
+<div class="code">
+<pre>
+<code>[[module Members group="moderators"]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

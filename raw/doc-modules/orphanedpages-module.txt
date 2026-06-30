@@ -1,0 +1,16 @@
+
+<div class="page-title">
+                    OrphanedPages Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » OrphanedPages Module
+                    </div>
+<div id="page-content">
+<p>This module shows the list of pages that do not have any incoming links from other pages - at least internal links produced by syntax <tt><span style="white-space: pre-wrap;">[[[page-name]]]</span></tt>. If a page is listed here in this module should not mean anything wrong because there might be special pages that do not (and should not as e.g. some forum pages) have incoming links. But it is recommended to check this list from time to time.</p>
+<p>The same module can be found in <strong>site tools</strong> at the bottom of every page.</p>
+<h3 id="toc0"><span>Usage</span></h3>
+<div class="code">
+<pre>
+<code>[[module OrphanedPages]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

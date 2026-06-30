@@ -1,0 +1,54 @@
+
+<div class="page-title">
+                    Search Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Search Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>The Search module lets your users search the current site. You can place the Search module itself on any page, but your site <em>must</em> contain a page called "<em>search:site</em>" that (also) contains the Search module.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>The Search module allows these attributes:</p>
+<ul>
+<li>mini="true" - shows a simpler search box, hiding the radio button search options.</li>
+</ul>
+<h2 id="toc2"><span>Example</span></h2>
+<p>On your site's <em>start</em> page:</p>
+<div class="code">
+<pre>
+<code>++ Search this site
+[[module Search]]
+= ([http://www.wikidot.com/doc:searching Search tips])</code>
+</pre></div>
+<p>On your site's <em>search:site</em> page:</p>
+<div class="code">
+<pre>
+<code>[[module Search]]</code>
+</pre></div>
+<h2 id="toc3"><span>Advanced Settings for search:site Page</span></h2>
+<p>This option only works on your site's <em>search:site</em> page in conjunction with the default search box (normally located near the top navigation bar).<br/>
+The default source of this page is:</p>
+<div class="code">
+<pre>
+<code>[[module Search]]
+
+[!-- please do not remove or change this page if you want to keep the search function working --]</code>
+</pre></div>
+<br/>
+You can edit the parameters of the Search module using the following options.
+<ul>
+<li>a="p" sets the default search mode to pages only (default).</li>
+<li>a="f" sets the default search to forum only.</li>
+<li>a="pf" sets the default search to pages and forum.</li>
+</ul>
+<p>Used in tandem with <em>mini="true"</em> you can hide the radio button options displaying a simpler interface and controlling the type of search done on your site.</p>
+<h2 id="toc4"><span>Advanced Example</span></h2>
+<p>To limit searching to forums only and hide the search radio button options, edit your <em>search:site</em> page so it looks like this:</p>
+<div class="code">
+<pre>
+<code>[[module Search a="f" mini="true"]]
+
+[!-- please do not remove or change this page if you want to keep the search function working --]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

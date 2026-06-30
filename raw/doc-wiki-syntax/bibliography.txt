@@ -1,0 +1,28 @@
+
+<div class="page-title">
+                    Bibliography
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Bibliography
+                    </div>
+<div id="page-content">
+<p>The bibliography block is defined by <tt><span style="white-space: pre-wrap;">[[bibliography]]...[[/bibliography]]</span></tt>. Each bibliography item has the form:<br/>
+<tt><span style="white-space: pre-wrap;">label : full reference</span></tt><br/>
+To cite a bibliography entry use <tt><span style="white-space: pre-wrap;">((bibcite</span> <em>label</em>))</tt>.</p>
+<div class="code">
+<pre>
+<code>The first pulsar was observed by J. Bell and A. Hewish [((bibcite bell))]. Another reference [see ((bibcite guy))].
+
+[[bibliography]]
+: bell : Bell, J.; Hewish, A.; Pilkington, J. D. H.; Scott, P. F.; and Collins, R. A. //Observation of a Rapidly Pulsating Radio Source.// Nature 217, 709, 1968.
+: guy : Guy, R. K. //Modular Difference Sets and Error Correcting Codes.// §C10 in Unsolved Problems in Number Theory, 2nd ed. New York: Springer-Verlag, pp. 118-121, 1994.
+[[/bibliography]]</code>
+</pre></div>
+<p>The first pulsar was observed by J. Bell and A. Hewish [<a class="bibcite" href="javascript:;" id="bibcite-1-33198a" onclick="WIKIDOT.page.utils.scrollToReference('bibitem-1')">1</a>]. Another reference [see <a class="bibcite" href="javascript:;" id="bibcite-2-7138a" onclick="WIKIDOT.page.utils.scrollToReference('bibitem-2')">2</a>].</p>
+<div class="bibitems">
+<div class="title">Bibliography</div>
+<div class="bibitem" id="bibitem-1">1. Bell, J.; Hewish, A.; Pilkington, J. D. H.; Scott, P. F.; and Collins, R. A. <em>Observation of a Rapidly Pulsating Radio Source.</em> Nature 217, 709, 1968.</div>
+<div class="bibitem" id="bibitem-2">2. Guy, R. K. <em>Modular Difference Sets and Error Correcting Codes.</em> §C10 in Unsolved Problems in Number Theory, 2nd ed. New York: Springer-Verlag, pp. 118-121, 1994.</div>
+</div>
+<p>If you are not satisfied with the default title ("Bibliography") you can force your own title by using <tt><span style="white-space: pre-wrap;">[[bibliography title="Custom title"]]</span></tt> or even do not use title at all (<tt>title=""</tt>).</p>
+</div><div id="action-area" style="display: none;"></div>

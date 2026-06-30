@@ -1,0 +1,21 @@
+
+<div class="page-title">
+                    Video tutorials
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Video tutorials
+                    </div>
+<div id="page-content">
+<p>Thanks to the user samoore, that originally provided video tutorials for Wikidot. These are no longer available.</p>
+<p>Here are some alternatives, also made by the community: <a href="https://www.youtube.com/@WikidotTutorials">https://www.youtube.com/@WikidotTutorials</a></p>
+<h3 id="toc0"><span>How to create your own site</span></h3>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/7SNz9A8x0vY" title="YouTube video player" width="560"></iframe></p>
+<h3 id="toc1"><span>Pages and Categories</span></h3>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/PJkN8_JQ3Uk" title="YouTube video player" width="560"></iframe></p>
+<h3 id="toc2"><span>ListPages module basics</span></h3>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/QkdzaeNQQ_s" title="YouTube video player" width="560"></iframe></p>
+<h3 id="toc3"><span>Simple Tables</span></h3>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/Tvqo6PFPwXs" title="YouTube video player" width="560"></iframe></p>
+<h3 id="toc4"><span>Editing your CSS theme</span></h3>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/C4EtSNwh6NE" title="YouTube video player" width="560"></iframe></p>
+</div><div id="action-area" style="display: none;"></div>

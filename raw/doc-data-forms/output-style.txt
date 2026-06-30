@@ -1,0 +1,37 @@
+
+<div class="page-title">
+                    Styling the output of a field
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Styling the output of a field
+                    </div>
+<div id="page-content">
+<p>You can set the color and other styles of a field on the form after it is saved. Create the field in your data form in the normal way as follows:</p>
+<div class="code">
+<pre>
+<code>[[form]
+fields
+...
+...
+  priority:
+    label: Priority
+    type: select
+    values:
+      normal: Normal
+      urgent: Urgent
+      critical: Critical
+....
+[[/form]]</code>
+</pre></div>
+<p>Above the <span style="white-space: pre-wrap;">====</span> separator add a CSS module:</p>
+<div class="code">
+<pre>
+<code>[[module css]]
+.normal { color: green; }
+.urgent { color: red; }
+.critical { color: red; font-weight: bold;}
+[[/module]]</code>
+</pre></div>
+<p>Then use a css span class and a combination of form_raw and form_data to display the field in the relevant color:</p>
+<p><span style="white-space: pre-wrap;">[[span class="%%form_raw{priority}%%"]]%%form_data{priority}%%[[/span]]</span></p>
+</div><div id="action-area" style="display: none;"></div>

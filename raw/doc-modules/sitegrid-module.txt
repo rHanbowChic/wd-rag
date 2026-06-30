@@ -1,0 +1,443 @@
+
+<div class="page-title">
+                    SiteGrid Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » SiteGrid Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>SiteGrid module gives you a possibility to create a grid of thumbnails of sites on Wikidot with a descriptions and some details in a form of pop-up when you move your mouse cursor over thumbnail.</p>
+<p>SiteGrid module is sorting thumbnails randomly. It's used on the main Wikidot page to list featured sites.</p>
+<p>Inside the module you have to put a list either of the names of sites, i.e. <strong>community</strong> (if the address is <em>community.wikidot.com</em>) or full address, i.e. <strong>community.wikidot.com</strong> or <strong>www.digistan.org</strong> (if a site has a custom domain).</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>Attribute</th>
+<th>Required</th>
+<th>Allowed values</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>limit</td>
+<td>no</td>
+<td>any integer</td>
+<td>none</td>
+<td>Limiting the number of displayed thumbnails from the predefined list</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<div class="code">
+<pre>
+<code>[[module SiteGrid limit="20"]]
+wikipiano
+michal
+wikiwealth
+quake
+fretsonfire
+squark
+istorijska-biblioteka
+angels
+string-theory
+fifa360
+liquidrescale
+qttabbar
+osx86
+moonworld
+wiihd
+wherearethejoneses
+sniki.org
+wow-unity
+heroesmush
+bvswiki.com
+scp-wiki
+www.digistan.org
+mechanics
+aeldaria
+coffeetime
+f-g
+thehurl
+arch1k
+comicbooks
+karmalab
+scmapdb
+tibasicdev
+gamedesign
+herald-tips-tricks
+swib
+skyscraper-en
+terrasdeportugal
+scmapdb
+l4dmapdb
+[[/module]]</code>
+</pre></div>
+<p>Which transfers to…</p>
+<div class="featured-site-grid-box">
+<div class="container">
+<a href="http://osx86.wikidot.com"><img alt="InfiniteMac Wiki wiki" id="featured-site-grid-image-25827" src="https://thumbnails.wdfiles.com/thumbnail/site/osx86.wikidot.com/80.jpg"/></a>
+<a href="http://wikipiano.wikidot.com"><img alt="Wikipiano wiki" id="featured-site-grid-image-70971" src="https://thumbnails.wdfiles.com/thumbnail/site/wikipiano.wikidot.com/80.jpg"/></a>
+<a href="http://swib.wikidot.com"><img alt="South West image Bank wiki" id="featured-site-grid-image-54336" src="https://thumbnails.wdfiles.com/thumbnail/site/swib.wikidot.com/80.jpg"/></a>
+<a href="http://sniki.wikidot.com"><img alt="Sniki Wiki Social Media List wiki" id="featured-site-grid-image-68066" src="https://thumbnails.wdfiles.com/thumbnail/site/sniki.wikidot.com/80.jpg"/></a>
+<a href="http://michal.wikidot.com"><img alt="Michal Frackowiak wiki" id="featured-site-grid-image-3298" src="https://thumbnails.wdfiles.com/thumbnail/site/michal.wikidot.com/80.jpg"/></a>
+<a href="http://comicbooks.wikidot.com"><img alt="Comic Book Wiki wiki" id="featured-site-grid-image-22962" src="https://thumbnails.wdfiles.com/thumbnail/site/comicbooks.wikidot.com/80.jpg"/></a>
+<a href="http://liquidrescale.wikidot.com"><img alt="Liquid Rescale GIMP plugin wiki" id="featured-site-grid-image-16559" src="https://thumbnails.wdfiles.com/thumbnail/site/liquidrescale.wikidot.com/80.jpg"/></a>
+<a href="http://thehurl.wikidot.com"><img alt="The Hurl - Wiki wiki" id="featured-site-grid-image-12007" src="https://thumbnails.wdfiles.com/thumbnail/site/thehurl.wikidot.com/80.jpg"/></a>
+<a href="http://herald-tips-tricks.wikidot.com"><img alt="Triumph Herald Tips &amp; Tricks wiki" id="featured-site-grid-image-2491" src="https://thumbnails.wdfiles.com/thumbnail/site/herald-tips-tricks.wikidot.com/80.jpg"/></a>
+<a href="http://l4dmapdb.wikidot.com"><img alt="L4D Map Database wiki" id="featured-site-grid-image-83390" src="https://thumbnails.wdfiles.com/thumbnail/site/l4dmapdb.wikidot.com/80.jpg"/></a>
+<a href="http://gamedesign.wikidot.com"><img alt="Game Design Novice wiki" id="featured-site-grid-image-4907" src="https://thumbnails.wdfiles.com/thumbnail/site/gamedesign.wikidot.com/80.jpg"/></a>
+<a href="http://angels.wikidot.com"><img alt="Angels Online Wiki wiki" id="featured-site-grid-image-49184" src="https://thumbnails.wdfiles.com/thumbnail/site/angels.wikidot.com/80.jpg"/></a>
+<a href="http://skyscraper-en.wikidot.com"><img alt="Skyscrapers of World wiki" id="featured-site-grid-image-29988" src="https://thumbnails.wdfiles.com/thumbnail/site/skyscraper-en.wikidot.com/80.jpg"/></a>
+<a href="http://digistan.wikidot.com"><img alt="Digital Standards Organization wiki" id="featured-site-grid-image-17408" src="https://thumbnails.wdfiles.com/thumbnail/site/digistan.wikidot.com/80.jpg"/></a>
+<a href="http://f-g.wikidot.com"><img alt="Fragmented Galaxy wiki" id="featured-site-grid-image-14596" src="https://thumbnails.wdfiles.com/thumbnail/site/f-g.wikidot.com/80.jpg"/></a>
+<a href="http://heroesmush.wikidot.com"><img alt="Heroes MUSH wiki" id="featured-site-grid-image-25338" src="https://thumbnails.wdfiles.com/thumbnail/site/heroesmush.wikidot.com/80.jpg"/></a>
+<a href="http://terrasdeportugal.wikidot.com"><img alt="Terras de Portugal wiki" id="featured-site-grid-image-78451" src="https://thumbnails.wdfiles.com/thumbnail/site/terrasdeportugal.wikidot.com/80.jpg"/></a>
+<a href="http://fretsonfire.wikidot.com"><img alt="Frets On Fire Wiki wiki" id="featured-site-grid-image-12888" src="https://thumbnails.wdfiles.com/thumbnail/site/fretsonfire.wikidot.com/80.jpg"/></a>
+<a href="http://wherearethejoneses.wikidot.com"><img alt="Where are the Joneses Wiki. wiki" id="featured-site-grid-image-6658" src="https://thumbnails.wdfiles.com/thumbnail/site/wherearethejoneses.wikidot.com/80.jpg"/></a>
+<a href="http://fifa360.wikidot.com"><img alt="Fifa 360 wiki" id="featured-site-grid-image-81802" src="https://thumbnails.wdfiles.com/thumbnail/site/fifa360.wikidot.com/80.jpg"/></a>
+</div>
+<div class="hovertip-container" id="special9387423" style="display: none">
+<div class="featured-site-hovertip" id="featured-site-grid-image-25827-hovertip0">
+<img alt="InfiniteMac Wiki wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/osx86.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		InfiniteMac Wiki
+			 		</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 85
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-70971-hovertip0">
+<img alt="Wikipiano wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/wikipiano.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Wikipiano
+			 		</div>
+<div class="tagline">
+			 				Free Piano Lessons &amp; Sheet Music
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 26
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-54336-hovertip0">
+<img alt="South West image Bank wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/swib.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		South West image Bank
+			 		</div>
+<div class="tagline">
+			 				Safeguarding the Region's Visual Heritage
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 24
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-68066-hovertip0">
+<img alt="Sniki Wiki Social Media List wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/sniki.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Sniki Wiki Social Media List
+			 		</div>
+<div class="tagline">
+			 				Sniki is The Encyclopedia Wiki for Social Media.
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 51
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-3298-hovertip0">
+<img alt="Michal Frackowiak wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/michal.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Michal Frackowiak
+			 		</div>
+<div class="tagline">
+			 				wikidot | web2.0 | wiki | gadgets | news
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 32
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-22962-hovertip0">
+<img alt="Comic Book Wiki wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/comicbooks.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Comic Book Wiki
+			 		</div>
+<div class="tagline">
+			 				Comic Libraries, News, Forums and More...
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 66
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-16559-hovertip0">
+<img alt="Liquid Rescale GIMP plugin wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/liquidrescale.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Liquid Rescale GIMP plugin
+			 		</div>
+<div class="tagline">
+			 				content-aware resizing for the GIMP
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 40
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-12007-hovertip0">
+<img alt="The Hurl - Wiki wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/thehurl.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		The Hurl - Wiki
+			 		</div>
+<div class="tagline">
+			 				"It's...The Hurl itself that matters!"-TheHurl
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 61
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-2491-hovertip0">
+<img alt="Triumph Herald Tips &amp; Tricks wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/herald-tips-tricks.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Triumph Herald Tips &amp; Tricks
+			 		</div>
+<div class="tagline">
+			 				from the first 948s to the last 13/60s
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 9
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-83390-hovertip0">
+<img alt="L4D Map Database wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/l4dmapdb.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		L4D Map Database
+			 		</div>
+<div class="tagline">
+			 				L4DMapDB.com
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 1570
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-4907-hovertip0">
+<img alt="Game Design Novice wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/gamedesign.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Game Design Novice
+			 		</div>
+<div class="tagline">
+			 				Learn to make video games.
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 57
+			 			<br/>
+			 						 			Contributors: 225
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-49184-hovertip0">
+<img alt="Angels Online Wiki wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/angels.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Angels Online Wiki
+			 		</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 12
+			 			<br/>
+			 						 			Contributors: 736
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-29988-hovertip0">
+<img alt="Skyscrapers of World wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/skyscraper-en.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Skyscrapers of World
+			 		</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 1
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-17408-hovertip0">
+<img alt="Digital Standards Organization wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/digistan.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Digital Standards Organization
+			 		</div>
+<div class="tagline">
+			 				Free and Open Digital Standards
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 33
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-14596-hovertip0">
+<img alt="Fragmented Galaxy wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/f-g.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Fragmented Galaxy
+			 		</div>
+<div class="tagline">
+			 				An MMORTS game in the making
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 32
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-25338-hovertip0">
+<img alt="Heroes MUSH wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/heroesmush.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Heroes MUSH
+			 		</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 184
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-78451-hovertip0">
+<img alt="Terras de Portugal wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/terrasdeportugal.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Terras de Portugal
+			 		</div>
+<div class="tagline">
+			 				Portugal em pormenor!
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 45
+			 			<br/>
+			 						 			Contributors: 398
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-12888-hovertip0">
+<img alt="Frets On Fire Wiki wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/fretsonfire.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Frets On Fire Wiki
+			 		</div>
+<div class="tagline">
+			 				courtesy of fretsonfire.org
+			 			</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 974
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-6658-hovertip0">
+<img alt="Where are the Joneses Wiki. wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/wherearethejoneses.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Where are the Joneses Wiki.
+			 		</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 268
+			 		</div>
+</div>
+</div>
+<div class="featured-site-hovertip" id="featured-site-grid-image-81802-hovertip0">
+<img alt="Fifa 360 wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/fifa360.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+				 		Fifa 360
+			 		</div>
+<hr/>
+<div class="stats">
+			 			Contributions last month: 0
+			 			<br/>
+			 						 			Contributors: 4
+			 		</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	
+//<![CDATA[
+	OZONE.dom.onDomReady(function(){
+		var els = YAHOO.util.Dom.getElementsByClassName('featured-site-hovertip', 'div', 'special9387423');
+		for(var i=0; i<els.length; i++){
+			els[i].id = els[i].id.replace(/0$/, '');
+		}
+		var els = YAHOO.util.Dom.getElementsByClassName('thumbnail', 'img', 'special9387423');
+		for(var i=0; i<els.length; i++){
+			els[i].alt = '';
+		}
+		OZONE.dialog.hovertip.dominit("special9387423", {delay: 100, noCursorHelp: true});
+	}, "dummy-ondomready-block");
+//]]>
+
+	
+</script>
+<p>This is a long list of featured sites, but only 20 are displayed in a random order.</p>
+</div><div id="action-area" style="display: none;"></div>

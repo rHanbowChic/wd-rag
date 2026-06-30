@@ -1,0 +1,38 @@
+
+<div class="page-title">
+                    Foldable List
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Foldable List
+                    </div>
+<div id="page-content">
+<p>The <a href="http://snippets.wikidot.com/code:foldable-list" target="_blank">Foldable List</a> container is a special class that can be used in a <span style="white-space: pre-wrap;">[[div]]</span>. It is useful for creating a navigation menu that folds and unfolds to expose different levels of a list. The following example shows how you can create 3 levels of nesting.</p>
+<div class="code">
+<pre>
+<code>[[div class="foldable-list-container"]]
+* Links
+ * Wikidot
+  * [*http://www.wikidot.com/doc Documentation]
+  * [*http://www.wikidot.com/doc:wiki-syntax wiki-syntax]
+  * [*http://community.wikidot.com/howto:howto-list How-To's]
+ * Search Engines
+  * [*http://www.google.com Google]
+  * [*http://www.yahoo.com Yahoo]
+* Main Category 1
+ * [# Main 1 - Sub 1]
+ * [# Main 1 - Sub 2]
+* Main Category 2
+ * [# Main 2 - Sub 1]
+ * [# Main 2 - Sub 2]
+ * [# Main 2 - Sub 3]
+* Main Category 3
+ * [# Main 3 - Sub 1]
+[[/div]]</code>
+</pre></div>
+<div class="alert alert-info">
+<p><strong>Update note:</strong></p>
+<ul>
+<li>it can be used anywhere (no longer associated with <tt>side bar</tt>)</li>
+</ul>
+</div>
+</div><div id="action-area" style="display: none;"></div>

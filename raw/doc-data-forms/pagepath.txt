@@ -1,0 +1,80 @@
+
+<div class="page-title">
+                    The Pagepath concept
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » The Pagepath concept
+                    </div>
+<div id="page-content">
+<p>Wikidot data forms have a unique concept, the Page Tree and pagepath, which is a way of organizing data. It creates a page in a specific category for each pagepath entry you enter. Using our band example you could set the <em>origin</em> of the band. Band origins form a tree:</p>
+<ul>
+<li>_root
+<ul>
+<li>USA
+<ul>
+<li>Chicago</li>
+<li>Los Angeles</li>
+</ul>
+</li>
+<li>Australia
+<ul>
+<li>Melbourne</li>
+<li>Sydney</li>
+</ul>
+</li>
+<li>Europe
+<ul>
+<li>UK
+<ul>
+<li>London
+<ul>
+<li style="list-style: none; display: inline">
+<ul>
+<li>North-London</li>
+<li>South-London
+<ul>
+<li>Dulwich</li>
+</ul>
+</li>
+<li>East-London</li>
+<li>West-London</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Newcastle</li>
+<li>Glasgow</li>
+</ul>
+</li>
+<li>Germany</li>
+<li>Sweden</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Each part of the tree is a wiki page. Imagine this tree is held in a category called <strong>band-origin</strong>. Now we can use parent links to attach Dulwich to South-London to London to UK to Europe, and Chicago to USA etc.</p>
+<p>The Wikidot data form system makes it easy to navigate, and edit such a tree. You define a 'pagepath' field and tell it to use the <strong>band-origin:</strong> category, as shown in part of a dataform below:</p>
+<div class="code">
+<pre>
+<code> origin:
+   label: Origin
+   type: pagepath
+   category: band-origin</code>
+</pre></div>
+<p>A page tree is always anchored to a page called _root that Wikidot creates automatically when you start using a page tree in forms.</p>
+<p>When you and your users are entering data into the dataform, for the pagepath field they will initially see a single dropdown box. If there is already a value in the box they can select it or click on the create new entry in the dropdown and enter the value you want.</p>
+<img alt="df_pagepath.png" class="image" src="https://www.wdfiles.com/local--files/doc-data-forms:pagepath/df_pagepath.png"/>
+<p><strong>After entering the value you <span style="text-decoration: underline;">must</span> press Enter.</strong> That will then add the value you have selected or entered and open the next box. There is no limit to the number of these boxes (and the pages they create) that you can have. However, you can use the <strong>max-level</strong> property to set the maximum number of levels that can be created in the pagepath tree.</p>
+<div class="code">
+<pre>
+<code> origin:
+   label: Origin
+   type: pagepath
+   category: band-origin
+   max-level: 4</code>
+</pre></div>
+<p>In the layout of your page, above the <span style="white-space: pre-wrap;">====</span> selector, you use <span style="white-space: pre-wrap;">%%form_data{origin}%%</span> and the lowest value in the pagepath list of values will be displayed. So if you have Europe-&gt;UK-&gt;London, London will be displayed.</p>
+<p>The pages that the pagepath creates can list each of the bands who have that value. To do this, create a live template page containing <span style="white-space: pre-wrap;">[[module Backlinks]]</span>.</p>
+<p>A site dedicated to examples of the pagepath concept is at <a href="http://pagepath.wikidot.com/" target="_blank">http://pagepath.wikidot.com/</a></p>
+</div><div id="action-area" style="display: none;"></div>

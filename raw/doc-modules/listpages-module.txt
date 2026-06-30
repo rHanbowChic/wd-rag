@@ -1,0 +1,932 @@
+
+<div class="page-title">
+                    ListPages Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » ListPages Module
+                    </div>
+<div id="page-content">
+<div class="floatright" id="toc">
+<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)" style="display: none">Unfold</a></div>
+<div class="title">Table of Contents</div>
+<div id="toc-list">
+<div style="margin-left: 2em;"><a href="#toc0">Example</a></div>
+<div style="margin-left: 2em;"><a href="#toc1">Naming conventions</a></div>
+<div style="margin-left: 2em;"><a href="#toc2">Selecting pages</a></div>
+<div style="margin-left: 2em;"><a href="#toc3">Ordering pages</a></div>
+<div style="margin-left: 2em;"><a href="#toc4">Pagination</a></div>
+<div style="margin-left: 2em;"><a href="#toc5">Module body</a></div>
+<div style="margin-left: 3em;"><a href="#toc6">Sections head/body/foot</a></div>
+<div style="margin-left: 2em;"><a href="#toc7">Advanced Use</a></div>
+<div style="margin-left: 3em;"><a href="#toc8">RSS feeds</a></div>
+<div style="margin-left: 3em;"><a href="#toc9">Passing arguments via URL</a></div>
+<div style="margin-left: 3em;"><a href="#toc10">More than one module in the page</a></div>
+<div style="margin-left: 2em;"><a href="#toc11">Deprecated functionality</a></div>
+</div>
+</div>
+<p>The ListPages module is a general-purpose and widely-used tool that selects and display pages within a site.</p>
+<p>To use ListPages, you decide some or all of:</p>
+<ul>
+<li>what pages to select (from the site, from categories, by parent, by tags, by date, etc.)</li>
+<li>how to order the pages (ascending, descending)</li>
+<li>how to break the output into blocks (pagination)</li>
+<li>how to display the results as Wikidot text (templating in module body)</li>
+<li>how to export the results as an RSS feed</li>
+</ul>
+<p>The general syntax for ListPages is:</p>
+<div class="code">
+<pre><code>[[module ListPages arguments...]]
+module body
+[[/module]]</code></pre></div>
+<p>By default, ListPages will show all visible pages in the current category, from newest to oldest.</p>
+<p>Module body cannot contain <span style="white-space: pre-wrap;">[[code]]</span> or <span style="white-space: pre-wrap;">[[html]]</span>. In case it contains those tags, module will not work at all.</p>
+<h2 id="toc0"><span>Example</span></h2>
+<p>This example lists the pages in the current category, along with details of who created the page, and when:</p>
+<div class="code">
+<pre><code>[[module ListPages separate="no" limit="5"]]
+%%title_linked%% - [[user %%created_by%%]] - %%created_at%%
+[[/module]]</code></pre></div>
+<p>In action:</p>
+<div class="list-pages-box">
+<p><a href="/doc-modules:nextpreviouspage-module">NextPreviousPage Module</a> - Anonymous - <span class="odate time_1398764169 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 09:36</span><br/>
+<a href="/doc-modules:pagesbytag-module">PagesByTag Module</a> - Anonymous - <span class="odate time_1398764168 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 09:36</span><br/>
+<a href="/doc-modules:pages-module">Pages Module</a> - Anonymous - <span class="odate time_1398764167 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 09:36</span><br/>
+<a href="/doc-modules:childpages-module">ChildPages Module</a> - Anonymous - <span class="odate time_1398764167 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 09:36</span><br/>
+<a href="/doc-modules:membershipbypassword-module">MembershipByPassword Module</a> - Anonymous - <span class="odate time_1398764166 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 09:36</span></p>
+</div>
+<h2 id="toc1"><span>Naming conventions</span></h2>
+<p>Older argument names are <tt>inMixedCase</tt>. Newer argument names are <tt>in_lower_case</tt>, and this style will be used more systematically in Wikidot. Dates are always <tt><em>something</em>_at</tt> and user names are always <tt><em>someone</em>_by</tt>. Linked fields are always <tt><em>somefield</em>_linked</tt>.</p>
+<h2 id="toc2"><span>Selecting pages</span></h2>
+<p>Specify one or more of these selectors to refine the set of pages you select. Each selector adds additional constraints:</p>
+<table class="wiki-content-table">
+<tr>
+<th>Argument</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>pagetype</td>
+<td>Select by type of page</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Select by category</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Select by tags</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Select by parent page</td>
+</tr>
+<tr>
+<td>link_to</td>
+<td>Select by outgoing links</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Select by date of creation</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>Select by date of update</td>
+</tr>
+<tr>
+<td>created_by</td>
+<td>Select by original author</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>Select by rating</td>
+</tr>
+<tr>
+<td>votes</td>
+<td>Select by number of votes</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>Start list after an offset of pages</td>
+</tr>
+<tr>
+<td>range</td>
+<td>Select a range of pages</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Select by page name</td>
+</tr>
+<tr>
+<td>fullname</td>
+<td>Select by fullname</td>
+</tr>
+<tr>
+<td>_&lt;data-form-field-name&gt;</td>
+<td>Select by a field's value in a data form</td>
+</tr>
+</table>
+<p>Page type selector:</p>
+<ul>
+<li>"normal" means pages without underscore in name (default)</li>
+<li>"hidden" means pages starting with underscore</li>
+<li>"*" means all pages, with or without underscores</li>
+</ul>
+<p>Category selector:</p>
+<ul>
+<li>"." means current category (default)</li>
+<li>"*" means all categories</li>
+<li>else, a list of space/comma delimited categories</li>
+<li>categories are by default additive (category OR category OR category)</li>
+<li>"-category" means exclude pages in this category (AND NOT)</li>
+<li>"%%category%%" means the same category as the current page ( if used on a _template page)</li>
+</ul>
+<p>Tags selector:</p>
+<ul>
+<li>"-" means pages with no tags, visible or invisible</li>
+<li>"=" means pages with any of the same visible tags as this page</li>
+<li>"==" means pages with the exact same visible tags as this page</li>
+<li>else, a list of space/comma delimited tags</li>
+<li>tags are by default additive (tag OR tag OR tag)</li>
+<li>"-tag" means pages without the tag (AND NOT)</li>
+<li>"+tag" means pages with the tag (AND)</li>
+</ul>
+<p>Parent page selector:</p>
+<ul>
+<li>"-" means pages with no parent page</li>
+<li>"=" means siblings of current page (same parent)</li>
+<li>"-=" means with different parent than current page</li>
+<li>"." means children of current page (parent is this page)</li>
+<li>else specifies a single full page name</li>
+</ul>
+<p>Outgoing links selector:</p>
+<ul>
+<li>enter a single full name of an existing page to select pages that link to that page</li>
+<li>while "." means pages that link to current page</li>
+</ul>
+<p>Creation date selector:</p>
+<ul>
+<li>"=" means created on same day as current page</li>
+<li>"yyyy" means specified year</li>
+<li>"yyyy.mm" means specified year and month</li>
+<li>optionally prefixed by "&gt;", "&lt;", "=", "&lt;=", "&gt;=", "&lt;&gt;" (default is "=")</li>
+<li>dates are not site-local but currently all UTC (GMT)</li>
+<li>"last n unit" or "older than n unit" where 'n' is a count (defaults to 1) and unit is "hours", "day", "week", or "month"</li>
+</ul>
+<p>Update date selector:</p>
+<ul>
+<li>dates are not site-local but currently all UTC (GMT)</li>
+<li>"last n unit" or "older than n unit" where 'n' is a count (defaults to 1) and unit is "hours", "day", "week", or "month"</li>
+</ul>
+<p>Author selector:</p>
+<ul>
+<li>"=" means by created by author of current page</li>
+<li>"-=" means by not created by author of current page</li>
+<li>else, a single user name</li>
+</ul>
+<p>Rating selector:</p>
+<ul>
+<li>"n" means pages with rating equal to n</li>
+<li>"=" means pages with same rating as current page</li>
+<li>optionally prefixed by "&gt;", "&lt;", "=", "&lt;=", "&gt;=", "&lt;&gt;" (default is "=")</li>
+</ul>
+<p><strong>Caution:</strong> When listing pages from many categories, where some categories have rating type set to + or +/- and others to "stars" (in Site Manager), selecting and ordering by rating may not funtion properly. The solution is to list and order pages from categories having the same rating mode.</p>
+<p>Votes selector:</p>
+<ul>
+<li>"n" means pages with votes equal to n</li>
+<li>"=" means pages with same number of votes as current page</li>
+<li>optionally prefixed by "&gt;", "&lt;", "=", "&lt;=", "&gt;=", "&lt;&gt;" (default is "=")</li>
+</ul>
+<p>Offset selector:</p>
+<ul>
+<li>"n" means do not show the first n pages (default is 0)</li>
+</ul>
+<p>Range selector:</p>
+<ul>
+<li>"." means current page</li>
+<li>"before" means pages up to but not including current (in order after sorting)</li>
+<li>"after" means pages after current page (in order after sorting)</li>
+<li>"others" means pages except current page</li>
+</ul>
+<p>Name selector:</p>
+<ul>
+<li>enter a single name (means the name part without the category!) of an existing page to select exact this page of a given category - or pages of different categories if also selected. You can use a dataform field of the current page</li>
+<li>"=" means pages that have exact the same name as the current page ( makes sence only with other selected categories)</li>
+<li>"s%" means all pages starting with given character "s" or</li>
+<li>"s*" means all pages starting with given character "s"</li>
+</ul>
+<p>Fullname selector:</p>
+<ul>
+<li>enter a single fullname of an existing page to select exact this one page (you can use a dataform field of the current page)</li>
+</ul>
+<p>Data Form selector:</p>
+<ul>
+<li>Select by a field's value in a data form</li>
+<li>Syntax: <tt>_data-form-field-name="data-form-field-value"</tt></li>
+<li>Example: <tt>_gender="m"</tt> - select all pages that have 'm' set as the 'gender' field's value in the Data Form</li>
+</ul>
+<h2 id="toc3"><span>Ordering pages</span></h2>
+<p>To order the pages, use:</p>
+<table class="wiki-content-table">
+<tr>
+<th>Argument</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>order</td>
+<td>Specify order criteria</td>
+</tr>
+</table>
+<p>Order criteria:</p>
+<ul>
+<li>"<em>property</em>" means "ascending by this property"</li>
+<li>optionally followed by " desc" meaning "descending"</li>
+<li>optionally followed by " desc desc" meaning "ascending", which makes "desc" safe to add after any sort order</li>
+<li>default is "created_at desc"</li>
+</ul>
+<table class="wiki-content-table">
+<tr>
+<th>Property</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>name</td>
+<td>Order by page name</td>
+</tr>
+<tr>
+<td>fullname</td>
+<td>Order by category and page name</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Order by page title</td>
+</tr>
+<tr>
+<td>created_by</td>
+<td>Order by author screen name</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Order by date created</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>Order by date updated</td>
+</tr>
+<tr>
+<td>size</td>
+<td>Order by number of characters in page</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>Order by rating</td>
+</tr>
+<tr>
+<td>votes</td>
+<td>Order by number of votes</td>
+</tr>
+<tr>
+<td>revisions</td>
+<td>Order by number of revisions</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>Order by number of comments</td>
+</tr>
+<tr>
+<td>random</td>
+<td>Order randomly, cached for 60 seconds</td>
+</tr>
+<tr>
+<td>_data-form-field-name</td>
+<td>Order by a field in a data form</td>
+</tr>
+</table>
+<p>For example to order by rating in descending order:</p>
+<div class="code">
+<pre><code>order="rating desc"</code></pre></div>
+<p>Caution: When listing pages from many categories, where some categories have rating type set to + or +/- and others to "stars" (in Site Manager), selecting and ordering by rating may not funtion properly. The solution is to list and order pages from categories having the same rating mode.</p>
+<p>This example shows how to order pages using a data form field. Note that you must prefix the data form field name with an underscore. This lists all pages from the <em>dictionary</em> category and sorts them by the data form's <em>mainword</em> field (a wiki field type in this example). The body of the module then lists the contents of the <em>mainword</em> field and creates a link to the page.</p>
+<div class="code">
+<pre><code>[!--
+Note: Use %%form_raw{fieldname}%% for wiki field types,
+         %%form_data{fieldname}%% for other field types
+--]
+[[module ListPages category="dictionary" order="_mainword"]]
+%%form_raw{mainword}%%@&lt;&amp;nbsp;&gt;@@&lt;&amp;nbsp;&gt;@([/%%fullname%% see dictionary entry])
+[[/module]]</code></pre></div>
+<p>Note that "<em>property</em> asc" is not allowed and unknown order criteria give you the default order, which is "created_at desc".</p>
+<p><strong>Type casting</strong> for <a href="/doc:data-forms">Data Forms</a> fields:<br/>
+Default order method is sort by text. You can enforce numerical sorting.</p>
+<div class="code">
+<pre><code>[[module ListPages category="band" order="_albums::integer desc"]]
+...
+[[/module]]</code></pre></div>
+<h2 id="toc4"><span>Pagination</span></h2>
+<p>To control how many items (wiki pages) will be shown in total, and how these are paginated (confusingly, also into 'pages'), use any of:</p>
+<table class="wiki-content-table">
+<tr>
+<th>Argument</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>limit</td>
+<td>Limit total items</td>
+</tr>
+<tr>
+<td>perPage</td>
+<td>Limit per pagination</td>
+</tr>
+<tr>
+<td>reverse</td>
+<td>Show pages in reversed order</td>
+</tr>
+</table>
+<p>Total limit:</p>
+<ul>
+<li>"number" - means limit the total number of selected pages.</li>
+<li>by default all pages matching criteria are listed</li>
+</ul>
+<p>Pagination limit:</p>
+<ul>
+<li>"number" - means limit the number of page items shown on per pagination.</li>
+<li>default is 20, maximum is 250.</li>
+</ul>
+<p>Reversed display:</p>
+<ul>
+<li>"yes" - means show wiki pages from last to first on given page.</li>
+</ul>
+<h2 id="toc5"><span>Module body</span></h2>
+<p>The body of the module allows you to specify how page properties and content is formatted. To control this formatting, you can use these module arguments:</p>
+<table class="wiki-content-table">
+<tr>
+<th>Argument</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>separate</td>
+<td>Separation specifier</td>
+</tr>
+<tr>
+<td>wrapper</td>
+<td>Wrapper specifier</td>
+</tr>
+<tr>
+<td>prependLine</td>
+<td>Header specifier</td>
+</tr>
+<tr>
+<td>appendLine</td>
+<td>Footer specifier</td>
+</tr>
+</table>
+<p>Separation specifier:</p>
+<ul>
+<li>"yes" means place each page item into a separate container (divs).</li>
+<li>"no" means put all items into one container, so they can become a single list, for example.</li>
+<li>default is "yes".</li>
+</ul>
+<p>With <tt>separate</tt> set to true, each of the page is compiled (converted from wiki source to HTML) separately. While it is false, wiki compiler is invoked only once on a combined source from all selected pages.</p>
+<p>As a result, some page-specific variables and constructs such as <tt>iftags</tt> can generate different results. <tt>iftags</tt>, with <tt>separate="yes"</tt>, will be aware of tags of individual pages, while with <tt>separate="no"</tt> it will read tags of the main page that holds the ListPages module.<br/>
+Also <span style="white-space: pre-wrap;">[[image :first ...]]</span> will only work with <tt>separate="yes"</tt>.</p>
+<p>Wrapper specifier:</p>
+<ul>
+<li>"yes" means place all items into container (div).</li>
+<li>"no" means do not place all items into container (div).</li>
+<li>default is "yes".</li>
+</ul>
+<p>Header specifier:</p>
+<ul>
+<li>"text" means output this text at the start of the list of pages, <em>only</em> if the separation specifier is false.</li>
+</ul>
+<p>Footer specifier:</p>
+<ul>
+<li>"text" means output this text at the end of the list of pages, <em>only</em> if the separation specifier is false.</li>
+</ul>
+<h3 id="toc6"><span>Sections head/body/foot</span></h3>
+<p>Additionally you can use <strong>[[head]]</strong>, <strong>[[body]]</strong>, <strong>[[foot]]</strong> sections, which simply replaces prependLine and appendLine. It allows you to create more complex header and footer for ListPages. This is particularly usable with complex table and list creation.</p>
+<p>Example of sections usage</p>
+<div class="code">
+<pre><code>[[module ListPages category="carousel" wrapper="no" separate="no" _active="yes"]]
+  [[head]]
+    [[ul id="u-myList" class="..."]]
+  [[/head]]
+
+  [[body]]
+    [[li class="list-item"]]%%title_linked%% by (%%created_by%%)[[/li]]
+  [[/body]]
+
+  [[foot]]
+    [[/ul]]
+  [[/foot]]
+[[/module]]</code></pre></div>
+<br/>
+(also works for custom domains)
+<p>The template consists of wiki text mixed with variables specified as <tt>%%variable-name%%</tt>. You can use these page properties:</p>
+<table class="wiki-content-table">
+<tr>
+<th>Property</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<th>Page lifecycle</th>
+<th></th>
+</tr>
+<tr>
+<td>%%created_at%%</td>
+<td>Date page was created</td>
+</tr>
+<tr>
+<td>%%created_by%%</td>
+<td>User who created page</td>
+</tr>
+<tr>
+<td>%%created_by_unix%%</td>
+<td>"Unixified" name of user who created page — to be used for constructing URLs</td>
+</tr>
+<tr>
+<td>%%created_by_id%%</td>
+<td>"ID" number of user who created page — to be used for constructing URLs</td>
+</tr>
+<tr>
+<td>%%created_by_linked%%</td>
+<td>Icon and link to user who created page</td>
+</tr>
+<tr>
+<td>%%updated_at%%</td>
+<td>Date page was updated (edited, tagged, parented)</td>
+</tr>
+<tr>
+<td>%%updated_by%%</td>
+<td>User who updated page</td>
+</tr>
+<tr>
+<td>%%updated_by_unix%%</td>
+<td>"Unixified" name of user who updated page — to be used for constructing URLs</td>
+</tr>
+<tr>
+<td>%%updated_by_id%%</td>
+<td>"ID" number of user who updated page — to be used for constructing URLs</td>
+</tr>
+<tr>
+<td>%%updated_by_linked%%</td>
+<td>Icon and link to user who updated page</td>
+</tr>
+<tr>
+<td>%%commented_at%%</td>
+<td>Date of last comment</td>
+</tr>
+<tr>
+<td>%%commented_by%%</td>
+<td>User who made last comment</td>
+</tr>
+<tr>
+<td>%%commented_by_unix%%</td>
+<td>"Unixified" name of user who made last comment — to be used for constructing URLs</td>
+</tr>
+<tr>
+<td>%%commented_by_id%%</td>
+<td>"ID" number of user who made last comment — to be used for constructing URLs</td>
+</tr>
+<tr>
+<td>%%commented_by_linked%%</td>
+<td>Icon and link to user who made last comment</td>
+</tr>
+<tr>
+<th>Page structure</th>
+<th></th>
+</tr>
+<tr>
+<td>%%name%%</td>
+<td>Page name without category</td>
+</tr>
+<tr>
+<td>%%category%%</td>
+<td>Page category if any</td>
+</tr>
+<tr>
+<td>%%fullname%%</td>
+<td>Page name with category if any</td>
+</tr>
+<tr>
+<td>%%title%%</td>
+<td>Page title</td>
+</tr>
+<tr>
+<td>%%title_linked%%</td>
+<td>Link to page showing title as text (works also for custom domain)</td>
+</tr>
+<tr>
+<td>%%parent_name%%</td>
+<td>Parent page name without category</td>
+</tr>
+<tr>
+<td>%%parent_category%%</td>
+<td>Parent page category if any</td>
+</tr>
+<tr>
+<td>%%parent_fullname%%</td>
+<td>Parent page name with category if any</td>
+</tr>
+<tr>
+<td>%%parent_title%%</td>
+<td>Parent page title</td>
+</tr>
+<tr>
+<td>%%parent_title_linked%%</td>
+<td>Link to Parent page showing title as text</td>
+</tr>
+<tr>
+<td>%%link%%</td>
+<td>URL pointing to page (not working for custom domains!)</td>
+</tr>
+<tr>
+<td>%%content%%</td>
+<td>Page content</td>
+</tr>
+<tr>
+<td>%%content{n}%%</td>
+<td>Numbered content section</td>
+</tr>
+<tr>
+<td>%%preview%%</td>
+<td>First 200 characters of the page</td>
+</tr>
+<tr>
+<td>%%preview(n)%%</td>
+<td>First <em>n</em> characters of the page</td>
+</tr>
+<tr>
+<td>%%summary%%</td>
+<td>Summary of content</td>
+</tr>
+<tr>
+<td>%%first_paragraph%%</td>
+<td>The first paragraph of the page</td>
+</tr>
+<tr>
+<td>%%tags%%</td>
+<td>Page visible tags (not starting with underscore)</td>
+</tr>
+<tr>
+<td>%%tags_linked%%</td>
+<td>Page visible tags linked to system:page-tags/tag/{tag}</td>
+</tr>
+<tr>
+<td>%%tags_linked|link_prefix%%</td>
+<td>Page visible tags linked to link_prefix{tag}</td>
+</tr>
+<tr>
+<td>%%_tags%%</td>
+<td>Page hidden tags (starting with underscore)</td>
+</tr>
+<tr>
+<td>%%_tags_linked%%</td>
+<td>Page hidden tags linked to system:page-tags/tag/{tag}</td>
+</tr>
+<tr>
+<td>%%_tags_linked|link_prefix%%</td>
+<td>Page hidden tags linked to link_prefix{tag}</td>
+</tr>
+<tr>
+<td>%%form_data{name}%%</td>
+<td>Field value from page <a href="/doc:data-forms">data form</a> if any</td>
+</tr>
+<tr>
+<td>%%form_raw{name}%%</td>
+<td>For select fields, the internal value saved in the page form data, if any</td>
+</tr>
+<tr>
+<td>%%form_label{name}%%</td>
+<td>The label of the field as defined in the <a href="/doc:data-forms">data form</a> if any</td>
+</tr>
+<tr>
+<td>%%form_hint{name}%%</td>
+<td>The hint of the field as defined in the <a href="/doc:data-forms">data form</a> if any</td>
+</tr>
+<tr>
+<th>Page reporting</th>
+<th></th>
+</tr>
+<tr>
+<td>%%children%%</td>
+<td>Number of child pages</td>
+</tr>
+<tr>
+<td>%%comments%%</td>
+<td>Number of comments on page</td>
+</tr>
+<tr>
+<td>%%size%%</td>
+<td>Number of characters in page</td>
+</tr>
+<tr>
+<td>%%rating%%</td>
+<td>Page rating value (number or stars depending on Rating settings in Site Manager</td>
+</tr>
+<tr>
+<td>%%rating_votes%%</td>
+<td>Number of votes</td>
+</tr>
+<tr>
+<td>%%rating_percent%%</td>
+<td>Percent value of 5-star rating only</td>
+</tr>
+<tr>
+<td>%%revisions%%</td>
+<td>Number of revisions to page</td>
+</tr>
+<tr>
+<td>%%index%%</td>
+<td>Page index in ListPages output + offset (1 to %%total%%)</td>
+</tr>
+<tr>
+<td>%%total%%</td>
+<td>Total number of pages ignoring limit (may be higher than %%limit%%)</td>
+</tr>
+<tr>
+<td>%%limit%%</td>
+<td>Limit passed to ListPages (empty if not passed)</td>
+</tr>
+<tr>
+<td>%%total_or_limit%%</td>
+<td>Total number of pages in ListPages output (highest %%index%%).<br/>
+If limit is passed to the module, %%total_or_limit%% is %%total%% or %%limit%% whichever is smaller</td>
+</tr>
+<tr>
+<th>Current context</th>
+<th></th>
+</tr>
+<tr>
+<td>%%site_title%%</td>
+<td>Title of current site</td>
+</tr>
+<tr>
+<td>%%site_name%%</td>
+<td>Wikidot Unix name for site</td>
+</tr>
+<tr>
+<td>%%site_domain%%</td>
+<td>Active domain name of current site</td>
+</tr>
+</table>
+<p>Date formatting:</p>
+<ul>
+<li>All _at fields are dates and allow a custom format via the <tt>|<em>format</em></tt> specifier.</li>
+</ul>
+<p>Most tokens from PHP's <a href="http://php.net/manual/en/function.strftime.php">strftime</a> are accepted. You may find <a href="http://community.wikidot.com/howto:frontforum-date-variable">the howto</a> contributed by community useful.</p>
+<div class="wiki-note">
+<p>Editor's note: this section needs expanding with the most useful formatting options.</p>
+</div>
+<p>Tag linking:</p>
+<ul>
+<li>If no link_prefix is specified, tags link to system:page-tags/tag/name-of-tag</li>
+<li>If link_prefix is specified, tags link to <span style="color: blue">link_prefix</span>name-of-tag (colors irrelevant)</li>
+<li>if link_prefix is empty but the pipe is present, %%tags_linked|%% generates links to pages with names corresponding to tags</li>
+<li>Examples</li>
+</ul>
+<table class="wiki-content-table">
+<tr>
+<th>if syntax is:</th>
+<th>"shiny" tag will link to:</th>
+</tr>
+<tr>
+<td>%%tags_linked%%</td>
+<td>/system:page-tags/tag/shiny</td>
+</tr>
+<tr>
+<td>%%tags_linked|system:page-tags/tag/%%</td>
+<td>/system:page-tags/tag/shiny</td>
+</tr>
+<tr>
+<td>%%tags_linked|interesting-list/category/%%</td>
+<td>/interesting-list/category/shiny</td>
+</tr>
+<tr>
+<td>%%tags_linked|player:%%</td>
+<td>/player:shiny</td>
+</tr>
+<tr>
+<td>%%tags_linked|very_%%</td>
+<td>/very_shiny</td>
+</tr>
+<tr>
+<td>%%tags_linked|<span style="white-space: pre-wrap;">http://myothersite.wikidot.com/</span>see-also/tag/%%</td>
+<td><span style="white-space: pre-wrap;">http://myothersite.wikidot.com</span>/see-also/tag/shiny</td>
+</tr>
+<tr>
+<td>%%tags_linked|%%</td>
+<td>/shiny</td>
+</tr>
+</table>
+<h2 id="toc7"><span>Advanced Use</span></h2>
+<p>This section describes additional functionality that will be useful for advanced users.</p>
+<h3 id="toc8"><span>RSS feeds</span></h3>
+<p>You can export any ListPages result as an RSS feed. Use these arguments to control the RSS feed generation:</p>
+<table class="wiki-content-table">
+<tr>
+<th>Argument</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>rss</td>
+<td>feed title</td>
+</tr>
+<tr>
+<td>rssDescription</td>
+<td>feed description</td>
+</tr>
+<tr>
+<td>rssHome</td>
+<td>feed homepage</td>
+</tr>
+<tr>
+<td>rssLimit</td>
+<td>feed limit</td>
+</tr>
+<tr>
+<td>rssOnly</td>
+<td>only show feed link</td>
+</tr>
+</table>
+<p>Feed title:</p>
+<ul>
+<li>"text" means use this text for the RSS feed title.</li>
+<li>Default is to not generate any RSS feed.</li>
+</ul>
+<p>Feed description:</p>
+<ul>
+<li>"text" means use this text for the RSS feed description.</li>
+</ul>
+<p>Feed homepage:</p>
+<ul>
+<li>"<em>pagename</em>" means tell RSS clients this is the home page for the feed.</li>
+<li>Default is <tt><span style="white-space: pre-wrap;">http://your-site.wikidot.com</span></tt></li>
+<li>Setting value to "blog:_start" actually means <tt><span style="white-space: pre-wrap;">http://your-site.wikidot.com/blog:_start</span></tt></li>
+</ul>
+<p>Feed limit:</p>
+<ul>
+<li>sets limit for RSS feed, and can be different to the ListPages limit</li>
+<li>Default RSS limit inherits lower value from limit and perPage arguments</li>
+</ul>
+<p>Feed only:</p>
+<ul>
+<li>"true" or "yes" displays the RSS feed link without showing ListPages results</li>
+</ul>
+<p><strong>Important</strong>: RSS feed ignores "<tt>created_at</tt>" selector.</p>
+<h3 id="toc9"><span>Passing arguments via URL</span></h3>
+<p>ListPages lets you create variations of a single list using specially constructed links, consisting of the page URL (link) followed by arguments and values. These are mainly useful to invoke new selectors, and change the ordering or display.</p>
+<p>You can pass any arguments in the URL by specifying <tt>argument="@URL|default-value"</tt> as the argument value and then appending "/<tt>name</tt>/<tt>value</tt>" to the URL used to invoke the page. If the URL does not contain a value for the argument, the default is used. Arguments that do not have @URL in their value cannot be set via the URL. The default value is optional: if you use only <tt>argument="@URL"</tt> and do not provide a value on the URL, then the argument behaves as if it was not set.</p>
+<p>The two main ways of using arguments-by-URL are (a) to create links to a page explicitly, on another page and (b) to generate links within the ListPages itself, so it will reshow itself with different configurations. Here is a simple example:</p>
+<div class="code">
+<pre><code>[[module ListPages category="@URL|design"]]
+%%name%% in category %%category%%
+[[/module]]</code></pre></div>
+<p>Another example shows how to select blog entries by created_at date:</p>
+<div class="code">
+<pre><code>[[module ListPages category="blog" created_at="@URL"]]</code></pre></div>
+<p>and the module will read the <tt>created_at</tt> argument from the properly-constructed URL, e.g.</p>
+<div class="code">
+<pre><code>http://www.wikidot.com/blog/created_at/2008.07</code></pre></div>
+<p>You can specify multiple arguments like this:</p>
+<div class="code">
+<pre><code>http://www.wikidot.com/blog/created_at/2008.07/order/rating desc/limit/3</code></pre></div>
+<p>To pass tags with (+/-) "+" need to be encoded with "%2b"<br/>
+<tt>+apple,-banana</tt></p>
+<div class="code">
+<pre><code>http://www.wikidot.com/blog/tags/%2bapple,-banana</code></pre></div>
+<p>You can create the URLs manually or within ListPages itself. Some modules also generate compatible URLs.</p>
+<div class="wiki-note">
+<p>Editor's note: list of modules that produce compatible URLs should be documented here.</p>
+</div>
+<h3 id="toc10"><span>More than one module in the page</span></h3>
+<p>Since some of the arguments can be passed in the URL of the request there might be conflict when more than one ListPages module is present in the page. One most likely conflict can occur when both modules use pagination — clicking "next" on one of them would also affect the other.</p>
+<p>To prevent such conflicts use the <tt>urlAttrPrefix</tt> argument. This prepends a text (unique for each of the modules) to the argument names in the URL. So the …/created_at/2008.7 would become …/prefix_created_at/2008.07. If you can set unique prefixes for each of the ListPages instances you would avoid any conflicts.</p>
+<h2 id="toc11"><span>Deprecated functionality</span></h2>
+<p>These arguments and variables can still be used but are disrecommended. You should when possible use the modern replacements. At some future date, deprecated functionality may be removed.</p>
+<table class="wiki-content-table">
+<tr>
+<th>Instead of this</th>
+<th>Use this</th>
+</tr>
+<tr>
+<td>skipCurrent="yes"</td>
+<td>range="others"</td>
+</tr>
+<tr>
+<td>categories=</td>
+<td>category=</td>
+</tr>
+<tr>
+<td>tag=</td>
+<td>tags=</td>
+</tr>
+<tr>
+<td>tagTarget="pagename"</td>
+<td>%%tags_linked|/pagename/tag/%%</td>
+</tr>
+<tr>
+<td>date=</td>
+<td>created_at=</td>
+</tr>
+<tr>
+<td>order="dateCreatedAsc"</td>
+<td>order="created_at"</td>
+</tr>
+<tr>
+<td>order="dateCreatedDesc"</td>
+<td>order="created_at desc"</td>
+</tr>
+<tr>
+<td>order="dateEditedAsc"</td>
+<td>order="updated_at"</td>
+</tr>
+<tr>
+<td>order="dateEditedDesc"</td>
+<td>order="updated_at desc"</td>
+</tr>
+<tr>
+<td>order="titleAsc"</td>
+<td>order="title"</td>
+</tr>
+<tr>
+<td>order="titleDesc"</td>
+<td>order="title desc"</td>
+</tr>
+<tr>
+<td>order="ratingAsc"</td>
+<td>order="rating"</td>
+</tr>
+<tr>
+<td>order="ratingDesc"</td>
+<td>order="rating desc"</td>
+</tr>
+<tr>
+<td>order="pageLengthAsc"</td>
+<td>order="size"</td>
+</tr>
+<tr>
+<td>order="pageLengthDesc"</td>
+<td>order="size desc"</td>
+</tr>
+<tr>
+<td>rssTitle=</td>
+<td>rss=</td>
+</tr>
+<tr>
+<td>%%linked_title%%</td>
+<td>%%title_linked%%</td>
+</tr>
+<tr>
+<td>%%page_unix_name%%</td>
+<td>%%fullname%%</td>
+</tr>
+<tr>
+<td>%%full_page_name%%</td>
+<td>%%fullname%%</td>
+</tr>
+<tr>
+<td>%%page_name%%</td>
+<td>%%name%%</td>
+</tr>
+<tr>
+<td>%%author%%</td>
+<td>%%created_by%%</td>
+</tr>
+<tr>
+<td>%%author_edited%%</td>
+<td>%%updated_by%%</td>
+</tr>
+<tr>
+<td>%%user_edited</td>
+<td>%%updated_by%%</td>
+</tr>
+<tr>
+<td>%%date%%</td>
+<td>%%created_at%%</td>
+</tr>
+<tr>
+<td>%%date_edited%%</td>
+<td>%%updated_at%%</td>
+</tr>
+<tr>
+<td>%%description%%</td>
+<td>%%summary%%</td>
+</tr>
+<tr>
+<td>%%short%%</td>
+<td>%%summary%%</td>
+</tr>
+<tr>
+<td>%%text%%</td>
+<td>%%content%%</td>
+</tr>
+<tr>
+<td>%%long%%</td>
+<td>%%content%%</td>
+</tr>
+<tr>
+<td>%%body%%</td>
+<td>%%content%%</td>
+</tr>
+</table>
+<p>ListPages supports a 'default format', where you do not specify any module body and no <tt>[[/module]]</tt>. This functionality is deprecated and you should avoid using it.</p>
+</div><div id="action-area" style="display: none;"></div>

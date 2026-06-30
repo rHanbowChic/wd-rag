@@ -1,0 +1,36 @@
+
+<div class="page-title">
+                    The 'text' field type
+                </div>
+<div id="page-content">
+<p>Defines a text or text box field. Allows 'width' and 'height' as properties. If you don't specify a height you get a normal 1-line text field. If you do specify it, you get a text box. For example:</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  name:
+    label: Your name
+    type: text
+    width: 30
+  comment:
+    label: Your comment
+    type: text
+    width: 50
+    height: 3
+  email:
+    label: email address
+    match: /^[_a-zA-Z0-9\-\+]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+$/
+[[/form]]</code>
+</pre></div>
+<p>The specific properties you can use on a text field:</p>
+<ul>
+<li><strong>width</strong>: specifies the visible field width in columns (fixed spaced characters, more or less).</li>
+<li><strong>height</strong>: specifies the field height in rows, 1 is normal text field, 2 or more is a text box.</li>
+<li><strong>match</strong>: specifies a regular expression (regex) that the field value must match.</li>
+<li><strong>match-error</strong>: specifies a custom error message.</li>
+<li><strong>hint</strong>: provides a string of text that is displayed in the field when empty.</li>
+<li><strong>default</strong>: defines a default value for the field shown on new pages.</li>
+</ul>
+<p>In the hint, if you want to use special characters like a # then you need to escape the character using \. For example, <strong>hint: enter a colorname like white or a hex value like \#468259</strong></p>
+<p>Wiki syntax does not work in a text field.</p>
+</div><div id="action-area" style="display: none;"></div>

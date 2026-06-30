@@ -1,0 +1,24 @@
+
+<div class="page-title">
+                    Reference
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Reference
+                    </div>
+<div id="page-content">
+<p>The form definition is made in <a href="http://yaml.org">YAML</a>, which is a simple structured markup language. A <em>_template</em> may have a single form. The form starts and ends with <span style="white-space: pre-wrap;">[[form]]</span> and <span style="white-space: pre-wrap;">[[/form]]</span> as for code blocks. Within those tags, we describe the form using YAML:</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:                           #  This is always required at the start
+  name-of-the-field:              #  Use a valid YAML name (i.e not starting with a number)
+    label: Label                  #  This is what the user sees when using the form
+    type: type-of-field           #  The field types
+    property: value...            #  Depending on the field type
+[[/form]]</code>
+</pre></div>
+<p>The default field type is 'text', unless you specify one or more values, in which case it defaults to 'select'.</p>
+<div class="wiki-note">
+<p><strong>Always start name of the field form with a letter. Field names starting with a digit or some other character are invalid. In case of special YAML symbols like <tt>true</tt>, <tt>false</tt>, <tt>yes</tt>, <tt>no</tt>, you may need to surround those with simple quote signs like this: "yes".</strong></p>
+</div>
+</div><div id="action-area" style="display: none;"></div>

@@ -1,0 +1,62 @@
+
+<div class="page-title">
+                    ThemePreviewer Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » ThemePreviewer Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>When inserted into the page source the module displays a list of available themes for a given site and allows previewing themes without entering site settings.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<ul>
+<li>noUi="true" - disable the user interface, and shows the theme specified on the URL. Use this syntax to specify the theme to apply to the page:</li>
+</ul>
+<div class="code">
+<pre>
+<code>?theme_url=http://example.com/style.css</code>
+</pre></div>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>Just do this:</p>
+<div class="code">
+<pre>
+<code>[[module ThemePreviewer]]</code>
+</pre></div>
+<p>which results in (you can try this now):</p>
+<div style="text-align: center">
+<form action="javascript:;">
+<select class="select" onchange="window.location.href=window.location.href.replace(/\?.*$/, '').replace(/\/*(theme_id\/[0-9]*\/*)?$/, '/theme_id/'+this.value).replace(/\/theme_id\/$/, '');">
+<option value="6651">Basic</option>
+<option value="6258">Bloo</option>
+<option value="6650">Bloo - no side bar</option>
+<option value="25">Cappuccino</option>
+<option value="26">Cappuccino - side bar on right</option>
+<option value="2">Clean</option>
+<option value="3">Clean - no side bar</option>
+<option value="56">Co</option>
+<option value="121">Co - no side bar</option>
+<option value="5">Flannel</option>
+<option value="9">Flannel Nature</option>
+<option value="10">Flannel Nature - no side bar</option>
+<option value="6">Flannel - no side bar</option>
+<option value="7">Flannel Ocean</option>
+<option value="8">Flannel Ocean - no side bar</option>
+<option value="57">Flower Blossom</option>
+<option value="75">Flower Blossom - no side bar</option>
+<option value="54">Gila</option>
+<option value="55">Gila - no side bar</option>
+<option value="58">Localize</option>
+<option value="59">Localize - no side bar</option>
+<option value="2439">Shiny</option>
+<option value="2440">Shiny - no side bar</option>
+<option value="2437">Webbish</option>
+<option value="2438">Webbish - no side bar</option>
+<option value="122">Webbish (older)</option>
+<option value="123">Webbish (older) - no side bar</option>
+<option selected="selected" value="192065">Wikidot 3.0 Content</option>
+<option value="192066">Wikidot 3.0 Content Nosidebar</option>
+<option value="192064">Wikidot 3.0 Main</option>
+</select>
+</form>
+</div>
+</div><div id="action-area" style="display: none;"></div>

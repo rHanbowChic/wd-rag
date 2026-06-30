@@ -1,0 +1,25 @@
+
+<div class="page-title">
+                    User Accounts FAQ
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » User Accounts FAQ
+                    </div>
+<div id="page-content">
+<h3 id="toc0"><span>Who can create a User account?</span></h3>
+<p>From our point of view - anyone. From yours - please consult your local law, boss, parents or whatever.</p>
+<h3 id="toc1"><span>Can I delete my user account?</span></h3>
+<p>Yes, you can delete your Account</p>
+<ul>
+<li>go to <a href="https://www.wikidot.com/account/settings" target="_blank">Your Account Settings</a> and go to the <strong>Account Settings</strong></li>
+<li>click <strong>Delete Account</strong> at the bottom of the list and follow the instructions. You will receive a confirmation e-mail and after clicking on the link in the e-mail, you will be prompted to provide your password. After doing so, your account will be deleted.</li>
+</ul>
+<p><strong><span style="color: red">Note that deleting an account is not equal to deleting Wikis.</span></strong> If you will delete an account, you Wiki will still be hosted by Wikidot.com.</p>
+<h3 id="toc2"><span>Help! I experience strange login/logout/authentication behavior!</span></h3>
+<p>Some of the problems related to session handling might be caused (and very often are) by strange configuration provided to you by your internet providers — such as routing problems, forcing caching, short dynamic IP lease time, filtering cookies etc.</p>
+<p>If you experience any problems with your browser "logging you out randomly" — please try to experiment with the log-in options. In most cases this would help:</p>
+<ul>
+<li>bind session to my IP — set to <em>no</em></li>
+<li>do not timeout my session — set to <em>yes</em></li>
+</ul>
+</div><div id="action-area" style="display: none;"></div>

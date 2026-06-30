@@ -1,0 +1,46 @@
+
+<div class="page-title">
+                    Watching FAQ
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Watching FAQ
+                    </div>
+<div id="page-content">
+<h3 id="toc0"><span>What is the new watching feature?</span></h3>
+<p>The "watching" feature allows you to follow changes on a site, page or category. One of the methods of receiving the notifications is by email, directly into your inbox. Other delivery channels, e.g. RSS, is on its way too.</p>
+<h3 id="toc1"><span>Why?</span></h3>
+<p>Delivering event notifications by email has tremendous positive impact on both large communities and small teams. It helps keeping people aware of what is going on, makes the collaboration more efficient (because you do not need to exchange emails saying "Look, I have edited this page") and keeps communities more organized.</p>
+<h3 id="toc2"><span>What happened to the old "watched pages" options?</span></h3>
+<p>It will be removed in the near future, since it was a half-baked solution and somehow counter-intuitive.</p>
+<h3 id="toc3"><span>What can be watched?</span></h3>
+<p>You can watch whole sites, whole categories within a site or individual pages. If you are watching the whole site, you will be notified about changes from all pages. The same goes for category and its pages.</p>
+<p>If you are watching a page, we will notify you whenever someone alters a page or adds a comment to it.</p>
+<h3 id="toc4"><span>How do I start watching?</span></h3>
+<p>There are 2 ways of starting watching:</p>
+<ul>
+<li>Automatically, once you:
+<ul>
+<li>create a new site, you are automatically watching the site</li>
+<li>edit or comment on a page, you can start watching it</li>
+</ul>
+</li>
+<li>Manually
+<ul>
+<li>Using the "start watching" in the bottom page options section.</li>
+</ul>
+</li>
+</ul>
+<p>Automatic watching can be enabled/disabled in the <a href="https://www.wikidot.com/account/activity#/watching">Activity / Settings</a>.</p>
+<h3 id="toc5"><span>Why am I suddenly watching dozens of sites and pages?</span></h3>
+<p>To give this new feature proper launch all our users have been automatically subscribed to sites and pages based on the following rules:</p>
+<ul>
+<li><span style="text-decoration: line-through;">if you are a member of a site, you watch it (including all the page and forum changes)</span></li>
+<li>if you are an admin (or creator) of a site, you watch it (including all the page and forum changes)</li>
+<li>if you have edited or commented a page on a site you are not member of, you watch it.</li>
+</ul>
+<h3 id="toc6"><span>How do I keep those emails organized in my mailbox?</span></h3>
+<p>If you are getting more than a few notifications per day you might want to put all of them into a separate folder. If your email service (or email software) supports filters, you can easily create one. All event emails are sent from <strong><span style="white-space: pre-wrap;">watching@wikidot.com</span></strong> address, so you can use it as the only and sufficient criteria.</p>
+<h3 id="toc7"><span>How do I unwatch?</span></h3>
+<p>Every notification email has a unique link. Once followed it allows to unsubscribe from a given kind (source) of events or stop all email notifications.</p>
+<p>You can also configure your list of watched items in your <a href="https://www.wikidot.com/account/activity#/watching">Activity / Settings</a>.</p>
+</div><div id="action-area" style="display: none;"></div>

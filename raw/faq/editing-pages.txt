@@ -1,0 +1,38 @@
+
+<div class="page-title">
+                    Editing Pages FAQ
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Editing Pages FAQ
+                    </div>
+<div id="page-content">
+<h3 id="toc0"><span>How do I edit a page?</span></h3>
+<p><object height="344" width="425"><param name="movie" value="http://www.youtube.com/v/xvHgb1S7Qkw&amp;hl=en&amp;fs=1"/>
+<param name="allowFullScreen" value="true"/>
+<embed allowfullscreen="true" height="344" src="http://www.youtube.com/v/xvHgb1S7Qkw&amp;hl=en&amp;fs=1" type="application/x-shockwave-flash" width="425"/></object><br/>
+<span style="font-size:small;"><span style="color: gray">Created by: <span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/samoore" onclick="WIKIDOT.page.listeners.userInfo(53495); return false;"><img alt="samoore" class="small" src="https://www.wikidot.com/avatar.php?userid=53495&amp;amp;size=small&amp;amp;timestamp=1482843329" style="background-image:url(https://www.wikidot.com/userkarma.php?u=53495)"/></a><a href="http://www.wikidot.com/user:info/samoore" onclick="WIKIDOT.page.listeners.userInfo(53495); return false;">samoore</a></span></span></span></p>
+<h3 id="toc1"><span>What is the "Wiki Syntax"?</span></h3>
+<p>Wiki syntax (also known as Wiki markup, Wiki language, Wiki text) is a markup language as a simple alternative to HTML code that allows quick content creation. There is no common Wiki syntax but each Wiki engine (such as MediaWiki (Wikipedia), MoinMoin, TWiki and others) have their own specific syntax. In our (Wikidot) syntax e.g. to create link to a different website you simply write <tt>[http://www.example.com visit this!]</tt> instead of HTML:<br/>
+<tt>&lt;a href="http://www.example.com"&gt;visit this!&lt;/a&gt;</tt></p>
+<p>To learn more about the Wiki Syntax go to our <a href="/doc:wiki-syntax">Wiki Syntax documentation</a>.</p>
+<h3 id="toc2"><span>So I have edited a page. Is the previous content lost?</span></h3>
+<p>Not at all. All pages have "history" which consists of a series of <span style="text-decoration: underline;">revisions</span>. Each change (title, content, rename, file upload etc.) creates a new revision. By clicking the <em>history</em> button at the bottom of a page you can browse the list of all revisions of a page.</p>
+<p>In principle the rule is <strong>no content is lost</strong>. This applies perfectly to pages - pages have history.</p>
+<p>The rule does not apply to uploaded files due to limited file storage size. So Users (who have permission) can replace/delete files.</p>
+<h3 id="toc3"><span>Why are there 3 modes of editing a page?</span></h3>
+<p>For convenience. It works fine when your pages are very long and editing the whole content is not always the best solution.<br/>
+So the modes are:</p>
+<ul>
+<li>whole page edit</li>
+<li>section edit</li>
+<li>append</li>
+</ul>
+<p>Each of these modes introduces a page edit lock such that no Users can both edit a page at the same time of their locks conflict. But as you might expect different users can edit non-overlapping sections of the same page at the same time. Or edit a section and append. These locks do not conflict.</p>
+<p>Anyway - with long pages it is much easier to use the section mode or append mode than editing the whole long page.</p>
+<h3 id="toc4"><span>Why is there no WYSIWYG editor?</span></h3>
+<p>WYSIWYG editor (What You See Is What You Get, such as <a href="http://tinymce.moxiecode.com/" target="_blank">TinyMCE</a> or <a href="http://www.fckeditor.net/" target="_blank">FCKeditor</a>) are still not very suitable for editing Wiki content. Although we would like to have an intuitive content editor the available ones do not meet our requirements since it is very difficult to produce well-structured documents with such tools.</p>
+<p>So what we ended with is "aided editing" - you still edit the raw source (which is a great advantage - produces clean, structured code) but the editor provides numerous buttons and wizards to make things a lot easier.</p>
+<h3 id="toc5"><span>Why the buttons above the text input area do not work for me?</span></h3>
+<p>Probably you use a non-standard browser. At the moment the interactive editor works with all major browsers, i.e. Mozilla Firefox, Opera and Internet Explorer.</p>
+<p><strong>Remember the buttons are only for your convenience and you can edit and save the content even if the buttons do not work!</strong></p>
+</div><div id="action-area" style="display: none;"></div>

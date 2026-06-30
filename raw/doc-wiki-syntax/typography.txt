@@ -1,0 +1,45 @@
+
+<div class="page-title">
+                    Typography
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Typography
+                    </div>
+<div id="page-content">
+<p>If you do care about typography there are a few ways to improve it in your text:</p>
+<table class="wiki-content-table">
+<tr>
+<th>you type</th>
+<th>you get</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">``quotation'' </span></tt></td>
+<td>“quotation”</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">`quotation' </span></tt></td>
+<td>‘quotation’</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">,,quotation''</span></tt></td>
+<td>„quotation”</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">&lt;&lt;quotation&gt;&gt;</span></tt></td>
+<td>«quotation»</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">&gt;&gt;quotation&lt;&lt;</span></tt></td>
+<td>»quotation«</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">dots...</span></tt></td>
+<td>dots…</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">em -- dash</span></tt></td>
+<td>em — dash</td>
+</tr>
+</table>
+<p>Note: em dash works only when surrounded by spaces.</p>
+</div><div id="action-area" style="display: none;"></div>

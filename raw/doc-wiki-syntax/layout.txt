@@ -1,0 +1,63 @@
+
+<div class="page-title">
+                    Layout elements
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Layout elements
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span><a name="tab-view"></a>Tab view</span></h2>
+<p>Tab view is a container that creates some clickable tabs that allow to switch between content to show.</p>
+<p><strong>NOTE: TabView breaks TOCs, anchor links and back button</strong></p>
+<ul>
+<li>you can't link to anchor inside of a tab</li>
+<li>TOC won't link properly to any header inside of a tab</li>
+<li>if you click a link from within a tab and go back, you will be always shown the first tab</li>
+</ul>
+<p>To generate a <em>tabview</em>, i.e. a set of tabs, the following syntax can be used:</p>
+<div class="code">
+<pre>
+<code>[[tabview]]
+[[tab Title of Tab No. 1]]
+Content of Tab No. 1.
+[[/tab]]
+[[tab Title of Tab No. 2]]
+Content of Tab No. 2.
+[[/tab]]
+[[tab Title of Tab No. 3]]
+Content of Tab No. 3.
+[[/tab]]
+[[/tabview]]</code>
+</pre></div>
+<p>This will produce the following tabset:</p>
+<script src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--javascript/yahooui/tabview-min.js" type="text/javascript">
+</script>
+<div class="yui-navset" id="wiki-tabview-3cb819bc1abfbfbe85cb069d950237c1">
+<ul class="yui-nav">
+<li class="selected"><a href="javascript:;"><em>Title of Tab No. 1</em></a></li>
+<li><a href="javascript:;"><em>Title of Tab No. 2</em></a></li>
+<li><a href="javascript:;"><em>Title of Tab No. 3</em></a></li>
+</ul>
+<div class="yui-content">
+<div id="wiki-tab-0-0">
+<p>Content of Tab No. 1.</p>
+</div>
+<div id="wiki-tab-0-1" style="display:none">
+<p>Content of Tab No. 2.</p>
+</div>
+<div id="wiki-tab-0-2" style="display:none">
+<p>Content of Tab No. 3.</p>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+OZONE.dom.onDomReady(function(){
+        var tabView3cb819bc1abfbfbe85cb069d950237c1 = new YAHOO.widget.TabView('wiki-tabview-3cb819bc1abfbfbe85cb069d950237c1');
+                }, "dummy-ondomready-block");
+        
+//]]>
+</script>
+<p>Tabs will accept any content, but at the moment it is not possible to nest tabviews.</p>
+<p>Another example of <tt>tabview</tt> can be found at our Snippets Wiki at <a href="http://snippets.wikidot.com/code:tabs">http://snippets.wikidot.com/code:tabs</a></p>
+</div><div id="action-area" style="display: none;"></div>

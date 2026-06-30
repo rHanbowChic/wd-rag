@@ -1,0 +1,576 @@
+
+<div class="page-title">
+                    SiteChanges Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » SiteChanges Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Lists recent changes made to the site content. Supported types of changes:</p>
+<ul>
+<li>new pages</li>
+<li>page content changes (edit source/title)</li>
+<li>page rename/move</li>
+<li>metadata change (parent page)</li>
+<li>attached file actions</li>
+</ul>
+<p>Changes do not include any forum activity. Use <a href="/doc:recentposts-module">RecentPosts</a> module for this.</p>
+<p>The module shows the category name for pages not in default category</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>No attributes required</p>
+<h2 id="toc2"><span>Examples</span></h2>
+<div class="code">
+<pre>
+<code>[[module SiteChanges]]</code>
+</pre></div>
+<div class="site-changes-box">
+<form action="dummy.html" method="get" onsubmit="return false;">
+<table class="form">
+<tr>
+<td>
+					Revision types:
+				</td>
+<td>
+<input checked="checked" class="checkbox" id="rev-type-all" type="checkbox"/> ALL<br/>
+<input class="checkbox" id="rev-type-new" type="checkbox"/> new pages<br/>
+<input class="checkbox" id="rev-type-source" type="checkbox"/> source changes<br/>
+<input class="checkbox" id="rev-type-title" type="checkbox"/> title changes<br/>
+<input class="checkbox" id="rev-type-move" type="checkbox"/> page name changes<br/>
+<input class="checkbox" id="rev-type-tags" type="checkbox"/> tags changes<br/>
+<input class="checkbox" id="rev-type-meta" type="checkbox"/> metadata changes<br/>
+<input class="checkbox" id="rev-type-files" type="checkbox"/> files changes				</td>
+</tr>
+<tr>
+<td>
+					From categories: 
+				</td>
+<td>
+<select id="rev-category">
+<option selected="selected" value="">Whole site</option>
+<option value="4387981">_default</option>
+<option value="4396860">action</option>
+<option value="4387980">admin</option>
+<option value="4511524">community-sites</option>
+<option value="4388016">doc</option>
+<option value="4388023">doc-data-forms</option>
+<option value="4388026">doc-include</option>
+<option value="4388021">doc-modules</option>
+<option value="4388017">doc-wiki-syntax</option>
+<option value="4388024">faq</option>
+<option value="4676983">forum</option>
+<option value="4388018">inc</option>
+<option value="4388025">legal</option>
+<option value="4388019">more</option>
+<option value="4387984">nav</option>
+<option value="4387982">search</option>
+<option value="4388020">start</option>
+<option value="4387983">system</option>
+<option value="4388136">user</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+					Revisions per page:
+				</td>
+<td>
+<select id="rev-perpage">
+<option value="10">10</option>
+<option selected="selected" value="20">20</option>
+<option value="50">50</option>
+<option value="100">100</option>
+<option value="200">200</option>
+</select>
+</td>
+</tr>
+</table>
+<div class="buttons">
+<input class="btn btn-default btn-sm" onclick="WIKIDOT.modules.SiteChangesModule.listeners.updateList(null)" type="button" value="Update list"/>
+</div>
+</form>
+<div class="changes-list" id="site-changes-list">
+<div class="pager"><span class="pager-no">page 1</span><span class="current">1</span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.SiteChangesModule.listeners.updateList(2)">2</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.SiteChangesModule.listeners.updateList(3)">3</a></span><span class="dots">...</span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.SiteChangesModule.listeners.updateList(2)">next »</a></span></div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1601">
+																								community-sites: 
+																Vassal LARP
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1782312213 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">24 Jun 2026 14:43</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/tribunal-power" onclick="WIKIDOT.page.listeners.userInfo(10431813); return false;">Tribunal Power</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1600">
+																								community-sites: 
+																backrooms-spring
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1782271141 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">24 Jun 2026 03:19</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/zailin1234" onclick="WIKIDOT.page.listeners.userInfo(10426265); return false;">zailin1234</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1599">
+																								community-sites: 
+																New
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1781833518 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">19 Jun 2026 01:45</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/qibeibei" onclick="WIKIDOT.page.listeners.userInfo(10422465); return false;">qibeibei</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1598">
+																								community-sites: 
+																GOC website
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1781823945 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">18 Jun 2026 23:05</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/crafter-official" onclick="WIKIDOT.page.listeners.userInfo(10407986); return false;">Crafter_official</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1597">
+																								community-sites: 
+																New
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="content source text changed">S</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1781772197 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">18 Jun 2026 08:43</span>
+</td>
+<td class="revision-no">
+						(rev. 1)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/beingless" onclick="WIKIDOT.page.listeners.userInfo(9316757); return false;">beingless</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1597">
+																								community-sites: 
+																New
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1781772161 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">18 Jun 2026 08:42</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/beingless" onclick="WIKIDOT.page.listeners.userInfo(9316757); return false;">beingless</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1596">
+																								community-sites: 
+																New
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1781090732 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">10 Jun 2026 11:25</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/linoce-nightmirai" onclick="WIKIDOT.page.listeners.userInfo(9015070); return false;">Linoce_Nightmirai</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1595">
+																								community-sites: 
+																New
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1781015228 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">09 Jun 2026 14:27</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/linoce-nightmirai" onclick="WIKIDOT.page.listeners.userInfo(9015070); return false;">Linoce_Nightmirai</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1594">
+																								community-sites: 
+																mapintime
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1780564158 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">04 Jun 2026 09:09</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/mapintime" onclick="WIKIDOT.page.listeners.userInfo(10399075); return false;">mapintime</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1593">
+																								community-sites: 
+																RAVEN: NEVERMORE!
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="title changed">T</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1780229701 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">31 May 2026 12:15</span>
+</td>
+<td class="revision-no">
+						(rev. 2)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/claviculanox9" onclick="WIKIDOT.page.listeners.userInfo(10316267); return false;">ClaviculaNox9</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1593">
+																								community-sites: 
+																RAVEN: NEVERMORE!
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="content source text changed">S</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1780229675 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">31 May 2026 12:14</span>
+</td>
+<td class="revision-no">
+						(rev. 1)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/claviculanox9" onclick="WIKIDOT.page.listeners.userInfo(10316267); return false;">ClaviculaNox9</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1593">
+																								community-sites: 
+																RAVEN: NEVERMORE!
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1779858891 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">27 May 2026 05:14</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/claviculanox9" onclick="WIKIDOT.page.listeners.userInfo(10316267); return false;">ClaviculaNox9</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1592">
+																								community-sites: 
+																enciklopedia-shqip
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1779451425 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">22 May 2026 12:03</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/enciklopedia-shqip" onclick="WIKIDOT.page.listeners.userInfo(10379574); return false;">enciklopedia-shqip</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1591">
+																								community-sites: 
+																deezypeezy
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1779245363 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">20 May 2026 02:49</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/darryl-payne" onclick="WIKIDOT.page.listeners.userInfo(10356903); return false;">Darryl Payne</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1590">
+																								community-sites: 
+																New
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1779102276 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">18 May 2026 11:04</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/ebsloninfotech" onclick="WIKIDOT.page.listeners.userInfo(10374245); return false;">ebslonInfotech</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1589">
+																								community-sites: 
+																paunionut
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1777736251 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">02 May 2026 15:37</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/paunionut" onclick="WIKIDOT.page.listeners.userInfo(10351610); return false;">paunionut</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1588">
+																								community-sites: 
+																Πληροφορική Α2 Λυκείου Ηρακλείου "Η ΕΛΛΗΝΙΚΗ ΠΑΙΔΕΙΑ"
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1777447718 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">29 Apr 2026 07:28</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/ypothal" onclick="WIKIDOT.page.listeners.userInfo(9114330); return false;">ypothal</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1587">
+																								community-sites: 
+																Lindfield Learning Village
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1777339647 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">28 Apr 2026 01:27</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/random82" onclick="WIKIDOT.page.listeners.userInfo(10345270); return false;">Random82</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1586">
+																								community-sites: 
+																The Literary Diologist
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1776141699 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">14 Apr 2026 04:41</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/dartmage0711" onclick="WIKIDOT.page.listeners.userInfo(10326676); return false;">dartmage0711</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="changes-list-item">
+<table>
+<tr>
+<td class="title">
+<a href="/community-sites:1585">
+																								community-sites: 
+																原神
+							</a>
+</td>
+<td class="flags">
+<span class="spantip" title="new page created">N</span>
+</td>
+<td class="mod-date">
+<span class="odate time_1775799034 format_%25e%20%25b%20%25Y%20-%20%25H%3A%25M%3A%25S%7Cagohover">10 Apr 2026 05:30</span>
+</td>
+<td class="revision-no">
+						(new)
+					</td>
+<td class="mod-by">
+<span class="printuser"><a href="http://www.wikidot.com/user:info/iopk123451" onclick="WIKIDOT.page.listeners.userInfo(9515319); return false;">Iopk123451</a></span>
+</td>
+</tr>
+</table>
+</div>
+<div class="pager"><span class="pager-no">page 1</span><span class="current">1</span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.SiteChangesModule.listeners.updateList(2)">2</a></span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.SiteChangesModule.listeners.updateList(3)">3</a></span><span class="dots">...</span><span class="target"><a href="javascript:;" onclick="WIKIDOT.modules.SiteChangesModule.listeners.updateList(2)">next »</a></span></div>
+</div>
+</div></div><div id="action-area" style="display: none;"></div>

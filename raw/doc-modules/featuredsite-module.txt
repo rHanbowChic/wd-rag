@@ -1,0 +1,60 @@
+
+<div class="page-title">
+                    FeaturedSite Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » FeaturedSite Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>FeaturedSite module is very similar to SiteGrid, but it's displaying <strong>only one</strong> wiki site thumbnail and the thumbnail is much bigger.</p>
+<p>This module has no attributes.</p>
+<h2 id="toc1"><span>Example</span></h2>
+<div class="code">
+<pre>
+<code>[[module FeaturedSite]]
+community.wikidot.com
+[[/module]]</code>
+</pre></div>
+<p>Which transfers to…</p>
+<div class="featured-site-box">
+<div class="container">
+<a href="http://community.wikidot.com"><img alt="Wikidot Community wiki" id="featured-site-image-12" src="https://thumbnails.wdfiles.com/thumbnail/site/community.wikidot.com/160.jpg"/></a>
+</div>
+<div class="hovertip-container" id="special9387424" style="display: none">
+<div class="featured-site-hovertip" id="featured-site-image-12-hovertip1">
+<img alt="Wikidot Community wiki" class="thumbnail" src="https://thumbnails.wdfiles.com/thumbnail/site/community.wikidot.com/160.jpg"/>
+<div class="description">
+<div class="name">
+			 		Wikidot Community
+		 		</div>
+<div class="tagline">
+		 				hints / tips / help / discussion
+		 			</div>
+<hr/>
+<div class="stats">
+		 			Contributions last month: 0
+		 			<br/>
+		 					 			Contributors: 7659
+		 		</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	
+//<![CDATA[
+	OZONE.dom.onDomReady(function(){
+		var els = YAHOO.util.Dom.getElementsByClassName('featured-site-hovertip', 'div', 'special9387424');
+		for(var i=0; i<els.length; i++){
+			els[i].id = els[i].id.replace(/1$/, '');
+		}
+		var els = YAHOO.util.Dom.getElementsByClassName('thumbnail', 'img', 'special9387424');
+		for(var i=0; i<els.length; i++){
+			els[i].alt = '';
+		}
+		OZONE.dialog.hovertip.dominit("special9387424", {delay: 100, noCursorHelp: true});
+	}, "dummy-ondomready-block");
+//]]>
+	
+</script></div><div id="action-area" style="display: none;"></div>

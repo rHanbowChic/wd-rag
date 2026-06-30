@@ -1,0 +1,134 @@
+
+<div class="page-title">
+                    PageCalendar Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » PageCalendar Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>The PageCalendar module creates a blogger-friendly calendar that displays the number of pages (articles) created per year and month. It also works great with the <a href="/doc:listpages-module">ListPages module</a> as shown below.</p>
+<div class="wiki-note">
+<p>We are still working on this module so the final syntax and specifications might change.</p>
+</div>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>category</tt></td>
+<td>no</td>
+<td>comma- or space-separated category names or "*" for whole wiki, or @URL</td>
+<td>current category</td>
+<td>sets the scope of processed pages</td>
+</tr>
+<tr>
+<td><tt>tags</tt></td>
+<td>no</td>
+<td>comma- or space-separated tag names with <tt>+</tt> and <tt>-</tt> modifiers,<br/>
+or <tt>@URL</tt></td>
+<td>none</td>
+<td>lists tags that are used as a criteria to select pages, the "+" before the tag makes it required, "-" means "without a tag" and tags without modifiers translate to "pages that have any of those tags";<br/>
+"@URL" takes the tags from the URL</td>
+</tr>
+<tr>
+<td><tt>startPage</tt> or <tt>targetPage</tt></td>
+<td>no</td>
+<td>any valid wiki page</td>
+<td>current page</td>
+<td>sets the page that will be displayed when any of the dates is clicked</td>
+</tr>
+<tr>
+<td><tt>urlAttrPrefix</tt></td>
+<td>no</td>
+<td>any alphanumeric</td>
+<td>none</td>
+<td>prefix for the parameters passed via the URL e.g. to the <a href="/doc:listpages-module">ListPages module</a></td>
+</tr>
+</table>
+<p>If you are using PageCalendar with ListPages, make sure that the <tt>urlAttrPrefix</tt> has the same value in both modules.</p>
+<p>Parameters that accept the <tt>@URL</tt> value, i.e. allow for passing the value in the URL, also allow for default values similar to the <a href="/doc:listpages-module#toc8">ListPages module</a>.</p>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>List pages in the documentation section grouped by year and month, linked with the ListPages module:</p>
+<div class="code">
+<pre>
+<code>[[module PageCalendar category="doc"]]
+[[module ListPages category="doc" perPage="7" date="@URL" separate="false" prependLine="||~ Page||~ Date created||~ Created by ||"]]
+|| %%linked_title%% || %%date%% || %%author%% ||
+[[/module]]</code>
+</pre></div>
+<div style="overflow: hidden; width: 55em;">
+<div style="float: left; margin: 0 7em 0 0"><div class="page-calendar-box">
+<ul>
+<li>
+<a href="/doc-modules:pagecalendar-module/date/2015">2015 (1)</a>
+<ul>
+<li>
+<a href="/doc-modules:pagecalendar-module/date/2015.10">October (1)</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/doc-modules:pagecalendar-module/date/2014">2014 (66)</a>
+<ul>
+<li>
+<a href="/doc-modules:pagecalendar-module/date/2014.8">August (1)</a>
+</li>
+<li>
+<a href="/doc-modules:pagecalendar-module/date/2014.4">April (65)</a>
+</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<div class="list-pages-box">
+<table class="wiki-content-table">
+<tr>
+<th>Page</th>
+<th>Date created</th>
+<th>Created by</th>
+</tr>
+<tr>
+<td><a href="/doc:expressions">Expressions</a></td>
+<td><span class="odate time_1445440846 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">21 Oct 2015 15:20</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/terq" onclick="WIKIDOT.page.listeners.userInfo(381827); return false;"><img alt="TeRq" class="small" src="https://www.wikidot.com/avatar.php?userid=381827&amp;amp;size=small&amp;amp;timestamp=1782789187" style="background-image:url(https://www.wikidot.com/userkarma.php?u=381827)"/></a><a href="http://www.wikidot.com/user:info/terq" onclick="WIKIDOT.page.listeners.userInfo(381827); return false;">TeRq</a></span></td>
+</tr>
+<tr>
+<td><a href="/doc:simpletodo-module">Simpletodo Module</a></td>
+<td><span class="odate time_1408438092 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">19 Aug 2014 08:48</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/terq" onclick="WIKIDOT.page.listeners.userInfo(381827); return false;"><img alt="TeRq" class="small" src="https://www.wikidot.com/avatar.php?userid=381827&amp;amp;size=small&amp;amp;timestamp=1782789187" style="background-image:url(https://www.wikidot.com/userkarma.php?u=381827)"/></a><a href="http://www.wikidot.com/user:info/terq" onclick="WIKIDOT.page.listeners.userInfo(381827); return false;">TeRq</a></span></td>
+</tr>
+<tr>
+<td><a href="/doc:karma">Karma</a></td>
+<td><span class="odate time_1398769973 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 11:12</span></td>
+<td><span class="printuser avatarhover"><a href="http://www.wikidot.com/user:info/terq" onclick="WIKIDOT.page.listeners.userInfo(381827); return false;"><img alt="TeRq" class="small" src="https://www.wikidot.com/avatar.php?userid=381827&amp;amp;size=small&amp;amp;timestamp=1782789187" style="background-image:url(https://www.wikidot.com/userkarma.php?u=381827)"/></a><a href="http://www.wikidot.com/user:info/terq" onclick="WIKIDOT.page.listeners.userInfo(381827); return false;">TeRq</a></span></td>
+</tr>
+<tr>
+<td><a href="/doc:nextpreviouspage-module">Nextpreviouspage Module</a></td>
+<td><span class="odate time_1398764176 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 09:36</span></td>
+<td>Anonymous</td>
+</tr>
+<tr>
+<td><a href="/doc:pagesbytag-module">Pagesbytag Module</a></td>
+<td><span class="odate time_1398764176 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 09:36</span></td>
+<td>Anonymous</td>
+</tr>
+<tr>
+<td><a href="/doc:childpages-module">Childpages Module</a></td>
+<td><span class="odate time_1398764176 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 09:36</span></td>
+<td>Anonymous</td>
+</tr>
+<tr>
+<td><a href="/doc:managesite-module">Managesite Module</a></td>
+<td><span class="odate time_1398764175 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%7Cagohover">29 Apr 2014 09:36</span></td>
+<td>Anonymous</td>
+</tr>
+</table>
+<div class="pager"><span class="pager-no">page 1 of 10</span><span class="current">1</span><span class="target"><a href="/doc-modules:pagecalendar-module/p/2">2</a></span><span class="target"><a href="/doc-modules:pagecalendar-module/p/3">3</a></span><span class="dots">...</span><span class="target"><a href="/doc-modules:pagecalendar-module/p/9">9</a></span><span class="target"><a href="/doc-modules:pagecalendar-module/p/10">10</a></span><span class="target"><a href="/doc-modules:pagecalendar-module/p/2">next »</a></span></div>
+</div></div>
+</div><div id="action-area" style="display: none;"></div>

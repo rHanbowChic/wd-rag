@@ -1,0 +1,16 @@
+
+<div class="page-title">
+                    Using the data in ListPages modules
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Using the data in ListPages modules
+                    </div>
+<div id="page-content">
+<p>The data that is produced by data forms can be used in the ListPages module (<a href="http://www.wikidot.com/doc:listpages-module" target="_blank">http://www.wikidot.com/doc:listpages-module</a>). With the band example, a ListPages module could look like this:</p>
+<div class="code">
+<pre>
+<code>[[module ListPages category="band" order="name"  separate="false" prependLine="||~ Band||~ Type ||~ Current ||" appendLine="||||||||~ ||"]]
+|| %%title_linked%% || %%form_data{type}%% || %%form_data{current}%% ||
+[[/module]]</code>
+</pre></div>
+<img alt="df_bandlist.jpg" class="image" src="https://www.wdfiles.com/local--files/doc-data-forms:dataforms-and-listpages/df_bandlist.jpg"/></div><div id="action-area" style="display: none;"></div>

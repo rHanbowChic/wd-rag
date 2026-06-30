@@ -1,0 +1,32 @@
+
+<div class="page-title">
+                    Site Features and managing sites FAQ
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Site Features and managing sites FAQ
+                    </div>
+<div id="page-content">
+<h3 id="toc0"><span>I already have a site and users. Can a Wikidot Site use external user accounts?</span></h3>
+<p>No, not at this moment. We have however some ideas how to implement it through distributed and modular authentication network but do not expect anything soon.</p>
+<p>If you want to integrate your new Wikidot Site with your existing project you can easily create a subdomain within your project's domain and let Wikidot.com handle it.</p>
+<h3 id="toc1"><span>Do you force me to display any ads?</span></h3>
+<p>Yes, we show advertising to selected visitors of your sites. This helps maintaining free sites and keeping them free for you.</p>
+<h3 id="toc2"><span>Is there any limit on the <span style="text-decoration: underline;">size</span> of a Site?</span></h3>
+<p>There is only a limit for the file storage, i.e. total space for the file attachments. By default it is 100MB - which is low but should be higher soon.</p>
+<p>There is absolutely no limit on number of pages you want to create, number of Site Members or any other factors. We would gladly host your verrrrrrry big Site ;-)</p>
+<h3 id="toc3"><span>How many Sites can I create?</span></h3>
+<p>At the moment any User can create (or administer) up to 5 sites. This limit is much higher for our paying users.</p>
+<h3 id="toc4"><span>Can I have a backup of my Site please?</span></h3>
+<p>Yes, you can make a snapshot of your Site that would contain sources for all the pages you have created. Although this has some limitations it should be a nice thing for these who would like to have their content a bit safer ;-)</p>
+<p>Although we do not guarantee that your content is safe on our servers (i.e. take no responsibility for any data loss) we follow a strict backup policy which include redundant disk storage, hot-backup server (synced with the master servers in real-time) and regular backups to servers in a different data center.</p>
+<h3 id="toc5"><span>How can I fight spam and vandalism?</span></h3>
+<p>There are a few ways:</p>
+<ul>
+<li>limiting permissions - allow only trusted users to modify content</li>
+<li>setting less restrictive permissions and monitoring changes (also via an RSS feed) and reverting changes</li>
+<li>blocking vandals from accessing the site</li>
+</ul>
+<h3 id="toc6"><span>How can I delete a Site?</span></h3>
+<p>Yes, you can. There is an option to delete a wiki inside the Site Manager under "Extreme actions". Moreover for every site deletion there is an <strong>undo</strong> — you can easily restore previously deleted wiki.</p>
+<p>Only a person who originally created the wiki (the founder) can delete it.</p>
+</div><div id="action-area" style="display: none;"></div>

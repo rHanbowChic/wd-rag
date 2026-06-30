@@ -1,0 +1,97 @@
+
+<div class="page-title">
+                    NextPreviousPage Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » NextPreviousPage Module
+                    </div>
+<div id="page-content">
+<p><strong>This module is deprecated. Use the <a href="/doc:listpages-module">ListPages module</a> with the tag and category selectors instead.</strong></p>
+<p>The NextPage and PreviousPage modules automatically create links to the next or previous page in the category with several type of sorting.</p>
+<h2 id="toc0"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>category</td>
+<td>no</td>
+<td>comma- or space-separated names, * for all categories</td>
+<td>current category</td>
+<td>the category where next / previous pages are chosen from</td>
+</tr>
+<tr>
+<td>by</td>
+<td>no</td>
+<td>title, date</td>
+<td>date</td>
+<td>changes the way of choosing next / previous page</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>no</td>
+<td>comma- or space-separated tag names with <tt>+</tt> and <tt>-</tt> modifiers,<br/>
+or <tt>@URL</tt></td>
+<td>none</td>
+<td>lists tags that are used as a criteria to select pages, the "+" before the tag makes it required, "-" means "without a tag" and tags without modifiers translate to "pages that have any of those tags";<br/>
+a special tag "=" adds all the tags that are present in the current page</td>
+</tr>
+</table>
+<h2 id="toc1"><span>Item format</span></h2>
+<p>You can define what NextPage / PreviousPage will display as it's result. You can use the format in the same way as in the <a href="/doc:listpages-module">ListPages module</a>.</p>
+<h2 id="toc2"><span>Examples</span></h2>
+<h3 id="toc3"><span>Example 1</span></h3>
+<div class="code">
+<pre>
+<code>[[module NextPage by="title"]]
+**Next documentation page:** %%linked_title%%
+[[/module]]
+
+[[module PreviousPage by="title"]]
+**Previous documentation page:** %%linked_title%%
+[[/module]]</code>
+</pre></div>
+<h3 id="toc4"><span>Result 1</span></h3>
+<div class="list-pages-box"> <div class="list-pages-item">
+<p><strong>Next documentation page:</strong> <a href="/doc-modules:orphanedpages-module">OrphanedPages Module</a></p>
+</div>
+</div><div class="list-pages-box"> <div class="list-pages-item">
+<p><strong>Previous documentation page:</strong> <a href="/doc-modules:nextpreviouspage-module">NextPreviousPage Module</a></p>
+</div>
+</div>
+<p>or you can use this code to place the links on the left and right side of your page (blog-like):</p>
+<h3 id="toc5"><span>Example 2</span></h3>
+<div class="code">
+<pre>
+<code>[[div style="overflow: hidden"]]
+
+[[div style="overflow: hidden; float: left; clear: left"]]
+[[module PreviousPage]]
+Previous: %%linked_title%%
+[[/module]]
+[[/div]]
+
+[[div style="overflow: hidden; float: right"]]
+[[module NextPage]]
+Next: %%linked_title%%
+[[/module]]
+[[/div]]
+
+[[/div]]</code>
+</pre></div>
+<h3 id="toc6"><span>Result 2</span></h3>
+<div style="overflow: hidden">
+<div style="overflow: hidden; float: left; clear: left"><div class="list-pages-box"> <div class="list-pages-item">
+<p>Previous: <a href="/doc-modules:pagesbytag-module">PagesByTag Module</a></p>
+</div>
+</div></div>
+<div style="overflow: hidden; float: right"><div class="list-pages-box"> <div class="list-pages-item">
+<p>Next: <a href="/doc-modules:orphanedpages-module">OrphanedPages Module</a></p>
+</div>
+</div></div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

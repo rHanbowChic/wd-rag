@@ -1,0 +1,45 @@
+
+<div class="page-title">
+                    Data Forms
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Data Forms
+                    </div>
+<div id="page-content">
+<img alt="df_dataform.jpg" class="image" src="https://www.wdfiles.com/local--files/doc-data-forms:start/df_dataform.jpg"/>
+<p>Wikidot Data Forms is a very powerful feature that makes it possible to build everything from simple applications in your wikidot sites to a complete content management system (CMS) across your entire site.</p>
+<p>A normal wiki page holds unstructured text. A wiki page with a data form holds structured data in "fields", the same as a database. In many cases structured data in a data form is easier for your users to edit, to understand and to work with.</p>
+<hr/>
+<h2 id="toc0"><span>Some uses for data forms</span></h2>
+<p>Some of the uses where data forms might work better than simple wiki pages are:</p>
+<ul>
+<li>I'm collecting references for my thesis, and for each reference I want to record the title, author, ISBN, date of issue, publisher, and language. If I use a data form with one field for each piece of data, I can easily produce reference lists in any format.</li>
+</ul>
+<ul>
+<li>I'm organizing my club membership and for each member I want a page with their name, email address and so on. By using a data form I can extract fields like the email address to send everyone a newsletter.</li>
+</ul>
+<ul>
+<li>I'm cataloging my video game collection and using a data form means I can search on games by console, by publisher, by genre and so on.</li>
+</ul>
+<ul>
+<li>I want my members to enter information about software, but I want to control what they enter by using lists they select from.</li>
+</ul>
+<ul>
+<li>I want users of my site to be able to easily upload images and videos at the same time that they create a page.</li>
+</ul>
+<ul>
+<li>I want to build a complete site where the user doesn't need to know any Wikidot syntax but can just fill in forms and press Save.</li>
+</ul>
+<hr/>
+<h2 id="toc1"><span>Live demo</span></h2>
+<ul>
+<li>A live demo is available to show the features of data forms that we have described in this documentation. The permissions have been relaxed so you can try out the form:</li>
+</ul>
+<p>* main page for creating new pages in the <em>band</em> category and for listing bands: <a href="http://vineyard.wikidot.com/bands:main" target="_blank">http://vineyard.wikidot.com/bands:main</a><br/>
+* example page at <a href="http://vineyard.wikidot.com/band:queen" target="_blank">http://vineyard.wikidot.com/band:queen</a><br/>
+* live template at <a href="http://vineyard.wikidot.com/band:_template" target="_blank">http://vineyard.wikidot.com/band:_template</a></p>
+<ul>
+<li><a href="http://pagepath.wikidot.com/">pagepath.wikidot.com</a> shows examples of the <em>pagepath</em> concept.</li>
+<li>There is also a pagepath example using the band example at <a href="http://vineyard.wikidot.com/bands" target="_blank">http://vineyard.wikidot.com/bands</a></li>
+</ul>
+</div><div id="action-area" style="display: none;"></div>

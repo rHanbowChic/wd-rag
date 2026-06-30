@@ -1,0 +1,19 @@
+
+<div class="page-title">
+                    ChildPages Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » ChildPages Module
+                    </div>
+<div id="page-content">
+<p><strong>This module is deprecated. Use the <a href="/doc:listpages-module">ListPages module</a> with the parent selector instead.</strong></p>
+<h2 id="toc0"><span>Description</span></h2>
+<p>Lists children pages of the page that contains the module. The list is ordered alphabetically.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>No attributes required.</p>
+<h2 id="toc2"><span>Examples</span></h2>
+<div class="code">
+<pre>
+<code>[[module ChildPages]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

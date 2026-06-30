@@ -1,0 +1,21 @@
+
+<div class="page-title">
+                    Links
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Links
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span><a name="external"></a> External Links</span></h2>
+<h3 id="toc1"><span>Data form field</span></h3>
+<p>To upload a url to your data form you need to use a <strong>url</strong> field. It defaults to http:// format so the user just needs to enter the url in the format <em>www.wikidot.com</em></p>
+<h3 id="toc2"><span>Layout</span></h3>
+<p>To display the link, above the <span style="white-space: pre-wrap;">====</span> separator use <span style="white-space: pre-wrap;">%%form_data{field}%%</span>.</p>
+<p>You can have the link open in a new window by adding a * as follows: <span style="white-space: pre-wrap;">*%%form_data{file}%%</span></p>
+<hr/>
+<h2 id="toc3"><span><a name="internal"></a> Internal Links</span></h2>
+<h3 id="toc4"><span>Data form field</span></h3>
+<p>To include an internal link in to your data form you use a <strong>text</strong> field. The user just enters the name of the page in the box on the form..</p>
+<h3 id="toc5"><span>Layout</span></h3>
+<p>To display it, above the <span style="white-space: pre-wrap;">====</span> separator use normal internal link syntax and form_data: <span style="white-space: pre-wrap;">[[[%%form_data{field}%%]]]</span></p>
+</div><div id="action-area" style="display: none;"></div>

@@ -1,0 +1,82 @@
+
+<div class="page-title">
+                    Inline Formatting
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Inline Formatting
+                    </div>
+<div id="page-content">
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">//italic text//</span></tt></td>
+<td><em>italic text</em></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">**bold text**</span></tt></td>
+<td><strong>bold text</strong></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">//**italic and bold**//</span></tt></td>
+<td><em><strong>italic and bold</strong></em></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">__underline text__</span></tt></td>
+<td><span style="text-decoration: underline;">underline text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">--strikethrough text--</span></tt></td>
+<td><span style="text-decoration: line-through;">strikethrough text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">{{teletype (monospaced) text}}</span></tt></td>
+<td><tt>teletype (monospaced) text</tt></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">normal^^superscript^^</span></tt></td>
+<td>normal<sup>superscript</sup></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">normal,,subscript,,</span></tt></td>
+<td>normal<sub>subscript</sub></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[!-- invisible comment --]</span></tt></td>
+<td></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[span style="color:red"]]custom //span// element[[/span]]</span></tt></td>
+<td><span style="color:red">custom <em>span</em> element</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">##blue|predefined## or ##44FF88|custom-code## color</span></tt></td>
+<td><span style="color: blue">predefined</span> or <span style="color: #229966">custom-code</span> color</td>
+</tr>
+</table>
+<p>Adding underscore to <strong>span</strong> element <strong><span style="white-space: pre-wrap;">[[span_ ]]</span></strong> will truncate whitespaces around it which prevents creation of random <a href="/doc-wiki-syntax:paragraphs-and-newline">new lines and paragraphs</a>. It's simplifices creation of complex HTML syntax like <a href="http://getbootstrap.com/components/">Bootstrap components</a></p>
+<div class="alert alert-info">
+<p>You can use user-defined <tt>ID</tt> arguments in <strong><span style="white-space: pre-wrap;">[[span]]...[[/span]]</span></strong> tags, which is extremely useful building sites using <a href="http://getbootstrap.com">Bootstrap</a>. Please note that every user-defined <tt>ID</tt> will have a <tt>"u-"</tt> prefix added in the output HTML for the security reasons.</p>
+<p>To make your source more readable, you can add the <tt>"u-"</tt> prefix yourself. For example, these 2 bits of wiki syntax will output the same HTML:</p>
+<hr/>
+<p><strong><tt>"u-"</tt> prefix will be added to <tt>mySpan</tt> automatically when the page is saved</strong></p>
+<div class="code">
+<pre>
+<code>[[span id="mySpan"]]My span element[[/span]]</code>
+</pre></div>
+<br/>
+<strong><tt>"u-"</tt> prefix will not be added to since it already exists</strong>
+<div class="code">
+<pre>
+<code>[[span id="u-mySpan"]]My span element[[/span]]</code>
+</pre></div>
+<br/>
+<strong>HTML output from both examples</strong>
+<div class="code">
+<pre>
+<code>&lt;span id="u-mySpan"&gt;My span element&lt;/span&gt;</code>
+</pre></div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

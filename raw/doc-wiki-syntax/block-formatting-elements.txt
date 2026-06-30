@@ -1,0 +1,120 @@
+
+<div class="page-title">
+                    Block Formatting Elements
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Block Formatting Elements
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span><a name="left"></a> Left, right, centered and justified</span></h2>
+<p>To apply horizontal alignment to a block of text use:</p>
+<table class="wiki-content-table">
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[&lt;]]</span><br/>
+…<br/>
+<span style="white-space: pre-wrap;">[[/&lt;]]</span></tt></td>
+<td>align left</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[&gt;]]</span><br/>
+…<br/>
+<span style="white-space: pre-wrap;">[[/&gt;]]</span></tt></td>
+<td>align right</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[=]]</span><br/>
+…<br/>
+<span style="white-space: pre-wrap;">[[/=]]</span></tt></td>
+<td>align center</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[==]]</span><br/>
+…<br/>
+<span style="white-space: pre-wrap;">[[/==]]</span></tt></td>
+<td>align justified</td>
+</tr>
+</table>
+<p>E.g.</p>
+<div style="float:left; width: 45%; padding: 0 2%">
+<div class="code">
+<pre>
+<code>[[=]]
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\
+Aenean a libero. Vestibulum adipiscing, felis ac faucibus \
+imperdiet, erat lacus accumsan neque, vitae nonummy lorem \
+pede ac elit.
+
+Maecenas in urna. Curabitur hendrerit risus vitae ligula.
+[[/=]]</code>
+</pre></div>
+</div>
+<div style="float:left; width: 45%; padding: 0 2%">
+<div style="text-align: center;">
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean a libero. Vestibulum adipiscing, felis ac faucibus imperdiet, erat lacus accumsan neque, vitae nonummy lorem pede ac elit.</p>
+<p>Maecenas in urna. Curabitur hendrerit risus vitae ligula.</p>
+</div>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<p>To center a single line use <tt>=</tt> at the beginning:</p>
+<div style="float:left; width: 45%; padding: 0 2%">
+<div class="code">
+<pre>
+<code>= Centered line</code>
+</pre></div>
+</div>
+<div style="float:left; width: 45%; padding: 0 2%">
+<p style="text-align: center;">Centered line</p>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<p><strong>Note:</strong> The block formatting tags must be on their own line with nothing after them, not even a space. For example, <span style="white-space: pre-wrap;">[[=]]</span> and <span style="white-space: pre-wrap;">[[/=]]</span> must be immediately followed by the return character (press Enter).</p>
+<h2 id="toc1"><span><a name="custom"></a>Custom <em>div</em> blocks</span></h2>
+<p>To improve the layout you can use <tt><span style="white-space: pre-wrap;">[[div]] ... [[/div]]</span></tt> elements which transform to html <tt><span style="white-space: pre-wrap;"> &lt;div&gt; ... &lt;/div&gt; </span></tt> blocks.<br/>
+Allowed attributes are: <tt>id</tt>, <tt>class</tt>, <tt>style</tt>, <tt>data-</tt> only but this should be more than enough to create desired layout. SPAN elements also allow <tt>class</tt>, <tt>style</tt> and <tt>data-</tt> attributes.</p>
+<p><tt><span style="white-space: pre-wrap;">[[div]]</span></tt> blocks can be nested. Put the <span style="white-space: pre-wrap;">[[div]]</span> and <span style="white-space: pre-wrap;">[[/div]]</span> tags on their own lines or the parser will not recognize them.</p>
+<p>Below is an example how to create a 2-column layout using div block:</p>
+<div class="code">
+<pre>
+<code>[[div style="float:left; width: 45%; padding: 0 2%"]]
+left column left column left column left column left column
+left column left column left column left column left column
+[[/div]]
+[[div style="float:left; width: 45%; padding: 0 2%"]]
+right column right column right column right column right column
+right column right column right column right column right column
+[[/div]]
+
+~~~~</code>
+</pre></div>
+<div style="float:left; width: 40%; padding: 0 4%">
+<p>left column left column left column left column left column left column left column left column left column left column</p>
+</div>
+<div style="float:left; width: 40%; padding: 0 4%">
+<p>right column right column right column right column right column right column right column right column right column right column</p>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<p>The <tt>~~~~</tt> element is used to clear floats and translates more or less to <tt>&lt;div style="clear:both"&gt;&lt;/div&gt;</tt>).</p>
+<p>Custom <tt><span style="white-space: pre-wrap;">[[div]]</span></tt> blocks can be used to create very advanced page layouts.</p>
+<p>Adding underscore to <strong>div</strong> element <strong><span style="white-space: pre-wrap;">[[div_ ]]</span></strong> will truncate whitespaces around it which prevents creation of random <a href="/doc-wiki-syntax:paragraphs-and-newline">new lines and paragraphs</a>. It's simplifices creation of complex HTML syntax like <a href="http://getbootstrap.com/components/">Bootstrap components</a></p>
+<div class="alert alert-info">
+<p>You can use user-defined <tt>ID</tt> arguments in custom DIVs, which is extremely useful building sites using <a href="http://getbootstrap.com">Bootstrap</a>. Please note that every user-defined <tt>ID</tt> will have a <tt>"u-"</tt> prefix added in the output HTML for the security reasons.</p>
+<p>To make your source more readable, you can add the <tt>"u-"</tt> prefix yourself. For example, these 2 bits of wiki syntax will output the same HTML:</p>
+<hr/>
+<p><strong><tt>"u-"</tt> prefix will be added to <tt>myCarousel</tt> automatically when the page is saved</strong></p>
+<div class="code">
+<pre>
+<code>[[div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel"]]</code>
+</pre></div>
+<br/>
+<strong><tt>"u-"</tt> prefix will not be added to since it already exists</strong>
+<div class="code">
+<pre>
+<code>[[div id="u-myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel"]]</code>
+</pre></div>
+<br/>
+<strong>HTML output from both examples</strong>
+<div class="code">
+<pre>
+<code>&lt;div id="u-myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel"&gt;</code>
+</pre></div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

@@ -1,0 +1,25 @@
+
+<div class="page-title">
+                    Footnotes
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Footnotes
+                    </div>
+<div id="page-content">
+<p>To make footnotes in the text use <tt><span style="white-space: pre-wrap;">[[footnote]]</span></tt> block. To force the list of footnotes<br/>
+to appear <span style="text-decoration: underline;">not</span> at the end of the page, use <tt><span style="white-space: pre-wrap;">[[footnoteblock]]</span></tt>.</p>
+<div class="code">
+<pre>
+<code>Some text[[footnote]]And a small footnote.[[/footnote]]. Here we go
+with another footnote[[footnote]]Content of another footnote.[[/footnote]].
+
+[[footnoteblock]]</code>
+</pre></div>
+<p>Some text<sup class="footnoteref"><a class="footnoteref" href="javascript:;" id="footnoteref-1" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup>. Here we go with another footnote<sup class="footnoteref"><a class="footnoteref" href="javascript:;" id="footnoteref-2" onclick="WIKIDOT.page.utils.scrollToReference('footnote-2')">2</a></sup>.</p>
+<div class="footnotes-footer">
+<div class="title">Footnotes</div>
+<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. And a small footnote.</div>
+<div class="footnote-footer" id="footnote-2"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-2')">2</a>. Content of another footnote.</div>
+</div>
+<p>If you are not satisfied with the default title ("Footnotes") you can force your own title by using <tt><span style="white-space: pre-wrap;">[[footnoteblock title="Custom title"]]</span></tt> or even do not use title at all (title="").</p>
+</div><div id="action-area" style="display: none;"></div>

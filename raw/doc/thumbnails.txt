@@ -1,0 +1,31 @@
+
+<div class="page-title">
+                    Thumbnails
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Thumbnails
+                    </div>
+<div id="page-content">
+<p>Wikidot automatically generates thumbnails in various sizes for:</p>
+<ul>
+<li>every Wikidot site</li>
+<li>every theme on <a href="http://themes.wikidot.com">the themes project</a></li>
+</ul>
+<p>The URL for site thumbnail is:</p>
+<p><span style="white-space: pre-wrap;">http://thumbnail.wdfiles.com/thumbnail/site/</span><em>&lt;site_domain_name&gt;</em><span style="white-space: pre-wrap;">/</span><em>&lt;size&gt;</em><span style="white-space: pre-wrap;">.jpg</span></p>
+<p>&lt;site_domain_name&gt;: the main URL for site, for example: www.wikidot.com<br/>
+&lt;size&gt;: one of 160, 80, 40, 20</p>
+<p>The URL for theme thumbnail is:</p>
+<p><span style="white-space: pre-wrap;">http://thumbnail.wdfiles.com/thumbnail/theme/</span><em>&lt;theme_name&gt;</em><span style="white-space: pre-wrap;">/</span><em>&lt;size&gt;</em><span style="white-space: pre-wrap;">.jpg</span></p>
+<p>&lt;theme_name&gt;: the unix name of theme<br/>
+&lt;size&gt;: one of 500, 240, 160, 80</p>
+<p>Examples:</p>
+<ul>
+<li><a href="http://thumbnail.wdfiles.com/thumbnail/site/sfugamedev.wikidot.com/160.jpg">http://thumbnail.wdfiles.com/thumbnail/site/sfugamedev.wikidot.com/160.jpg</a></li>
+</ul>
+<div class="image-container aligncenter"><img alt="160.jpg" class="image" src="https://thumbnail.wdfiles.com/thumbnail/site/sfugamedev.wikidot.com/160.jpg"/></div>
+<ul>
+<li><a href="http://thumbnail.wdfiles.com/thumbnail/theme/curvature/240.jpg">http://thumbnail.wdfiles.com/thumbnail/theme/curvature/240.jpg</a></li>
+</ul>
+<div class="image-container aligncenter"><img alt="240.jpg" class="image" src="https://thumbnail.wdfiles.com/thumbnail/theme/curvature/240.jpg"/></div>
+</div><div id="action-area" style="display: none;"></div>

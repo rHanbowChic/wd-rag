@@ -1,0 +1,128 @@
+
+<div class="page-title">
+                    Site Structure
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Site Structure
+                    </div>
+<div id="page-content">
+<p>This document covers the layout (structure) of a any Site provided by wikidot.com network.</p>
+<table style="margin:0; padding:0">
+<tr>
+<td style="margin:0; padding:0">
+<div id="toc">
+<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)" style="display: none">Unfold</a></div>
+<div class="title">Table of Contents</div>
+<div id="toc-list">
+<div style="margin-left: 1em;"><a href="#toc0">Sites</a></div>
+<div style="margin-left: 1em;"><a href="#toc1">Content pages</a></div>
+<div style="margin-left: 2em;"><a href="#toc2">Direct links between pages</a></div>
+<div style="margin-left: 2em;"><a href="#toc3">Page inclusions</a></div>
+<div style="margin-left: 2em;"><a href="#toc4">Categories (namespaces)</a></div>
+<div style="margin-left: 2em;"><a href="#toc5">Tags</a></div>
+<div style="margin-left: 2em;"><a href="#toc6">Parent pages</a></div>
+<div style="margin-left: 1em;"><a href="#toc7">Forum</a></div>
+<div style="margin-left: 2em;"><a href="#toc8">Category groups</a></div>
+<div style="margin-left: 2em;"><a href="#toc9">Forum categories</a></div>
+<div style="margin-left: 2em;"><a href="#toc10">Forum threads</a></div>
+<div style="margin-left: 2em;"><a href="#toc11">Posts and posts layout</a></div>
+<div style="margin-left: 1em;"><a href="#toc12">Interaction of Pages and Forum</a></div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h1 id="toc0"><span>Sites</span></h1>
+<p>Each Site powered by WikiDot.com resides in a unique subdomain of wikidot.com:</p>
+<p style="text-align: center;"><tt>http://<em>site-unix-name</em>.wikidot.com</tt></p>
+<p>where the <tt>site-unix-name</tt> consists of only alphanumeric characters (0..9, 'a'..'z') and ('-').</p>
+<p>Each site is independent from other sites but all the sites share User accounts, but can have different appearance, permission system, block-list etc. In this context the wikidot.com service only provides hosting for the sites.</p>
+<p>From the functional point of view any site can consist of two (somehow overlapping) parts: content pages and forum section.</p>
+<h1 id="toc1"><span>Content pages</span></h1>
+<p>Content pages are… just pages you browse on any of our sites. Each of the pages is uniquely identified by its <em>unix name</em> - i.e. a string that consists of only alphanumeric characters (0..9, 'a'..'z'), dash ('-') and colon (':').</p>
+<p>All the pages reside in a <em>flat structure</em> which means there are no directories, subdirectories etc. Any page is accessible via its URL address:</p>
+<p style="text-align: center;"><tt>http://<em>site-unix-name</em>.wikidot.com/<em>page-unix-name</em></tt></p>
+<h2 id="toc2"><span>Direct links between pages</span></h2>
+<p>All the pages within a Site are somehow "linked". The most basic link is just a <em>direct link</em>.</p>
+<p>The pages are linked from other places by inserting a link, i.e. <tt>[[[<em>page-unix-name</em>]]]</tt> or even <tt>[[[Page Unix name!!!]]]</tt>. In the second case the string is internally <em>unixified</em> and both cases render to a link <a class="newpage" href="/page-unix-name">page unix name</a>. If a link is red - page does not exist and can be created by following the link. This is the safest way of creating new pages.</p>
+<h2 id="toc3"><span>Page inclusions</span></h2>
+<p>One page can include contents of another page. This is useful e.g. when you want to maintain some sort of summaries or separate column on the main page, but want to edit the individual units somewhere else. To include a page simply use <tt>[[include <em>page-unix-name</em>]]</tt>.</p>
+<h2 id="toc4"><span>Categories (namespaces)</span></h2>
+<p>Although all the pages reside in the <em>flat structure</em>, pages can belong to different <em>categories</em> (<em>namespaces</em>). This allows:</p>
+<ul>
+<li>easier page management and structure,</li>
+<li>separate appearance settings, permissions, license for each category (see <a href="/doc:managesite-module">ManageSite module</a>),</li>
+<li>easier listing (see <a href="/doc:pages-module">Pages module</a>)</li>
+</ul>
+<p>Categories are uniquely identified by their <em>unix names</em>. Each page belongs to a certain category based on its <em>page unix name</em> which can have the form:</p>
+<p style="text-align: center;"><em>category-unix-name</em>:<em>the-rest</em></p>
+<p>Everything that precedes the colon (':') in the <em>page unix name</em> is treated as a category name.</p>
+<p>Categories are created (when a page with a new category name is created) and automatically deleted (when no more pages contain category name).</p>
+<h2 id="toc5"><span>Tags</span></h2>
+<p>Each page can have multiple <em>tags</em> (labels). If you use such services as <a href="http://del.icio.us">del.icio.us</a> you should be familiar with the concept of tags. Also Wikipedia has entries for <a href="http://en.wikipedia.org/wiki/Tags" onclick="window.open(this.href, '_blank'); return false;">tags</a> and <a href="http://en.wikipedia.org/wiki/Tag_cloud" onclick="window.open(this.href, '_blank'); return false;">tag cloud</a>.</p>
+<p>In your Site tags can relate to… anything. A tag cloud is automatically generated for all your tagged pages.</p>
+<p>Tags have no affect on other functions and features of the Site contrary to categories.</p>
+<h2 id="toc6"><span>Parent pages</span></h2>
+<p><em>Parent</em> relations allow to introduce page structure (like in site maps). The results of setting a parent page are:</p>
+<ul>
+<li>breadcrumbs navigation appear at the top of the page,</li>
+<li>easier to come back to the parent page,</li>
+<li>easier listing (see <a href="/doc:childpages-module">ChildPages module</a> and <a href="/doc:pagetree-module">PageTree module</a>)</li>
+</ul>
+<p>These documentation pages use parent relations. Just see how it works and how it makes the navigation easier.</p>
+<h1 id="toc7"><span>Forum</span></h1>
+<p>Forum layout is easy. It consists of 3 elements: category groups, categories and threads.</p>
+<h2 id="toc8"><span>Category groups</span></h2>
+<p>Category groups are just container for forum categories for easier logical layout. This layout is visible on the forum main page, e.g. on our <a href="http://community.wikidot.com/forum/start">Community Forums</a>. Groups are the top-most containers.</p>
+<h2 id="toc9"><span>Forum categories</span></h2>
+<p>Forum categories are containers for forum <em>threads</em> (also known as <em>topics</em>). Forum categories can have individual permissions and posts layout.</p>
+<h2 id="toc10"><span>Forum threads</span></h2>
+<p>Threads cover individual discussion subject and contain individual posts. Simply if anyone wants to talk about something new, a new thread is created.</p>
+<h2 id="toc11"><span>Posts and posts layout</span></h2>
+<p>Posts are smallest units here. They are just what people say. Posts can be edited after they are posted.</p>
+<p>Posts layout can be set using the <a href="/doc:managesite-module">ManageSite module</a> and can be:</p>
+<ul>
+<li>flat/linear - posts appear one after another; it is not possible to reply to the post that is not the last post,</li>
+<li>nested - the tree-like structure, any post can be replied and new posts not necessarily appear at the end of the discussion but under the post that is being replied; <em>max nest level</em> determines number of possible levels and defaults to 2</li>
+</ul>
+<div style="float:left; width: 43%; padding: 0 3%">
+<p>Example of flat structure:</p>
+<ul>
+<li>post 1</li>
+<li>post 2</li>
+<li>post 3</li>
+<li>post 4</li>
+<li>…</li>
+</ul>
+</div>
+<div style="float:left; width: 43%; padding: 0 3%">
+<p>Nested structure:</p>
+<ul>
+<li>post 1
+<ul>
+<li>reply to post 1</li>
+<li>another reply to post 1</li>
+</ul>
+</li>
+<li>post 2
+<ul>
+<li>reply
+<ul>
+<li>reply</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<p>Flat/nested choice often determines the way people discuss. In the flat layout there is only one "path" - that is why this is called "linear".</p>
+<p>Nested layout offers more freedom, more digressions and more paths in the discussion but it is more difficult to spot new posts (unless you use RSS feed or watch a thread).</p>
+<p>The default layout is: nested with max_nest_level = 2.</p>
+<h1 id="toc12"><span>Interaction of Pages and Forum</span></h1>
+<p>Forum infrastructure can be used to discuss pages (by creating a relation between apage and a forum thread) or even to add forum elements to content pages.</p>
+<p>To enable the "discuss" button at the bottom of a page the <a href="/doc:managesite-module">ManageSite module</a> should be use and option <em>Forum &amp; discussion</em> -&gt; <em>Per page discussion</em>.</p>
+<p>When enabled, a button "discuss" will be visible at the bottom page options bar which will lead to a unique forum thread just for commenting this particular page.</p>
+<p>Another way is to use the <a href="/doc:comments-module">Comments module</a> and embed it in the page. This will bring the whole discussion just below the page content. Such a solution could be used e.g. when one creates an article and wants other people to discuss it or comment.</p>
+</div><div id="action-area" style="display: none;"></div>

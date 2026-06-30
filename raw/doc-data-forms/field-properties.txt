@@ -1,0 +1,66 @@
+
+<div class="page-title">
+                    Field Properties
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Field Properties
+                    </div>
+<div id="page-content">
+<h3 id="toc0"><span>Properties that apply to all field types</span></h3>
+<h4 id="toc1"><span><a name="label"></a> The 'label' property</span></h4>
+<p>If you specify a 'label' property then the field gets that text in the left column, or before the field for joined fields. If you do not specify a label then the field has an empty space in the left column, or is squashed up after the previous field, for joined fields. For example:</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  address-line-1:
+    label: Address
+    width: 30
+  address-line-2:
+    width: 30
+  address-line-3:
+    width: 30
+[[/form]]</code>
+</pre></div>
+<h4 id="toc2"><span><a name="join"></a> The 'join' property</span></h4>
+<p>If you specify 'join: true' then the field is placed after the previous field, if any. This property has no effect if the field is the first in the form. For example:</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  city:
+    label: City
+    width: 20
+  postcode:
+    label: Postcode
+    width: 8
+    join: true
+[[/form]]</code>
+</pre></div>
+<h4 id="toc3"><span><a name="before"></a>The 'before' property</span></h4>
+<p>Provides a string of plain text that displays before the field value</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  phone:
+    label: Phone
+    width: 10
+    before: +(1)
+[[/form]]</code>
+</pre></div>
+<h4 id="toc4"><span><a name="after"></a> The 'after' property</span></h4>
+<p>Provides a string of plain text that displays after the field value</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  speed:
+    label: Car speed
+    width: 4
+    after: kph
+[[/form]]</code>
+</pre></div>
+<h3 id="toc5"><span>Properties for specific field types</span></h3>
+<p>There are additional properties that only apply to specific field types. These are documented below with the field type(s) they apply to.</p>
+</div><div id="action-area" style="display: none;"></div>

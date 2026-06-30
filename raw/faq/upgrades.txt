@@ -1,0 +1,156 @@
+
+<div class="page-title">
+                    Upgrades and Plans FAQ
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Upgrades and Plans FAQ
+                    </div>
+<div id="page-content">
+<h3 id="toc0"><span>What upgrades can I buy?</span></h3>
+<p>At Wikidot.com we have a very simple model for upgrades. Basically there are four simple upgrades available:</p>
+<ul>
+<li><strong>Pro Lite subscription</strong>
+<ul>
+<li>upgrades basic account functionality</li>
+<li>gives "pro" status to all your Sites, extending their features too</li>
+<li>space for 5 sites and 30GB of storage</li>
+</ul>
+</li>
+<li><strong>Pro subscription</strong>
+<ul>
+<li>vastly extends functionality of your account</li>
+<li>gives "pro" status to all your Sites, extending their features too</li>
+<li>space for 10 sites and 100 GB storage</li>
+</ul>
+</li>
+<li><strong>Pro+ subscription</strong>
+<ul>
+<li>all the functionality above and SSL (plus a few more features)</li>
+<li>includes space for 30 sites and 200 GB storage</li>
+</ul>
+</li>
+<li><strong>Slots</strong>
+<ul>
+<li>provide additional space for new sites and storage</li>
+<li>1 slot = 1 extra site + 5 GB storage.</li>
+</ul>
+</li>
+</ul>
+<p>All upgrades are based on the <strong>subscription model</strong> — you can buy upgrades for a time period, e.g. a year. You can extend your subscription for each of your upgrades at any time.</p>
+<p>The upgrades are <strong>per User</strong> instead of being "per Site". There are no additional fees for hosting each of your Sites within the limits of your account.</p>
+<h3 id="toc1"><span>Is there a monthly / yearly fee for a "Pro" site?</span></h3>
+<p>Instead of introducing a subscription fee for each of your sites, our plans are made simpler. The Pro Lite / Pro / Pro+ upgrades are for a user's account and all user's Sites are promoted to Pro Lite / Pro / Pro+ status automatically. This is very different from what other wiki providers are offering and have a few key benefits:</p>
+<ul>
+<li>easier management of subscriptions</li>
+<li>much lower costs</li>
+</ul>
+<h3 id="toc2"><span>What are the benefits of being a Pro / Pro+ subscriber?</span></h3>
+<p>There are a lot of them. Among the most important are:</p>
+<ul>
+<li>more Sites to create and more storage space</li>
+<li>SSL for all your Sites (available in Pro+ plan)</li>
+<li>higher limits of members for all your private Sites</li>
+<li>advanced web statistics for all your Sites</li>
+<li>configurable visibility of your profile</li>
+<li>no adverstising on your Sites</li>
+</ul>
+<p>You can compare the plans at <a href="http://www.wikidot.com/plans">http://www.wikidot.com/plans</a></p>
+<h3 id="toc3"><span>How do I upgrade to the Pro account?</span></h3>
+<p>The "Pro" plans are available as upgrades to the free account.</p>
+<ul>
+<li>You can get a free account <a href="http://www.wikidot.com/auth:newaccount">here</a>.</li>
+<li>The upgrade panel is available in the <a href="https://www.wikidot.com/account:you#?start=upgrades">"Upgrades" section in My Account</a>.</li>
+</ul>
+<p>If you do not have a Pro account yet, you can upgrade directly to the Pro+ account as described above.</p>
+<p>If you do have the Pro account already, the Upgrade panel will show the option to upgrade to Pro+ plan. The Pro+ subscription will be valid for a year from the date of upgrade, but the price will be lowered by the unused period of your Pro account.</p>
+<h3 id="toc4"><span>How exactly do "slots" work?</span></h3>
+<p style="text-align: center;"><strong>1 slot = space for 1 site + 1 GB storage</strong></p>
+<p>Simply speaking, a slot is a space for a new Site with space for the uploaded files.</p>
+<p>Slots can be purchased at the <a href="https://www.wikidot.com/account:you">Upgrade panel in My Account</a>.</p>
+<h3 id="toc5"><span>How do file storage and per-site limits work?</span></h3>
+<p>With the free account, each of your Sites have 300 MB for file uploads. No more, no less.</p>
+<p>In the Pro account it works differently. First of all, it is your account that has the storage. Now you can set maximum limits on how much of your storage can each of your Sites use.</p>
+<p>Let us say you have 10 GB from your Pro upgrade and 5 Sites. Now you could set 1 GB or 2 GB limits for each of the Sites, but you can also set 5GB or even no limits at all. In any of those cases the total files size cannot exceed the per-site limit, and the total used storage cannot exceed your account storage (10 GB in this case).</p>
+<p>So setting the per-site limits means: <span style="text-decoration: underline;">use up to X GB from my account's storage</span>. Of course if your account runs out of free space, you will not be able to upload any new files.</p>
+<p>If you need more storage, each extra Slot gives you 1 GB.</p>
+<p>The system of account storage provides a very efficient (and cost-effective) storage space management.</p>
+<h3 id="toc6"><span>What happens when my subscriptions expire?</span></h3>
+<p>When your Pro subscription expires, your account and all your Sites will be downgraded to the free version. All the extra features will be downgraded. E.g. SSL will stop working, advanced web statistics will not be accessible anymore, your forum signature will be no longer displayed. No content however will be deleted upon downgrade and all the settings you had will be kept. Once you renew your Pro subscription, all features will be restored instantly.</p>
+<p>Number of slots decreases when either your Pro subscription expires or when your slot upgrades expire. When <strong>number of slots drops</strong> it might happen that the number of your Sites is larger than the number of your slots. In such a case the most recent Sites will be locked (read-only) until you prolong your subscription.</p>
+<p>If your file storage exceeds your limit after the downgrade, you will not be able to upload new files.</p>
+<h3 id="toc7"><span>How much do the upgrades cost?</span></h3>
+<p>Please refer to <a href="http://www.wikidot.com/plans">www.wikidot.com/plans</a> to learn more about the upgrades and pricing.</p>
+<h3 id="toc8"><span>Why so inexpensive?</span></h3>
+<p>Our infrastructure (software and hardware) consists of top solutions in the industry, tuned to deliver very high performance and scales easily when needed. This help us reasonably manage our resources.</p>
+<p>Thanks to this policy, we are able to offer top-quality wikis at a price that is a fraction of the ones offered by our competitors, because we have a proven way to provide scalable, efficient and reliable infrastructure for the product at a balanced cost.</p>
+<h3 id="toc9"><span>How long is my subscription?</span></h3>
+<p>Both the Pro account and Slots are active for 1 year. When any of the features are about to expire, we will email you to remind you about it.</p>
+<p>We are also planning shorter periods for upgrades (monthly plans).</p>
+<h3 id="toc10"><span>If I create new wiki <span style="text-decoration: underline;">after</span> buying Pro Account, will it be Pro too?</span></h3>
+<p>Yes, all wikis created after buying Pro Account will automatically be Pro too.</p>
+<h3 id="toc11"><span>I have a Pro Site with a few other guest Admins. Will they be able to configure Pro features?</span></h3>
+<p>To configure settings (e.g. through the Site Manager) that come from the Pro package, the Admin also need to be a Pro user. Obviously you, as the Master Administrator of the given Site, have access to all settings, as well as other Admins with Pro accounts. Admins with free accounts can configure all non-Pro settings, but does not have acccess to custom domain settings, favicon etc.</p>
+<h3 id="toc12"><span>Would anyone know that I am Pro User?</span></h3>
+<p>It depends. By default Pro Accounts are marked by a Pro Icon shown next to the avatar. However there is an option to hide your Pro indicator for Pro+ Users. Moreover you can choose how your user information looks like by toggling displaying of karma, pro icons and avatars. The same way you can choose how your users icons will be displayed on each of your Sites. Both features are available only in Pro+ account.</p>
+<h3 id="toc13"><span>Do you have a refund policy?</span></h3>
+<p>Yes. We can refund any product purchased up to 30 days after the purchase. After 30 days all the sales are final and non-refundable. Any refund after 30 days is in our sole discretion.</p>
+<h3 id="toc14"><span>What happens when you cannot provide the service I am paying for?</span></h3>
+<p>If for some reason we cannot deliver the service, e.g. because major, prolonging server or network failure or software problems, in most circumstances we would prolong your subscriptions by the amount of time the service was not available.</p>
+<h1 id="toc15"><span>Accounting and prices</span></h1>
+<h3 id="toc16"><span>What currencies do you accept?</span></h3>
+<p>We are accepting payments in <strong>USD</strong> (United States Dollars) for countries outside of European Union and <strong>Euro</strong> for customers in European Union.</p>
+<p>Prices in Euro already contain VAT (Value Added Tax).</p>
+<h3 id="toc17"><span>What are the payment methods?</span></h3>
+<p>We accept credit card payments (VISA and MasterCard), PayPal payments, and bank transfer (for larger clients only).</p>
+<h3 id="toc18"><span>Are payments safe?</span></h3>
+<p>Yes, all the data is transferred using SSL secure channels with at least 128-bit encryption, which meets the industry standards for processing payments. We do our best to keep the data secure and impossible to misuse.</p>
+<h3 id="toc19"><span>Do you issue VAT invoices?</span></h3>
+<p>Yes, for every purchase a full VAT invoice is issued. You can use it for your accounting purposes (and VAT accounting if you are running a business in European Union).</p>
+<h3 id="toc20"><span>What is VAT?</span></h3>
+<p>VAT, Value Added Tax, is a consumption tax levied on value added. Please find more information in this <a href="http://en.wikipedia.org/wiki/Taxation_in_the_European_Union">Wikipedia article about VAT in European Union</a>.</p>
+<h3 id="toc21"><span>Who is charged with VAT on purchases and how much?</span></h3>
+<p>All non-business customers from European Union (EU), EU business clients without valid EU VAT ID and all clients in Poland are charged 23% VAT.</p>
+<p>Companies in European Union with a valid EU VAT ID and customers (both individual and companies) from outside of European Union are not charged VAT.</p>
+<p>All customers from Poland are charged VAT.</p>
+<table class="wiki-content-table">
+<tr>
+<th>Who?</th>
+<th>Charged VAT?</th>
+</tr>
+<tr>
+<td>Individual not in EU</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Business not in EU</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Individual in EU</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Business in EU with valid EU VAT ID</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Business in EU without valid EU VAT ID</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Individual and Business in Poland</td>
+<td>Yes</td>
+</tr>
+</table>
+<p>We know it is a bit complicated, but this is how VAT works. We made the upgrade panel automatically handle all those cases so you do not have to worry about it. When you upgrade, you will be presented with prices either with or without VAT.</p>
+<h3 id="toc22"><span>When I enter my EU VAT ID the error says it is not valid.</span></h3>
+<p>Wikidot Inc. automatically verifies validity of EU VAT numbers using the <a href="http://ec.europa.eu/taxation_customs/vies/vieshome.do">VIES</a> service but take no responsibility for outdated or false results provided by VIES. The top reasons your VAT ID is not valid according to VIES might be:</p>
+<ul>
+<li>The VAT ID is a national VAT ID and not a EU VAT ID (this is a difference)</li>
+<li>The VIES database is not up-to-date (see their <a href="http://ec.europa.eu/taxation_customs/vies/faqvies.do#item12">FAQ</a></li>
+<li>Communication error with the VIES database has occurred.</li>
+</ul>
+<p>If VIES database is not validating your VAT ID properly and you still want to qualify for VAT reverse charge (i.e. you do not want VAT to be included in your prices), please contact us at <span class="wiki-email">moc.todikiw|selas#moc.todikiw|selas</span>. Most likely we will ask you to fax your VAT registration documents to us and we will manually approve your VAT number.</p>
+<h3 id="toc23"><span>I have a national VAT ID (not a EU VAT ID) but still want it to appear on my invoice.</span></h3>
+<p>In such a case please put your VAT ID in a field other than the EU VAT ID, e.g. put it next to the Company's name, e.g. "Wiki LLC, VAT ID: 0987654321"</p>
+</div><div id="action-area" style="display: none;"></div>

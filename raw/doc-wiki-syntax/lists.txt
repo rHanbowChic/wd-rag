@@ -1,0 +1,124 @@
+
+<div class="page-title">
+                    Lists
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Lists
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span><a name="bulleted"></a> Bulleted Lists</span></h2>
+<p>Make a list element by starting a line with an asterisk. To increase the indent put extra spaces<br/>
+before the asterisk.</p>
+<div class="code">
+<pre>
+<code>* Bullet 1
+* Bullet 2
+ * Bullet 2.1</code>
+</pre></div>
+<ul>
+<li>Bullet 1</li>
+<li>Bullet 2
+<ul>
+<li>Bullet 2.1</li>
+</ul>
+</li>
+</ul>
+<p>If you need to put more than one line in the bullet list, please use _ (underscore) at the end of the line you want to break (after one space). Remember not to insert any character after the underscore.</p>
+<div class="code">
+<pre>
+<code>* Bullet 1 _
+ another line
+* Bullet 2
+ * Bullet 2.1</code>
+</pre></div>
+<ul>
+<li>Bullet 1<br/>
+another line</li>
+<li>Bullet 2
+<ul>
+<li>Bullet 2.1</li>
+</ul>
+</li>
+</ul>
+<h2 id="toc1"><span><a name="numbered"></a> Numbered Lists</span></h2>
+<p>Similarly, you can create numbered lists by starting a paragraph with one or more hashes.</p>
+<div class="code">
+<pre>
+<code># Item 1
+# Item 2
+ # Item 2.1</code>
+</pre></div>
+<ol>
+<li>Item 1</li>
+<li>Item 2
+<ol>
+<li>Item 2.1</li>
+</ol>
+</li>
+</ol>
+<p>If you need to put more than one line in the numbered list, please use _ (underscore) at the end of the line you want to break (after one space). Remember not to insert any character after the underscore.</p>
+<div class="code">
+<pre>
+<code># Item 1 _
+ another line
+# Item 2
+ # Item 2.1</code>
+</pre></div>
+<ol>
+<li>Item 1<br/>
+another line</li>
+<li>Item 2
+<ol>
+<li>Item 2.1</li>
+</ol>
+</li>
+</ol>
+<p>You can mix bulleted lists and number lists.</p>
+<h2 id="toc2"><span><a name="advanced"></a> Advanced Lists</span></h2>
+<p>You can use <span style="white-space: pre-wrap;">[[ul]]</span> / <span style="white-space: pre-wrap;">[[ol]]</span> and <span style="white-space: pre-wrap;">[[li]]</span> tags to create advanced lists. It's especially useful when using a Boostrap-based theme. Every <span style="white-space: pre-wrap;">[[ul]]</span> / <span style="white-space: pre-wrap;">[[ol]]</span> and <span style="white-space: pre-wrap;">[[li]]</span> can contain <em>id</em>, <em>class</em>, <em>data-</em> and <em>style</em> arguments. Lists can be nested.</p>
+<div class="code">
+<pre>
+<code>[[ul]]
+ [[li class="item1" data-toggle="data1"]]Item1[[/li]]
+ [[li style="color: red;"]]Item 2
+  [[ol]]
+    [[li]]Item 2.1[[/li]]
+    [[li]]Item 2.2[[/li]]
+  [[/ol]]
+ [[/li]]
+[[/ul]]</code>
+</pre></div>
+<ul>
+<li class="item1" data-toggle="data1">Item1</li>
+<li style="color: red;">Item 2<br/>
+<ol>
+<li>Item 2.1</li>
+<li>Item 2.2</li>
+</ol>
+</li>
+</ul>
+<br/>
+Adding underscore to <strong>ul/ol</strong> element <strong><span style="white-space: pre-wrap;">[[ul_/ol_ ]]</span></strong> will truncate whitespaces around it which prevents creation of random <a href="/doc-wiki-syntax:paragraphs-and-newline">new lines and paragraphs</a>. It's simplifices creation of complex HTML syntax like <a href="http://getbootstrap.com/components/">Bootstrap components</a>
+<div class="alert alert-info">
+<p>You can use user-defined <tt>ID</tt> arguments in advanced lists, which is extremely useful building sites using <a href="http://getbootstrap.com">Bootstrap</a>. Please note that every user-defined <tt>ID</tt> will have a <tt>"u-"</tt> prefix added in the output HTML for the security reasons.</p>
+<p>To make your source more readable, you can add the <tt>"u-"</tt> prefix yourself. For example, these 2 bits of wiki syntax will output the same HTML:</p>
+<hr/>
+<p><strong><tt>"u-"</tt> prefix will be added to <tt>myAdvancedList</tt> automatically when the page is saved</strong></p>
+<div class="code">
+<pre>
+<code>[[ul id="myAdvancedList"]]</code>
+</pre></div>
+<br/>
+<strong><tt>"u-"</tt> prefix will not be added to since it already exists</strong>
+<div class="code">
+<pre>
+<code>[[ul id="u-myAdvancedList"]]</code>
+</pre></div>
+<br/>
+<strong>HTML output from both examples</strong>
+<div class="code">
+<pre>
+<code>&lt;ul id="u-myAdvancedList"&gt;</code>
+</pre></div>
+</div>
+</div><div id="action-area" style="display: none;"></div>

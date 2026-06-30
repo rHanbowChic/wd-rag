@@ -1,0 +1,19 @@
+
+<div class="page-title">
+                    Headings
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Headings
+                    </div>
+<div id="page-content">
+<p>To make a heading start a line with a "plus". Make as many pluses as the heading level you want to get.</p>
+<div class="code">
+<pre>
+<code>+ Level 1 Heading
+++ Level 2 Heading
++++ Level 3 Heading
+++++ Level 4 Heading
++++++ Level 5 Heading
+++++++ Level 6 Heading</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

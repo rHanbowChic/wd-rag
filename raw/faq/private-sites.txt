@@ -1,0 +1,41 @@
+
+<div class="page-title">
+                    Private Sites FAQ
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Private Sites FAQ
+                    </div>
+<div id="page-content">
+<p>These questions are related to private sites.</p>
+<h3 id="toc0"><span>What does it meen that the site is private (non-public)?</span></h3>
+<p>It means that only selected Wikidot.com users (of your choice) are able to see it and browse it. You can choose the site to be private either when creating the site or later in your <em>Site Manager</em> » <em>Public or Private</em> settings.</p>
+<h3 id="toc1"><span>So who can view a private site?</span></h3>
+<p>There are 2 classes of users that have "view permission":</p>
+<ul>
+<li>site members (invite them or allow them to apply for membership)</li>
+<li>"extra access" users you can define in <em>Site Manager</em> » <em>Public or Private</em></li>
+</ul>
+<p>"extra access" users will be able to view all the content from your site but will act as "Wikidot.com users" when it comes to site modifying permissions (<em>SiteManager</em> » <em>Permissions</em>).</p>
+<p>In other words — people that are not your site members and you did not give them "extra access" will not be able to browse your site but instead will see the default landing page.</p>
+<h3 id="toc2"><span>What can I use the private site for?</span></h3>
+<p>For whatever you want provided you comply with our Terms. People use it for personal notepads or workspaces, teachers use it for their classes, some people use it for online collaboration…</p>
+<p>I myself (<span class="printuser"><a href="http://www.wikidot.com/user:info/michal-frackowiak" onclick="WIKIDOT.page.listeners.userInfo(1); return false;">michal frackowiak</a></span>) am using a private site to take notes online, store ideas, keep my "todo" lists, prepare things for my students…</p>
+<p>Just think what you need a private space for ;-)</p>
+<h3 id="toc3"><span>How many users (members) are allowed for a private Wiki?</span></h3>
+<p>At the moment free private Wikis have a limit of <strong>5 members</strong> + 5 extra access permissions. To increase the limit, please upgrade your Account. For more information please refer to the <a href="http://www.wikidot.com/plans">Plans</a> or <a href="http://www.wikidot.com/faq:upgrades">Upgrade's FAQ</a>.</p>
+<h3 id="toc4"><span>Is this really secure?</span></h3>
+<p>Yes, the system has been carefully designed and data from your private site should not leak unless someone can steal your password and/or access Wikidot.com as someone who has sufficient permissions.</p>
+<p>The system is much better with the SSL encryption. It's available for Pro+ Accounts.</p>
+<h3 id="toc5"><span>Although I have specified the default landing page for unauthorized users there are still top- and side-bar menus there that reveal some of my content!</span></h3>
+<p>Indeed and this might be a problem when you want to keep your nav:top and nav:side secret. Here is what to do:</p>
+<ul>
+<li>create a landing page within a new category, e.g. <tt>unauthorized:start</tt></li>
+<li>go to the Site Manager » Appearance » Navigation element</li>
+<li>clear navigational elements for category <em>unauthorized</em>.</li>
+<li>go to Site Manager » Public of private and set <tt>unauthorized:start</tt> as a landing page.</li>
+</ul>
+<p>Update: now there is an option to disable the nav elements in your Site Manager » Public or Private. However the method described above is visually better (often).</p>
+<h3 id="toc6"><span>How do I access RSS feeds from private sites?</span></h3>
+<p>All the RSS feeds from private sites are password-protected and only members of the given site are allowed to access them. The authentication mechanism is HTTP Basic Authentication — supported by most of the feed readers.</p>
+<p>However due to security reasons the password for accessing the feed is <strong>not the same as your log-in password</strong>. As a user name you should still put your email address but for the password please use the same password you are using for your private feed: please go to <a href="http://www.wikidot.com/account:you/start/settings" target="_blank">Settings in My Account</a> and click on Notifications to find out the password.</p>
+</div><div id="action-area" style="display: none;"></div>

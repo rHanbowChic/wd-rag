@@ -1,0 +1,46 @@
+
+<div class="page-title">
+                    Social Bookmarking
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Social Bookmarking
+                    </div>
+<div id="page-content">
+<p>It is easy to add "social bookmarking" buttons to your pages — just write <tt><span style="white-space: pre-wrap;">[[social]]</span></tt> (without any parameters) and get:</p>
+<p>
+<span id="social95643"><a href="http://www.blinklist.com/index.php?Action=Blink/addblink.php&amp;Description=&amp;Url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;Title=TITLE" style="margin: 0 2px" title="BlinkList"><img alt="BlinkList" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/blinklist.png"/></a><a href="http://blogmarks.net/my/new.php?mini=1&amp;simple=1&amp;url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;title=TITLE" style="margin: 0 2px" title="blogmarks"><img alt="blogmarks" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/blogmarks.png"/></a><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;title=TITLE" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=700,height=400'); return false;" style="margin: 0 2px" title="del.icio.us"><img alt="del.icio.us" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/delicious.png"/></a><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;title=TITLE" style="margin: 0 2px" title="digg"><img alt="digg" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/digg.png"/></a><a href="http://cgi.fark.com/cgi/fark/edit.pl?new_url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;new_comment=TITLE&amp;new_comment=Wikidot+-+Free+and+Pro+Wiki+Hosting&amp;linktype=Misc" style="margin: 0 2px" title="Fark"><img alt="Fark" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/fark.png"/></a><a href="http://feedmelinks.com/categorize?from=toolbar&amp;op=submit&amp;url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;name=TITLE" style="margin: 0 2px" title="feedmelinks"><img alt="feedmelinks" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/feedmelinks.png"/></a><a href="http://www.furl.net/storeIt.jsp?u=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;t=TITLE" style="margin: 0 2px" title="Furl"><img alt="Furl" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/furl.png"/></a><a href="http://www.linkagogo.com/go/AddNoPopup?url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;title=TITLE" style="margin: 0 2px" title="LinkaGoGo"><img alt="LinkaGoGo" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/linkagogo.png"/></a><a href="http://www.newsvine.com/_tools/seed&amp;save?u=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;h=TITLE" style="margin: 0 2px" title="NewsVine"><img alt="NewsVine" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/newsvine.png"/></a><a href="http://www.netvouz.com/action/submitBookmark?url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;title=TITLE&amp;description=TITLE" style="margin: 0 2px" title="Netvouz"><img alt="Netvouz" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/netvouz.png"/></a><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;title=TITLE" style="margin: 0 2px" title="Reddit"><img alt="Reddit" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/reddit.png"/></a><a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;=TITLE" style="margin: 0 2px" title="YahooMyWeb"><img alt="YahooMyWeb" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/yahoomyweb.png"/></a><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking" onclick="window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(location.href)+'&amp;t='+encodeURIComponent(document.title),'sharer','toolbar=0,status=0,width=626,height=436');return false;" style="margin: 0 2px" title="Facebook"><img alt="Facebook" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/facebook.gif"/></a></span>
+<script type="text/javascript">
+//<![CDATA[
+
+            var socialspan = $j("#social95643")[0];
+            var els = socialspan.getElementsByTagName("a");
+            for (var i=0;i<els.length;i++) {
+                els[i].href = els[i].href.replace("TITLE", encodeURIComponent(document.title));
+            }
+//]]>
+</script></p>
+<p>This is equivalent to:</p>
+<div class="code">
+<pre>
+<code>[[social blinklist,blogmarks,connotea,del.icio.us,digg,fark,feedmelinks,furl,linkagogo,newsvine,netvouz,reddit,simpy,spurl,wists,yahoomyweb,facebook]]</code>
+</pre></div>
+<p>You can also choose only selected services, e.g. to show digg, furl, del.icio.us and Facebook use:</p>
+<div class="code">
+<pre>
+<code>[[social digg,furl,del.icio.us,facebook]]</code>
+</pre></div>
+<p>and get: 
+
+<span id="social11249"><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;title=TITLE" style="margin: 0 2px" title="digg"><img alt="digg" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/digg.png"/></a><a href="http://www.furl.net/storeIt.jsp?u=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;t=TITLE" style="margin: 0 2px" title="Furl"><img alt="Furl" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/furl.png"/></a><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking&amp;title=TITLE" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=700,height=400'); return false;" style="margin: 0 2px" title="del.icio.us"><img alt="del.icio.us" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/delicious.png"/></a><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wikidot.com%2Fdoc-wiki-syntax%3Asocial-bookmarking" onclick="window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(location.href)+'&amp;t='+encodeURIComponent(document.title),'sharer','toolbar=0,status=0,width=626,height=436');return false;" style="margin: 0 2px" title="Facebook"><img alt="Facebook" src="https://d3g0gp89917ko0.cloudfront.net/v--7690939296dc/common--images/social/facebook.gif"/></a></span>
+<script type="text/javascript">
+//<![CDATA[
+
+            var socialspan = $j("#social11249")[0];
+            var els = socialspan.getElementsByTagName("a");
+            for (var i=0;i<els.length;i++) {
+                els[i].href = els[i].href.replace("TITLE", encodeURIComponent(document.title));
+            }
+//]]>
+</script></p>
+<p><strong>Tip:</strong> Use social bookmarking! It is always a good idea to put social shortcuts under an article or inside your side bar.</p>
+</div><div id="action-area" style="display: none;"></div>

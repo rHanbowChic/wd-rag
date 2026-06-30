@@ -1,0 +1,56 @@
+
+<div class="page-title">
+                    Managing users
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Managing users
+                    </div>
+<div id="page-content">
+<p>This document describes how User accounts, roles and permissions are organized within the Wikidot.com network.</p>
+<table style="margin:0; padding:0">
+<tr>
+<td style="margin:0; padding:0">
+<div id="toc">
+<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)" style="display: none">Unfold</a></div>
+<div class="title">Table of Contents</div>
+<div id="toc-list">
+<div style="margin-left: 1em;"><a href="#toc0">One account - access many sites</a></div>
+<div style="margin-left: 1em;"><a href="#toc1">User status within a site</a></div>
+<div style="margin-left: 2em;"><a href="#toc2">Anonymous User</a></div>
+<div style="margin-left: 2em;"><a href="#toc3">Registered Users</a></div>
+<div style="margin-left: 2em;"><a href="#toc4">Members of the site</a></div>
+<div style="margin-left: 3em;"><a href="#toc5">Site Administrators</a></div>
+<div style="margin-left: 3em;"><a href="#toc6">Site Moderators</a></div>
+<div style="margin-left: 1em;"><a href="#toc7">WikiDot.com Superusers</a></div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h1 id="toc0"><span>One account - access many sites</span></h1>
+<p>At the WikiDot.com network all the sites share the same User accounts. It means that having one account guarantees the same User identity at all the sites.</p>
+<h1 id="toc1"><span>User status within a site</span></h1>
+<h2 id="toc2"><span>Anonymous User</span></h2>
+<p>Some sites may allow anonymous users (i.e. these who do not use a valid WikiDot account - are not logged in) to modify content and use discussion forum. In any such case the visitor's IP address will be stored and publicly visible.</p>
+<h2 id="toc3"><span>Registered Users</span></h2>
+<p>Registered Users are these who have and use a valid Wikidot account but are not necessarily a member of a given site. Some sites allow such Users to modify content and use forum.</p>
+<h2 id="toc4"><span>Members of the site</span></h2>
+<p>Members of the particular site are these who through some process joined the site. One can become a Member of a site by</p>
+<ul>
+<li>applying to Site Administrators (if enabled)</li>
+<li>by providing a valid <em>membership password</em> (if enabled)</li>
+<li>by accepting an invitation from a Site Administrator</li>
+</ul>
+<p>Some sites allow content modification and forum postings only to its Members. In fact this is the default ;-)</p>
+<h3 id="toc5"><span>Site Administrators</span></h3>
+<p>Users who have all possible permissions within a site. A User who creates a new site also becomes an Administrator of this site. Other site Members can be also given Administrator roles.</p>
+<h3 id="toc6"><span>Site Moderators</span></h3>
+<p>Users who have certain permissions to modify content but can not access site settings. Moderators can have any of the two roles</p>
+<ul>
+<li>Page Moderator - can modify content pages</li>
+<li>Forum Moderators - can modify (edit, delete) forum threads and posts.</li>
+</ul>
+<p>Site Moderators are given their roles by Site Administrators.</p>
+<h1 id="toc7"><span>WikiDot.com Superusers</span></h1>
+<p>There is also a group of Superusers which most possibly belong to Wikidot.com staff. They can do a lot.</p>
+</div><div id="action-area" style="display: none;"></div>

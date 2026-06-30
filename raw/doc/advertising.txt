@@ -1,0 +1,19 @@
+
+<div class="page-title">
+                    Advertising
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Advertising
+                    </div>
+<div id="page-content">
+<p>At Wikidot.com we display 3rd party advertising on free sites to help us pay the bills and keep the most services free.</p>
+<p>Our algorithm tries to show ads in a non-disturbing way, e.g. logged-in users should not see any ads at all. We try to optimize ads so that they do not impair the user experience, but they need to be visible enough so that placing advertising on Wikidot sites provides a value for advertisers.</p>
+<p>The algorithm will put more ads on sites that show no recent activity — no page edits, comments nor forum posts.</p>
+<p>New sites might not show ads until they have enough content and traffic.</p>
+<p>To remove ads from your site, there are two simple choices:</p>
+<ol>
+<li>Upgrade to one of our <a href="/plans">Pro plans</a> — even Pro Lite (for about $5 a month) removes ads from sites you are a master administrator of. Moreover, you can control advertising yourself and earn money from your traffic.</li>
+<li>If you are running an educational site (for your classes, student projects etc.) you could apply for the <a href="/education">Educational upgrade</a>.</li>
+</ol>
+<p>Also, ads are not displayed on any private sites.</p>
+</div><div id="action-area" style="display: none;"></div>

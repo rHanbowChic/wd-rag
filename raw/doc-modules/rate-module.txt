@@ -1,0 +1,58 @@
+
+<div class="page-title">
+                    Rate Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Rate Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Displays a widget used to rate pages. Page rating must be enabled in the Site Manager.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>No attributes required.</p>
+<h2 id="toc2"><span>Examples</span></h2>
+<div class="code">
+<pre>
+<code>[[module Rate]]</code>
+</pre></div>
+<p>results in:</p>
+<div class="page-rate-widget-box"><span class="rate-points">rating: <span class="number prw54353">0</span></span><span class="rateup btn btn-default"><a href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.rate(event, 1)" title="I like it">+</a></span><span class="cancel btn btn-default"><a href="javascript:;" onclick="WIKIDOT.modules.PageRateWidgetModule.listeners.cancelVote(event)" title="Cancel my vote">x</a></span></div>
+<p>or displays five-stars rating mode depending on the setting in Site Manager -&gt; Page Ratings -&gt; Type</p>
+<p>You can use certain variables when using 5-star type:</p>
+<table class="wiki-content-table">
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>%%rating%%</td>
+<td>Displays rating number value</td>
+</tr>
+<tr>
+<td>%%rating_votes%%</td>
+<td>Displays number of votes</td>
+</tr>
+<tr>
+<td>%%rating_percent%%</td>
+<td>Displays overall average rating in percent (without the '%' character)</td>
+</tr>
+<tr>
+<td>%%rating_decimal%%</td>
+<td>Displays decimal value of 5-star rating (e.g. 4.7)</td>
+</tr>
+</table>
+<p>For example:</p>
+<div class="code">
+<pre>
+<code>[[module Rate]]
+Average Rating %%rating%% from %%rating_votes%% votes
+[[/module]]</code>
+</pre></div>
+<p>To make this centered use:</p>
+<div class="code">
+<pre>
+<code>[[=]]
+[[module Rate]]
+[[/=]]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

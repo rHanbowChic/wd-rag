@@ -1,0 +1,195 @@
+
+<div class="page-title">
+                    Images
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Images
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span><a name="single"></a> Single images</span></h2>
+<p>To insert an image into the page use the following syntax:</p>
+<div class="code">
+<pre>
+<code>[[image image-source attribute1="value1" attribute2="value2" ...]]</code>
+</pre></div>
+<p>And here is the list of allowed attributes:</p>
+<table class="wiki-content-table">
+<tr>
+<th>attribute name</th>
+<th>allowed values</th>
+<th>example value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>link</td>
+<td>wiki page name or URL</td>
+<td><tt><span style="white-space: pre-wrap;">"wiki-page"</span></tt><br/>
+<tt><span style="white-space: pre-wrap;">"http://www.example.com"</span></tt><br/>
+<tt><span style="white-space: pre-wrap;">"#anchor"</span></tt><br/>
+<tt><span style="white-space: pre-wrap;">"#"</span></tt></td>
+<td>makes image a link to another page or web address; this is <span style="text-decoration: underline;">ignored</span> when using Flickr as a source; prepend the link with '*' to make it open in a new window; can link to an <a href="#toc22">Anchor</a> within a page; "#" prevents any actions when image is clicked</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>any string</td>
+<td><tt><span style="white-space: pre-wrap;">"a photo of me"</span></tt></td>
+<td>Text substitution when image not available. It is also used by screen readers to describe an image.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>any string</td>
+<td><tt><span style="white-space: pre-wrap;">"a photo of me"</span></tt></td>
+<td>Displays mouse-over text for the image.</td>
+</tr>
+<tr>
+<td>width</td>
+<td>number of pixels</td>
+<td><tt><span style="white-space: pre-wrap;">"200px"</span></tt></td>
+<td>forces width of a image when displaying</td>
+</tr>
+<tr>
+<td>height</td>
+<td>number of pixels</td>
+<td><tt><span style="white-space: pre-wrap;">"200px"</span></tt></td>
+<td>forces height of a image when displaying</td>
+</tr>
+<tr>
+<td>style</td>
+<td>valid CSS style definition</td>
+<td><tt><span style="white-space: pre-wrap;">"border: 1px solid red; padding: 2em;"</span></tt></td>
+<td>adds extra CSS style to the image</td>
+</tr>
+<tr>
+<td>class</td>
+<td>CSS class</td>
+<td><tt><span style="white-space: pre-wrap;">"mystyle"</span></tt></td>
+<td>forces the image CSS class - suggested use only with customized themes</td>
+</tr>
+<tr>
+<td>size</td>
+<td><tt>"square"</tt> - 75x75 pixels<br/>
+<tt>"thumbnail"</tt> - 100 on longest side<br/>
+<tt>"small"</tt> - 240 on longest side<br/>
+<tt>"medium"</tt> - 500 on longest side<br/>
+<tt>"medium640"</tt> - 640 on longest side (Flickr only)<br/>
+<tt>"large"</tt> - 1024 on longest side (only for Flickr large images)<br/>
+<tt>"original"</tt> - original image (Flickr only)</td>
+<td>any of allowed ;-)</td>
+<td>displays a <span style="text-decoration: underline;">resized</span> image; great for thumbnails<br/>
+(transparency is lost and clicking the thumbnail opens the original image, unless link parameter is also supplied)<br/>
+if flickr is the source it pulls required size from a Flickr server;<br/>
+this option has effect only on local images or Flickr images</td>
+</tr>
+</table>
+<p><tt>size</tt> attribute works very well with local files (attached to pages) not only with image files, but with e.g. PDF or PostScript. See <a href="http://www.imagemagick.org/script/formats.php">this page</a> for more details.</p>
+<p>The <em>image-source</em> can be one of the following:</p>
+<table class="wiki-content-table">
+<tr>
+<th>source type</th>
+<th>format</th>
+<th>example value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>URL address</td>
+<td>any valid URL address</td>
+<td><tt><span style="white-space: pre-wrap;">http://www.example.com/image.jpg</span></tt></td>
+<td>displays image from the web address</td>
+</tr>
+<tr>
+<td>file attachment (current page)</td>
+<td><tt><em>filename</em></tt></td>
+<td><tt><span style="white-space: pre-wrap;">exampleimage.jpg</span></tt></td>
+<td>displays image attached to the current page</td>
+</tr>
+<tr>
+<td><tt>:first</tt></td>
+<td><tt>:first</tt></td>
+<td><tt>:first</tt></td>
+<td>displays first image attached to the current page (or nothing at all)</td>
+</tr>
+<tr>
+<td>file attachment (different page)</td>
+<td><tt><em>/another-page-name/filename</em></tt></td>
+<td><tt><span style="white-space: pre-wrap;">/another-page/exampleimage.jpg</span></tt></td>
+<td>displays image attached to a different page</td>
+</tr>
+<tr>
+<td><a href="http://www.flickr.com">flickr</a> image</td>
+<td><tt><span style="white-space: pre-wrap;">flickr:</span><em>photoid</em></tt></td>
+<td><tt><span style="white-space: pre-wrap;">flickr:83001279</span></tt></td>
+<td>displays image from Flickr and links to the original Flickr page</td>
+</tr>
+<tr>
+<td><a href="http://www.flickr.com">flickr</a> image (private)</td>
+<td><tt><span style="white-space: pre-wrap;">flickr:</span><em>photoid_secret</em></tt></td>
+<td><tt><span style="white-space: pre-wrap;">flickr:149666562_debab08866</span></tt></td>
+<td>displays image from Flickr and links to the original Flickr page; if the <em>secret</em> is provided the image is available despite being marked as non-public</td>
+</tr>
+</table>
+<p>To make the linked document in a new window you can either prepend the <tt>link</tt> attribute with '*' (e.g. <tt><span style="white-space: pre-wrap;">link="*http://www.example.com"</span></tt> or prepend the <tt>src</tt> element with '*' (e.g. <tt><span style="white-space: pre-wrap;">*flickr:149666562_debab08866</span></tt>, <tt>*<em>image-file</em></tt> etc.) for images that automatically generate links.</p>
+<p>To choose horizontal alignment use:</p>
+<ul>
+<li><tt>[[=image…</tt> - centered image</li>
+<li><tt>[[&lt;image…</tt> - image on left</li>
+<li><tt>[[&gt;image…</tt> - image on right</li>
+<li><tt>[[f&lt;image…</tt> - image on left floating (surrounded by text)</li>
+<li><tt>[[f&gt;image…</tt> - image on right floating (surrounded by text)</li>
+</ul>
+<h2 id="toc1"><span><a name="gallery"></a>Gallery of images</span></h2>
+<p>To insert a series of images into a page content use the <tt><span style="white-space: pre-wrap;">[[gallery]]</span></tt> element:</p>
+<div class="code">
+<pre>
+<code>[[gallery size="image-size"]]</code>
+</pre></div>
+<br/>
+or
+<div class="code">
+<pre>
+<code>[[gallery size="image-size"]]
+: image-source1 attribute1="value1" attribute2="value2" ...
+: image-source2 attribute1="value1" attribute2="value2" ...
+...
+[[/gallery]]</code>
+</pre></div>
+<p>The allowed attributes within the <tt><span style="white-space: pre-wrap;">[[gallery]]</span></tt> tag are:<br/></p>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td><tt>size</tt></td>
+<td><tt>"square"</tt>, <tt>"thumbnail"</tt>, <tt>"small"</tt>, <tt>"medium"</tt></td>
+<td><tt>"thumbnail"</tt></td>
+<td>sets the size of preview image<br/>
+this option has effect only on local images or Flickr images</td>
+</tr>
+<tr>
+<td><tt>order</tt></td>
+<td><tt>"name"</tt>, <tt>"name desc"</tt>, <tt>"created_at"</tt>, <tt>"created_at desc"</tt></td>
+<td><tt>"name"</tt></td>
+<td>sets order type</td>
+</tr>
+<tr>
+<td><tt>viewer</tt></td>
+<td><tt>"false"</tt>, <tt>"no"</tt>, <tt>"true"</tt>, <tt>"yes"</tt></td>
+<td><tt>"yes"</tt></td>
+<td>disables LightBox viewer</td>
+</tr>
+</table>
+<p>Order parameter also takes the following deprecated values: <tt>"nameDesc"</tt>, <tt>"dateAddedDesc"</tt> and <tt>"dateAdded"</tt>. For consistency with ListPages module it also takes the following values: <tt>"name desc desc"</tt> and <tt>"created_at desc desc"</tt> (meaning the same as without the "desc desc").</p>
+<p>If the <tt><span style="white-space: pre-wrap;">[[gallery]]</span></tt> tag is invoked without a list of images it automatically displays rescaled images (thumbnails) of image files attached to the current page (without .pdf and .ps documents as gallery displays only images by default).</p>
+<p>If <tt><span style="white-space: pre-wrap;">[[gallery]]</span></tt> is invoked with a list of images, only these images are displayed. <tt>image-source</tt> must not be a URL in this case. Allowed "per-image attributes are:</p>
+<ul>
+<li><tt>link</tt> - URL or wiki page name (does not work with Flickr images to be o.k. with Flickr terms)</li>
+<li><tt>alt</tt> - alternative text when the image is not available</li>
+</ul>
+<p>To make a document open in a new window the same rules as with a single image applies.</p>
+<p>The gallery by default is using LightBox to view images. It means that if you click on an image in the gallery, a very nice looking pop-up will show up with a possibility to scroll images forward / backward without reloading page / opening new tab or window. To disable LightBox view use parameter:</p>
+<p><tt><span style="white-space: pre-wrap;">[[gallery viewer="no"]]</span></tt> or <tt><span style="white-space: pre-wrap;">[[gallery viewer="false"]]</span></tt></p>
+<p>Also see <a href="/doc:flickrgallery-module">FlickrGallery module</a> if you wish to import images from Flickr.</p>
+<p>Put the <span style="white-space: pre-wrap;">[[gallery]]</span> tag on its own line or the parser will not recognize it.</p>
+</div><div id="action-area" style="display: none;"></div>

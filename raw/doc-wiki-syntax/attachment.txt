@@ -1,0 +1,25 @@
+
+<div class="page-title">
+                    Attached files
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Attached files
+                    </div>
+<div id="page-content">
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what it means</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[</span>file <em>filename</em> | <em>custom-text</em><span style="white-space: pre-wrap;">]]</span></tt></td>
+<td>produces a link to a file attached to this page.<br/>
+<em>custom-text</em> changes the name of a link (<em>custom-text</em> will be displayed instead of the file name).</td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[</span>file <em>/another-page/filename</em> | <em>custom-text</em><span style="white-space: pre-wrap;">]]</span></tt></td>
+<td>produces a link to a file attached to <em>another-page</em></td>
+</tr>
+</table>
+<p>The destination file must be first attached to the page — by clicking "files" and "upload file" from the options at the bottom of any page. <em>Do not use a leading slash on filenames, unless you really mean that they are attached to the default (start) page</em>.</p>
+</div><div id="action-area" style="display: none;"></div>

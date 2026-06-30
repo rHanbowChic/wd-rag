@@ -1,0 +1,20 @@
+
+<div class="page-title">
+                    The 'hidden' field type
+                </div>
+<div id="page-content">
+<p>Adds data to the form that the user cannot see or edit. It takes no space visually. This is for putting data into the page so that data can be used later. The value of the field is defined by the 'value' property.</p>
+<div class="code">
+<pre>
+<code>[[form]]
+fields:
+  version:
+    type: hidden
+    value: 1.0
+[[/form]]</code>
+</pre></div>
+<p>The specific properties you can use on a hidden field:</p>
+<ul>
+<li><strong>value</strong>: sets the value of the field</li>
+</ul>
+</div><div id="action-area" style="display: none;"></div>

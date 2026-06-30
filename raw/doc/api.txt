@@ -1,0 +1,321 @@
+
+<div class="page-title">
+                    Wikidot API
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Wikidot API
+                    </div>
+<div id="page-content">
+<p>The main concept of naming is as follows:</p>
+<ul>
+<li>namespace is type of object you work with</li>
+<li>select methods return array of names</li>
+<li>get methods return array of all data of matched objects</li>
+<li>get_one methods return array of all data of one matched object</li>
+</ul>
+<p>The list will grow as the methods are added. The methods are discussed <a href="http://developer.wikidot.com/forum/t-257156">here</a>.</p>
+<p>XML-RPC api is limited to 240 req/min (per user).</p>
+<h2 id="toc0"><span>categories.select</span></h2>
+<p>Select all categories from given site</p>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: site to get pages from, e.g. "my-site"</li>
+</ul>
+</li>
+<li>returns: list of category names</li>
+</ul>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-code">&gt;&gt;&gt; </span><span class="hl-identifier">s</span><span class="hl-code">.</span><span class="hl-identifier">categories</span><span class="hl-code">.</span><span class="hl-identifier">select</span><span class="hl-brackets">(</span><span class="hl-code">{</span><span class="hl-quotes">"</span><span class="hl-string">site</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">my-site</span><span class="hl-quotes">"</span><span class="hl-code">}</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">_default</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">admin</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">forum</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">system</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">blog</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span>
+</pre></div>
+</div>
+<h2 id="toc1"><span>files.select</span></h2>
+<p>Get names of files attached to page</p>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: what site we ask about</li>
+<li><strong>page</strong>: what page (full name) we ask about</li>
+</ul>
+</li>
+<li>returns: list of file names</li>
+</ul>
+<h2 id="toc2"><span>files.get_meta</span></h2>
+<p>Get meta data of given files</p>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: what site we ask about</li>
+<li><strong>page</strong>: what page (full name) we ask about</li>
+<li><strong>files</strong>: name of files to get meta data of — max 10 of them</li>
+</ul>
+</li>
+<li>returns: dictionary of files. File name is key of each item in it. The value is a dictionary of:
+<ul>
+<li><em>size</em> — size in bytes</li>
+<li><em>comment</em></li>
+<li><em>mime_type</em></li>
+<li><em>mime_description</em></li>
+<li><em>uploaded_by</em></li>
+<li><em>uploaded_at</em></li>
+<li><em>download_url</em> — URL to download the file from. For private sites, the URL contains authorization token <tt>?ukey=<span style="white-space: pre-wrap;">..</span>.</tt> valid for about 5 minutes.</li>
+</ul>
+</li>
+</ul>
+<h2 id="toc3"><span>files.get_one</span></h2>
+<div class="wiki-note">
+<p>This method works for small files only (max 6MB).</p>
+</div>
+<p>Get file attached to page (alternatively you can use download_url from get_meta method above)</p>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: site to get page from</li>
+<li><strong>page</strong>: page to get file from</li>
+<li><strong>file</strong>: name of file to get</li>
+</ul>
+</li>
+<li>returns: dictionary with the same keys as files.get_meta and additionally:
+<ul>
+<li><em>content</em> — base64-encoded file contents</li>
+</ul>
+</li>
+</ul>
+<h2 id="toc4"><span>files.save_one</span></h2>
+<div class="wiki-note">
+<p>With this method you can attach files not bigger than 50MB. Other file size limits also apply:</p>
+<ul>
+<li>site storage — can't upload file bigger than current unused file storage for site</li>
+<li>maximum file size depending on free/Pro Wikidot plan</li>
+</ul>
+</div>
+<p>Attaches file to page</p>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: site of page to attach file to</li>
+<li><strong>page</strong>: page to attach file to</li>
+<li><strong>file</strong>: name of file to attach</li>
+<li><strong>comment</strong> (optional): file description</li>
+<li><strong>save_mode</strong> (optional): allowed mode of operation
+<ul>
+<li>create — only allow creating new objects (exception thrown if object with this name already exists)</li>
+<li>update — only allow updating objects (exception thrown if no object with this name exists)</li>
+<li>create_or_update (default) — allow both creating and updating object</li>
+</ul>
+</li>
+<li><strong>content</strong>: base64-encoded file content</li>
+<li><strong>notify_watchers</strong> (optional):
+<ul>
+<li>true: notify watchers about the edit (as if it was done with the web interface)</li>
+<li>false (default): don't notify watchers</li>
+</ul>
+</li>
+<li><strong>revision_comment</strong> (optional): revision comment (displayed in history)</li>
+</ul>
+</li>
+<li>returns: the newly uploaded file information as dictionary the same to what files.get_meta return for each file</li>
+</ul>
+<h2 id="toc5"><span>tags.select</span></h2>
+<p>Select all tags from pages from given site or page or category</p>
+<ul>
+<li>argument keys:
+<ul>
+<li>site: site to get pages to get tags from, e.g. "my-site"</li>
+<li>categories (optional): list of names of categories to get pages to get tags from</li>
+<li>pages (optional): list of full names of pages to get tags from — max 10 of them</li>
+</ul>
+</li>
+<li>returns: list of tags</li>
+</ul>
+<h2 id="toc6"><span>pages.select</span></h2>
+<p>Select pages that match given criteria</p>
+<ul>
+<li>argument keys (if not stated otherwise, possible values documented in <a href="/doc:listpages-module">ListPages module</a>):
+<ul>
+<li><strong>site</strong>: site to get pages from, e.g. "my-site"</li>
+<li><strong>pagetype</strong> (optional): default "*"</li>
+<li><strong>categories</strong> (optional): list of category names to pull pages from, default: all categories</li>
+<li><strong>tags_any</strong> (optional): list of tags, page must have at least one of them</li>
+<li><strong>tags_all</strong> (optional): list of tags, page must have all of them</li>
+<li><strong>tags_none</strong> (optional): list of tags, page must have none of them</li>
+<li><strong>parent</strong> (optional): single page name or "-" for pages with no parent</li>
+<li><strong>created_by</strong> (optional): single user name</li>
+<li><strong>rating</strong> (optional)</li>
+<li><strong>order</strong> (optional)</li>
+</ul>
+</li>
+<li>returns: list of page full names</li>
+</ul>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-code">&gt;&gt;&gt; </span><span class="hl-identifier">s</span><span class="hl-code">.</span><span class="hl-identifier">pages</span><span class="hl-code">.</span><span class="hl-identifier">select</span><span class="hl-brackets">(</span><span class="hl-code">{</span><span class="hl-quotes">"</span><span class="hl-string">site</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">my-site</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">categories</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">blog</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">news</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">tags_none</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">_draft</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">order</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">created_at desc</span><span class="hl-quotes">"</span><span class="hl-code">}</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">blog:last-post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">blog:second-post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">blog:first-post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">blog:_template</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span>
+</pre></div>
+</div>
+<h2 id="toc7"><span>pages.get_meta</span></h2>
+<p>Get a bunch of pages and returns (some of) their meta data</p>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: site to list pages from, eg. "my-site"</li>
+<li><strong>pages</strong>: list of page full names to list (maximum 10 pages)</li>
+</ul>
+</li>
+<li>returns dictionary of pages. For each page there will be item in the dictionary with page name as key and dictionary of the following page properties as value:
+<ul>
+<li><em>fullname</em></li>
+<li><em>created_at</em></li>
+<li><em>created_by</em></li>
+<li><em>updated_at</em></li>
+<li><em>updated_by</em></li>
+<li><em>title</em></li>
+<li><em>parent_fullname</em></li>
+<li><em>tags</em> — list of all tags (including those starting with underscore)</li>
+<li><em>rating</em></li>
+<li><em>revisions</em></li>
+<li><strong>[PLANNED]</strong> <em>comments</em> — number of comments</li>
+<li><strong>[PLANNED]</strong> <em>files</em> — number of files attached to the page</li>
+<li><strong>[PLANNED]</strong> <em>children</em> — number of children pages</li>
+</ul>
+</li>
+</ul>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-code">&gt;&gt;&gt; </span><span class="hl-identifier">s</span><span class="hl-code">.</span><span class="hl-identifier">pages</span><span class="hl-code">.</span><span class="hl-identifier">meta</span><span class="hl-brackets">(</span><span class="hl-code">{</span><span class="hl-quotes">"</span><span class="hl-string">site</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">my-site</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">pages</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">blog:last-post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">blog:second-post</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">}</span><span class="hl-brackets">)</span><span class="hl-code">
+{
+ </span><span class="hl-quotes">"</span><span class="hl-string">blog:last-post</span><span class="hl-quotes">"</span><span class="hl-code">: {</span><span class="hl-quotes">"</span><span class="hl-string">fullname</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">blog:last-post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">created_at</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">2010-08-04T23:20:50Z</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">created_by</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Gabrys</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">updated_at</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">2010-08-04T23:23:31Z</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">updated_by</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Gabrys</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">title</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Last Post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">parent_fullname</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-reserved">None</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">tags</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">blog</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">last</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">rating</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">8</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">revisions</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">2</span><span class="hl-code">},
+ </span><span class="hl-quotes">"</span><span class="hl-string">blog:second-post</span><span class="hl-quotes">"</span><span class="hl-code">: {</span><span class="hl-quotes">"</span><span class="hl-string">fullname</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">blog:second-post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">created_at</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">2010-08-03T22:52:10Z</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">created_by</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Gabrys</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">updated_at</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">2010-08-03T22:52:10Z</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">updated_by</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Gabrys</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">title</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Second Post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">parent_fullname</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-reserved">None</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">tags</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">blog</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">second</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">rating</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">1</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">revisions</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">1</span><span class="hl-code">}
+}</span>
+</pre></div>
+</div>
+<h2 id="toc8"><span>pages.get_one</span></h2>
+<p>Gets one page and returns all its properties</p>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: site to get a page from, e.g. "my-site"</li>
+<li><strong>page</strong>: page full name to get, e.g. "start" or "blog:first-post"</li>
+</ul>
+</li>
+<li>returns: page properties as dictionary (consult documentation of <a href="/doc:listpages-module">ListPages module</a>)
+<ul>
+<li>all those listed in <tt>pages.get_meta</tt> plus:</li>
+<li><em>parent_title</em></li>
+<li><em>children</em></li>
+<li><em>content</em> — page content, if page is assigned a form it's in YAML format</li>
+<li><em>html</em> — generated HTML of the page (as seen from browser excluding navigational bars etc)</li>
+<li><em>comments</em> — number of comments</li>
+<li><em>commented_at</em></li>
+<li><em>commented_by</em></li>
+</ul>
+</li>
+</ul>
+<div class="code">
+<div class="hl-main">
+<pre>
+<span class="hl-code">&gt;&gt;&gt; </span><span class="hl-identifier">s</span><span class="hl-code">.</span><span class="hl-identifier">pages</span><span class="hl-code">.</span><span class="hl-identifier">get_one</span><span class="hl-brackets">(</span><span class="hl-code">{</span><span class="hl-quotes">"</span><span class="hl-string">site</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">my-site</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">page</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">blog:last-post</span><span class="hl-quotes">"</span><span class="hl-code">}</span><span class="hl-brackets">)</span><span class="hl-code">
+{</span><span class="hl-quotes">"</span><span class="hl-string">created_at</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">2010-08-04T23:20:50Z</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">created_by</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Gabrys</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">updated_at</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">2010-08-04T23:23:31Z</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">updated_by</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Gabrys</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">title</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Last Post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">parent_fullname</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-reserved">None</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">tags</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">blog</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">last</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">rating</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">8</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">revisions</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">2</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">parent_title</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-reserved">None</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">children</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">0</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">content</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Test blog post</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">html</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;Test blog post&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">comments</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">0</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">commented_at</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-reserved">None</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">commented_by</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-reserved">None</span><span class="hl-code">}</span>
+</pre></div>
+</div>
+<h2 id="toc9"><span>pages.save_one</span></h2>
+<p>Save page. Site and page keys of argument array are required. Set specific keys to update the properties, omit to keep current values.</p>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: site to save page to</li>
+<li><strong>page</strong>: page full name to save</li>
+<li><strong>title</strong> (optional): title to set</li>
+<li><strong>content</strong> (optional): page content — wiki source</li>
+<li><strong>tags</strong> (optional): array of tags to set</li>
+<li><strong>parent_fullname</strong> (optional): parent page full name, "-" to reset</li>
+<li><strong>save_mode</strong> (optional): allowed mode of operation
+<ul>
+<li>create — only allow creating new objects (exception thrown if object with this name already exists)</li>
+<li>update — only allow updating objects (exception thrown if no object with this name exists)</li>
+<li>create_or_update (default) — allow both creating and updating object</li>
+</ul>
+</li>
+<li><strong>rename_as</strong> (optional): rename the page (in addition to possible other changes in source etc)</li>
+<li><strong>revision_comment</strong> (optional): revision comment (displayed in history)</li>
+<li><strong>notify_watchers</strong> (optional):
+<ul>
+<li>true: notify watchers about the edit (as if it was done with the web interface)</li>
+<li>false (default): don't notify watchers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>returns: saved page (as in pages.get_one)</li>
+</ul>
+<div class="wiki-note">
+<p>We only want to make API for comments currently, but it will be expanded to both comments and forum. That's why the namespace is <tt>posts</tt> and not <tt>comments</tt>.</p>
+<p><strong>Note the API for <tt>posts</tt> namespace is not yet stable. This means it may change in the future without notice and break compatibility.</strong></p>
+</div>
+<h2 id="toc10"><span>posts.select</span></h2>
+<p>Select post/comments on given site, page, thread and/or in reply to other comment.</p>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: site to get pages to get comments from, e.g. "my-site"</li>
+<li><strong>page</strong> (optional): page to get comments from</li>
+<li><strong>thread</strong> (optional): thread to get posts from — not yet implemented</li>
+<li><strong>reply_to</strong> (optional): only select comments/posts that are direct replies to this one ("-" means not replies to other posts/comments)</li>
+<li><strong>created_by</strong> (optional): select posts by this user</li>
+</ul>
+</li>
+<li>returns: list of post/comments IDs sorted by date posted</li>
+</ul>
+<h2 id="toc11"><span>posts.get</span></h2>
+<ul>
+<li>argument keys:
+<ul>
+<li><strong>site</strong>: site to get comments from, e.g. "my-site"</li>
+<li><strong>posts</strong>: list of IDs of posts/comments to get (max 10 of them)</li>
+</ul>
+</li>
+<li>returns dictionary of posts/comments. For each post/comment there will be item in the dictionary with post/comment ID as key and and dictionary of the following post properties as value:
+<ul>
+<li><em>id</em> — ID of post/comment</li>
+<li><em>fullname</em> — fullname of page to which comment belongs</li>
+<li><em>reply_to</em> — ID of comment which this post/comment replies to</li>
+<li><em>title</em> — title of the post/comment</li>
+<li><em>content</em> — post/comment body (wiki syntax)</li>
+<li><em>html</em> — post/comment body as HTML</li>
+<li><em>created_by</em> — user that posted post/comment</li>
+<li><em>created_at</em> — time post/comment was posted</li>
+<li><em>replies</em> — number of replies to given post/comment — not yet implemented</li>
+</ul>
+</li>
+</ul>
+<h2 id="toc12"><span>users.get_me</span></h2>
+<ul>
+<li>argument keys:
+<ul>
+<li>no arguments needed, pass an empty dictionary or array</li>
+</ul>
+</li>
+<li>returns dictionary of user (the one that API key belongs to) properties:
+<ul>
+<li>name: URL version of user name, for example "john-smith" for "John Smith"</li>
+<li>title: full name of user, for example "John Smith"</li>
+<li>id: ID number of user, for example "12345"</li>
+</ul>
+</li>
+</ul>
+<h2 id="toc13"><span>Deleted methods</span></h2>
+<p>The following methods are deleted and don't work anymore:</p>
+<ul>
+<li>site.pages</li>
+<li>site.categories</li>
+<li>page.get</li>
+<li>page.files</li>
+<li>page.save</li>
+<li>user.sites</li>
+</ul>
+</div><div id="action-area" style="display: none;"></div>

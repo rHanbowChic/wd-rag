@@ -1,0 +1,16 @@
+
+<div class="page-title">
+                    Comments
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Comments
+                    </div>
+<div id="page-content">
+<p>A comment is a source block that is not rendered in the compiled version. To add a comment to the source use <tt><span style="white-space: pre-wrap;">[!-- ... --]</span></tt> construct, e.g.:</p>
+<div class="code">
+<pre>
+<code>[!--
+This text will not be rendered.
+--]</code>
+</pre></div>
+</div><div id="action-area" style="display: none;"></div>

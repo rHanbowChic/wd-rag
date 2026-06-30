@@ -1,0 +1,130 @@
+
+<div class="page-title">
+                    FlickrGallery Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » FlickrGallery Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>Pulls images from <a href="http://www.flickr.com">Flickr</a> - online photo management.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>userName</td>
+<td>no</td>
+<td>any valid <span style="text-decoration: underline;">flickr</span> <em>user name</em></td>
+<td>none</td>
+<td>limits results to a single user</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>no</td>
+<td>tags</td>
+<td>none</td>
+<td>comma-delimited list of <em>tags</em></td>
+</tr>
+<tr>
+<td>tagMode</td>
+<td>no</td>
+<td><tt>"any"</tt>, <tt>"all"</tt></td>
+<td><tt>"any"</tt></td>
+<td>applies OR, AND for tag sellection</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>no</td>
+<td><tt>"date-posted-asc"</tt><br/>
+<tt>"date-posted-desc"</tt><br/>
+<tt>"date-taken-asc"</tt><br/>
+<tt>"date-taken-desc"</tt><br/>
+<tt>"interestingness-desc"</tt><br/>
+<tt>"interestingness-asc"</tt><br/>
+<tt>"relevance"</tt></td>
+<td><tt>"date-posted-desc"</tt></td>
+<td>sets the sort order</td>
+</tr>
+<tr>
+<th colspan="5">alternative attributes (do not play with these above)</th>
+</tr>
+<tr>
+<td>photosetId</td>
+<td>no</td>
+<td>any valid <em>photoset id</em></td>
+<td>none</td>
+<td>gets images from a photoset</td>
+</tr>
+<tr>
+<td>groupId</td>
+<td>no</td>
+<td>any valid <em>group name</em></td>
+<td>none</td>
+<td>gets images from a specified group</td>
+</tr>
+<tr>
+<td>groupUrl</td>
+<td>no</td>
+<td>URL address of the group main page</td>
+<td>none</td>
+<td>gets images from a specified group</td>
+</tr>
+<tr>
+<th colspan="5">display options</th>
+</tr>
+<tr>
+<td>perPage</td>
+<td>no</td>
+<td>any number between 1 and 100</td>
+<td>30</td>
+<td>how many photos per page</td>
+</tr>
+<tr>
+<td>limitPages</td>
+<td>no</td>
+<td>any positive number</td>
+<td>none</td>
+<td>limits number of pages to navigate; also useful if you do not want to navigate pages at all (<tt>limitPages="1"</tt>)</td>
+</tr>
+<tr>
+<td>size</td>
+<td>no</td>
+<td><tt>"square"</tt> - 75x75 pixels<br/>
+<tt>"thumbnail"</tt> - 100 on longest side<br/>
+<tt>"small"</tt> - 240 on longest side<br/>
+<tt>"medium"</tt>, 500 on longest side</td>
+<td><tt>"thumbnail"</tt></td>
+<td>size of the images to display</td>
+</tr>
+<tr>
+<th colspan="5">other options</th>
+</tr>
+<tr>
+<td>disableBrowsing</td>
+<td>no</td>
+<td>"yes"/"true"</td>
+<td>none</td>
+<td>disables displaying images in overlay windows when clicked</td>
+</tr>
+<tr>
+<td>contentType</td>
+<td>no</td>
+<td>photos, screenshots, other, photos-screenshots, screenshots-other, photos-other, all</td>
+<td><tt>"all"</tt></td>
+<td>sets the type of images retrieved from Flickr</td>
+</tr>
+</table>
+<h2 id="toc2"><span>Examples</span></h2>
+<p>Get pictures that have both "linux" and "sun" tags:</p>
+<div class="code">
+<pre>
+<code>[[module FlickrGallery tags="linux,sun" tagMode="all"]]</code>
+</pre></div>
+<p>How it works:</p>
+<div class="wikidot-hybrid-module" id="wikidot-hybrid-module-186681961"><div style="display: none">{"module":"wiki\/image\/FlickrGalleryModule","params":{"tags":"linux,sun","tagMode":"all"}}</div></div></div><div id="action-area" style="display: none;"></div>

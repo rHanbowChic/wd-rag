@@ -1,0 +1,19 @@
+
+<div class="page-title">
+                    Wiki Syntax
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » Wiki Syntax
+                    </div>
+<div id="page-content">
+<p>This document describes the <strong>Wiki Syntax</strong> used within the Wikidot.com project.</p>
+<p>Any page of any of the sites exists in two different forms: the source code and the compiled code. Source code is what you can edit and what describes the content of the page. Source code is compiled into the (XHTML) code that is sent to the browser when you view/browse the page. The Wiki Syntax is used to create content of the pages by editing the source code.</p>
+<p>If you are looking for wiki code snippets ready to copy/paste/modify, please visit our <a href="http://snippets.wikidot.com">Code Snippets Site</a>.</p>
+<div style="border: 1px solid #BBB; padding: 5px 20px; background-color: #FFF;">
+<p>Documents you might also be interested in:</p>
+<ul>
+<li><a href="/doc:embedding">Code embedding</a> — list of supported embeds, i.e. pieces of code from other websites you can use on Wikidot, like films from YouTube or Google Gadgets.</li>
+<li><a href="/doc:modules">Modules</a> — description of <em>modules</em> — interactive elements you can put on your pages.</li>
+</ul>
+</div>
+</div><div id="action-area" style="display: none;"></div>

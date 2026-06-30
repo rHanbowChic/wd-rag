@@ -1,0 +1,52 @@
+
+<div class="page-title">
+                    Math
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Math
+                    </div>
+<div id="page-content">
+<p>Wikidot.com uses <a href="http://mathjax.org">MathJax</a> to render beautiful LaTeX equations. For those that know LaTeX syntax using wikidot equations should be straightforward.</p>
+<h2 id="toc0"><span><a name="equations"></a> Equations</span></h2>
+<p>Simply put the equation between <tt><span style="white-space: pre-wrap;">[[math</span> <em>label</em>]] … <span style="white-space: pre-wrap;">[[/math]]</span></tt> block tags (the label is optional). The equation is rendered within LaTex <tt><span style="white-space: pre-wrap;">\begin{equation} ... \end{equation}</span></tt> environment. Please refer to any LaTeX reference manual for details about syntax.</p>
+<div class="code">
+<pre>
+<code>[[math label1]]
+\rho _{\rm GJ} = -\sigma (r) \left[ (1 - \eta _{\ast }^2 {\kappa \over {\eta ^3}}) \cos \chi \right.
++ \left. {3\over 2} \theta (\eta) H(\eta)
+\xi \sin \chi \cos \phi \right]
+[[/math]]</code>
+</pre></div>
+<span class="equation-number">(1)</span>
+<div class="math-equation" id="equation-1">\begin{align} \rho _{\rm GJ} = -\sigma (r) \left[ (1 - \eta _{\ast }^2 {\kappa \over {\eta ^3}}) \cos \chi \right. + \left. {3\over 2} \theta (\eta) H(\eta) \xi \sin \chi \cos \phi \right] \end{align}</div>
+<p>To refer to a <span style="text-decoration: underline;">labeled</span> equation simply use <tt><span style="white-space: pre-wrap;">[[eref</span> <em>label</em>]]</tt> to get a raw number or e.g. <tt><span style="white-space: pre-wrap;">Eq. ([[eref</span> <em>label1</em>]])</tt> which gives Eq. (<a class="eref" href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('equation-1')">1</a>).</p>
+<p>You can specify the LaTeX environment in 2 ways, either by passing a <tt>type="&lt;environment&gt;"</tt> parameter, or using <tt><span style="white-space: pre-wrap;">\begin{&lt;environment&gt;}</span></tt> and <tt>@\end{&lt;environment&gt;}@@</tt> within the equation. E.q. these two are equivalent:</p>
+<div class="code">
+<pre>
+<code>[[math type="align"]]
+E = mc^2
+[[/math]]</code>
+</pre></div>
+<div class="code">
+<pre>
+<code>[[math]]
+\begin{align}
+E = mc^2
+\end{align}
+[[/math]]</code>
+</pre></div>
+<p>The <tt>equation</tt> environment is default. Other supported math environments are: <tt>align</tt>, <tt>alignat</tt>, <tt>aligned</tt>, <tt>alignedat</tt>, <tt>array</tt>, <tt>Bmatrix</tt>, <tt>bmatrix</tt>, <tt>cases</tt>, <tt>eqnarray</tt>, <tt>equation</tt>, <tt>gather</tt>, <tt>gathered</tt>, <tt>matrix</tt>, <tt>multline</tt>, <tt>pmatrix</tt>, <tt>smallmatrix</tt>, <tt>split</tt>, <tt>subarray</tt>, <tt>Vmatrix</tt>, <tt>vmatrix</tt>.</p>
+<h2 id="toc1"><span><a name="inline"></a> Inline math</span></h2>
+<p>To use math expressions inside text (sentence) use <tt><span style="white-space: pre-wrap;">[[$ ... $]]</span></tt> block tags.</p>
+<div style="float:left; width: 45%; margin: 0 2%;">
+<div class="code">
+<pre>
+<code>[[$ E = mc^2 $]] is much more popular than
+[[$ G_{\mu\nu} - \Lambda g_{\mu\nu} = \kappa T_{\mu\nu} $]]</code>
+</pre></div>
+</div>
+<div style="float:left; width: 45%; margin: 0 2%;">
+<p><span class="math-inline">$E = mc^2$</span> is much more popular than <span class="math-inline">$G_{\mu\nu} - \Lambda g_{\mu\nu} = \kappa T_{\mu\nu}$</span></p>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+</div><div id="action-area" style="display: none;"></div>

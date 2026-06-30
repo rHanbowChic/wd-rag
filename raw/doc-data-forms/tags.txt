@@ -1,0 +1,11 @@
+
+<div class="page-title">
+                    Tags
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-data-forms:start">Data Forms</a> » Tags
+                    </div>
+<div id="page-content">
+<p>It is not currently possible to set tags when saving the data form based on the values in the data form.</p>
+<p>However a workaround is possible until a tag field is implemented. This workaround is described at <a href="http://community.wikidot.com/forum/t-402555/automatically-setting-tags-for-a-page-based-on-form-input" target="_blank">http://community.wikidot.com/forum/t-402555/automatically-setting-tags-for-a-page-based-on-form-input</a></p>
+</div><div id="action-area" style="display: none;"></div>

@@ -1,0 +1,151 @@
+
+<div class="page-title">
+                    Tables
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Tables
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span><a name="simple"></a> Simple tables</span></h2>
+<p>You can create simple tables using pairs of vertical bars:</p>
+<div style="float:left; width: 45%; margin: 0 2%">
+<div class="code">
+<pre>
+<code>||~ head 1 ||~ head 2 ||~ head 3 ||
+|| cell 1 || cell 2 || cell 3 ||
+|||| long cell 4 || cell 5 ||
+||cell 6 |||| long cell 7 ||
+|||||| looong cell 8||</code>
+</pre></div>
+</div>
+<div style="float:left; width: 45%; margin: 0 2%">
+<table class="wiki-content-table">
+<tr>
+<th>head 1</th>
+<th>head 2</th>
+<th>head 3</th>
+</tr>
+<tr>
+<td>cell 1</td>
+<td>cell 2</td>
+<td>cell 3</td>
+</tr>
+<tr>
+<td colspan="2">long cell 4</td>
+<td>cell 5</td>
+</tr>
+<tr>
+<td>cell 6</td>
+<td colspan="2">long cell 7</td>
+</tr>
+<tr>
+<td colspan="3">looong cell 8</td>
+</tr>
+</table>
+</div>
+<div style="clear:both; height: 0px; font-size: 1px"></div>
+<div class="code">
+<pre>
+<code>|| lines must start and end || with double vertical bars || nothing ||
+|| cells are separated by || double vertical bars || nothing ||
+|||| you can span multiple columns by || starting each cell ||
+|| with extra cell |||| separators ||
+|||||| but perhaps an example is _
+the easiest way to see ||</code>
+</pre></div>
+<table class="wiki-content-table">
+<tr>
+<td>lines must start and end</td>
+<td>with double vertical bars</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td>cells are separated by</td>
+<td>double vertical bars</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td colspan="2">you can span multiple columns by</td>
+<td>starting each cell</td>
+</tr>
+<tr>
+<td>with extra cell</td>
+<td colspan="2">separators</td>
+</tr>
+<tr>
+<td colspan="3">but perhaps an example is<br/>
+the easiest way to see</td>
+</tr>
+</table>
+<p>For a new line inside the table cell use _ (underscore) at the end of the line (see the example above).</p>
+<h2 id="toc1"><span><a name="advanced"></a>Advanced (custom) tables</span></h2>
+<p>To create more advanced tables, special tags can be used that can accept <tt>class</tt> and <tt>style</tt> attributes for managing appearance. To create an advanced table use the following syntax:</p>
+<div class="code">
+<pre>
+<code>[[table]]
+[[row]]
+[[hcell style="border: 1px solid silver; background-color: yellow;"]]
+header cell 0.0
+[[/hcell]]
+[[hcell style="border: 1px solid silver"]]
+header cell 0.1
+[[/hcell]]
+[[hcell style="border: 1px solid silver" ]]
+header cell 0.2
+[[/hcell]]
+[[/row]]
+[[row]]
+[[cell style="border: 1px solid silver" colspan="2"]]
+cell 1.0
+[[/cell]]
+[[cell style="border: 1px solid silver; background-color: yellow;"]]
+cell 1.2
+[[/cell]]
+[[/row]]
+[[row]]
+[[cell style="border: 1px solid silver" rowspan="2"]]
+cell 2.0
+[[/cell]]
+[[cell style="border: 1px solid silver"]]
+cell 2.1
+[[/cell]]
+[[cell style="border: 1px solid silver"]]
+cell 2.2
+[[/cell]]
+[[/row]]
+[[row]]
+[[cell style="border: 1px solid silver"]]
+cell 3.1
+[[/cell]]
+[[cell style="border: 1px solid silver"]]
+cell 3.2
+[[/cell]]
+[[/row]]
+[[/table]]</code>
+</pre></div>
+<p>transforms to…</p>
+<table>
+<tr>
+<th style="border: 1px solid silver; background-color: yellow;">header cell 0.0</th>
+<th style="border: 1px solid silver">header cell 0.1</th>
+<th style="border: 1px solid silver">header cell 0.2</th>
+</tr>
+<tr>
+<td colspan="2" style="border: 1px solid silver">cell 1.0</td>
+<td style="border: 1px solid silver; background-color: yellow;">cell 1.2</td>
+</tr>
+<tr>
+<td rowspan="2" style="border: 1px solid silver">cell 2.0</td>
+<td style="border: 1px solid silver">cell 2.1</td>
+<td style="border: 1px solid silver">cell 2.2</td>
+</tr>
+<tr>
+<td style="border: 1px solid silver">cell 3.1</td>
+<td style="border: 1px solid silver">cell 3.2</td>
+</tr>
+</table>
+<p>Each of elements <span style="white-space: pre-wrap;">[[table]]</span>, <span style="white-space: pre-wrap;">[[row]]</span>, <span style="white-space: pre-wrap;">[[cell]]</span> and <span style="white-space: pre-wrap;">[[hcell]]</span> can accept attributes <tt>style</tt> and <tt>class</tt> and they are transformed to (X)HTML tags: <tt>&lt;table&gt;</tt>, <tt>&lt;tr&gt;</tt> and <tt>&lt;td&gt;</tt>. Cells also accept <strong>colspan</strong> and <strong>rowspan</strong> variables.</p>
+<p>If you wish to remove the spacing between cells in the above example, change the first line to <tt><span style="white-space: pre-wrap;">[[table style="border-collapse:collapse;"]]</span></tt>.</p>
+<p>An example of using tables for page layout can be found on our Snippets Wiki at: <a href="http://snippets.wikidot.com/code:layout-with-tables">http://snippets.wikidot.com/code:layout-with-tables</a> .</p>
+<p>Tables can be nested.</p>
+</div><div id="action-area" style="display: none;"></div>

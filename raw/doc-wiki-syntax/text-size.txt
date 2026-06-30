@@ -1,0 +1,90 @@
+
+<div class="page-title">
+                    Text Size
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-wiki-syntax:start">Wiki Syntax</a> » Text Size
+                    </div>
+<div id="page-content">
+<p>Text (font) size can be set with the <tt><span style="white-space: pre-wrap;">[[size</span></tt> …<tt><span style="white-space: pre-wrap;">]]</span></tt> … <tt><span style="white-space: pre-wrap;">[[/size]]</span></tt> tags. These tags can be nested.</p>
+<h3 id="toc0"><span>Relative text sizes</span></h3>
+<p>Relative text sizes are based on the current font — they increase or decrease the current font size. To specify a relative text size use <tt><span style="white-space: pre-wrap;">[[size smaller]]</span></tt>, <tt><span style="white-space: pre-wrap;">[[size larger]]</span></tt>, <tt><span style="white-space: pre-wrap;">[[size</span></tt> <em>n</em><tt><span style="white-space: pre-wrap;">em]]</span></tt>, or <tt><span style="white-space: pre-wrap;">[[size</span></tt> <em>n</em><tt><span style="white-space: pre-wrap;">%]]</span></tt>, where <em>n</em> is a 1- to 5-digit number (including an optional decimal point).<br/></p>
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size smaller]]smaller text[[/size]]</span></tt></td>
+<td><span style="font-size:smaller;">smaller text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size larger]]larger text[[/size]]</span></tt></td>
+<td><span style="font-size:larger;">larger text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size 80%]]80% of current size[[/size]]</span></tt></td>
+<td><span style="font-size:80%;">80% of current size</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size 100%]]100% of current size[[/size]]</span></tt></td>
+<td><span style="font-size:100%;">100% of current size</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size 150%]]150% of current size[[/size]]</span></tt></td>
+<td><span style="font-size:150%;">150% of current size</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size 0.8em]]80% of current size[[/size]]</span></tt></td>
+<td><span style="font-size:0.8em;">80% of current size</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size 1em]]100% of current size[[/size]]</span></tt></td>
+<td><span style="font-size:1em;">100% of current size</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size 1.5em]]150% of current size[[/size]]</span></tt></td>
+<td><span style="font-size:1.5em;">150% of current size</span></td>
+</tr>
+</table>
+<h3 id="toc1"><span>Absolute text sizes</span></h3>
+<p>Absolute text sizes are <em>not</em> based on the current font size. To specify an absolute text size use <tt><span style="white-space: pre-wrap;">[[size xx-small]]</span></tt>, <tt><span style="white-space: pre-wrap;">[[size x-small]]</span></tt>, <tt><span style="white-space: pre-wrap;">[[size small]]</span></tt>, <tt><span style="white-space: pre-wrap;">[[size large]]</span></tt>, <tt><span style="white-space: pre-wrap;">[[size x-large]]</span></tt>, <tt><span style="white-space: pre-wrap;">[[size xx-large]]</span></tt>, or <tt><span style="white-space: pre-wrap;">[[size</span></tt> <em>n</em><tt><span style="white-space: pre-wrap;">px]]</span></tt>, where <em>n</em> is a 1- to 5-digit number (including an optional decimal point).<br/></p>
+<table class="wiki-content-table">
+<tr>
+<th>what you type</th>
+<th>what you get</th>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size xx-small]]xx-small text[[/size]]</span></tt></td>
+<td><span style="font-size:xx-small;">xx-small text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size x-small]]x-small text[[/size]]</span></tt></td>
+<td><span style="font-size:x-small;">x-small text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size small]]small text[[/size]]</span></tt></td>
+<td><span style="font-size:small;">small text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size large]]large text[[/size]]</span></tt></td>
+<td><span style="font-size:large;">large text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size x-large]]x-large text[[/size]]</span></tt></td>
+<td><span style="font-size:x-large;">x-large text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size xx-large]]xx-large text[[/size]]</span></tt></td>
+<td><span style="font-size:xx-large;">xx-large text</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size 7px]]text size 7 pixels[[/size]]</span></tt></td>
+<td><span style="font-size:7px;">text size 7 pixels</span></td>
+</tr>
+<tr>
+<td><tt><span style="white-space: pre-wrap;">[[size 18.75px]]text size 18.75 pixels[[/size]]</span></tt></td>
+<td><span style="font-size:18.75px;">text size 18.75 pixels</span></td>
+</tr>
+</table>
+</div><div id="action-area" style="display: none;"></div>

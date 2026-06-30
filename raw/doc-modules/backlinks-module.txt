@@ -1,0 +1,52 @@
+
+<div class="page-title">
+                    Backlinks Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Backlinks Module
+                    </div>
+<div id="page-content">
+<h2 id="toc0"><span>Description</span></h2>
+<p>This module simply lists all the pages from the given wiki that contain links to the current page.</p>
+<h2 id="toc1"><span>Attributes</span></h2>
+<p>No attributes.</p>
+<h2 id="toc2"><span>Appearance</span></h2>
+<p>If you want to change the appearance of the list you should define (within your custom theme) the following class definition:</p>
+<div class="code">
+<pre>
+<code>div.backlinks-module-box{
+    [your definition]
+}</code>
+</pre></div>
+<h2 id="toc3"><span>Examples</span></h2>
+<div class="code">
+<pre>
+<code>[[module Backlinks]]</code>
+</pre></div>
+<p>and this produces backlinks for this page:</p>
+<div class="backlinks-module-box">
+<ul>
+<li>
+<a href="/nav:doc-modules">Doc Modules</a>
+</li>
+<li>
+<a href="/doc-modules:start">Modules</a>
+</li>
+</ul>
+</div>
+<p><strong>Tip:</strong> You can use the Backlinks module to make <em>soft categories</em> — simply create pages in the namespace <tt>category:</tt>, e.g.</p>
+<ul>
+<li><tt>category:cars</tt></li>
+<li><tt>category:bikes</tt></li>
+<li>etc…</li>
+</ul>
+<p>Each of these pages could have a description of the category and the <tt><span style="white-space: pre-wrap;">[[module Backlinks]]</span></tt> that would list the pages…</p>
+<p>And within the pages you want to add to specific categories you would put links to these categories, e.g. at the bottom:</p>
+<div class="code">
+<pre>
+<code>++ Categories:
+
+[[[category:cars]]], [[[category:bikes]]]</code>
+</pre></div>
+<p>Moreover if all your category pages, i.e. <tt>category:cars</tt>, <tt>category:bikes</tt> etc. include a link to a page called <tt>category:all</tt> — it is a quick way to put the module in the <tt>category:all</tt> too and have a list of all categories.</p>
+</div><div id="action-area" style="display: none;"></div>

@@ -1,0 +1,148 @@
+
+<div class="page-title">
+                    Categories Module
+                </div>
+<div class="breadcrumb">
+<a href="/doc:start">Documentation</a> » <a href="/doc-modules:start">Modules</a> » Categories Module
+                    </div>
+<div id="page-content">
+<p>The Categories module is a tool that displays categories and their pages within a site. This tool will eventually be replaced by <a href="/doc:listpages-module">ListPages</a>, which is more general purpose.</p>
+<h2 id="toc0"><span>Attributes</span></h2>
+<table class="wiki-content-table">
+<tr>
+<th>attribute</th>
+<th>required</th>
+<th>allowed values</th>
+<th>default</th>
+<th>description</th>
+</tr>
+<tr>
+<td>includeHidden</td>
+<td>no</td>
+<td><tt>true</tt></td>
+<td><tt>false</tt></td>
+<td>includes "hidden" (starting with underscore) pages in the listing</td>
+</tr>
+</table>
+<h2 id="toc1"><span>Example</span></h2>
+<p>To use Categories, add this code to your page:</p>
+<div class="code">
+<pre>
+<code>[[module Categories]]</code>
+</pre></div>
+<p>In action:</p>
+<div>
+<h3>_default</h3>
+<a href="javascript:;" id="category-pages-toggler-4387981" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4387981)">+ list pages</a>
+<div id="category-pages-4387981" style="display: none"></div>
+<div id="category-pages-4387981-options" style="display: none"></div>
+</div>
+<div>
+<h3>action</h3>
+<a href="javascript:;" id="category-pages-toggler-4396860" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4396860)">+ list pages</a>
+<div id="category-pages-4396860" style="display: none"></div>
+<div id="category-pages-4396860-options" style="display: none"></div>
+</div>
+<div>
+<h3>admin</h3>
+<a href="javascript:;" id="category-pages-toggler-4387980" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4387980)">+ list pages</a>
+<div id="category-pages-4387980" style="display: none"></div>
+<div id="category-pages-4387980-options" style="display: none"></div>
+</div>
+<div>
+<h3>community-sites</h3>
+<a href="javascript:;" id="category-pages-toggler-4511524" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4511524)">+ list pages</a>
+<div id="category-pages-4511524" style="display: none"></div>
+<div id="category-pages-4511524-options" style="display: none"></div>
+</div>
+<div>
+<h3>doc</h3>
+<a href="javascript:;" id="category-pages-toggler-4388016" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388016)">+ list pages</a>
+<div id="category-pages-4388016" style="display: none"></div>
+<div id="category-pages-4388016-options" style="display: none"></div>
+</div>
+<div>
+<h3>doc-data-forms</h3>
+<a href="javascript:;" id="category-pages-toggler-4388023" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388023)">+ list pages</a>
+<div id="category-pages-4388023" style="display: none"></div>
+<div id="category-pages-4388023-options" style="display: none"></div>
+</div>
+<div>
+<h3>doc-include</h3>
+<a href="javascript:;" id="category-pages-toggler-4388026" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388026)">+ list pages</a>
+<div id="category-pages-4388026" style="display: none"></div>
+<div id="category-pages-4388026-options" style="display: none"></div>
+</div>
+<div>
+<h3>doc-modules</h3>
+<a href="javascript:;" id="category-pages-toggler-4388021" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388021)">+ list pages</a>
+<div id="category-pages-4388021" style="display: none"></div>
+<div id="category-pages-4388021-options" style="display: none"></div>
+</div>
+<div>
+<h3>doc-wiki-syntax</h3>
+<a href="javascript:;" id="category-pages-toggler-4388017" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388017)">+ list pages</a>
+<div id="category-pages-4388017" style="display: none"></div>
+<div id="category-pages-4388017-options" style="display: none"></div>
+</div>
+<div>
+<h3>faq</h3>
+<a href="javascript:;" id="category-pages-toggler-4388024" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388024)">+ list pages</a>
+<div id="category-pages-4388024" style="display: none"></div>
+<div id="category-pages-4388024-options" style="display: none"></div>
+</div>
+<div>
+<h3>forum</h3>
+<a href="javascript:;" id="category-pages-toggler-4676983" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4676983)">+ list pages</a>
+<div id="category-pages-4676983" style="display: none"></div>
+<div id="category-pages-4676983-options" style="display: none"></div>
+</div>
+<div>
+<h3>inc</h3>
+<a href="javascript:;" id="category-pages-toggler-4388018" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388018)">+ list pages</a>
+<div id="category-pages-4388018" style="display: none"></div>
+<div id="category-pages-4388018-options" style="display: none"></div>
+</div>
+<div>
+<h3>legal</h3>
+<a href="javascript:;" id="category-pages-toggler-4388025" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388025)">+ list pages</a>
+<div id="category-pages-4388025" style="display: none"></div>
+<div id="category-pages-4388025-options" style="display: none"></div>
+</div>
+<div>
+<h3>more</h3>
+<a href="javascript:;" id="category-pages-toggler-4388019" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388019)">+ list pages</a>
+<div id="category-pages-4388019" style="display: none"></div>
+<div id="category-pages-4388019-options" style="display: none"></div>
+</div>
+<div>
+<h3>nav</h3>
+<a href="javascript:;" id="category-pages-toggler-4387984" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4387984)">+ list pages</a>
+<div id="category-pages-4387984" style="display: none"></div>
+<div id="category-pages-4387984-options" style="display: none"></div>
+</div>
+<div>
+<h3>search</h3>
+<a href="javascript:;" id="category-pages-toggler-4387982" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4387982)">+ list pages</a>
+<div id="category-pages-4387982" style="display: none"></div>
+<div id="category-pages-4387982-options" style="display: none"></div>
+</div>
+<div>
+<h3>start</h3>
+<a href="javascript:;" id="category-pages-toggler-4388020" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388020)">+ list pages</a>
+<div id="category-pages-4388020" style="display: none"></div>
+<div id="category-pages-4388020-options" style="display: none"></div>
+</div>
+<div>
+<h3>system</h3>
+<a href="javascript:;" id="category-pages-toggler-4387983" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4387983)">+ list pages</a>
+<div id="category-pages-4387983" style="display: none"></div>
+<div id="category-pages-4387983-options" style="display: none"></div>
+</div>
+<div>
+<h3>user</h3>
+<a href="javascript:;" id="category-pages-toggler-4388136" onclick="WIKIDOT.modules.WikiCategoriesModule.listeners.toggleListPages(event, 4388136)">+ list pages</a>
+<div id="category-pages-4388136" style="display: none"></div>
+<div id="category-pages-4388136-options" style="display: none"></div>
+</div>
+</div><div id="action-area" style="display: none;"></div>
