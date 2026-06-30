@@ -34,20 +34,20 @@ fields:
     value: |
              //italic text//    italic text
              ||~ what you type ||~ what you get ||
-             || {{@@//italic text//@@}} || //italic text// ||
-             || {{@@**bold text**@@}} || **bold text** ||
-             || {{@@//**italic and bold**//@@}} || //**italic and bold**// ||
-             || {{@@__underline text__@@}} || __underline text__ ||
-             || {{@@--strikethrough text--@@}} || --strikethrough text-- ||
-             || {{@@{{teletype (monospaced) text}}@@}} || {{teletype (monospaced) text}} ||
-             || {{@@normal^^superscript^^@@}} || normal^^superscript^^ ||
-             || {{@@normal,,subscript,,@@}} || normal,,subscript,, ||
-             || {{@@[!-- invisible comment --]@@}} || [!-- invisible comment --] ||
-             || {{@@[[span style="color:red"]]custom //span// element[[/span]]@@}} || [[span style="color:red"]]custom //span// element[[/span]] ||
-             || {{@@##blue|predefined## or ##44FF88|custom-code## color@@}} || ##blue|predefined## or ##229966|custom-code## color ||
+             || {{ '{{' }}@@//italic text//@@}} || //italic text// ||
+             || {{ '{{' }}@@**bold text**@@}} || **bold text** ||
+             || {{ '{{' }}@@//**italic and bold**//@@}} || //**italic and bold**// ||
+             || {{ '{{' }}@@__underline text__@@}} || __underline text__ ||
+             || {{ '{{' }}@@--strikethrough text--@@}} || --strikethrough text-- ||
+             || {{ '{{' }}@@{{ '{{' }}teletype (monospaced) text}}@@}} || {{ '{{' }}teletype (monospaced) text}} ||
+             || {{ '{{' }}@@normal^^superscript^^@@}} || normal^^superscript^^ ||
+             || {{ '{{' }}@@normal,,subscript,,@@}} || normal,,subscript,, ||
+             || {{ '{{' }}@@[!-- invisible comment --]@@}} || [!-- invisible comment --] ||
+             || {{ '{{' }}@@[[span style="color:red"]]custom //span// element[[/span]]@@}} || [[span style="color:red"]]custom //span// element[[/span]] ||
+             || {{ '{{' }}@@##blue|predefined## or ##44FF88|custom-code## color@@}} || ##blue|predefined## or ##229966|custom-code## color ||
 
              [[div class="alert alert-info"]]
-             You can use user-defined {{ID}} arguments in **@@[[span]]...[[/span]]@@** tags, which is extremely useful building sites using [http://getbootstrap.com Bootstrap]. Please note that every user-defined {{ID}} will have a {{"u-"}} prefix added in the output HTML for the security reasons.
+             You can use user-defined {{ '{{' }}ID}} arguments in **@@[[span]]...[[/span]]@@** tags, which is extremely useful building sites using [http://getbootstrap.com Bootstrap]. Please note that every user-defined {{ '{{' }}ID}} will have a {{ '{{' }}"u-"}} prefix added in the output HTML for the security reasons.
              [[/div]]
 [[/form]]
 ```
@@ -68,7 +68,7 @@ fields:
   header-1:
     type: static
     label: 'Inline Formatting Docs'
-    value: "//italic text//    italic text\n||~ what you type ||~ what you get ||\n|| {{@@//italic text//@@}} || //italic text// ||\n|| {{@@**bold text**@@}} || **bold text** ||\n|| {{@@//**italic and bold**//@@}} || //**italic and bold**// ||\n|| {{@@__underline text__@@}} || __underline text__ ||\n|| {{@@--strikethrough text--@@}} || --strikethrough text-- ||\n|| {{@@{{teletype (monospaced) text}}@@}} || {{teletype (monospaced) text}} ||\n|| {{@@normal^^superscript^^@@}} || normal^^superscript^^ ||\n|| {{@@normal,,subscript,,@@}} || normal,,subscript,, ||\n|| {{@@[!-- invisible comment --]@@}} || [!-- invisible comment --] ||\n|| {{@@[[span style=\"color:'red\"]]custom //span// element[[/span]]@@}} || [[span style=\"color:red\"]]custom //span// element[[/span]] ||'\n|| {{@@##blue|predefined## or ##44FF88|custom-code## color@@}} || ##blue|predefined## or ##229966|custom-code## color ||\n\n[[div class=\"alert alert-info\"]]\nYou can use user-defined {{ID}} arguments in **@@[[span]]...[[/span]]@@** tags, which is extremely useful building sites using [http://getbootstrap.com Bootstrap]. Please note that every user-defined {{ID}} will have a {{\"u-\"}} prefix added in the output HTML for the security reasons.\n[[/div]]"
+    value: "//italic text//    italic text\n||~ what you type ||~ what you get ||\n|| {{ '{{' }}@@//italic text//@@}} || //italic text// ||\n|| {{ '{{' }}@@**bold text**@@}} || **bold text** ||\n|| {{ '{{' }}@@//**italic and bold**//@@}} || //**italic and bold**// ||\n|| {{ '{{' }}@@__underline text__@@}} || __underline text__ ||\n|| {{ '{{' }}@@--strikethrough text--@@}} || --strikethrough text-- ||\n|| {{ '{{' }}@@{{ '{{' }}teletype (monospaced) text}}@@}} || {{ '{{' }}teletype (monospaced) text}} ||\n|| {{ '{{' }}@@normal^^superscript^^@@}} || normal^^superscript^^ ||\n|| {{ '{{' }}@@normal,,subscript,,@@}} || normal,,subscript,, ||\n|| {{ '{{' }}@@[!-- invisible comment --]@@}} || [!-- invisible comment --] ||\n|| {{ '{{' }}@@[[span style=\"color:'red\"]]custom //span// element[[/span]]@@}} || [[span style=\"color:red\"]]custom //span// element[[/span]] ||'\n|| {{ '{{' }}@@##blue|predefined## or ##44FF88|custom-code## color@@}} || ##blue|predefined## or ##229966|custom-code## color ||\n\n[[div class=\"alert alert-info\"]]\nYou can use user-defined {{ '{{' }}ID}} arguments in **@@[[span]]...[[/span]]@@** tags, which is extremely useful building sites using [http://getbootstrap.com Bootstrap]. Please note that every user-defined {{ '{{' }}ID}} will have a {{ '{{' }}\"u-\"}} prefix added in the output HTML for the security reasons.\n[[/div]]"
 [[/form]]
 ```
 

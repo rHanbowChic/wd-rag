@@ -9,7 +9,7 @@
 | //**italic and bold**// | italic and bold |
 | __underline text__ | underline text |
 | --strikethrough text-- | strikethrough text |
-| {{teletype (monospaced) text}} | teletype (monospaced) text |
+| {{ '{{' }}teletype (monospaced) text}} | teletype (monospaced) text |
 | normal^^superscript^^ | normalsuperscript |
 | normal,,subscript,, | normalsubscript |
 | [!-- invisible comment --] |  |

@@ -13,7 +13,7 @@
 | > Blockquoted text |
 | //italic text// |
 | **bold text** |
-| {{monospaced text}} |
+| {{ '{{' }}monospaced text}} |
 | ^^superscript^^ |
 | ,,subscript,, |
 | ##red\|standard## or ##229966\|custom-code## color |

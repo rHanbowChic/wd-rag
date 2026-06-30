@@ -35,5 +35,41 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/rHanbowChic/wd-rag' }
     ]
+  },
+  markdown: {
+    config(md) {
+      md.options.html = false
+
+      const defaultRender =
+        md.renderer.rules.link_open ||
+        ((tokens, idx, options, env, self) =>
+          self.renderToken(tokens, idx, options))
+
+      md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+        const href = tokens[idx].attrGet('href')
+
+        if (!href) {
+          return defaultRender(tokens, idx, options, env, self)
+        }
+
+        // Wikidot 内部死链
+        if (
+          href.startsWith('/doc:') ||
+          href.startsWith('/doc-') ||
+          href.startsWith('/system:') ||
+          href.startsWith('/community-sites') ||
+          href.startsWith('/page-unix-name') ||
+          href.startsWith('/plans') ||
+          href.startsWith('/education') ||
+          href.startsWith('/start') ||
+          href == "/doc"
+        ) {
+          // 去掉 href，保留文本
+          tokens[idx].attrSet('href', '#')
+        }
+
+        return defaultRender(tokens, idx, options, env, self)
+      }
+    }
   }
 })
