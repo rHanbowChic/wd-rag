@@ -58,4 +58,3 @@ function generateRootIndex() {
 
 // 执行
 TARGET_DIRS.forEach(generateIndex)
-generateRootIndex()

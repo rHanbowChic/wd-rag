@@ -1,14 +1,23 @@
-# Documentation Hub
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
 
-- [doc](/doc/)
-- [doc-modules](/doc-modules/)
-- [doc-wiki-syntax](/doc-wiki-syntax/)
-- [faq](/faq/)
-- [faq-splitted/community-sites](/faq-splitted/community-sites/)
-- [faq-splitted/editing-pages](/faq-splitted/editing-pages/)
-- [faq-splitted/private-sites](/faq-splitted/private-sites/)
-- [faq-splitted/site-features](/faq-splitted/site-features/)
-- [faq-splitted/technical](/faq-splitted/technical/)
-- [faq-splitted/upgrades](/faq-splitted/upgrades/)
-- [faq-splitted/user-accounts](/faq-splitted/user-accounts/)
-- [faq-splitted/watching](/faq-splitted/watching/)
+hero:
+  name: "MerulaBook"
+  text: "AI-friendly Wikidot Documentation"
+  actions:
+    - theme: brand
+      text: General Docs
+      link: /doc/
+    - theme: alt
+      text: FAQ
+      link: /faq/
+
+features:
+  - title: AI Friendly
+    details: Build by AI, work for AI
+  - title: High Credibility
+    details: From official wikidot website
+  - title: Adorable UI
+    details: Despite it's not pink
+---
