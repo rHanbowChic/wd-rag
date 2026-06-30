@@ -71,5 +71,8 @@ export default defineConfig({
         return defaultRender(tokens, idx, options, env, self)
       }
     }
+  },
+  sitemap: {
+    hostname: 'https://merula.ect.fyi'
   }
 })
