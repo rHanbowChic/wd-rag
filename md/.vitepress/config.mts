@@ -34,7 +34,11 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/rHanbowChic/wd-rag' }
-    ]
+    ],
+    footer: {
+      message: 'The river is moving. The blackbird must be flying.',
+      copyright: 'Copyright © 2026 Ect07, Licensed under the MIT License.'
+    }
   },
   markdown: {
     config(md) {

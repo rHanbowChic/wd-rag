@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: FAQ
       link: /faq/
+  image:
+    src: /assets/merula-hero.png
+    alt: Head of a blackbird
 
 features:
   - title: AI Friendly
