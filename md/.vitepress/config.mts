@@ -123,6 +123,7 @@ export default defineConfig({
       #dify-chatbot-bubble-window {
         width: 24rem !important;
         height: 40rem !important;
+        position: fixed !important;
       }
     `]
   ]
