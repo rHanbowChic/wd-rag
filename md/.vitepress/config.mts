@@ -100,7 +100,7 @@ export default defineConfig({
     ['script', {}, `
       window.difyChatbotConfig = {
         token: 'Fnbc7TuopmaZx6RQ',
-        baseUrl: 'http://dify.ect.fyi',
+        baseUrl: 'https://dify.ect.fyi',
         inputs: {},
         systemVariables: {},
         userVariables: {},
