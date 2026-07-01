@@ -94,5 +94,36 @@ export default defineConfig({
   },
   sitemap: {
     hostname: 'https://merula.ect.fyi'
-  }
+  },
+  head: [
+    // 1. 注入 Dify Chatbot 配置
+    ['script', {}, `
+      window.difyChatbotConfig = {
+        token: 'Fnbc7TuopmaZx6RQ',
+        baseUrl: 'http://dify.ect.fyi',
+        inputs: {},
+        systemVariables: {},
+        userVariables: {},
+      }
+    `],
+
+    // 2. 引入 embed 脚本
+    ['script', {
+      src: 'https://dify.ect.fyi/embed.min.js',
+      id: 'Fnbc7TuopmaZx6RQ',
+      defer: ''
+    }],
+
+    // 3. 注入样式
+    ['style', {}, `
+      #dify-chatbot-bubble-button {
+        background-color: #1C64F2 !important;
+      }
+
+      #dify-chatbot-bubble-window {
+        width: 24rem !important;
+        height: 40rem !important;
+      }
+    `]
+  ]
 })
