@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: FAQ
       link: /faq/
+    - theme: alt
+      text: Try the Chatbot
+      link: https://dify.ect.fyi/chat/Fnbc7TuopmaZx6RQ
   image:
     src: /assets/merula-hero.png
     alt: Head of a blackbird
