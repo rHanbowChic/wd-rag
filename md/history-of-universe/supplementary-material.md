@@ -1,0 +1,241 @@
+补充材料
+
+[文章资源中心](https://scp-wiki-cn.wikidot.com/essay-resource-hub) » [宇宙史中心页](https://scp-wiki-cn.wikidot.com/history-of-the-universe-hub) » 补充材料
+
+- _+ 参考文献_
+- _+术语表_
+- _+致谢_
+
+[http://www.scp-wiki.net/forum/c-50741/p/4](http://www.scp-wiki.net/forum/c-50741/p/4) [查看此处所有链接]
+
+[http://www.scp-wiki.net/forum/t-228926/site-history](http://www.scp-wiki.net/forum/t-228926/site-history)
+
+[http://scpsandbox2.wikidot.com/staff](http://scpsandbox2.wikidot.com/staff)
+
+[http://www.scp-wiki.net/guide-to-newbies](http://www.scp-wiki.net/guide-to-newbies) （浏览历史）
+
+[http://wayback.archive.org/web/*/http://editthis.info/scp_wiki/SCP_Series](http://wayback.archive.org/web/*/http://editthis.info/scp_wiki/SCP_Series) （旧维基的时光倒流机）
+
+[http://www.scp-wiki.net/system:page-tags/tag/admin#pages](http://www.scp-wiki.net/system:page-tags/tag/admin#pages)
+
+[http://www.scp-wiki.net/system:page-tags/tag/sandbox#pages](http://www.scp-wiki.net/system:page-tags/tag/sandbox#pages)
+
+[http://www.scp-wiki.net/forum/t-76549](http://www.scp-wiki.net/forum/t-76549) （The Administrator询问新网站）
+
+[http://www.scp-wiki.net/forum/t-164975](http://www.scp-wiki.net/forum/t-164975) (Kondraki被降职)
+
+[http://www.scp-wiki.net/forum/t-96238](http://www.scp-wiki.net/forum/t-96238) (早期SCP的数量)
+
+[http://www.scp-wiki.net/forum/t-109852（2008年12](http://www.scp-wiki.net/forum/t-109852%EF%BC%882008%E5%B9%B412)月的人气）
+
+[http://www.scp-wiki.net/forum/t-152812](http://www.scp-wiki.net/forum/t-152812) (05指挥部之初)
+
+_再创造？可能指的是不再存在的管理法庭决策_
+
+[http://www.scp-wiki.net/forum/t-161858](http://www.scp-wiki.net/forum/t-161858) (SCP电影话题)
+
+[http://www.scp-wiki.net/forum/t-123602](http://www.scp-wiki.net/forum/t-123602) (第一次大编辑)
+
+_笔记：这表明它当时可能还没有被称为大编辑。_
+
+[http://www.scp-wiki.net/forum/t-180329](http://www.scp-wiki.net/forum/t-180329) (第二次大编辑)
+
+[http://www.scp-wiki.net/forum/t-202489](http://www.scp-wiki.net/forum/t-202489) (对大编辑的抱怨)
+
+[http://www.scp-wiki.net/forum/t-184400](http://www.scp-wiki.net/forum/t-184400) (大编辑J条目)
+
+[http://www.scp-wiki.net/forum/t-181287](http://www.scp-wiki.net/forum/t-181287) (大编辑0-99条目)
+
+[http://www.scp-wiki.net/forum/t-181831](http://www.scp-wiki.net/forum/t-181831) (大编辑100条目)
+
+[http://www.scp-wiki.net/forum/t-183010](http://www.scp-wiki.net/forum/t-183010) (大编辑200条目)
+
+[http://www.scp-wiki.net/forum/t-183670](http://www.scp-wiki.net/forum/t-183670) (大编辑300条目)
+
+[http://www.scp-wiki.net/forum/t-185664](http://www.scp-wiki.net/forum/t-185664) (大编辑400条目)
+
+[http://www.scp-wiki.net/forum/t-196275](http://www.scp-wiki.net/forum/t-196275) (大编辑500条目)
+
+[http://www.scp-wiki.net/forum/t-196305](http://www.scp-wiki.net/forum/t-196305) (大编辑600条目)
+
+[http://www.scp-wiki.net/forum/t-201709](http://www.scp-wiki.net/forum/t-201709) (大编辑700条目)
+
+[http://www.scp-wiki.net/forum/t-202968](http://www.scp-wiki.net/forum/t-202968) (在大编辑中被删掉的一切)
+
+[http://www.scp-wiki.net/forum/t-202329](http://www.scp-wiki.net/forum/t-202329) (大编辑的结束)
+
+[http://www.scp-wiki.net/forum/t-118490/vandalization-of-my-pages](http://www.scp-wiki.net/forum/t-118490/vandalization-of-my-pages) (Dr. Laughter抱怨他的用户页面被恶意破坏）
+
+[http://www.scp-wiki.net/forum/t-119536/got-accepted-to-4444](http://www.scp-wiki.net/forum/t-119536/got-accepted-to-4444) (Laughter的另一次话题)
+
+[http://www.scp-wiki.net/forum/t-118322/i-ve-decided](http://www.scp-wiki.net/forum/t-118322/i-ve-decided) (Laughter决定删掉一些东西)
+
+[http://www.scp-wiki.net/forum/t-117212/how-can-the-pdfs-of-500-599-and-600-699-be-done](http://www.scp-wiki.net/forum/t-117212/how-can-the-pdfs-of-500-599-and-600-699-be-done) (Laughter的PDF问题)
+
+[http://www.scp-wiki.net/forum/t-324338/new-staff](http://www.scp-wiki.net/forum/t-324338/new-staff)
+
+[http://www.scp-wiki.net/forum/t-117083/photograph-found-of-scp-217-victim](http://www.scp-wiki.net/forum/t-117083/photograph-found-of-scp-217-victim) (Laughter和一张图片)
+
+[http://www.scp-wiki.net/forum/t-116380/the-subversion-challenge](http://www.scp-wiki.net/forum/t-116380/the-subversion-challenge) (Laughter蠢爆了)
+
+[http://www.scp-wiki.net/forum/t-100056/return-of-hagger](http://www.scp-wiki.net/forum/t-100056/return-of-hagger) (Haggar回来了。)
+
+[http://www.scp-wiki.net/forum/t-100065/return-of-the-return-of-hagger-thread](http://www.scp-wiki.net/forum/t-100065/return-of-the-return-of-hagger-thread) (Haggar)
+
+[http://www.scp-wiki.net/forum/t-100271/how-many-girls-are-out-there](http://www.scp-wiki.net/forum/t-100271/how-many-girls-are-out-there) (2008年10月性别讨论)
+
+[http://www.scp-wiki.net/forum/t-245761](http://www.scp-wiki.net/forum/t-245761) (Fishmonger走了)
+
+[http://scp-wiki.wikidot.com/forum/t-245831/the-epic-new-scpf-epic-discussion-thread](http://scp-wiki.wikidot.com/forum/t-245831/the-epic-new-scpf-epic-discussion-thread) (一些有关Fishmonger离去的反应)
+
+[http://www.scp-wiki.net/forum/t-98329/glad-i-missed](http://www.scp-wiki.net/forum/t-98329/glad-i-missed) （不再存在匿名编辑/Dantenson删除账户）
+
+[http://www.scp-wiki.net/archived-news](http://www.scp-wiki.net/archived-news) （归档新闻）
+
+[http://www.scp-wiki.net/forum/t-406914](http://www.scp-wiki.net/forum/t-406914) （被处决类关闭）
+
+[http://www.scp-wiki.net/forum/t-282647](http://www.scp-wiki.net/forum/t-282647) （Active Duty）
+
+[http://www.scp-wiki.net/forum/t-324338](http://www.scp-wiki.net/forum/t-324338) （自2011年3月12日起的人员扩充）
+
+[http://05command.wikidot.com/forum/t-153443/promotion-drive-v-1](http://05command.wikidot.com/forum/t-153443/promotion-drive-v-1)（首次人员扩充决议）
+
+[http://www.scp-wiki.net/archive-of-past-content](http://www.scp-wiki.net/archive-of-past-content) （现今可能已被删除，但对于一些老职员来说是有用的中心)
+
+[http://www.scp-wiki.net/forum/t-102066](http://www.scp-wiki.net/forum/t-102066) (Site 19手册)
+
+[http://www.scp-wiki.net/forum/t-76752/foundation-or-organisation](http://www.scp-wiki.net/forum/t-76752/foundation-or-organisation) (基金会命名)
+
+[http://sfw.chanarchive.org/4chan/b/3148/special-containment-procedures](http://sfw.chanarchive.org/4chan/b/3148/special-containment-procedures) （关于SCP在/b/上的老话题）
+
+[http://www.scp-wiki.net/a-word-from-the-administrator](http://www.scp-wiki.net/a-word-from-the-administrator) **重要**
+
+[http://www.scp-wiki.net/forum/t-376556](http://www.scp-wiki.net/forum/t-376556) (SCP-1000竞赛)
+
+[http://scp-application.wikidot.com/](http://scp-application.wikidot.com/) （这他妈是啥？）
+
+> 22:17 DrMann 用它来审核网站的新成员，但很快就被废止了。  
+> 22:18 DrMann 随后基本把它当做沙盒页一样使用。
+
+[http://www.scp-wiki.net/forum/t-122666/scp-5555-eyewitness-drawing](http://www.scp-wiki.net/forum/t-122666/scp-5555-eyewitness-drawing) （艺术创作物）
+
+[http://www.scp-wiki.net/forum/t-106618/picture-section](http://www.scp-wiki.net/forum/t-106618/picture-section) （图片部分的创建）
+
+[http://scpclassic.wikidot.com/](http://scpclassic.wikidot.com/) (按年代划分的经典SCP文章)
+
+[http://scpfoundation.ru/](http://scpfoundation.ru/) (俄语Wiki)
+
+[http://05command.wikidot.com/](http://05command.wikidot.com/)
+
+[http://activeduty.wikidot.com/](http://activeduty.wikidot.com/)
+
+[http://scp-field-work.wikidot.com/](http://scp-field-work.wikidot.com/)
+
+[http://scp-field-work.wikidot.com/](http://scp-field-work.wikidot.com/)
+
+[http://far-recon.wikidot.com/](http://far-recon.wikidot.com/)
+
+[http://after-action.wikidot.com/](http://after-action.wikidot.com/)
+
+[http://tamlinhouse.wikidot.com/](http://tamlinhouse.wikidot.com/)
+
+[http://scparchive.wikidot.com/](http://scparchive.wikidot.com/)
+
+[http://wanderers-library.wikidot.com/](http://wanderers-library.wikidot.com/)
+
+[http://serpents-hand.wikidot.com/](http://serpents-hand.wikidot.com/)
+
+[http://scp-society.wikidot.com/](http://scp-society.wikidot.com/)
+
+[http://scp-inc.wikidot.com/](http://scp-inc.wikidot.com/)
+
+[http://goc.wikidot.com/start](http://goc.wikidot.com/start)
+
+[http://mcd-curios.wikidot.com/](http://mcd-curios.wikidot.com/)
+
+[http://knowyourmeme.com/memes/subcultures/scp-foundation](http://knowyourmeme.com/memes/subcultures/scp-foundation)
+
+[http://scpfoundation.org/](http://scpfoundation.org/)
+
+[http://tvtropes.org/pmwiki/pmwiki.php/Wiki/SCPFoundation?from=Main.SCPFoundation](http://tvtropes.org/pmwiki/pmwiki.php/Wiki/SCPFoundation?from=Main.SCPFoundation)
+
+[http://thescpfoundation.tumblr.com/](http://thescpfoundation.tumblr.com/)
+
+[https://www.facebook.com/SCPfoundation](https://www.facebook.com/SCPfoundation)
+
+[http://www.tumblr.com/tagged/scp-foundation](http://www.tumblr.com/tagged/scp-foundation)
+
+[http://scp-foundation.deviantart.com/](http://scp-foundation.deviantart.com/)
+
+[http://villains.wikia.com/wiki/SCP_Foundation](http://villains.wikia.com/wiki/SCP_Foundation)
+
+[https://twitter.com/SCP_ebooks](https://twitter.com/SCP_ebooks)
+
+[http://www.brutalashell.com/2012/07/the-internet-gets-freaky-the-scp-foundation-website/](http://www.brutalashell.com/2012/07/the-internet-gets-freaky-the-scp-foundation-website/)
+
+这是一份为那些因可能在这篇文章中找到的术语而百思不得其解、或只是因为太萌新了所以一无所知的人们而准备的术语表。它们现在暂时不按字母表顺序排列，不过可能在未来某个时刻如此。
+
+欢乐基金会_（lolFoundation）_（形容词/名词）：一种用来描述让基金会看起来愚蠢、无能，或者受恶作剧者利用而写就的术语。_参见 Keter任务（Keter Duty）._
+
+Keter任务_（Keter Duty）_（名词）：指增编的幽默俚语，如果有些人继续胡作非为，就威胁要派人把他送去执行“Keter任务”(从事危险对象或高风险地区的工作)。由于2012年2月被Pig_Catapult净化不良风气，如今非常罕见。[http://www.scp-wiki.net/forum/t-443524](http://www.scp-wiki.net/forum/t-443524)
+
+SCP（名词）：一种缩写，用以指代“特殊收容措施_（Special Containment Procedures）_”、“控制、收容，保护_（Secure, Contain, Protect）_”或者“安全收容协议_（Secure Containment Protocols）_”，这得取决于你问的对象是什么，以及它的使用环境。
+
+Site19（名词）：SCP基金会官方IRC聊天室的名字。
+
+EditThis（名词）：一个wiki农场，是SCP系列的第一个家。它的功能就像维基百科的复制品，布局几乎完全相同。在2008年被使用了几个月，之后就转移到了WikiDot网站。
+
+Kitchen Peppers（名词）：SCP Wiki 用户“Reject”的假名
+
+SCP系列（名词）：SCP基金会的最初名字。当时我们的内容主要是由SCP列表组成，没有故事，未曾建立一个真正有凝聚力的设定。如今已不再使用，取而代之的是“SCP基金会”。
+
+SCP基金会（名词）：你正在阅读的协作小说网站的名称。一种其工作是收容异常对象并保护世界常态的秘密组织。来自“关于SCP基金会”页面：
+
+SS（名词）：缩写为“高级职员”，即管理SCP Wiki的人。
+
+工程基金会_（Project Foundation）（_名词）：将容纳SCP基金会的新网站，当前由 [![Aelanna](https://www.wikidot.com/avatar.php?userid=334454&amp;size=small&amp;timestamp=1766679116)](http://www.wikidot.com/user:info/aelanna)[Aelanna](http://www.wikidot.com/user:info/aelanna) 和[![murphy_slaw](https://www.wikidot.com/avatar.php?userid=1319317&amp;size=small&amp;timestamp=1766679116)](http://www.wikidot.com/user:info/murphy-slaw)[murphy_slaw](http://www.wikidot.com/user:info/murphy-slaw)开发。
+
+> ## 基金会
+> 
+> 暗中于全世界运作，SCP基金会的职权超越了司法管辖范围，它由世界各国政府授权和委托，承担着收容“危害正常秩序的项目”的任务。  
+> 这些“项目”中有许多既对人类构成物理威胁，也对世俗事务、个人信仰造成心理怀疑，它们干涉着正常生活。
+> 
+> - _例如_ - 一般个体可能会对[SCP-126](https://scp-wiki-cn.wikidot.com/scp-126)的存在感到不安，相信无论何时都会有很多像她一样的存在。
+> - _例如_ - 被人类正受到[SCP-008](https://scp-wiki-cn.wikidot.com/scp-008)或[SCP-058](https://scp-wiki-cn.wikidot.com/scp-058)威胁的事实而吓倒
+> - _例如_ - 许多人会服从甚至崇拜诸如[SCP-076](https://scp-wiki-cn.wikidot.com/scp-076)或[SCP-882](https://scp-wiki-cn.wikidot.com/scp-882)这样的对象的可能性
+
+自2007年以来，SCP wiki以各种形式存在，它从/x/开始，接着到了EditThis，然后到WikiDot。
+
+RP（名词）：“角色扮演”的缩写形式。
+
+LBD（名词）：Le Blue Dude的简写，该用户因永远招惹人厌而被封禁。活跃在Wacky HiJinx时期，有几篇文章仍然存在于Wiki。
+
+Wacky HiJinx时期（名词）：从2009年初到同年6月，维基百科使用的一种愚蠢又喜剧性的语调。“Keter任务”、“欢乐基金会”和“被处决”等术语的起源。
+
+FUDGE（形容词）：SCP基金会RP常用的IRC滚骰系统。
+
+马甲行为（动词）：创建一个额外账户以避免被封禁，拉高投票分数，或做其他可以通过第二个账户完成的事情。
+
+排序（动词）：在一个以SCP基金会管理员和讨论管理员命名的私密位置上煞风景的行为。
+
+我要感谢那些在我写下这篇文章时帮助过我的人们，我觉得他们值得我的赞誉。如果你的名字未曾列在这里，但清楚自己确实给过我帮助，请通过维基或私信给我留言。我为疏漏致歉。
+
+感谢DrGears，给我提供了不少重要信息。
+
+Kain Pathos Crow，不仅给我提供了信息，还引领我接触到了前人从未见过的资源。
+
+TheDeadlyMoose，审阅了我的文章并给出严厉批评。
+
+致TroyL，整个写作过程中都给予了我鼓励和帮助，并提供了有价值的数据。
+
+致我在IRC里窃听到并给予帮助的人们。你们这些家伙帮了大忙。
+
+感谢Salman，为RP相关提供输入。
+
+Bright，协助了事实核查。
+
+谢谢你Wogglebug，你在某些我无以言表的地方帮助了我。你的耐性和彻底精神对这个项目而言如此无价。
+
+致far2。虽然当我联系你的时候我并没有在写这篇文章，但是我从你这里得到的信息确实帮助我完成了它的早期部分。
+
+而最后，谢意则献给你，读者。你们这些年来所做的贡献使这篇文章成为可能。我们共同打造和完善了一个经得起时间考验的项目，创造了一段令人着迷的历史。我希望你们读它时会像我将其书写而下那般兴味盎然。

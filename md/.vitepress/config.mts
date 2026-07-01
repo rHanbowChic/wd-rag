@@ -40,6 +40,7 @@ export default defineConfig({
         text: 'Community',
         items: [
           { text: 'SCP Wiki CN', link: '/scp-cn/' },
+          { text: 'SCP Wiki CN - 宇宙史', link: '/history-of-universe/' },
         ]
       }
     ],

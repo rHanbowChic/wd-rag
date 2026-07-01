@@ -9,6 +9,7 @@ const TARGET_DIRS = [
   'doc-wiki-syntax',
   'faq',
   'scp-cn',
+  'history-of-universe',
   'faq-splitted/community-sites',
   'faq-splitted/editing-pages',
   'faq-splitted/private-sites',
