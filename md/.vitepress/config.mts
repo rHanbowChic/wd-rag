@@ -29,6 +29,12 @@ export default defineConfig({
           { text: 'FAQ - Watching', link: '/faq-splitted/watching' },
 
         ]
+      },
+      {
+        text: 'Media',
+        items: [
+          { text: 'Wikidot AJAX 接口逆向文档', link: '/wikidot-ajax.md' },
+        ]
       }
     ],
 
