@@ -38,6 +38,9 @@ export default defineConfig({
     footer: {
       message: 'The river is moving. The blackbird must be flying.',
       copyright: 'Copyright © 2026 Ect07, Licensed under the MIT License.'
+    },
+    search: {
+      provider: 'local'
     }
   },
   markdown: {
