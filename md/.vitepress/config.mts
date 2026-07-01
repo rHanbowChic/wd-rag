@@ -35,6 +35,12 @@ export default defineConfig({
         items: [
           { text: 'Wikidot AJAX 接口逆向文档', link: '/wikidot-ajax.md' },
         ]
+      },
+      {
+        text: 'Community',
+        items: [
+          { text: 'SCP Wiki CN', link: '/scp-cn/' },
+        ]
       }
     ],
 

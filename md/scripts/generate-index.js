@@ -8,6 +8,7 @@ const TARGET_DIRS = [
   'doc-modules',
   'doc-wiki-syntax',
   'faq',
+  'scp-cn',
   'faq-splitted/community-sites',
   'faq-splitted/editing-pages',
   'faq-splitted/private-sites',
@@ -21,7 +22,10 @@ const TARGET_DIRS = [
 // 读取 Markdown 标题（第一行 #）
 function getTitle(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8')
-  const line = content.split('\n')[0].trim()
+  let line = content.split('\n')[0].trim()
+  if (line.includes("```")) {
+    line = content.split('\n')[1].trim()
+  }
   return line.startsWith("###") ? line.replace(/^###\s*/, '') : line.replace(/^#\s*/, '')
 }
 
